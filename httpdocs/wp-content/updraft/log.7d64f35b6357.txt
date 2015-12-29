@@ -1,0 +1,7 @@
+0000.001 (0) Opened log file at time: Tue, 26 May 2015 20:40:57 +0000 on http://www.selectsifiso.net
+0000.002 (0) UpdraftPlus WordPress backup plugin (http://updraftplus.com): 1.10.1 WP: 4.2.2 PHP: 5.3.2-1ubuntu4.28 (Linux gnoll.imaginet.co.za 2.6.32-73-server #140-Ubuntu SMP Tue Feb 10 15:26:08 UTC 2015 x86_64) MySQL: 5.1.73-0ubuntu0.10.04.1 Server: Apache safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 78.4M | 79M) multisite: N mcrypt: Y LANG:  ZipArchive::addFile: Y
+0000.003 (0) Free space on disk containing Updraft's temporary directory: 96149.1 Mb
+0000.005 (0) Tasks: Backup files:  (schedule: weekly) Backup DB: 1 (schedule: weekly)
+0000.006 (0) Processed schedules. Tasks now: Backup files:  Backup DB: 
+0000.009 (0) No email will be sent - this backup set was empty.
+0000.010 (0) The backup apparently succeeded and is now complete

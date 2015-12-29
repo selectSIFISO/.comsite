@@ -1,0 +1,128 @@
+.box {
+  float: left;
+  width: 190px;
+  background-color:white;
+}
+.box .gallery_box {
+  background-color:Red; padding-top:0px
+}
+.mbox {
+  float: left;
+  width: 518px;
+  margin-left: 0px;
+  background: white;
+  height:720px;
+  border:none;
+  padding-top: 1px;
+  padding-left: 1px;  
+}
+.mbox .h3menu{
+  margin-top:1pt; border:none; 
+  font-size:11px;font-family: Tahoma;
+  padding-left: 5px;padding-right: 5px;
+  text-align:center;font-weight: 100;
+  background: url(images/updates.png) repeat-x #e6e3dc;
+}
+.mbox .h3menu a{color: #9bb50b;text-decoration:none;}
+.mbox .defmenu a{color: #859c0a;text-decoration:none;font-weight:bold;}
+.rbox .h3menu{
+  margin-top:1pt; border:none; 
+  font-size:11px;font-family: Tahoma;
+  padding-left: 5px;padding-right: 5px;
+  text-align:center;font-weight: 100;
+  background: url(images/updates.png) repeat-x #e6e3dc;
+}
+.rbox .h3menu a{color: #9bb50b;text-decoration:none;}
+.rbox {
+  float:right;
+  width: 190px;
+  background: white;
+  height: 250px;
+  border:none;
+  padding-top: 1px;  
+  padding-bottom:25px;    
+}
+.box p {
+  font-size: 11px;
+  font-family: Tahoma;
+  font-weight:normal;  
+ padding-left: 5px;
+ padding-right: 5px;
+}
+
+.mbox p {
+  font-size: 11px;
+  font-family: Tahoma;
+  font-weight:normal;
+  padding-left: 5px;
+padding-right: 5px;  
+}
+
+.box img {border: 0;display: block;padding-right: 5px;}
+.box li a:hover{color: #859c0a;text-decoration:underline;}
+.box .h3menu{
+  margin-top:1pt; border:none; 
+  font-size:11px;font-family: Tahoma;
+  padding-left: 5px;padding-right: 5px;
+  text-align:center;font-weight: 100;
+  background: url(images/updates.png) repeat-x #e6e3dc;
+}
+.box .h3menu a{color: #9bb50b;text-decoration:none;}
+.box li a{color: black;text-decoration:none;}
+.box .defmenu a{
+  color: #859c0a;    
+  text-decoration:none;    
+  font-weight:bold;
+}
+.box li {
+  font-size: 11px;
+  color: Black;    
+  list-style-type:square;    
+}
+
+.box ul {
+  font-size: 11px;
+  font-family: Tahoma;
+  font-weight:normal;
+  color: Black;  
+  padding-left: 15px;  
+}
+.rbox p {
+  font-size: 11px;
+  font-family: Tahoma;
+  font-weight:normal;  
+  padding-left: 5px;
+ padding-right: 5px;
+}
+
+.rbox img {
+  border: 0;
+  display: block;
+  padding-right: 5px;
+}
+
+.rbox ul {
+  font-size: 11px;
+  font-family: Tahoma;
+  font-weight:normal;  
+  padding-left: 5px;
+  padding-right: 5px;  
+}
+.box p {
+  margin: 1em 0;
+}
+ 
+#footer {
+  text-align: center;
+}
+#footer p, #footer ul {
+  margin: 0.8em;
+}
+#footer ul {
+  margin-top: 1.2em;
+}
+#footer li {
+  display: inline;
+  list-style: none;
+}
+

@@ -1,0 +1,11 @@
+EmployeeKey|FirstName|LastName|Title|BirthDate|HireDate
+1|Guy|Gilbert|Production Technician - WC60|1976-05-15|2000-07-31
+2|Kevin|Brown|Marketing Assistant|1981-06-03|2001-02-26
+3|Roberto|Tamburello|Engineering Manager|1968-12-13|2001-12-12
+4|Rob|Walters|Senior Tool Designer|1969-01-23|2002-01-05
+5|Barry|Johnson|Production Technician - WC10|1950-04-27|2002-02-07
+6|Thierry|Ford|Tool Designer|1953-08-29|2002-01-11
+7|David|Bradley|Marketing Manager|1969-04-19|2002-01-20
+8|JoLynn|Dobney|Production Supervisor - WC60|1950-02-16|2002-01-26
+9|Ruth|Ellerbrock|Production Technician - WC10|1950-07-06|2002-02-06
+10|Gail|Erickson|Design Engineer|1946-10-29|2002-02-06

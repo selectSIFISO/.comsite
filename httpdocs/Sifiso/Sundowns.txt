@@ -1,0 +1,6 @@
+Player|Goals
+Player A|12
+Player B|5
+Player C|3
+Player D|7
+Player E|2

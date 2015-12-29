@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>Untitled</title>
+
+</head>
+<body>
+  <input type="text" id="txtSearch" onkeypress="searchKeyPress(event);" />
+        <input type="button" id="btnSearch" Value="Search" onclick="doSomething();" />
+
+        <script type="text/javascript">
+        <!--
+        function searchKeyPress(e)
+        {
+                // look for window.event in case event isn't passed in
+                if (window.event) { e = window.event; }
+                if (e.keyCode == 13)
+                {
+                        document.getElementById('btnSearch').click();
+                }
+        }
+        
+        function doSomething()
+        {
+            alert("Warning Message");        
+        }        
+        //-->
+        </script>
+        
+        <form enctype="multipart/form-data" action="insert.php" method="post" name="changer">
+        <input name="MAX_FILE_SIZE" value="102400" type="hidden">
+        <input name="image" accept="image/jpeg" type="file">
+        <input value="Submit" type="submit">
+        </form>
+</body>
+</html>
