@@ -21,8 +21,8 @@ class W4PL_Admin_Page_Docs
 	{
 		$admin_page = add_submenu_page( 
 			'edit.php?post_type='. W4PL_SLUG,
-			__('Documentation', W4PL_TD),
-			__('Documentation', W4PL_TD),
+			__('Documentation', 'w4pl'),
+			__('Documentation', 'w4pl'),
 			'delete_users',
 			W4PL_SLUG . '-docs',
 			array( $this, 'admin_page')
@@ -53,17 +53,17 @@ class W4PL_Admin_Page_Docs
         </style>
 
 		<div class="wrap about-wrap">
-		<h1><strong>W4 Post List Docs</strong> - (<?php _e('Version', W4PL_TD); ?>: <strong><?php echo W4PL_VERSION; ?></strong>)</h1>
-		<!--<div class="about-text"><?php _e('This plugin lets you create a list of Posts (including pages & custom post type), Terms (category, tag & custom taxonomy) or Terms + Posts Combo template. Outputs are completely customizable using Shortcode & HTML', W4PL_TD); ?></div>-->
+		<h1><strong>W4 Post List Docs</strong> - (<?php _e('Version', 'w4pl'); ?>: <strong><?php echo W4PL_VERSION; ?></strong>)</h1>
+		<!--<div class="about-text"><?php _e('This plugin lets you create a list of Posts (including pages & custom post type), Terms (category, tag & custom taxonomy) or Terms + Posts Combo template. Outputs are completely customizable using Shortcode & HTML', 'w4pl'); ?></div>-->
         <div class="about-text">As like id (<code>[postlist id=1]</code>), a list can also be called using slug or title.<br /><strong>Ex</strong>: <code>[postlist slug='my-list']</code>, <code>[postlist Title='My List']</code></div>
 		<div class="has-right-sidebar"><div id="poststuff">
 
 		<div class="inner-sidebar" id="side-info-column">
 
 		<?php if( self::old_table_exists() ): ?>
-		<div class="postbox"><h3><?php _e( 'Migration', W4PL_TD ); ?></h3>
+		<div class="postbox"><h3><?php _e( 'Migration', 'w4pl' ); ?></h3>
 		<div class="inside">
-			<?php _e('Old database table exists. Please import old lists and delete the table.', W4PL_TD); ?>
+			<?php _e('Old database table exists. Please import old lists and delete the table.', 'w4pl'); ?>
 			<p><a href="<?php echo add_query_arg( array( 'action' => 'import_from_old' ) ); ?>" class="button"><?php _e('Import'); ?></a>
 			 <a href="<?php echo add_query_arg( array( 'action' => 'delete_old_table' ) ); ?>" class="button"><?php _e('Delete Table'); ?></a></p>
 		</div><!--inside-->
@@ -71,33 +71,33 @@ class W4PL_Admin_Page_Docs
 		<?php endif; ?>
 
 		<div class="postbox">
-		<h3><?php _e( 'Usage', W4PL_TD ); ?></h3>
+		<h3><?php _e( 'Usage', 'w4pl' ); ?></h3>
 		<div class="inside">
 			<strong>Shortcode</strong>
 			<p><?php 
-			printf( __('Use shortcode %s with the list id to show a list on post/page content area', W4PL_TD), '<code>postlist</code>');
-			_e( 'Ex:', W4PL_TD); ?> <code>[postlist 1]</code></p>
+			printf( __('Use shortcode %s with the list id to show a list on post/page content area', 'w4pl'), '<code>postlist</code>');
+			_e( 'Ex:', 'w4pl'); ?> <code>[postlist 1]</code></p>
 
 			<strong>Function</strong>
 			<p><?php 
-			printf( __('Display list using %s function', W4PL_TD), '<code>do_shortcode</code>'); ?>
+			printf( __('Display list using %s function', 'w4pl'), '<code>do_shortcode</code>'); ?>
 			<br /><code>&lt;?php</code><br /><code>echo do_shortcode('[postlist id=1]');</code><br /><code>?&gt;</code></p>
 		</div></div><!--postbox-->
 
-		<div class="postbox"><h3><?php _e( 'Plugin links', W4PL_TD ); ?></h3>
+		<div class="postbox"><h3><?php _e( 'Plugin links', 'w4pl' ); ?></h3>
 		<div class="inside">
 		<ul class="w4outlinks">
 			<?php $siteurl = site_url('/'); ?>
-			<li><a class="button" href="<?php echo add_query_arg( array( 'utm_source' => $siteurl, 'utm_medium' => 'w4%2Bplugin', 'utm_campaign' => W4PL_TD ), 'http://w4dev.com/plugins/w4-post-list' ); ?>" target="_blank">Visit Plugin Page</a></li>
-			<li><a class="button" href="<?php echo add_query_arg( array( 'utm_source' => $siteurl, 'utm_medium' => 'w4%2Bplugin', 'utm_campaign' => W4PL_TD ), 'http://w4dev.com/wp/w4-post-list-examples/#examples' ); ?>" target="_blank">Demos &amp; Examples</a></li>
+			<li><a class="button" href="<?php echo add_query_arg( array( 'utm_source' => $siteurl, 'utm_medium' => 'w4%2Bplugin', 'utm_campaign' => 'w4pl' ), 'http://w4dev.com/plugins/w4-post-list' ); ?>" target="_blank">Visit Plugin Page</a></li>
+			<li><a class="button" href="<?php echo add_query_arg( array( 'utm_source' => $siteurl, 'utm_medium' => 'w4%2Bplugin', 'utm_campaign' => 'w4pl' ), 'http://w4dev.com/wp/w4-post-list-examples/#examples' ); ?>" target="_blank">Demos &amp; Examples</a></li>
 			<li><a class="button" href="http://wordpress.org/support/view/plugin-reviews/w4-post-list" target="_blank">Post a review</a></li>
-			<li><a class="button" href="<?php echo add_query_arg( array( 'utm_source' => $siteurl, 'utm_medium' => 'w4%2Bplugin', 'utm_campaign' => W4PL_TD ), 'http://codecanyon.net/item/soccer-engine-wordpress-plugin/9070583' ); ?>" target="_blank">Do u need a Soccer/Football Plugin ?</a></li>
-			<li><?php _e('Contact Author', W4PL_TD); ?> - sajib1223@gmail.com</li>
+			<li><a class="button" href="<?php echo add_query_arg( array( 'utm_source' => $siteurl, 'utm_medium' => 'w4%2Bplugin', 'utm_campaign' => 'w4pl' ), 'http://codecanyon.net/item/soccer-engine-wordpress-plugin/9070583' ); ?>" target="_blank">Do u need a Soccer/Football Plugin ?</a></li>
+			<li><?php _e('Contact Author', 'w4pl'); ?> - sajib1223@gmail.com</li>
 			</ul>
 		</div><!--inside-->
 		</div><!--postbox-->
 
-		<div class="postbox"><h3><?php _e( 'Plugin Updates', W4PL_TD ); ?></h3>
+		<div class="postbox"><h3><?php _e( 'Plugin Updates', 'w4pl' ); ?></h3>
 		<div class="inside">
 		   <?php W4PL_Lists_Admin::plugin_news(); ?>
 		</div><!--inside-->
@@ -106,13 +106,13 @@ class W4PL_Admin_Page_Docs
 		</div><!--#side-info-column-->
 
 		<div id="post-body"><div id="post-body-content">
-		<div class="postbox"><h3><?php _e( 'Template', W4PL_TD); ?></h3>
+		<div class="postbox"><h3><?php _e( 'Template', 'w4pl'); ?></h3>
 		<div class="inside">
 
-		<p><?php _e( 'Template is the output of a list. It can be designed with shortcode and HTML. Find few examples below.', W4PL_TD ); ?></p>
+		<p><?php _e( 'Template is the output of a list. It can be designed with shortcode and HTML. Find few examples below.', 'w4pl' ); ?></p>
 
 
-		<h2><strong><?php _e('Example'); ?></strong>: <?php _e( 'Simple Unordered Post List', W4PL_TD ); ?></h2>
+		<h2><strong><?php _e('Example'); ?></strong>: <?php _e( 'Simple Unordered Post List', 'w4pl' ); ?></h2>
 		<pre><code>[posts]
   &lt;ul&gt;
     &lt;li&gt;&lt;a href=&quot;[post_link]&quot;&gt;[post_title]&lt;/a&gt;&lt;li&gt;
@@ -120,7 +120,7 @@ class W4PL_Admin_Page_Docs
 [/posts]</code></pre>
 
 
-		<h2><strong><?php _e('Example'); ?></strong>: <?php _e( 'Post list having excerpt limited to 20 words, and using post class on post wrapper element', W4PL_TD ); ?></h2>
+		<h2><strong><?php _e('Example'); ?></strong>: <?php _e( 'Post list having excerpt limited to 20 words, and using post class on post wrapper element', 'w4pl' ); ?></h2>
 		<pre><code>[posts]
   &lt;div class=&quot;[post_class]&quot;&gt;
     &lt;h3&gt;&lt;a href=&quot;[post_link]&quot;&gt;[post_title]&lt;/a&gt;&lt;/h3&gt;
@@ -128,7 +128,7 @@ class W4PL_Admin_Page_Docs
   &lt;/div&gt;
 [/posts]</code></pre>
 
-		<h2><strong><?php _e('Example'); ?>: <?php _e( 'Post list Group by Year (chose <em>Group By</em> option to Year while using this).', W4PL_TD ); ?></h2>
+		<h2><strong><?php _e('Example'); ?>: <?php _e( 'Post list Group by Year (chose <em>Group By</em> option to Year while using this).', 'w4pl' ); ?></h2>
 		<pre><code>[groups]
   &lt;ul&gt;
     &lt;li&gt;
@@ -144,7 +144,7 @@ class W4PL_Admin_Page_Docs
 
 
 
-		<h2><strong><?php _e('Example'); ?>: <?php _e( 'A Simple Unordered Category list', W4PL_TD ); ?></h2>
+		<h2><strong><?php _e('Example'); ?>: <?php _e( 'A Simple Unordered Category list', 'w4pl' ); ?></h2>
 		<pre><code>[terms]
   &lt;ul&gt;
     &lt;li&gt;&lt;a href=&quot;[term_link]&quot;&gt;[term_name]&lt;/a&gt;&lt;li&gt;
@@ -152,7 +152,7 @@ class W4PL_Admin_Page_Docs
 [/terms]</code></pre>
 
 
-		<h2><strong><?php _e('Example'); ?>: <?php _e( 'Category Post list', W4PL_TD ); ?></h2>
+		<h2><strong><?php _e('Example'); ?>: <?php _e( 'Category Post list', 'w4pl' ); ?></h2>
 		<pre><code>[terms]
   &lt;ul&gt;
     &lt;li&gt;
@@ -167,7 +167,7 @@ class W4PL_Admin_Page_Docs
 [/terms]</code></pre>
 
 
-		<h2><strong><?php _e('Example'); ?>: <?php _e( 'A Simple Unordered Users list', W4PL_TD ); ?></h2>
+		<h2><strong><?php _e('Example'); ?>: <?php _e( 'A Simple Unordered Users list', 'w4pl' ); ?></h2>
 		<pre><code>[users]
   &lt;ul&gt;
     &lt;li&gt;&lt;a href=&quot;[user_link]&quot;&gt;[user_name]&lt;/a&gt;&lt;li&gt;
@@ -175,7 +175,7 @@ class W4PL_Admin_Page_Docs
 [/users]</code></pre>
 
 
-		<h2><strong><?php _e('Example'); ?>: <?php _e( 'Users Post list', W4PL_TD ); ?></h2>
+		<h2><strong><?php _e('Example'); ?>: <?php _e( 'Users Post list', 'w4pl' ); ?></h2>
 		<pre><code>[users]
   &lt;ul&gt;
     &lt;li&gt;
@@ -192,10 +192,10 @@ class W4PL_Admin_Page_Docs
 		</div><!--inside-->
 		</div><!--postbox-->
 	
-		<div class="postbox "><h3><?php _e( 'Available Shortcodes', W4PL_TD); ?></h3>
+		<div class="postbox "><h3><?php _e( 'Available Shortcodes', 'w4pl'); ?></h3>
 		<div class="inside"><?php $shortcodes = apply_filters( 'w4pl/get_shortcodes', array() ); ?>
 		<table id="shortcode_hint" cellpadding="0" cellspacing="0">
-		<thead><tr><th class="tag_name">Tag</th><th style="text-align:left; padding-left:10px;" class="tag_desc"><?php _e( 'Details', W4PL_TD); ?></th></tr></thead><tbody><?php
+		<thead><tr><th class="tag_name">Tag</th><th style="text-align:left; padding-left:10px;" class="tag_desc"><?php _e( 'Details', 'w4pl'); ?></th></tr></thead><tbody><?php
 		foreach( $shortcodes as $shortcode => $attr ){ $rc = isset($rc) && $rc == '' ? $rc = 'alt' : ''; ?>
 			<tr class="<?php echo $rc; ?>">
 			<th valign="top" class="tag_name"><code>[<?php echo $shortcode; ?>]</code></th>
@@ -237,10 +237,10 @@ class W4PL_Admin_Page_Docs
 	public function admin_notices()
 	{
 		if( isset($_REQUEST['m']) && 'imported' == $_REQUEST['m'] ){
-			echo '<div id="message" class="updated"><p>'. __('Old entries imported', W4PL_TD). '</p></div>';
+			echo '<div id="message" class="updated"><p>'. __('Old entries imported', 'w4pl'). '</p></div>';
 		}
 		elseif( isset($_REQUEST['m']) && 'table_deleted' == $_REQUEST['m'] ){
-			echo '<div id="message" class="updated"><p>'. __('Old table deleted', W4PL_TD). '</p></div>';
+			echo '<div id="message" class="updated"><p>'. __('Old table deleted', 'w4pl'). '</p></div>';
 		}
 	}
 
@@ -356,7 +356,7 @@ class W4PL_Admin_Page_Docs
 
 	public static function plugin_action_links( $links )
 	{
-		$readme_link['doc'] = '<a href="'. 'edit.php?post_type=w4pl&page=w4pl-docs">' . __('Docs', W4PL_TD ). '</a>';
+		$readme_link['doc'] = '<a href="'. 'edit.php?post_type=w4pl&page=w4pl-docs">' . __('Docs', 'w4pl' ). '</a>';
 		return array_merge( $links, $readme_link );
 	}
 

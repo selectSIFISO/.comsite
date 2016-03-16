@@ -15,7 +15,7 @@ class W4PL_Widget extends WP_Widget
 	{
 		$widget_ops = array(
 			'classname' 	=> 'w4_post_list_widget',
-			'description' 	=> __( 'Display lists created with W4 Post List', W4PL_TD )
+			'description' 	=> __( 'Display lists created with W4 Post List', 'w4pl' )
 		);
 		$control_ops = array( 'width' => 200, 'height' => 400);
 		parent::__construct( 'w4_post_list', 'W4 Post List', $widget_ops, $control_ops );
@@ -49,12 +49,12 @@ class W4PL_Widget extends WP_Widget
 
 		?>
 		<p>
-			<strong><?php _e( 'Title:', W4PL_TD); ?></strong>
+			<strong><?php _e( 'Title:', 'w4pl'); ?></strong>
             <br /><input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" 
 			value="<?php echo $title; ?>" />
 		</p>
 		<p>
-			<strong><?php _e( 'Select list:', W4PL_TD); ?></strong>
+			<strong><?php _e( 'Select list:', 'w4pl'); ?></strong>
             <br /><select id="<?php echo $this->get_field_id('PL_ID'); ?>" name="<?php echo $this->get_field_name('PL_ID'); ?>"><?php
 				$lists = get_posts( 'post_status=publish&post_type='. W4PL_SLUG . '&posts_per_page=-1' );
 				$PL_ID = (int) $PL_ID;

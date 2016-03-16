@@ -3,7 +3,7 @@
 Plugin Name: Add Meta Tags
 Plugin URI: http://www.g-loaded.eu/2006/01/05/add-meta-tags-wordpress-plugin/
 Description: Add basic meta tags and also Opengraph, Schema.org Microdata, Twitter Cards and Dublin Core metadata to optimize your web site for better SEO.
-Version: 2.10.6
+Version: 2.10.9
 Author: George Notaras
 Author URI: http://www.g-loaded.eu/
 License: Apache License v2
@@ -217,15 +217,21 @@ function amt_get_metadata_head($post, $options) {
             ( is_author() && is_paged() && ($options["noindex_author_archives"] == "1") )             // Author archives (except 1st page)
         ) {
             $do_add_metadata = false;   // No need to process metadata
-            $robots_content = 'NOINDEX,FOLLOW';
+            // $robots_content is old. Should remove.
+            ////$robots_content = 'NOINDEX,FOLLOW';
             // Allow filtering of the robots meta tag content.
             // Dev Note: Filtering of the robots meta tag takes place here, so as to avoid double filtering in case $do_add_metadata is true.
-            $robots_content = apply_filters( 'amt_robots_data', $robots_content );
+            ////$robots_content = apply_filters( 'amt_robots_data', $robots_content );
+
+            $robots_options = array( 'noindex', 'follow' );
+            // Allow filtering of the robots meta tag content.
+            // Dev Note: Filtering of the robots meta tag takes place here, so as to avoid double filtering in case $do_add_metadata is true.
+            $robots_options = apply_filters( 'amt_robots_options_noindex', $robots_options );
         }
     }
     // Add a robots meta tag if its content is not empty.
-    if ( ! empty( $robots_content ) ) {
-        $metadata_arr[] = '<meta name="robots" content="' . $robots_content . '" />';
+    if ( ! empty( $robots_options ) ) {
+        $metadata_arr[] = '<meta name="robots" content="' . implode(',', $robots_options) . '" />';
     }
 
 
@@ -350,6 +356,10 @@ function amt_print_head_block() {
 }
 
 add_action('wp_head', 'amt_print_head_block', 0);
+// AMP page
+//if ( function_exists('is_amp_endpoint') && is_amp_endpoint() ) {
+    add_action('amp_post_template_head', 'amt_print_head_block', 0);
+//}
 
 
 /**
@@ -567,22 +577,42 @@ function amt_get_metadata_review($options, $add_as_view=false) {
         $enclosure_end = '</pre>' . $BR . $BR;
     }
 
-    $text_title = '<span class="amt-ht-title">Add-Meta-Tags &mdash; Metadata Review Mode</span>' . $BR . $BR;
+    if ( $options['review_mode_omit_notices'] == '0' ) {
+        $text_title = '<span class="amt-ht-title">Add-Meta-Tags &mdash; Metadata Review Mode</span>' . $BR . $BR;
+    } else {
+        $text_title = '';
+    }
 
-    $text_intro = '<span class="amt-ht-notice"><span class="amt-ht-important">NOTE</span>: This menu has been added because <span class="amt-ht-important">Metadata Review Mode</span> has been enabled in';
-    $text_intro .= $BR . 'the Add-Meta-Tags settings. Only logged in administrators can see this menu.</span>';
+    if ( $options['review_mode_omit_notices'] == '0' ) {
+        $text_intro = '<span class="amt-ht-notice"><span class="amt-ht-important">NOTE</span>: This menu has been added because <span class="amt-ht-important">Metadata Review Mode</span> has been enabled in';
+        $text_intro .= $BR . 'the Add-Meta-Tags settings. Only logged in administrators can see this menu.</span>';
+    } else {
+        $text_intro = '';
+    }
 
-    //$text_head_intro = $BR . $BR . '<span class="amt-ht-notice">The following metadata has been added to the head section.</span>' . $BR . $BR;
-    $text_head_intro = $BR . $BR . 'Metadata at the head section' . $BR;
-    $text_head_intro .=            '============================' . $BR . $BR;
+    if ( $options['review_mode_omit_notices'] == '0' ) {
+        //$text_head_intro = $BR . $BR . '<span class="amt-ht-notice">The following metadata has been added to the head section.</span>' . $BR . $BR;
+        $text_head_intro = $BR . $BR . 'Metadata at the head section' . $BR;
+        $text_head_intro .=            '============================' . $BR . $BR;
+    } else {
+        $text_head_intro = '';
+    }
 
-    //$text_footer_intro = $BR . $BR . '<span class="amt-ht-notice">The following metadata has been embedded in the body of the page.</span>' . $BR . $BR;
-    $text_footer_intro = $BR . $BR . 'Metadata within the body area' . $BR;
-    $text_footer_intro .=            '=============================' . $BR . $BR;
+    if ( $options['review_mode_omit_notices'] == '0' ) {
+        //$text_footer_intro = $BR . $BR . '<span class="amt-ht-notice">The following metadata has been embedded in the body of the page.</span>' . $BR . $BR;
+        $text_footer_intro = $BR . $BR . 'Metadata within the body area' . $BR;
+        $text_footer_intro .=            '=============================' . $BR . $BR;
+    } else {
+        $text_footer_intro = $BR . $BR;
+    }
 
-    //$text_content_filter_intro = $BR . $BR . '<span class="amt-ht-notice">The following metadata has been embedded in the body of the page.</span>' . $BR;
-    $text_content_filter_intro = $BR . $BR . 'Metadata within the body area' . $BR;
-    $text_content_filter_intro .=            '=============================' . $BR;
+    if ( $options['review_mode_omit_notices'] == '0' ) {
+        //$text_content_filter_intro = $BR . $BR . '<span class="amt-ht-notice">The following metadata has been embedded in the body of the page.</span>' . $BR;
+        $text_content_filter_intro = $BR . $BR . 'Metadata within the body area' . $BR;
+        $text_content_filter_intro .=            '=============================' . $BR;
+    } else {
+        $text_content_filter_intro = $BR;
+    }
 
     //
     // Build view

@@ -1,10 +1,10 @@
-﻿=== Simplified Social Share ===
+﻿=== Open Social Share ===
 Contributors: social9
 Donate link: http://www.social9.com/
 Tags: Social share, Wordpress plugin, BuddyPress, bbpress, social sharing, multisite, Social9, share post, sharing, share, single share, Social share Plug-in, Twitter tweet, Google plus share, Yahoo share, OpenID, Linkedin share, social media tools, free social sharing, post to social networks, social authentication, social api, social app, facebook share, google share, wordpress multisite, social plugins
 Requires at least: 3.4
-Tested up to: 4.3.0
-Stable tag: 3.5.1
+Tested up to: 4.4.2
+Stable tag: 4.0
 License: GPLv2 or later
 
 Let your users share via their accounts on popular social networks such as Facebook, Google, Twitter, LinkedIn, Vkontakte and over 50 more!
@@ -19,7 +19,7 @@ More than 22 billion shares are viewed each and every day on the internet, with 
 
 = Step-by-step installation documents =
 
-* <a href="http://www.social9.com/wordpress-social-sharing-instructions" target="_blank">WordPress Social Sharing installation and configuration</a>
+* <a href="http://www.social9.com/docs/wordpress-social-share" target="_blank">WordPress Social Sharing installation and configuration</a>
 
 = Features =
 
@@ -41,29 +41,29 @@ Social9 also provides social plugins for Joomla, Drupal, Magento, PrestaShop, Va
 = Important links =
 
 * Social9 website: http://www.social9.com
-* Product page: http://www.social9.com/wordpress-social-sharing-instructions
+* Product page: http://www.social9.com/docs/wordpress-social-share
 
 Please share your comments and feedback at feedback@social9.com
 
 == Installation ==
 
 = Step-by-step installation documents =
-After downloading the plugin, you will find Simplified Social Share located under Plugins.
+After downloading the plugin, you will find Open Social Share located under Plugins.
 Activate your plugin in Wordpress by clicking on "Activate".
 For a step-by-step installation guide please follow this:<br />
-<a href="http://www.social9.com/wordpress-social-sharing-instructions" target="_blank">WordPress installation and configuration</a><br />
+<a href="http://www.social9.com/wordpress-social-share" target="_blank">WordPress installation and configuration</a><br />
 
 = Configuring the Widget =
 
-1. After activating the Simplified Social Share plugin, you'll notice a new icon located on the admin menu called Social Sharing. Click on it to open the plugin settings.
-2. If new to Simplified Social Share you'll be asked to activate this plugin using your email address.
+1. After activating the Open Social Share plugin, you'll notice a new icon located on the admin menu called Social Sharing. Click on it to open the plugin settings.
+2. If new to Open Social Share you'll be asked to activate this plugin using your email address.
 3. Once you've activated the plugin you'll be presented with the plugin options.
 3. These options allow you to enable or disable horizontal and vertical sharing widgets and the placement of widgets. Here, you can also select sharing providers to display (up to 8) and use the rearrange section to modify the order of the first theme selection. 
 4. If ever you find yourself wanting to return to default click on the Reset Options.
 5. The horizontal sharing shortcode is [Social9_Share] and is located for reference under the Advanced Settings Tab.
 
 = Technical Support Questions =
-<a href="http://www.social9.com/wordpress-social-sharing-instructions" target="_blank">How do I implement Social Sharing on my WordPress website?</a><br />
+<a href="http://www.social9.com/wordpress-social-share" target="_blank">How do I implement Social Sharing on my WordPress website?</a><br />
 
 == Frequently Asked Questions ==
 
@@ -74,10 +74,10 @@ Social sharing allows users to share your web content on his/her social networks
 Our plugin is FREE to download and feel free to use on your WordPress, BuddyPress, bbPress and any other WP based systems. For advanced features, enterprise level support and custom solutions, we offer premium packages as well.
 
 = Can you help me set up Social Sharing on my website? =
-Yes, the Social9 Team can assist you with implementing Social Sharing. Please contact us <a href="http://www.social9.com/contact" target="_blank">here</a> and one of our experts will get back to you.
+Yes, the Social9 Team can assist you with implementing Social Sharing. Please contact us <a href="http://www.social9.com" target="_blank">here</a> and one of our experts will get back to you.
 
 = Where can I get support? =
-Our knowledge base is available <a href="http://www.social9.com/wordpress-social-sharing-instructions" target="_blank">here</a>.
+Our knowledge base is available <a href="http://www.social9.com/wordpress-social-share" target="_blank">here</a>.
 
 = My website is not in English, what should i do? =
 Simplified Social Sharing plugin is available only in english at this time. Please let us know at feedback@social9.com if you would like us to add any other language.
@@ -88,6 +88,23 @@ Simplified Social Sharing plugin is available only in english at this time. Plea
 3. **Social Sharing Vertical Theme**: Choose social sharing vertical themes
 
 == Changelog ==
+
+= 4.0 =
+* Added Advance Setting options
+-- Added desired email message
+-- Added desired email subject
+-- Added email content read only
+-- Added short URL option during sharing
+-- Added Facebook App ID
+-- Added Total Share to display the total share count on your website
+-- Added open all providers in a single window
+-- Added Custom Popup Window Size
+-- Added desired Twitter handle to mention during a Twitter share
+-- Added desired Twitter hash tags to be used during a Twitter share 
+-- Added custom options for sharing interface
+-- Added Facebook Page Url
+
+
 
 = 3.5.1 =
 * Added shortcode support
@@ -258,3 +275,18 @@ Simplified Social Sharing plugin is available only in english at this time. Plea
 
 = 3.5.1 =
 * Added shortcode support
+
+= 4.0 =
+* Added Advance Setting options
+-- Added desired email message
+-- Added desired email subject
+-- Added email content read only
+-- Added short URL option during sharing
+-- Added Facebook App ID
+-- Added Total Share to display the total share count on your website
+-- Added open all providers in a single window
+-- Added Custom Popup Window Size
+-- Added desired Twitter handle to mention during a Twitter share
+-- Added desired Twitter hash tags to be used during a Twitter share 
+-- Added custom options for sharing interface
+-- Added Facebook Page Url

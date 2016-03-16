@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>Using REST API in SSIS to Extract Top 100 User Tweets | select SIFISO</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="" />
+<!--[if lt IE 9]>
+<script src="http://blogs.selectsifiso.com/wp-content/themes/iconic-one/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+
+<!-- BEGIN Metadata added by the Add-Meta-Tags WordPress plugin -->
+<meta name="robots" content="index,follow,ssis,c#,business intelligence,package" />
+<meta name="description" content="Abstract The growing popularity of the use of social networks by businesses indicate a possible change in ETL requirements. Part of this change is that developers had to revise existing ETL model such that it caters for sourcing of data off the internet in addition to the traditional flat files or..." />
+<meta name="keywords" content="api, data flow task, http connection, oledb connection, script component, .net framework, .net framework 3.5, c#, c# programming language, data flow task, destination component, dynamic ssis package, http connection manager, ole db, oledb destination, rest api, script component, script component source, sql server integration services, ssis, ssis 2012, tweets, twitter" />
+<!-- END Metadata added by the Add-Meta-Tags WordPress plugin -->
+
+    <!-- PVC Template -->
+    <script type="text/template" id="pvc-stats-view-template">
+	<% if ( total_view > 0 ) { %>
+		<%= total_view %> <%= total_view > 1 ? "total views" : "total view" %>,
+		<% if ( today_view > 0 ) { %>
+			<%= today_view %> <%= today_view > 1 ? "views today" : "view today" %>
+		<% } else { %>
+		no views today		<% } %>
+	<% } else { %>
+	No views yet	<% } %>
+	</script>
+    <link rel="alternate" type="application/rss+xml" title="select SIFISO &raquo; Feed" href="http://blogs.selectsifiso.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="select SIFISO &raquo; Comments Feed" href="http://blogs.selectsifiso.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="select SIFISO &raquo; Using REST API in SSIS to Extract Top 100 User Tweets Comments Feed" href="http://blogs.selectsifiso.com/using-rest-api-in-ssis-to-extract-top-100-user-tweets/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/blogs.selectsifiso.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=06820f499ad3078ba51bb8a3026295a9"}};
+			!function(a,b,c){function d(a){var c,d=b.createElement("canvas"),e=d.getContext&&d.getContext("2d"),f=String.fromCharCode;return e&&e.fillText?(e.textBaseline="top",e.font="600 32px Arial","flag"===a?(e.fillText(f(55356,56806,55356,56826),0,0),d.toDataURL().length>3e3):"diversity"===a?(e.fillText(f(55356,57221),0,0),c=e.getImageData(16,16,1,1).data.toString(),e.fillText(f(55356,57221,55356,57343),0,0),c!==e.getImageData(16,16,1,1).data.toString()):("simple"===a?e.fillText(f(55357,56835),0,0):e.fillText(f(55356,57135),0,0),0!==e.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag"),unicode8:d("unicode8"),diversity:d("diversity")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag&&c.supports.unicode8&&c.supports.diversity||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='validate-engine-css-css'  href='http://blogs.selectsifiso.com/wp-content/plugins/wysija-newsletters/css/validationEngine.jquery.css?ver=06820f499ad3078ba51bb8a3026295a9' type='text/css' media='all' />
+<link rel='stylesheet' id='oss-social-sharing-front-css'  href='http://blogs.selectsifiso.com/wp-content/plugins/simplified-social-share/oss-social-sharing/assets/css/oss-social-sharing-front.css?ver=06820f499ad3078ba51bb8a3026295a9' type='text/css' media='all' />
+<link rel='stylesheet' id='oss-share-widget-style-css'  href='https://sharecdn.social9.com/v2/css/os-share-widget-style.css?ver=06820f499ad3078ba51bb8a3026295a9' type='text/css' media='all' />
+<link rel='stylesheet' id='cptch_stylesheet-css'  href='http://blogs.selectsifiso.com/wp-content/plugins/captcha/css/style.css?ver=06820f499ad3078ba51bb8a3026295a9' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css'  href='http://blogs.selectsifiso.com/wp-includes/css/dashicons.min.css?ver=06820f499ad3078ba51bb8a3026295a9' type='text/css' media='all' />
+<link rel='stylesheet' id='cptch_desktop_style-css'  href='http://blogs.selectsifiso.com/wp-content/plugins/captcha/css/desktop_style.css?ver=06820f499ad3078ba51bb8a3026295a9' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='http://blogs.selectsifiso.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=06820f499ad3078ba51bb8a3026295a9' type='text/css' media='all' />
+<link rel='stylesheet' id='a3-pvc-style-css'  href='http://blogs.selectsifiso.com/wp-content/plugins/page-views-count/assets/css/style.min.css?ver=06820f499ad3078ba51bb8a3026295a9' type='text/css' media='all' />
+<link rel='stylesheet' id='themonic-fonts-css'  href='http://fonts.googleapis.com/css?family=Ubuntu:400,700&#038;subset=latin,latin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='themonic-style-css'  href='http://blogs.selectsifiso.com/wp-content/themes/iconic-one/style.css?ver=06820f499ad3078ba51bb8a3026295a9' type='text/css' media='all' />
+<link rel='stylesheet' id='custom-style-css'  href='http://blogs.selectsifiso.com/wp-content/themes/iconic-one/custom.css?ver=06820f499ad3078ba51bb8a3026295a9' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='themonic-ie-css'  href='http://blogs.selectsifiso.com/wp-content/themes/iconic-one/css/ie.css?ver=06820f499ad3078ba51bb8a3026295a9' type='text/css' media='all' />
+<![endif]-->
+<link rel='stylesheet' id='tablepress-default-css'  href='http://blogs.selectsifiso.com/wp-content/plugins/tablepress/css/default.min.css?ver=06820f499ad3078ba51bb8a3026295a9' type='text/css' media='all' />
+<link rel='stylesheet' id='counterize_stylesheet-css'  href='http://blogs.selectsifiso.com/wp-content/plugins/counterize/counterize.css.php?ver=06820f499ad3078ba51bb8a3026295a9' type='text/css' media='all' />
+<script type='text/javascript' src='http://blogs.selectsifiso.com/wp-includes/js/jquery/jquery.js?ver=06820f499ad3078ba51bb8a3026295a9'></script>
+<script type='text/javascript' src='http://blogs.selectsifiso.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=06820f499ad3078ba51bb8a3026295a9'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var cptch_vars = {"nonce":"bd324e9ed7","ajaxurl":"http:\/\/blogs.selectsifiso.com\/wp-admin\/admin-ajax.php","enlarge":"0"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://blogs.selectsifiso.com/wp-content/plugins/captcha/js/front_end_script.js?ver=06820f499ad3078ba51bb8a3026295a9'></script>
+<script type='text/javascript' src='http://d1n0x3qji82z53.cloudfront.net/src-min-noconflict/ace.js?ver=06820f499ad3078ba51bb8a3026295a9'></script>
+<script type='text/javascript' src='http://blogs.selectsifiso.com/wp-includes/js/underscore.min.js?ver=06820f499ad3078ba51bb8a3026295a9'></script>
+<script type='text/javascript' src='http://blogs.selectsifiso.com/wp-includes/js/backbone.min.js?ver=06820f499ad3078ba51bb8a3026295a9'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var vars = {"api_url":"http:\/\/blogs.selectsifiso.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://blogs.selectsifiso.com/wp-content/plugins/page-views-count/assets/js/pvc.backbone.min.js?ver=06820f499ad3078ba51bb8a3026295a9'></script>
+<script type='text/javascript' src='http://blogs.selectsifiso.com/wp-content/plugins/counterize/counterize.js.php?ver=06820f499ad3078ba51bb8a3026295a9'></script>
+<link rel='https://api.w.org/' href='http://blogs.selectsifiso.com/wp-json/' />
+<link rel='prev' title='Execute Process Task &#8211; Compress File Using 7-Zip' href='http://blogs.selectsifiso.com/execute-process-task-compress-file-using-7-zip/' />
+<link rel='next' title='Compress Dynamic Files Using 7-Zip in SSIS' href='http://blogs.selectsifiso.com/compress-dynamic-files-using-7-zip-in-ssis/' />
+
+<link rel="canonical" href="http://blogs.selectsifiso.com/using-rest-api-in-ssis-to-extract-top-100-user-tweets/" />
+<link rel='shortlink' href='http://blogs.selectsifiso.com/?p=578' />
+<link rel="alternate" type="application/json+oembed" href="http://blogs.selectsifiso.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fblogs.selectsifiso.com%2Fusing-rest-api-in-ssis-to-extract-top-100-user-tweets%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://blogs.selectsifiso.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fblogs.selectsifiso.com%2Fusing-rest-api-in-ssis-to-extract-top-100-user-tweets%2F&#038;format=xml" />
+<meta property="og:locale" content="en_US" />
+<link rel="publisher" href="https://plus.google.com/u/1/103041474356156114889" />
+<meta name="google-site-verification" content="4GM7tP12ESZ2vVeffPTZGhIJ6Z1KrA44j-EpxBbzk5Q" />
+<meta name="msvalidate.01" content="79A618AD90CC58A6052A24AA79F83725" />
+<meta name="alexaVerifyID" content="B8h6vtsLdGOfpu2c9ARG5Qfcc78" />
+<meta name="yandex-verification" content="69149779cf0fd27c" />
+<meta name="p:domain_verify" content="" />
+<meta property="og:site_name" content="select SIFISO" />
+<meta property="article:publisher" content="https://www.facebook.com/pages/select-SIFISO/652751321424822?ref=bookmarks" />
+<meta property="article:author" content="https://www.facebook.com/pages/select-SIFISO/652751321424822?ref=bookmarks" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:site" content="@@selectsifiso"/>
+<meta name="twitter:domain" content="@selectsifiso"/>
+<meta name="twitter:creator" content="@@selectsifiso"/>    
+<meta name="robots" content="index, follow" />
+<meta name="revisit-after" content="21 days" />
+<meta name="creator" content="Name,Designer,Email Address,or Company" />
+<meta name="publisher" content="Designer, Company or Website Name" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Using REST API in SSIS to Extract Top 100 User Tweets" />
+<meta property="og:description" content="Abstract The growing popularity of the use of social networks by businesses indicate a possible change in ETL requirements. Part of this change is that de" />
+<meta property="og:url" content="http://blogs.selectsifiso.com/using-rest-api-in-ssis-to-extract-top-100-user-tweets/" />
+<meta property="article:section" content="API"  />
+<meta property="article:published_time" content="2012-11-24 06:47:36"/>
+<meta property="article:modified_time" content="2013-02-13 11:13:47" />
+<meta property="og:updated_time" content="2013-02-13 11:13:47" />
+<meta property="og:image" content="" />
+<meta property="og:image" content="" />
+<meta name="twitter:image:src" content="" />
+<meta itemprop="name" content="Using REST API in SSIS to Extract Top 100 User Tweets">
+<meta itemprop="description" content="Abstract The growing popularity of the use of social networks by businesses indicate a possible change in ETL requirements. Part of this change is that de">
+<meta itemprop="image" content="" >
+<meta name="classification" content=".NET Framework, .NET Framework 3.5, C#, C# programming language, Data Flow Task, Destination Component, Dynamic SSIS Package, HTTP Connection Manager, OLE DB, OLEDB Destination, REST API, Script Component, Script Component Source, SQL Server Integration Services, SSIS, SSIS 2012, Tweets, Twitter" />
+<meta name="distribution" content="API" />
+<meta name="rating" content="API" />
+<style type="text/css">
+#author-bio-box {
+	width:632px;
+	background: #;
+	border: 1px solid #bbb;
+	box-shadow: 5px 5px 2px #888;
+	padding: 5px;
+}
+#author-bio-box img {
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 2px;
+}
+#author-bio-box .author-name {
+	font-weight: bold;
+	margin: 0px;
+	font-size: 14px;
+}
+#author-bio-box p {
+	font-size: 10px;
+	line-height: 14px;
+}
+#author-bio-box thead th {
+	border: 0;
+}
+#author-bio-box tbody {
+	border: 0;
+}
+.bio-spacer { min-height:44px; padding: 1px; display: block; clear: both; border:1px;}
+.bio-socials {
+	border-top:solid 1px;
+	border-bottom:none;
+	border-left:none;
+	border-right:none;
+	width: 628px;
+	height: 32px;
+	clear: both;
+}
+</style></head>
+<body class="single single-post postid-578 single-format-standard custom-font-enabled">
+<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header" role="banner">
+					
+		<div class="themonic-logo">
+        <a href="http://blogs.selectsifiso.com/" title="select SIFISO" rel="home"><img src="http://blogs.selectsifiso.com/wp-content/uploads/2015/09/selectSIFISOforBlogsNew.png" alt="select SIFISO"></a>
+		</div>
+		
+		<div class="socialmedia">
+							<a href="http://default_value" target="_blank"><img src="http://blogs.selectsifiso.com/wp-content/themes/iconic-one/img/twitter.png" alt="Follow us on Twitter"/></a> 
+											<a href="http://default_value" target="_blank"><img src="http://blogs.selectsifiso.com/wp-content/themes/iconic-one/img/facebook.png" alt="Follow us on Facebook"/></a>
+											<a href="http://default_value" rel="author" target="_blank"><img src="http://blogs.selectsifiso.com/wp-content/themes/iconic-one/img/gplus.png" alt="Follow us on Google Plus"/></a>
+									<a class="rss" href="https://www.linkedin.com/company/select-sifiso?trk=biz-companies-cym" target="_blank"><img src="http://blogs.selectsifiso.com/wp-content/uploads/2015/05/linkedin_321.png" alt="Connect with us on LinkedIn"/></a>			
+									<a class="rss" href="https://www.youtube.com/channel/UCjloZMqHJaRiXXlnt3y7ZKQ" target="_blank"><img src="http://blogs.selectsifiso.com/wp-content/uploads/2015/05/youtube_logo.png" alt="Tune into our YouTube channel"/></a>			
+									<a class="rss" href="http://default_value" target="_blank"><img src="http://blogs.selectsifiso.com/wp-content/themes/iconic-one/img/rss.png" alt="Follow us on rss"/></a>			
+						<div class="widget widget_search">
+				<form role="search" method="get" id="searchform" class="searchform" action="http://blogs.selectsifiso.com/">
+				<div>
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Search" />
+				</div>
+			</form>			</div>
+		</div>
+		
+
+		
+		<nav id="site-navigation" class="themonic-nav" role="navigation">
+			<a class="assistive-text" href="#content" title="Skip to content">Skip to content</a>
+			<ul id="menu-top" class="nav-menu"><li id="menu-item-11" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11"><a title="Homepage of select SIFISO Blogs" href="http://www.blogs.selectsifiso.com/">Home</a></li>
+<li id="menu-item-790" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-790"><a title="About select SIFISO Blogs" href="http://blogs.selectsifiso.com/about/">About</a></li>
+<li id="menu-item-793" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-793"><a title="Blog Posts Archive" href="http://blogs.selectsifiso.com/articles/">Articles</a></li>
+<li id="menu-item-741" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-741"><a title="Contributors to select SIFISO Blogs" href="http://blogs.selectsifiso.com/contributors/">Contributors</a></li>
+</ul>		</nav><!-- #site-navigation -->
+		<div class="clear"></div>
+	</header><!-- #masthead -->
+
+	<div id="main" class="wrapper">	<div id="primary" class="site-content">
+		<div id="content" role="main">
+
+			
+				
+	<article id="post-578" class="post-578 post type-post status-publish format-standard hentry category-api category-data-flow-task category-http-connection category-oledb-connection category-script-component tag-net-framework tag-net-framework-3-5 tag-c tag-c-programming-language tag-data-flow-task tag-destination-component tag-dynamic-ssis-package tag-http-connection-manager tag-ole-db tag-oledb-destination tag-rest-api tag-script-component tag-script-component-source tag-sql-server-integration-services tag-ssis tag-ssis-2012 tag-tweets tag-twitter">
+				<header class="entry-header">
+						<h1 class="entry-title">Using REST API in SSIS to Extract Top 100 User Tweets</h1>
+									
+	<div class="below-title-meta">
+		<div class="adt">
+		By        <span class="author">
+         <a href="http://blogs.selectsifiso.com/author/sifiso-ndlovu/" title="Posts by Sifiso Ndlovu" rel="author">Sifiso Ndlovu</a>        </span>
+         <span class="meta-sep">|</span> 
+         November 24, 2012 
+         </div>
+		 <div class="adt-comment">
+		 <a class="link-comments" href="http://blogs.selectsifiso.com/using-rest-api-in-ssis-to-extract-top-100-user-tweets/#comments">4 Comments</a> 
+         </div>       
+     </div><!-- below title meta end -->
+			
+						
+			</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<div  class="oss_horizontal_share oss_title_replace" data-share-titles="Using REST API in SSIS to Extract Top 100 User Tweets" data-share-description="Abstract
+The growing popularity of the use of social networks by businesses indicate a possible cha" data-share-imageurl=""  data-share-url="http://blogs.selectsifiso.com/using-rest-api-in-ssis-to-extract-top-100-user-tweets/"></div><p><strong>Abstract</strong></p>
+<p style="text-align: left;"><em>The growing popularity of the use of social networks by businesses indicate a possible change in ETL requirements. Part of this change is that developers had to revise existing ETL model such that it caters for sourcing of data off the internet in addition to the traditional <strong><a style="text-decoration: none;" href="http://msdn.microsoft.com/en-us/library/ms141716(v=sql.90).aspx">flat files or OLE/ODBC Connections</a></strong>. In this article, I will demonstrate extracting user tweets using <strong><a style="text-decoration: none;" href="https://dev.twitter.com/docs/api/1.1">Twitter&#8217;s REST API</a></strong> inside an <strong><a style="text-decoration: none;" href="http://msdn.microsoft.com/en-us/library/ms137602.aspx">HTTP Connection Manager</a></strong>.</em></p>
+<p><strong>Requirements</strong></p>
+<ul>
+<li><strong><em><a style="text-decoration: none;" href="http://msdn.microsoft.com/en-us/library/ms950416.aspx">Microsoft Visual Studio 2005 or later</a></em><em> </em></strong></li>
+<li><strong><em><a style="text-decoration: none;" href="http://www.microsoft.com/sqlserver/en/us/default.aspx">SQL Server 2005 or later</a></em></strong><em> </em></li>
+<li><strong><em><a style="text-decoration: none;" href="http://www.microsoft.com/en-za/download/details.aspx?id=21">Microsoft .NET Framework 3.5 or later</a></em></strong><em> </em></li>
+<li><strong><em><a style="text-decoration: none;" href="https://twitter.com/">Tweeter User Account that has posted at least 100 tweets</a></em></strong><em> </em></li>
+<li><strong><em><a style="text-decoration: none;">An Active Internet Connection</a></em></strong><em> </em></li>
+</ul>
+<p><strong>Article</strong></p>
+<p>Let&#8217;s begin by launching <em>Microsoft Visual Studio</em> and create a new Integration Services Project which is located under Business Intelligence Projects category. (If you are using <em>SQL Server 2012</em> or later, you will have to launch <em>SQL Server Data Tools</em> &#8211; SSDT).</p>
+<p>After you have assigned a project name, proceed to click and drag the <em>Data Flow Task</em> (DFT) into <em>Control Flow</em> pane from toolbox (<em>SSIS Toolbox</em> in SSDT). I decided to name my DFT as <em>DFT &#8211; Retrieve Tweets</em></p>
+<p>Add the following two connections:</p>
+<ul>
+<li><em>HTTP Connection Manager</em></li>
+<li><em>OLE DB Connection</em></li>
+</ul>
+<p>I have configured my HTTP Connection as follows:</p>
+<ul>
+<li><em>Server URL = http://api.twitter.com/1/statuses/user_timeline.rss?screen_name=mafiswana&amp;count=100</em></li>
+</ul>
+<p>Note that you can replace the value of parameter <em>screen_name</em> with your twitter user account instead of mafiswana.</p>
+<p>I have configured my OLE DB Connection as follows:</p>
+<ul>
+<li><em>Server = Localhost</em></li>
+<li><em>Database Name = selectSifiso</em></li>
+</ul>
+<p>So far the package should look as below:</p>
+<p><a href="http://www.blogs.selectsifiso.com/wp-content/uploads/pull_tweets.png"><img class="alignnone size-full wp-image-592" title="pull_tweets" alt="" src="http://www.blogs.selectsifiso.com/wp-content/uploads/pull_tweets.png" width="516" height="484" srcset="http://blogs.selectsifiso.com/wp-content/uploads/pull_tweets-300x281.png 300w, http://blogs.selectsifiso.com/wp-content/uploads/pull_tweets.png 516w" sizes="(max-width: 516px) 100vw, 516px" /></a></p>
+<p>Let&#8217;s go back and edit the <em>Data Flow Task</em>.</p>
+<p>Add a Script Component (SC) which is located under <em>Data Flow Transformations</em>.</p>
+<p>Select Source as a script component type.</p>
+<p>Edit the script SC and click on the <em>Connection Managers</em> tab on the left of the <em>Script Transformation Editor</em>. Under the Connection Manager column click to select the <em>HTTP Connection Manager</em> (it should be the only connection available).</p>
+<p>Let&#8217;s move on to the <em>Inputs and Outputs</em> tab in the <em>Script Transformation Editor</em>. In here we will configure the source output columns.</p>
+<p>Collapse <em>Output 0</em> node and click on <em>Output Columns</em>. Click <em>Add Column</em> and the following columns with properties configured as below:</p>
+<ul>
+<li><em>Name = sS_Tweets; DataType  = string [DT_STR]; Length = 200</em></li>
+<li><em>Name = sS_TwitterDate; DataType  = string [DT_STR]; Length = 200</em></li>
+</ul>
+<p>Now let&#8217;s move on to the Script tab in the Script Transformation Editor.</p>
+<p>In <em>Object Explorer</em>, right click on <em>References</em> and Click <em>Add</em>. Under <em>.NET</em> tab add the following references:</p>
+<ul>
+<li><em>System.ServiceModel</em></li>
+<li><em>System.ServiceModel.Web</em></li>
+</ul>
+<p>If one or none of above references are not available for selection, please ensure that you have <em>.NET 3.5 Framework</em> selected. You can do that by clicking on <em>Properties &#8211; Application &#8211; Target Framework &#8211; .NET Framework 3.5</em></p>
+<p>In addition to the already referenced namespaces, add the following namespaces:</p>
+<ul>
+<li><em>using System.Xml;</em></li>
+<li><em>using System.ServiceModel.Syndication;</em></li>
+</ul>
+<p>Declare the following variables in the <em>public class ScriptMain : UserComponent</em></p>
+<ul>
+<li><em>private SyndicationFeed sS_Tweets = null;</em></li>
+<li><em>private XmlReader sS_XmlReader = null;</em></li>
+</ul>
+<p>Under the PreExecute() method, add the following:</p>
+<ul>
+<li><em>sS_XmlReader = XmlReader.Create(Connections.Connection.ConnectionString);</em></li>
+<li><em>sS_Tweets = SyndicationFeed.Load(sS_XmlReader);</em></li>
+</ul>
+<p>Under the <em>public override void CreateNewOutputRows()</em> method, add the following:<br />
+<em>if (sS_Tweets != null)</em></p>
+<p><em>{</em></p>
+<p><em>           foreach (var item in sS_Tweets.Items)</em></p>
+<p><em>                     {</em></p>
+<p><em>                             Output0Buffer.AddRow();</em></p>
+<p><em>                             Output0Buffer.sS_Tweets= item.Title.Text;</em></p>
+<p><em>                             Output0Buffer.sS_TwitterDate= item.PublishDate.ToString();</em></p>
+<p><em>                      }</em></p>
+<p><em>             Output0Buffer.SetEndOfRowset();</em></p>
+<p><em>}</em></p>
+<p>The complete script code can be found here &#8211; <a href="http://www.blogs.selectsifiso.com/wp-content/uploads/tweets_ssis.zip">tweets_ssis</a></p>
+<p>Now that we have configured the <em>Script Component</em> as Source let us add an <em>OLE DB Destination Component</em> (ODD) and connect Script Component to the Destination Component.</p>
+<p>I have configured the <em>OLE DB connection manage</em>r of the ODD to use the <em>selectSifiso</em> connection. The data access mode is a <em>Table or view &#8211; fast load</em>. Under <em>Name of the table or the view</em>, click <em>New</em> and create and output table. Click on <em>Mappings</em> tab and ensure that the source-to-destination mappings are correct.</p>
+<p>Your complete package data flow task should look as follows:</p>
+<p><a href="http://www.blogs.selectsifiso.com/wp-content/uploads/tweets_dft.png"><img class="alignnone size-full wp-image-601" title="tweets_dft" alt="" src="http://www.blogs.selectsifiso.com/wp-content/uploads/tweets_dft.png" width="467" height="489" srcset="http://blogs.selectsifiso.com/wp-content/uploads/tweets_dft-286x300.png 286w, http://blogs.selectsifiso.com/wp-content/uploads/tweets_dft.png 467w" sizes="(max-width: 467px) 100vw, 467px" /></a></p>
+<p><strong>Conclusion</strong></p>
+<p>All left to do is to run the package and your tweets will be extracted and stored in SQL Server.</p>
+<p>It&#8217;s that simple.</p>
+<p>Till next time folks, cheers.</p>
+<p><em>Sifiso</em></p>
+<p><a href="http://www.codeproject.com" style="display:none" rel="tag">CodeProject</a><br />
+&nbsp;
+<div class="pvc_clear"></div>
+<p id="pvc_stats_578" class="pvc_stats pvc_load_by_ajax_update" element-id="578"><img src="http://blogs.selectsifiso.com/wp-content/plugins/page-views-count/ajax-loader.gif" border=0 /></p>
+<div class="pvc_clear"></div>
+<div  class="oss_horizontal_share oss_title_replace" data-share-titles="Using REST API in SSIS to Extract Top 100 User Tweets" data-share-description="Abstract
+The growing popularity of the use of social networks by businesses indicate a possible cha" data-share-imageurl="" data-share-url="http://blogs.selectsifiso.com/using-rest-api-in-ssis-to-extract-top-100-user-tweets/" ></div><div id="author-bio-box"><img src="http://blogs.selectsifiso.com/wp-content/uploads/sw_ndlovu-144x150.png" width="77" height="80" alt="" class="avatar avatar-80 wp-user-avatar wp-user-avatar-80 photo avatar-default" /><span class="author-name"> Sifiso Ndlovu (<a href="http://blogs.selectsifiso.com/author/sifiso-ndlovu/">45 Posts</a>)</span><p></p><div class="bio-socials"><a href="http://www.blogs.selectsifiso.com" target="_blank"><img src="http://blogs.selectsifiso.com/wp-content/plugins/social-autho-bio/images/Wordpress.png"></a></div></div><br/>					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+		<span>Category: <a href="http://blogs.selectsifiso.com/category/api/" rel="category tag">API</a> <a href="http://blogs.selectsifiso.com/category/data-flow-task/" rel="category tag">Data Flow Task</a> <a href="http://blogs.selectsifiso.com/category/http-connection/" rel="category tag">HTTP Connection</a> <a href="http://blogs.selectsifiso.com/category/oledb-connection/" rel="category tag">OLEDB Connection</a> <a href="http://blogs.selectsifiso.com/category/script-component/" rel="category tag">Script Component</a></span> <span>Tags: <a href="http://blogs.selectsifiso.com/tag/net-framework/" rel="tag">.NET Framework</a>, <a href="http://blogs.selectsifiso.com/tag/net-framework-3-5/" rel="tag">.NET Framework 3.5</a>, <a href="http://blogs.selectsifiso.com/tag/c/" rel="tag">C#</a>, <a href="http://blogs.selectsifiso.com/tag/c-programming-language/" rel="tag">C# programming language</a>, <a href="http://blogs.selectsifiso.com/tag/data-flow-task/" rel="tag">Data Flow Task</a>, <a href="http://blogs.selectsifiso.com/tag/destination-component/" rel="tag">Destination Component</a>, <a href="http://blogs.selectsifiso.com/tag/dynamic-ssis-package/" rel="tag">Dynamic SSIS Package</a>, <a href="http://blogs.selectsifiso.com/tag/http-connection-manager/" rel="tag">HTTP Connection Manager</a>, <a href="http://blogs.selectsifiso.com/tag/ole-db/" rel="tag">OLE DB</a>, <a href="http://blogs.selectsifiso.com/tag/oledb-destination/" rel="tag">OLEDB Destination</a>, <a href="http://blogs.selectsifiso.com/tag/rest-api/" rel="tag">REST API</a>, <a href="http://blogs.selectsifiso.com/tag/script-component/" rel="tag">Script Component</a>, <a href="http://blogs.selectsifiso.com/tag/script-component-source/" rel="tag">Script Component Source</a>, <a href="http://blogs.selectsifiso.com/tag/sql-server-integration-services/" rel="tag">SQL Server Integration Services</a>, <a href="http://blogs.selectsifiso.com/tag/ssis/" rel="tag">SSIS</a>, <a href="http://blogs.selectsifiso.com/tag/ssis-2012/" rel="tag">SSIS 2012</a>, <a href="http://blogs.selectsifiso.com/tag/tweets/" rel="tag">Tweets</a>, <a href="http://blogs.selectsifiso.com/tag/twitter/" rel="tag">Twitter</a></span> 
+           						</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+				<nav class="nav-single">
+					<div class="assistive-text">Post navigation</div>
+					<span class="nav-previous"><a href="http://blogs.selectsifiso.com/execute-process-task-compress-file-using-7-zip/" rel="prev"><span class="meta-nav">&larr;</span> Execute Process Task &#8211; Compress File Using 7-Zip</a></span>
+					<span class="nav-next"><a href="http://blogs.selectsifiso.com/compress-dynamic-files-using-7-zip-in-ssis/" rel="next">Compress Dynamic Files Using 7-Zip in SSIS <span class="meta-nav">&rarr;</span></a></span>
+				</nav><!-- .nav-single -->
+
+				
+<div id="comments" class="comments-area">
+
+	
+			<h2 class="comments-title">
+			4 thoughts on &ldquo;<span>Using REST API in SSIS to Extract Top 100 User Tweets</span>&rdquo;		</h2>
+
+		<ol class="commentlist">
+				<li class="comment even thread-even depth-1" id="li-comment-47092">
+		<article id="comment-47092" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img src="http://blogs.selectsifiso.com/wp-content/uploads/sw_ndlovu-144x150.png" width="30" height="30" alt="" class="avatar avatar-30wp-user-avatar wp-user-avatar-30 alignnone photo avatar-default" /><cite class="fn">SQL Daddy </cite><a href="http://blogs.selectsifiso.com/using-rest-api-in-ssis-to-extract-top-100-user-tweets/#comment-47092"><time datetime="2015-07-23T19:02:52+00:00">July 23, 2015</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Thank you so much for taking time.. This was very helpful for ssis user like me .. the only problem is coding aspect. Do you know any other approach which doesn&#8217;t require coding.. I found this <a href="http://zappysys.com/products/ssis-powerpack/ssis-rest-api-web-service-task/" rel="nofollow">http://zappysys.com/products/ssis-powerpack/ssis-rest-api-web-service-task/</a> which is 3rd party but I am looking something open source</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+				<a rel='nofollow' class='comment-reply-link' href='http://blogs.selectsifiso.com/using-rest-api-in-ssis-to-extract-top-100-user-tweets/?replytocom=47092#respond' onclick='return addComment.moveForm( "comment-47092", "47092", "respond", "578" )' aria-label='Reply to SQL Daddy'>Reply</a> <span>&darr;</span>			</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-47085">
+		<article id="comment-47085" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img src="http://blogs.selectsifiso.com/wp-content/uploads/sw_ndlovu-144x150.png" width="30" height="30" alt="" class="avatar avatar-30wp-user-avatar wp-user-avatar-30 alignnone photo avatar-default" /><cite class="fn">Anbu </cite><a href="http://blogs.selectsifiso.com/using-rest-api-in-ssis-to-extract-top-100-user-tweets/#comment-47085"><time datetime="2015-06-03T12:16:36+00:00">June 3, 2015</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hi, </p>
+<p>Many thanks for posting this blog, it is very useful, i tried to replicate the same but for a reatime example at work. I am a newbie when it comes to scripting, i managed to add the below script to consume data from an api, for some reason the output side is not working. can you please shed you wisdom on this when you got a min, Many thanks</p>
+<p>Anbu</p>
+<p>/* Microsoft SQL Server Integration Services Script Component<br />
+*  Write scripts using Microsoft Visual C# 2008.<br />
+*  ScriptMain is the entry point class of the script.*/</p>
+<p>using System;<br />
+using System.Data;<br />
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;<br />
+using Microsoft.SqlServer.Dts.Runtime.Wrapper;<br />
+using System.Xml;<br />
+using System.ServiceModel.Syndication;</p>
+<p>[Microsoft.SqlServer.Dts.Pipeline.SSISScriptComponentEntryPointAttribute]<br />
+public class ScriptMain : UserComponent<br />
+{<br />
+    private SyndicationFeed ContactId = null;<br />
+    private XmlReader XmlReader = null;<br />
+    public override void PreExecute()<br />
+    {<br />
+        base.PreExecute();<br />
+        XmlReader = XmlReader.Create(Connections.Connection.ConnectionString);<br />
+        ContactId = SyndicationFeed.Load(XmlReader);</p>
+<p>        /*<br />
+          Add your code here for preprocessing or remove if not needed<br />
+        */<br />
+    }</p>
+<p>    public override void PostExecute()<br />
+    {<br />
+        base.PostExecute();<br />
+        /*<br />
+          Add your code here for postprocessing or remove if not needed<br />
+          You can set read/write variables here, for example:<br />
+          Variables.MyIntVar = 100<br />
+        */<br />
+    }</p>
+<p>    public override void CreateNewOutputRows()<br />
+    {</p>
+<p>        if (ContactId != null)<br />
+        {<br />
+            foreach (var item in ContactId.Items)<br />
+            {<br />
+                Output0Buffer.AddRow();<br />
+                Output0Buffer.ContactId = item.ContactId.int32;<br />
+                Output0Buffer.Email = item.Email.ToString();<br />
+                Output0Buffer.NumOpens = item.NumOpens.int32;<br />
+                Output0Buffer.NumPageViews = item.NumPageViews.int32;<br />
+                Output0Buffer.NumClicks = item.NumClicks.int32;<br />
+                Output0Buffer.NumForwards = item.NumForwards.int32;<br />
+                Output0Buffer.NumEstimatedForwards = item.NumEstimatedForwards.int32;<br />
+                Output0Buffer.NumReplies = item.NumReplies.int32;<br />
+                Output0Buffer.DateSent = item.DateSent.date;<br />
+                Output0Buffer.DateFirstOpened = item.DateFirstOpened.date;<br />
+                Output0Buffer.DateLastOpened = item.DateLastOpened.date;<br />
+                Output0Buffer.FirstOpenIp = item.FirstOpenIp.ToString();<br />
+                Output0Buffer.Unsubscribed = item.Unsubscribed.bol;<br />
+                Output0Buffer.SoftBounced = item.SoftBounced.bol;<br />
+                Output0Buffer.HardBounced = item.HardBounced.bol;<br />
+            }<br />
+            Output0Buffer.SetEndOfRowset();<br />
+        }<br />
+        /*<br />
+          Add rows by calling the AddRow method on the member variable named &#8220;Buffer&#8221;.<br />
+          For example, call MyOutputBuffer.AddRow() if your output was named &#8220;MyOutput&#8221;.<br />
+        */<br />
+    }</p>
+<p>}</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+				<a rel='nofollow' class='comment-reply-link' href='http://blogs.selectsifiso.com/using-rest-api-in-ssis-to-extract-top-100-user-tweets/?replytocom=47085#respond' onclick='return addComment.moveForm( "comment-47085", "47085", "respond", "578" )' aria-label='Reply to Anbu'>Reply</a> <span>&darr;</span>			</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-18503">
+		<article id="comment-18503" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img src="http://blogs.selectsifiso.com/wp-content/uploads/sw_ndlovu-144x150.png" width="30" height="30" alt="" class="avatar avatar-30wp-user-avatar wp-user-avatar-30 alignnone photo avatar-default" /><cite class="fn"><a href='http://www.akademisains.gov.my/index.php?Itemid=0&#038;option=com_fireboard&#038;func=showcat&#038;Go=Go&#038;catid=0' rel='external nofollow' class='url'>Leonard</a> </cite><a href="http://blogs.selectsifiso.com/using-rest-api-in-ssis-to-extract-top-100-user-tweets/#comment-18503"><time datetime="2013-05-15T02:52:18+00:00">May 15, 2013</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I am extremely impressed along with your writing abilities as well as with<br />
+the layout on your weblog. Is that this a paid topic<br />
+or did you customize it yourself? Either<br />
+way stay up the nice quality writing, it is rare to look a great weblog like this one today.</p>
+<p>.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+				<a rel='nofollow' class='comment-reply-link' href='http://blogs.selectsifiso.com/using-rest-api-in-ssis-to-extract-top-100-user-tweets/?replytocom=18503#respond' onclick='return addComment.moveForm( "comment-18503", "18503", "respond", "578" )' aria-label='Reply to Leonard'>Reply</a> <span>&darr;</span>			</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-18470">
+		<article id="comment-18470" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img src="http://blogs.selectsifiso.com/wp-content/uploads/sw_ndlovu-144x150.png" width="30" height="30" alt="" class="avatar avatar-30wp-user-avatar wp-user-avatar-30 alignnone photo avatar-default" /><cite class="fn">O Ruiz </cite><a href="http://blogs.selectsifiso.com/using-rest-api-in-ssis-to-extract-top-100-user-tweets/#comment-18470"><time datetime="2013-05-14T15:50:30+00:00">May 14, 2013</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I followed the steps and when I run the package, I get this message:</p>
+<p>[Script Component [2]] Error: System.Xml.XmlException: The element with name &#8216;html&#8217; and namespace &#8221; is not an allowed feed format.<br />
+   at Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost.HandleUserException(Exception e)<br />
+   at Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost.PreExecute()<br />
+   at Microsoft.SqlServer.Dts.Pipeline.ManagedComponentHost.HostPreExecute(IDTSManagedComponentWrapper100 wrapper)</p>
+<p>Any ideas?</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+				<a rel='nofollow' class='comment-reply-link' href='http://blogs.selectsifiso.com/using-rest-api-in-ssis-to-extract-top-100-user-tweets/?replytocom=18470#respond' onclick='return addComment.moveForm( "comment-18470", "18470", "respond", "578" )' aria-label='Reply to O Ruiz'>Reply</a> <span>&darr;</span>			</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+		</ol><!-- .commentlist -->
+
+		
+		
+	
+					<div id="respond" class="comment-respond">
+			<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/using-rest-api-in-ssis-to-extract-top-100-user-tweets/#respond" style="display:none;">Cancel reply</a></small></h3>				<form action="http://blogs.selectsifiso.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+					<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8"  aria-required="true" required="required"></textarea></p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" aria-required='true' required='required' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" aria-describedby="email-notes" aria-required='true' required='required' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" /></p>
+<p class="cptch_block"><br /><span class="cptch_wrap">
+				<label class="cptch_label" for="cptch_input">
+					<span class="cptch_span"><input id="cptch_input" class="cptch_input" type="text" autocomplete="off" name="cptch_number" value="" maxlength="2" size="2" aria-required="true" required="required" style="margin-bottom:0;display:inline;font-size: 12px;width: 40px;" /></span>
+					<span class="cptch_span">&nbsp;&#43;&nbsp;</span>
+					<span class="cptch_span"><img class="cptch_img " src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAMAAADDpiTIAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABhQTFRFiIiI////AAAAYGBguLi49fX13d3dMjIyhQMs8AAABWFJREFUeNrs3cFu2zAQRVGNRUr//8dFjRTownZkpQaqeeeuk4XMEw5pOMlyU3SLlwAAASAABIAAEAACQAAIAAEgAASAABAAAkAACAABIAAEgAAQAAJAAAgAASAABIAAEAACQAAIAAEgAASAABAAAkAACAABIAAEgAAQAAJAAAgAASAABIAAEAACQAAIAAEgAASAABAAAkAACAABIAAEgAAQAAJAAAgAASAABIAAEAACQAAIAAEgAASAAADASwCAABAAAkAACAABIAAEgAAQAAJAAAgAASAABIAAEAACQAAIAAEgAASAABAAAkAACAABIAAEgAAQAAJAAAgAASAABIAAEAACQAAIAAEgAASAABAAAkAACAABIAAEgAAQAALgY+2zDjQB6PrTcGj9AejaOLb+ADTd/kcVALmtWwGQvP6zAEge/1UABI//rQCIHv8TALd/ANz+ATD+AXD7B8D4B8DtHwDjH4De439OAIIBLGeXH4Dk8Q9A+PgHoMn4LwCCASxVAAQDGAVAMICfjX8Awsc/AOHjH4Dw8Q9A+PgH4MrjvwqAYABLAZAMYCsAggGs/3D9Aci8/QNg/ANwzdvfKACCAexbARAMYJkFQDCAD6w/AMHjH4Dc2z8AF9z+JwDBAMZnlh+A5PEPwGXWfxYAwQCWKgCCAYwCIBjAvk0AggGc+7MvAPS5/Z9Y/20BIHn8z30FoMn4P7P+236zA/QY/+f+6td+AyB3/P/++Qcg+PZ/X38AUsf/1/oD0KDtB+sPQIct4Mz6nxkfAPyvd4Dz6w9Aj4d5c/3HXwdI/zQq7x4wTn4nAD1uAssNgH5vBR/eyedyA6AfgMMHwbmev0MCcP2D4J/rPwD9Pg8w3jz+fQFwC2jT9t7xzw7Qrf3N8Q9At9b3xv89nwlMOQiOx98ynQEyDoLPntcOEHEQfDj+AWjY43cEH4//e34xJOAgOF58PQD9D4IvHxWA7gfB5+P/+cgAoM9B8MX4P/LmEQAXPwiOU4dGALocBL99SjtA54Pg6/EPQOPGgfEPQOe278f/07cNAGhxEDz2gAC0FXDwvOgWkJ0dAAAAAAAgtgUAAABIBuAWYAcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAASAABAAAkAACAABIAAEgAAQAAJAAAgAASAABIAAEAACQAAIAAEgAASAABAAAkAACAABIAAEgAAQAAJAAAgAASAABIAAEAAACAABIAAEgAAQAAJAAAgAASAABIAAEAACQAAIAAEgAASAABAAAkAACAABIAAEgAAQAAJAAAgAASAABIAAEAACQAAIAAEgAASAABAAAkAACAABIAAEgAAQAAJAAAgAASAABIAAEAACQAAIAAEgAASAABAAAkAACAABIAAEgAAQAAJAAAgAASAABIAAAEAACAABIAAEgAAQAAJAAAgAASAABIAAEAACQAAIAAGgBv0SYACFudcj/Eb08AAAAABJRU5ErkJggg==" /></span>
+					<span class="cptch_span">&nbsp;=&nbsp;</span>
+					<span class="cptch_span"><img class="cptch_img " src="data: image/png;base64,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" /></span>
+					<input type="hidden" name="cptch_result" value="R+o=" />
+					<input type="hidden" name="cptch_time" value="1458117304" />
+					<input type="hidden" value="Version: 4.1.8" />
+				</label><span class="cptch_reload_button_wrap hide-if-no-js">
+					<noscript>
+						<style type="text/css">
+							.hide-if-no-js {
+								display: none !important;
+							}
+						</style>
+					</noscript>
+					<span class="cptch_reload_button dashicons dashicons-update"></span>
+				</span></span></p><p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment" /> <input type='hidden' name='comment_post_ID' value='578' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="3659898045" /></p><p style="display:none;"><input type="text" name="nxts" value="1458117305" /><input type="text" name="nxts_signed" value="232a27ff394e4927b01eecfc3d2d3703cd8c65b7" /><input type="text" name="07a8bb65771366f8ab4ec6f" value="3efe6dac701706d" /><input type="text" name="3cc709bd9e143" value="" /></p><p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="51"/></p>				</form>
+					</div><!-- #respond -->
+		
+</div><!-- #comments .comments-area -->
+			
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+
+		
+	 		<div id="secondary" class="widget-area" role="complementary">
+			<div class="widget widget_search">
+				<form role="search" method="get" id="searchform" class="searchform" action="http://blogs.selectsifiso.com/">
+				<div>
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Search" />
+				</div>
+			</form>			</div>
+			<div class="widget widget_recent_entries">
+				<p class="widget-title">Recent Posts</p>
+				<ul>	<li><a href='http://blogs.selectsifiso.com/duplicate-mysql-table-using-phpmyadmin/'>Duplicate MySQL Table Using phpMyAdmin</a></li>
+	<li><a href='http://blogs.selectsifiso.com/wheres-my-team-explorer-2015/'>Where&#8217;s my Team Explorer 2015?</a></li>
+	<li><a href='http://blogs.selectsifiso.com/sql-server-database-source-control-using-vso-git/'>SQL Server Database Source Control using VSO Git</a></li>
+	<li><a href='http://blogs.selectsifiso.com/dimensional-modelling-in-lucidchart-vs-visio-part-1/'>Dimensional Modelling in Lucidchart vs Visio: Part 1</a></li>
+	<li><a href='http://blogs.selectsifiso.com/execute-all-packages-within-ssis-project-catalog/'>Execute All Packages Within SSIS Project Catalog</a></li>
+</ul>
+			</div>
+			<div class="widget widget_pages">
+			<p class="widget-title">Pages</p>
+          <ul><li class="page_item page-item-776"><a href="http://blogs.selectsifiso.com/about/">About</a></li>
+<li class="page_item page-item-791"><a href="http://blogs.selectsifiso.com/articles/">Articles</a></li>
+<li class="page_item page-item-947"><a href="http://blogs.selectsifiso.com/codeplex/">CodePlex</a></li>
+<li class="page_item page-item-19"><a href="http://blogs.selectsifiso.com/contact/">Contact</a></li>
+<li class="page_item page-item-740"><a href="http://blogs.selectsifiso.com/contributors/">Contributors</a></li>
+<li class="page_item page-item-882"><a href="http://blogs.selectsifiso.com/disclaimer/">Disclaimer</a></li>
+<li class="page_item page-item-868"><a href="http://blogs.selectsifiso.com/events/">Events</a></li>
+<li class="page_item page-item-938"><a href="http://blogs.selectsifiso.com/github/">GitHub</a></li>
+<li class="page_item page-item-806"><a href="http://blogs.selectsifiso.com/manage-subscriptions/">Manage Subscriptions</a></li>
+<li class="page_item page-item-808"><a href="http://blogs.selectsifiso.com/nl-confirm-signup/">Newsletter Sign Up Confirmation</a></li>
+<li class="page_item page-item-809"><a href="http://blogs.selectsifiso.com/nl-unsubscribe-page/">Newsletter Unsubscription</a></li>
+<li class="page_item page-item-781"><a href="http://blogs.selectsifiso.com/newsletters/">Newsletters</a></li>
+<li class="page_item page-item-891"><a href="http://blogs.selectsifiso.com/privacy-policy/">Privacy Policy</a></li>
+<li class="page_item page-item-635"><a href="http://blogs.selectsifiso.com/rss-feeds/">RSS Feeds</a></li>
+<li class="page_item page-item-778"><a href="http://blogs.selectsifiso.com/source-code/">Source Code</a></li>
+<li class="page_item page-item-903"><a href="http://blogs.selectsifiso.com/terms/">Terms and Conditions</a></li>
+<li class="page_item page-item-780"><a href="http://blogs.selectsifiso.com/tutorials/">Videos</a></li>
+</ul>
+      </div>
+	  
+	  <div class="widget widget_tag_cloud">
+       <p class="widget-title">Tag Cloud</p>
+        <a href='http://blogs.selectsifiso.com/tag/adventureworks2008r2/' class='tag-link-21' title='20 topics' style='font-size: 17.826086956522px;'>AdventureWorks2008R2</a>
+<a href='http://blogs.selectsifiso.com/tag/c/' class='tag-link-12' title='30 topics' style='font-size: 19.673913043478px;'>C#</a>
+<a href='http://blogs.selectsifiso.com/tag/c-programming-language/' class='tag-link-15' title='32 topics' style='font-size: 20px;'>C# programming language</a>
+<a href='http://blogs.selectsifiso.com/tag/create-sql-view/' class='tag-link-17' title='13 topics' style='font-size: 15.978260869565px;'>create SQL view</a>
+<a href='http://blogs.selectsifiso.com/tag/create-ssis-package/' class='tag-link-18' title='24 topics' style='font-size: 18.695652173913px;'>Create SSIS Package</a>
+<a href='http://blogs.selectsifiso.com/tag/data-flow-task/' class='tag-link-193' title='10 topics' style='font-size: 14.782608695652px;'>Data Flow Task</a>
+<a href='http://blogs.selectsifiso.com/tag/destination-component/' class='tag-link-48' title='12 topics' style='font-size: 15.54347826087px;'>Destination Component</a>
+<a href='http://blogs.selectsifiso.com/tag/dts/' class='tag-link-43' title='9 topics' style='font-size: 14.347826086957px;'>DTS</a>
+<a href='http://blogs.selectsifiso.com/tag/dynamic-ssis-package/' class='tag-link-9' title='28 topics' style='font-size: 19.347826086957px;'>Dynamic SSIS Package</a>
+<a href='http://blogs.selectsifiso.com/tag/execute-sql-task/' class='tag-link-190' title='13 topics' style='font-size: 15.978260869565px;'>Execute SQL Task</a>
+<a href='http://blogs.selectsifiso.com/tag/extract-sql-statement-source/' class='tag-link-22' title='7 topics' style='font-size: 13.260869565217px;'>Extract SQL Statement source</a>
+<a href='http://blogs.selectsifiso.com/tag/file/' class='tag-link-39' title='4 topics' style='font-size: 11.086956521739px;'>file</a>
+<a href='http://blogs.selectsifiso.com/tag/foreach-loop/' class='tag-link-27' title='4 topics' style='font-size: 11.086956521739px;'>ForEach Loop</a>
+<a href='http://blogs.selectsifiso.com/tag/foreachloop-container/' class='tag-link-28' title='4 topics' style='font-size: 11.086956521739px;'>ForEachLoop Container</a>
+<a href='http://blogs.selectsifiso.com/tag/ole-db/' class='tag-link-44' title='15 topics' style='font-size: 16.521739130435px;'>OLE DB</a>
+<a href='http://blogs.selectsifiso.com/tag/oledb-destination/' class='tag-link-46' title='12 topics' style='font-size: 15.54347826087px;'>OLEDB Destination</a>
+<a href='http://blogs.selectsifiso.com/tag/oledb-source/' class='tag-link-45' title='11 topics' style='font-size: 15.217391304348px;'>OLEDB Source</a>
+<a href='http://blogs.selectsifiso.com/tag/read-sql-query/' class='tag-link-23' title='8 topics' style='font-size: 13.804347826087px;'>Read SQL Query</a>
+<a href='http://blogs.selectsifiso.com/tag/script-task/' class='tag-link-13' title='26 topics' style='font-size: 19.021739130435px;'>script task</a>
+<a href='http://blogs.selectsifiso.com/tag/sequence-container/' class='tag-link-191' title='3 topics' style='font-size: 10px;'>Sequence Container</a>
+<a href='http://blogs.selectsifiso.com/tag/source-component/' class='tag-link-47' title='10 topics' style='font-size: 14.782608695652px;'>Source Component</a>
+<a href='http://blogs.selectsifiso.com/tag/sql-server-2008/' class='tag-link-11' title='24 topics' style='font-size: 18.695652173913px;'>SQL Server 2008</a>
+<a href='http://blogs.selectsifiso.com/tag/sql-server-integration-services/' class='tag-link-19' title='31 topics' style='font-size: 19.891304347826px;'>SQL Server Integration Services</a>
+<a href='http://blogs.selectsifiso.com/tag/sql-view/' class='tag-link-14' title='13 topics' style='font-size: 15.978260869565px;'>SQL view</a>
+<a href='http://blogs.selectsifiso.com/tag/ssis/' class='tag-link-5' title='25 topics' style='font-size: 18.804347826087px;'>SSIS</a>
+<a href='http://blogs.selectsifiso.com/tag/ssis-2012/' class='tag-link-205' title='5 topics' style='font-size: 11.95652173913px;'>SSIS 2012</a>
+<a href='http://blogs.selectsifiso.com/tag/transformation/' class='tag-link-54' title='4 topics' style='font-size: 11.086956521739px;'>Transformation</a>
+<a href='http://blogs.selectsifiso.com/tag/update-view/' class='tag-link-16' title='11 topics' style='font-size: 15.217391304348px;'>update view</a>
+<a href='http://blogs.selectsifiso.com/tag/visual-studio-2010/' class='tag-link-95' title='4 topics' style='font-size: 11.086956521739px;'>Visual Studio 2010</a>
+<a href='http://blogs.selectsifiso.com/tag/xml/' class='tag-link-201' title='4 topics' style='font-size: 11.086956521739px;'>XML</a>			</div>
+		</div><!-- #secondary -->
+		</div><!-- #main .wrapper -->
+	<footer id="colophon" role="contentinfo">
+		<div class="site-info">
+		<div class="footercopy">custom footer text left</div>
+		<div class="footercredit">custom footer text right</div>
+		<div class="clear"></div>
+		</div><!-- .site-info -->
+		</footer><!-- #colophon -->
+		<div class="site-wordpress">
+				<a href="http://themonic.com/iconic-one/">Iconic One</a> Theme | Powered by <a href="http://wordpress.org">Wordpress</a>
+				</div><!-- .site-info -->
+				<div class="clear"></div>
+</div><!-- #page -->
+
+
+
+
+<script type='text/javascript' src='http://blogs.selectsifiso.com/wp-content/plugins/akismet/_inc/form.js?ver=06820f499ad3078ba51bb8a3026295a9'></script>
+<script type='text/javascript' src='http://blogs.selectsifiso.com/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=06820f499ad3078ba51bb8a3026295a9-2014.06.20'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"http:\/\/blogs.selectsifiso.com\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","recaptchaEmpty":"Please verify that you are not a robot.","sending":"Sending ..."};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://blogs.selectsifiso.com/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=06820f499ad3078ba51bb8a3026295a9'></script>
+<script type='text/javascript' src='http://blogs.selectsifiso.com/wp-includes/js/comment-reply.min.js?ver=06820f499ad3078ba51bb8a3026295a9'></script>
+<script type='text/javascript' src='http://blogs.selectsifiso.com/wp-content/themes/iconic-one/js/selectnav.js?ver=06820f499ad3078ba51bb8a3026295a9'></script>
+<script type='text/javascript' src='http://blogs.selectsifiso.com/wp-includes/js/wp-embed.min.js?ver=06820f499ad3078ba51bb8a3026295a9'></script>
+<script type='text/javascript' src='http://blogs.selectsifiso.com/wp-content/plugins/simplified-social-share/oss-social-sharing/assets/js/oss_share.js?ver=06820f499ad3078ba51bb8a3026295a9'></script>
+<script type='text/javascript' src='https://sharecdn.social9.com/v2/js/opensocialsharedefaulttheme.js?ver=06820f499ad3078ba51bb8a3026295a9'></script>
+<script type='text/javascript' src='https://sharecdn.social9.com/v2/js/opensocialshare.js?ver=06820f499ad3078ba51bb8a3026295a9'></script>
+
+               <script type="text/javascript">
+        var shareWidget = new OpenSocialShare();
+        shareWidget.init({
+             isEmailContentReadOnly:false,isTotalShare:true,isMobileFriendly:true,isShortenUrl:true,isOpenSingleWindow:false,                 
+            isCounterWidgetTheme: 0, // 0 or 1 - standard themes or counter widget themes
+            isHorizontalCounter: 0, // 0 or 1 - counter on top or counter to right - counter themes only
+            isHorizontalLayout: 1, // 0 or 1 - vertical layout or horizontal layout
+            widgetIconSize: "32", // "16" or "32" - 16px or 32px standard themes only
+                       widgetStyle: "responsive", //"image", "square" or "responsive" - standard themes only
+            
+           
+            providers: {
+                
+                   top: ["Facebook","Twitter","LinkedIn","GooglePlus","Pinterest","Email","Print"]
+                },
+           widgets: {
+                 //all : _private.getAllButtonName(_private.widgetConfig),
+                      top: ["Facebook Like","Twitter Tweet","Google+ Share","Pinterest Pin it","LinkedIn Share"]
+                      },
+                          theme: 'OpenSocialShareDefaultTheme',
+             
+        });
+        shareWidget.injectInterface(".oss_horizontal_share");
+        shareWidget.setWidgetTheme(".oss_horizontal_share");
+    </script>
+            </body>
+</html>

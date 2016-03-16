@@ -1,15 +1,16 @@
 === Spam Comments Cleaner ===
-Contributors: manishkrag, mindfire-solutions
+Contributors: manishkrag
 Tags: spam delete, spam clean, mindfire solutions, WordPress comments, delete comments
 Requires at least: 3.0
-Tested up to: 4.2
-Stable tag: 1.2.2
+Tested up to: 4.4
+Stable tag: 1.2.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Delete all the SPAM comments of your WordPress site in a regular time interval. To start the scheduled script this plugin using wp_cron hook.
 
 == Description ==
+Ger advance version <a href="http://youngtechleads.com/wordpress-database-cleaner/">WordPress Database Cleaner</a>
 
 If you are a WordPress site owner then you are definitely aware that everyday more than 20-30 SPAM comments are posting in your site's different posts. And if you do not delete these spam comments then database size going heavy day after day. So to have database size lighter you have to remove unnecessary spam comments. To do so you have to go to comments listing and delete all the spam comments.
 
@@ -62,6 +63,10 @@ For debugging purpose provided button to delete spam in next one(1) minute.
 * Enabled Screen
 
 == Changelog ==
+
+= 1.2.3 =
+* Did the PHP warning fixes.
+* Optimized code.
 
 = 1.2.2 =
 * Text Modifications and Notices Fixed.

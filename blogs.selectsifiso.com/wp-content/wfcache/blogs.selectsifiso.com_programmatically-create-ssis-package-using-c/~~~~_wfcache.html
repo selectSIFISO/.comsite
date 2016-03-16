@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>Create SSIS Package with SQL Tasks using C# | select SIFISO</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="" />
+<!--[if lt IE 9]>
+<script src="http://blogs.selectsifiso.com/wp-content/themes/iconic-one/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+
+<!-- BEGIN Metadata added by the Add-Meta-Tags WordPress plugin -->
+<meta name="robots" content="index,follow,ssis,c#,business intelligence,package" />
+<meta name="description" content="Abstract This article explains how to create an SSIS package using C# programming language. The package contains two sql tasks: the first sql task drops and create a SQL view, the second sql task updates the view." />
+<meta name="keywords" content="creating ssis packages, execute sql task, adventureworks2008r2, c#, c# programming language, create sql view, create ssis package, dynamic ssis package, execute sql task, script task, sql server 2008, sql server integration services, sql view, ssis, update view" />
+<!-- END Metadata added by the Add-Meta-Tags WordPress plugin -->
+
+    <!-- PVC Template -->
+    <script type="text/template" id="pvc-stats-view-template">
+	<% if ( total_view > 0 ) { %>
+		<%= total_view %> <%= total_view > 1 ? "total views" : "total view" %>,
+		<% if ( today_view > 0 ) { %>
+			<%= today_view %> <%= today_view > 1 ? "views today" : "view today" %>
+		<% } else { %>
+		no views today		<% } %>
+	<% } else { %>
+	No views yet	<% } %>
+	</script>
+    <link rel="alternate" type="application/rss+xml" title="select SIFISO &raquo; Feed" href="http://blogs.selectsifiso.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="select SIFISO &raquo; Comments Feed" href="http://blogs.selectsifiso.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="select SIFISO &raquo; Create SSIS Package with SQL Tasks using C# Comments Feed" href="http://blogs.selectsifiso.com/programmatically-create-ssis-package-using-c/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/blogs.selectsifiso.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=06820f499ad3078ba51bb8a3026295a9"}};
+			!function(a,b,c){function d(a){var c,d=b.createElement("canvas"),e=d.getContext&&d.getContext("2d"),f=String.fromCharCode;return e&&e.fillText?(e.textBaseline="top",e.font="600 32px Arial","flag"===a?(e.fillText(f(55356,56806,55356,56826),0,0),d.toDataURL().length>3e3):"diversity"===a?(e.fillText(f(55356,57221),0,0),c=e.getImageData(16,16,1,1).data.toString(),e.fillText(f(55356,57221,55356,57343),0,0),c!==e.getImageData(16,16,1,1).data.toString()):("simple"===a?e.fillText(f(55357,56835),0,0):e.fillText(f(55356,57135),0,0),0!==e.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag"),unicode8:d("unicode8"),diversity:d("diversity")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag&&c.supports.unicode8&&c.supports.diversity||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='validate-engine-css-css'  href='http://blogs.selectsifiso.com/wp-content/plugins/wysija-newsletters/css/validationEngine.jquery.css?ver=06820f499ad3078ba51bb8a3026295a9' type='text/css' media='all' />
+<link rel='stylesheet' id='oss-social-sharing-front-css'  href='http://blogs.selectsifiso.com/wp-content/plugins/simplified-social-share/oss-social-sharing/assets/css/oss-social-sharing-front.css?ver=06820f499ad3078ba51bb8a3026295a9' type='text/css' media='all' />
+<link rel='stylesheet' id='oss-share-widget-style-css'  href='https://sharecdn.social9.com/v2/css/os-share-widget-style.css?ver=06820f499ad3078ba51bb8a3026295a9' type='text/css' media='all' />
+<link rel='stylesheet' id='cptch_stylesheet-css'  href='http://blogs.selectsifiso.com/wp-content/plugins/captcha/css/style.css?ver=06820f499ad3078ba51bb8a3026295a9' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css'  href='http://blogs.selectsifiso.com/wp-includes/css/dashicons.min.css?ver=06820f499ad3078ba51bb8a3026295a9' type='text/css' media='all' />
+<link rel='stylesheet' id='cptch_desktop_style-css'  href='http://blogs.selectsifiso.com/wp-content/plugins/captcha/css/desktop_style.css?ver=06820f499ad3078ba51bb8a3026295a9' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='http://blogs.selectsifiso.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=06820f499ad3078ba51bb8a3026295a9' type='text/css' media='all' />
+<link rel='stylesheet' id='a3-pvc-style-css'  href='http://blogs.selectsifiso.com/wp-content/plugins/page-views-count/assets/css/style.min.css?ver=06820f499ad3078ba51bb8a3026295a9' type='text/css' media='all' />
+<link rel='stylesheet' id='themonic-fonts-css'  href='http://fonts.googleapis.com/css?family=Ubuntu:400,700&#038;subset=latin,latin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='themonic-style-css'  href='http://blogs.selectsifiso.com/wp-content/themes/iconic-one/style.css?ver=06820f499ad3078ba51bb8a3026295a9' type='text/css' media='all' />
+<link rel='stylesheet' id='custom-style-css'  href='http://blogs.selectsifiso.com/wp-content/themes/iconic-one/custom.css?ver=06820f499ad3078ba51bb8a3026295a9' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='themonic-ie-css'  href='http://blogs.selectsifiso.com/wp-content/themes/iconic-one/css/ie.css?ver=06820f499ad3078ba51bb8a3026295a9' type='text/css' media='all' />
+<![endif]-->
+<link rel='stylesheet' id='tablepress-default-css'  href='http://blogs.selectsifiso.com/wp-content/plugins/tablepress/css/default.min.css?ver=06820f499ad3078ba51bb8a3026295a9' type='text/css' media='all' />
+<link rel='stylesheet' id='counterize_stylesheet-css'  href='http://blogs.selectsifiso.com/wp-content/plugins/counterize/counterize.css.php?ver=06820f499ad3078ba51bb8a3026295a9' type='text/css' media='all' />
+<script type='text/javascript' src='http://blogs.selectsifiso.com/wp-includes/js/jquery/jquery.js?ver=06820f499ad3078ba51bb8a3026295a9'></script>
+<script type='text/javascript' src='http://blogs.selectsifiso.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=06820f499ad3078ba51bb8a3026295a9'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var cptch_vars = {"nonce":"e1a0c46b16","ajaxurl":"http:\/\/blogs.selectsifiso.com\/wp-admin\/admin-ajax.php","enlarge":"0"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://blogs.selectsifiso.com/wp-content/plugins/captcha/js/front_end_script.js?ver=06820f499ad3078ba51bb8a3026295a9'></script>
+<script type='text/javascript' src='http://d1n0x3qji82z53.cloudfront.net/src-min-noconflict/ace.js?ver=06820f499ad3078ba51bb8a3026295a9'></script>
+<script type='text/javascript' src='http://blogs.selectsifiso.com/wp-includes/js/underscore.min.js?ver=06820f499ad3078ba51bb8a3026295a9'></script>
+<script type='text/javascript' src='http://blogs.selectsifiso.com/wp-includes/js/backbone.min.js?ver=06820f499ad3078ba51bb8a3026295a9'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var vars = {"api_url":"http:\/\/blogs.selectsifiso.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://blogs.selectsifiso.com/wp-content/plugins/page-views-count/assets/js/pvc.backbone.min.js?ver=06820f499ad3078ba51bb8a3026295a9'></script>
+<script type='text/javascript' src='http://blogs.selectsifiso.com/wp-content/plugins/counterize/counterize.js.php?ver=06820f499ad3078ba51bb8a3026295a9'></script>
+<link rel='https://api.w.org/' href='http://blogs.selectsifiso.com/wp-json/' />
+<link rel='next' title='Extract &#038; Save SQL Statements in Execute SQL Tasks using C#' href='http://blogs.selectsifiso.com/programmatically-extract-save-sql-statements-in-execute-sql-tasks-using-c/' />
+
+<link rel="canonical" href="http://blogs.selectsifiso.com/programmatically-create-ssis-package-using-c/" />
+<link rel='shortlink' href='http://blogs.selectsifiso.com/?p=82' />
+<link rel="alternate" type="application/json+oembed" href="http://blogs.selectsifiso.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fblogs.selectsifiso.com%2Fprogrammatically-create-ssis-package-using-c%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://blogs.selectsifiso.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fblogs.selectsifiso.com%2Fprogrammatically-create-ssis-package-using-c%2F&#038;format=xml" />
+<meta property="og:locale" content="en_US" />
+<link rel="publisher" href="https://plus.google.com/u/1/103041474356156114889" />
+<meta name="google-site-verification" content="4GM7tP12ESZ2vVeffPTZGhIJ6Z1KrA44j-EpxBbzk5Q" />
+<meta name="msvalidate.01" content="79A618AD90CC58A6052A24AA79F83725" />
+<meta name="alexaVerifyID" content="B8h6vtsLdGOfpu2c9ARG5Qfcc78" />
+<meta name="yandex-verification" content="69149779cf0fd27c" />
+<meta name="p:domain_verify" content="" />
+<meta property="og:site_name" content="select SIFISO" />
+<meta property="article:publisher" content="https://www.facebook.com/pages/select-SIFISO/652751321424822?ref=bookmarks" />
+<meta property="article:author" content="https://www.facebook.com/pages/select-SIFISO/652751321424822?ref=bookmarks" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:site" content="@@selectsifiso"/>
+<meta name="twitter:domain" content="@selectsifiso"/>
+<meta name="twitter:creator" content="@@selectsifiso"/>    
+<meta name="robots" content="index, follow" />
+<meta name="revisit-after" content="21 days" />
+<meta name="creator" content="Name,Designer,Email Address,or Company" />
+<meta name="publisher" content="Designer, Company or Website Name" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Create SSIS Package with SQL Tasks using C#" />
+<meta property="og:description" content="Abstract This article explains how to create an SSIS package using C# programming language. The package contains two sql tasks: the first sql task drops" />
+<meta property="og:url" content="http://blogs.selectsifiso.com/programmatically-create-ssis-package-using-c/" />
+<meta property="article:section" content="Creating SSIS Packages"  />
+<meta property="article:published_time" content="2011-04-06 11:45:24"/>
+<meta property="article:modified_time" content="2011-04-23 09:18:44" />
+<meta property="og:updated_time" content="2011-04-23 09:18:44" />
+<meta property="og:image" content="" />
+<meta property="og:image" content="" />
+<meta name="twitter:image:src" content="" />
+<meta itemprop="name" content="Create SSIS Package with SQL Tasks using C#">
+<meta itemprop="description" content="Abstract This article explains how to create an SSIS package using C# programming language. The package contains two sql tasks: the first sql task drops">
+<meta itemprop="image" content="" >
+<meta name="classification" content="AdventureWorks2008R2, C#, C# programming language, create SQL view, Create SSIS Package, Dynamic SSIS Package, Execute SQL Task, script task, SQL Server 2008, SQL Server Integration Services, SQL view, SSIS, update view" />
+<meta name="distribution" content="Creating SSIS Packages" />
+<meta name="rating" content="Creating SSIS Packages" />
+<style type="text/css">
+#author-bio-box {
+	width:632px;
+	background: #;
+	border: 1px solid #bbb;
+	box-shadow: 5px 5px 2px #888;
+	padding: 5px;
+}
+#author-bio-box img {
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 2px;
+}
+#author-bio-box .author-name {
+	font-weight: bold;
+	margin: 0px;
+	font-size: 14px;
+}
+#author-bio-box p {
+	font-size: 10px;
+	line-height: 14px;
+}
+#author-bio-box thead th {
+	border: 0;
+}
+#author-bio-box tbody {
+	border: 0;
+}
+.bio-spacer { min-height:44px; padding: 1px; display: block; clear: both; border:1px;}
+.bio-socials {
+	border-top:solid 1px;
+	border-bottom:none;
+	border-left:none;
+	border-right:none;
+	width: 628px;
+	height: 32px;
+	clear: both;
+}
+</style></head>
+<body class="single single-post postid-82 single-format-standard custom-font-enabled">
+<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header" role="banner">
+					
+		<div class="themonic-logo">
+        <a href="http://blogs.selectsifiso.com/" title="select SIFISO" rel="home"><img src="http://blogs.selectsifiso.com/wp-content/uploads/2015/09/selectSIFISOforBlogsNew.png" alt="select SIFISO"></a>
+		</div>
+		
+		<div class="socialmedia">
+							<a href="http://default_value" target="_blank"><img src="http://blogs.selectsifiso.com/wp-content/themes/iconic-one/img/twitter.png" alt="Follow us on Twitter"/></a> 
+											<a href="http://default_value" target="_blank"><img src="http://blogs.selectsifiso.com/wp-content/themes/iconic-one/img/facebook.png" alt="Follow us on Facebook"/></a>
+											<a href="http://default_value" rel="author" target="_blank"><img src="http://blogs.selectsifiso.com/wp-content/themes/iconic-one/img/gplus.png" alt="Follow us on Google Plus"/></a>
+									<a class="rss" href="https://www.linkedin.com/company/select-sifiso?trk=biz-companies-cym" target="_blank"><img src="http://blogs.selectsifiso.com/wp-content/uploads/2015/05/linkedin_321.png" alt="Connect with us on LinkedIn"/></a>			
+									<a class="rss" href="https://www.youtube.com/channel/UCjloZMqHJaRiXXlnt3y7ZKQ" target="_blank"><img src="http://blogs.selectsifiso.com/wp-content/uploads/2015/05/youtube_logo.png" alt="Tune into our YouTube channel"/></a>			
+									<a class="rss" href="http://default_value" target="_blank"><img src="http://blogs.selectsifiso.com/wp-content/themes/iconic-one/img/rss.png" alt="Follow us on rss"/></a>			
+						<div class="widget widget_search">
+				<form role="search" method="get" id="searchform" class="searchform" action="http://blogs.selectsifiso.com/">
+				<div>
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Search" />
+				</div>
+			</form>			</div>
+		</div>
+		
+
+		
+		<nav id="site-navigation" class="themonic-nav" role="navigation">
+			<a class="assistive-text" href="#content" title="Skip to content">Skip to content</a>
+			<ul id="menu-top" class="nav-menu"><li id="menu-item-11" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11"><a title="Homepage of select SIFISO Blogs" href="http://www.blogs.selectsifiso.com/">Home</a></li>
+<li id="menu-item-790" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-790"><a title="About select SIFISO Blogs" href="http://blogs.selectsifiso.com/about/">About</a></li>
+<li id="menu-item-793" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-793"><a title="Blog Posts Archive" href="http://blogs.selectsifiso.com/articles/">Articles</a></li>
+<li id="menu-item-741" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-741"><a title="Contributors to select SIFISO Blogs" href="http://blogs.selectsifiso.com/contributors/">Contributors</a></li>
+</ul>		</nav><!-- #site-navigation -->
+		<div class="clear"></div>
+	</header><!-- #masthead -->
+
+	<div id="main" class="wrapper">	<div id="primary" class="site-content">
+		<div id="content" role="main">
+
+			
+				
+	<article id="post-82" class="post-82 post type-post status-publish format-standard hentry category-creating-ssis-packages category-execute-sql-task tag-adventureworks2008r2 tag-c tag-c-programming-language tag-create-sql-view tag-create-ssis-package tag-dynamic-ssis-package tag-execute-sql-task tag-script-task tag-sql-server-2008 tag-sql-server-integration-services tag-sql-view tag-ssis tag-update-view">
+				<header class="entry-header">
+						<h1 class="entry-title">Create SSIS Package with SQL Tasks using C#</h1>
+									
+	<div class="below-title-meta">
+		<div class="adt">
+		By        <span class="author">
+         <a href="http://blogs.selectsifiso.com/author/sifiso-ndlovu/" title="Posts by Sifiso Ndlovu" rel="author">Sifiso Ndlovu</a>        </span>
+         <span class="meta-sep">|</span> 
+         April 6, 2011 
+         </div>
+		 <div class="adt-comment">
+		 <a class="link-comments" href="http://blogs.selectsifiso.com/programmatically-create-ssis-package-using-c/#comments">23 Comments</a> 
+         </div>       
+     </div><!-- below title meta end -->
+			
+						
+			</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<div  class="oss_horizontal_share oss_title_replace" data-share-titles="Create SSIS Package with SQL Tasks using C#" data-share-description="Abstract
+
+This article explains how to create an SSIS package using C# programming language. The p" data-share-imageurl=""  data-share-url="http://blogs.selectsifiso.com/programmatically-create-ssis-package-using-c/"></div><p><span style="text-decoration: underline;"><strong>Abstract</strong></span></p>
+<p><em>This article explains how to create an SSIS package using C# programming language. The package contains two sql tasks: the first sql task drops and create a SQL view, the second sql task updates the view.</em></p>
+<p><span style="text-decoration: underline;"><strong>Requirements</strong></span></p>
+<ul>
+<li><em><a style="text-decoration: none; color: green;" href="http://www.microsoft.com/downloads/en/details.aspx?FamilyID=17319eb4-299c-43b8-a360-a1c2bd6a421b">Microsoft Visual Studio 2008</a></em><em> </em></li>
+<li><em><a style="text-decoration: none; color: green;" href="http://www.microsoft.com/sqlserver/2008/en/us/overview.aspx">SQL Server 2008</a></em></li>
+<li><em>AdventureWorks2008R2 database (downloadable database file available <a style="text-decoration: none; color: green;" href="http://msftdbprodsamples.codeplex.com/">here</a>)<br />
+</em></li>
+</ul>
+<p><span style="text-decoration: underline;"><strong>Article</strong></span></p>
+<p>If the above requirements are all met, we will begin by launching Microsoft Visual Studio 2008.</p>
+<p>Create a new project <a style="text-decoration: none; color: green;" href="http://msdn.microsoft.com/en-us/library/ms138028.aspx">Integration Services Project</a> which is located under <a style="text-decoration: none; color: green;" href="http://msdn.microsoft.com/en-us/library/ms173767.aspx">Business Intelligence Projects</a>.</p>
+<p>After you have named the new project, proceed to click and drag the <a style="text-decoration: none; color: green;" href="http://msdn.microsoft.com/en-us/library/ms141752.aspx">script task</a> in Control Flow pane of the new package.</p>
+<div id="attachment_103" style="width: 310px" class="wp-caption aligncenter"><a href="http://www.blogs.selectsifiso.com/wp-content/uploads/st1.jpg"><img class="size-medium wp-image-103" title="st" src="http://www.blogs.selectsifiso.com/wp-content/uploads/st1-300x232.jpg" alt="Insert script task" width="300" height="232" /></a><p class="wp-caption-text">Insert script task - click image to view full size</p></div>
+<p>&nbsp;</p>
+<p>Right click the script task click on &#8220;Edit&#8221;</p>
+<div id="attachment_121" style="width: 310px" class="wp-caption aligncenter"><a href="http://www.blogs.selectsifiso.com/wp-content/uploads/script.jpg"><img class="size-medium wp-image-121" title="script" src="http://www.blogs.selectsifiso.com/wp-content/uploads/script-300x232.jpg" alt="" width="300" height="232" /></a><p class="wp-caption-text">Right Click - click image to view full size</p></div>
+<p>Under the Script Task Editor change the &#8220;ScriptLanguage&#8221; to &#8220;Microsoft Visual C# 2008&#8221;.</p>
+<div id="attachment_122" style="width: 310px" class="wp-caption aligncenter"><a href="http://www.blogs.selectsifiso.com/wp-content/uploads/language.jpg"><img class="size-medium wp-image-122" title="language" src="http://www.blogs.selectsifiso.com/wp-content/uploads/language-300x232.jpg" alt="" width="300" height="232" /></a><p class="wp-caption-text">Select C# - click image to view full size</p></div>
+<p>Clicking &#8220;Edit Script&#8221; will bring another window where you can import relevant namespaces:</p>
+<div id="attachment_123" style="width: 310px" class="wp-caption aligncenter"><a href="http://www.blogs.selectsifiso.com/wp-content/uploads/ref2.jpg"><img class="size-medium wp-image-123" title="ref2" src="http://www.blogs.selectsifiso.com/wp-content/uploads/ref2-300x232.jpg" alt="" width="300" height="232" /></a><p class="wp-caption-text">Add references - click image to view full size</p></div>
+<p>Ensure that you have declared namespaces as below:</p>
+<p><a style="text-decoration: none; color: blue;">using</a> <a style="text-decoration: none; color: green;" href="http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.server.aspx">Microsoft.SqlServer.Server</a>;<br />
+<a style="text-decoration: none; color: blue;">using</a> <a style="text-decoration: none; color: green;" href="http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dts.tasks.scripttask.aspx">Microsoft.SqlServer.Dts.Tasks</a>;<br />
+<a style="text-decoration: none; color: blue;">using</a> <a style="text-decoration: none; color: green;" href="http://technet.microsoft.com/en-us/library/microsoft.sqlserver.dts.tasks.executesqltask.executesqltask.aspx">Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask</a>;<br />
+<a style="text-decoration: none; color: blue;">using</a> <a style="text-decoration: none; color: green;" href="http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dts.runtime.aspx">Microsoft.SqlServer.Dts.Runtime</a>;<br />
+<a style="text-decoration: none; color: blue;">using</a> <a style="text-decoration: none; color: green;" href="http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dts.runtime.wrapper.aspx">Microsoft.SqlServer.Dts.Pipeline.Wrapper</a>;<br />
+<a style="text-decoration: none; color: blue;">using</a> <a style="text-decoration: none; color: green;" href="http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dts.runtime.wrapper.aspx">RuntimeWrapper = Microsoft.SqlServer.Dts.Runtime.Wrapper</a>;</p>
+<p>After declarations, create a new package (including package name and description) inside an application.<br />
+<a style="text-decoration: none; font-size: 10pt; color: #9900ff; font-family: Calibri;"><br />
+Application SIFISO_app = new Application();<br />
+Package dyna_pkg = new Package();<br />
+dyna_pkg.Name = &#8220;pkg_Execute_Sql_Tasks&#8221;;<br />
+dyna_pkg.Description = &#8220;Executing Sql Task&#8221;;</a></p>
+<p>Create a connection to AdventureWorks2008R2 database.</p>
+<p><a style="text-decoration: none; font-size: 10pt; color: #9900ff; font-family: Calibri;">ConnectionManager ConMgr = dyna_pkg.Connections.Add(&#8220;OLEDB&#8221;);<br />
+ConMgr.ConnectionString = &#8220;Provider=SQLOLEDB.1;&#8221; +<br />
+&#8220;Integrated Security=SSPI;Initial Catalog=AdventureWorks2008R2;&#8221; +<br />
+&#8220;Data Source=(local);&#8221;;<br />
+ConMgr.Name = &#8220;ConMgr_OLEDB&#8221;;<br />
+ConMgr.Description = &#8220;OLE DB connection to the AdventureWorks2008R2 database.&#8221;;</a></p>
+<p>Add the Execute SQL Task in the package.</p>
+<p><a style="text-decoration: none; font-size: 10pt; color: #9900ff; font-family: Calibri;">Executable exec = dyna_pkg.Executables.Add(&#8220;STOCK:SQLTask&#8221;);<br />
+TaskHost th = exec as TaskHost;</a></p>
+<p>Define the properties of the newly added SQL Task including name, description, connection, and sql query.</p>
+<p><a style="text-decoration: none; font-size: 10pt; color: #9900ff; font-family: Calibri;">th.Properties[&#8220;Name&#8221;].SetValue(th, &#8220;Create View&#8221;);<br />
+th.Properties[&#8220;Description&#8221;].SetValue(th, &#8220;Drops and Create SQL View which based on Adventureworks database&#8221;);<br />
+th.Properties[&#8220;Connection&#8221;].SetValue(th, &#8220;ConMgr_OLEDB&#8221;);<br />
+th.Properties[&#8220;SqlStatementSource&#8221;].SetValue(th, &#8220;CREATE OR REPLACE VIEW v_Sales as select * from Employee&#8221;);</a></p>
+<p>For the purposes of this article we have further added two more SQL task in the package.</p>
+<p><a style="text-decoration: none; font-size: 10pt; color: #9900ff; font-family: Calibri;">Executable exec2 = dyna_pkg.Executables.Add(&#8220;STOCK:SQLTask&#8221;);<br />
+TaskHost th2 = exec2 as TaskHost;</a></p>
+<p><a style="text-decoration: none; font-size: 10pt; color: #9900ff; font-family: Calibri;">th2.Properties[&#8220;Name&#8221;].SetValue(th2, &#8220;select from view&#8221;);<br />
+th2.Properties[&#8220;Description&#8221;].SetValue(th2, &#8220;select from view&#8221;);<br />
+th2.Properties[&#8220;Connection&#8221;].SetValue(th2, &#8220;ConMgr_OLEDB&#8221;);<br />
+th2.Properties[&#8220;SqlStatementSource&#8221;].SetValue(th2, &#8220;SELECT * FROM v_Sales&#8221;);</a></p>
+<p><a style="text-decoration: none; font-size: 10pt; color: #9900ff; font-family: Calibri;">Executable exec3 = dyna_pkg.Executables.Add(&#8220;STOCK:SQLTask&#8221;);<br />
+TaskHost th3 = exec3 as TaskHost;</a></p>
+<p><a style="text-decoration: none; font-size: 10pt; color: #9900ff; font-family: Calibri;"> </a></p>
+<p><a style="text-decoration: none; font-size: 10pt; color: #9900ff; font-family: Calibri;"></a></p>
+<p><a style="text-decoration: none; font-size: 10pt; color: #9900ff; font-family: Calibri;"></a></p>
+<p><a style="text-decoration: none; font-size: 10pt; color: #9900ff; font-family: Calibri;">th3.Properties[&#8220;Name&#8221;].SetValue(th3, &#8220;delete View&#8221;);<br />
+th3.Properties[&#8220;Description&#8221;].SetValue(th3, &#8220;delete View&#8221;);<br />
+th3.Properties[&#8220;Connection&#8221;].SetValue(th3, &#8220;ConMgr_OLEDB&#8221;);<br />
+th3.Properties[&#8220;SqlStatementSource&#8221;].SetValue(th3, &#8220;DROP VIEW v_Sales&#8221;);</a></p>
+<p>Then we join the three tasks with precedence constraints.</p>
+<p><a style="text-decoration: none; font-size: 10pt; color: #9900ff; font-family: Calibri;">PrecedenceConstraint pcFileTasks =<br />
+dyna_pkg.PrecedenceConstraints.Add((Executable)exec, (Executable)exec2);<br />
+pcFileTasks.Value = DTSExecResult.Success;</a></p>
+<p><a style="text-decoration: none; font-size: 10pt; color: #9900ff; font-family: Calibri;"> </a></p>
+<p><a style="text-decoration: none; font-size: 10pt; color: #9900ff; font-family: Calibri;">PrecedenceConstraint pcFileTasks2 =<br />
+dyna_pkg.PrecedenceConstraints.Add((Executable)exec2, (Executable)exec3);<br />
+pcFileTasks2.Value = DTSExecResult.Success;</a></p>
+<p>We then save the package in a file system.</p>
+<p><a style="text-decoration: none; font-size: 10pt; color: #9900ff; font-family: Calibri;">SIFISO_app.SaveToXml(&#8220;C:\\TEMP\\pkg_Execute_Sql_Tasks.dtsx&#8221;, dyna_pkg, null);</a></p>
+<p><span style="text-decoration: underline;"><strong>Conclusion</strong></span></p>
+<p>It&#8217;s that simple!</p>
+<p>You can now execute your script task and the package will be created in location you specified.
+<div class="pvc_clear"></div>
+<p id="pvc_stats_82" class="pvc_stats pvc_load_by_ajax_update" element-id="82"><img src="http://blogs.selectsifiso.com/wp-content/plugins/page-views-count/ajax-loader.gif" border=0 /></p>
+<div class="pvc_clear"></div>
+<div  class="oss_horizontal_share oss_title_replace" data-share-titles="Create SSIS Package with SQL Tasks using C#" data-share-description="Abstract
+
+This article explains how to create an SSIS package using C# programming language. The p" data-share-imageurl="" data-share-url="http://blogs.selectsifiso.com/programmatically-create-ssis-package-using-c/" ></div><div id="author-bio-box"><img src="http://blogs.selectsifiso.com/wp-content/uploads/sw_ndlovu-144x150.png" width="77" height="80" alt="" class="avatar avatar-80 wp-user-avatar wp-user-avatar-80 photo avatar-default" /><span class="author-name"> Sifiso Ndlovu (<a href="http://blogs.selectsifiso.com/author/sifiso-ndlovu/">45 Posts</a>)</span><p></p><div class="bio-socials"><a href="http://www.blogs.selectsifiso.com" target="_blank"><img src="http://blogs.selectsifiso.com/wp-content/plugins/social-autho-bio/images/Wordpress.png"></a></div></div><br/>					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+		<span>Category: <a href="http://blogs.selectsifiso.com/category/creating-ssis-packages/" rel="category tag">Creating SSIS Packages</a> <a href="http://blogs.selectsifiso.com/category/execute-sql-task/" rel="category tag">Execute SQL Task</a></span> <span>Tags: <a href="http://blogs.selectsifiso.com/tag/adventureworks2008r2/" rel="tag">AdventureWorks2008R2</a>, <a href="http://blogs.selectsifiso.com/tag/c/" rel="tag">C#</a>, <a href="http://blogs.selectsifiso.com/tag/c-programming-language/" rel="tag">C# programming language</a>, <a href="http://blogs.selectsifiso.com/tag/create-sql-view/" rel="tag">create SQL view</a>, <a href="http://blogs.selectsifiso.com/tag/create-ssis-package/" rel="tag">Create SSIS Package</a>, <a href="http://blogs.selectsifiso.com/tag/dynamic-ssis-package/" rel="tag">Dynamic SSIS Package</a>, <a href="http://blogs.selectsifiso.com/tag/execute-sql-task/" rel="tag">Execute SQL Task</a>, <a href="http://blogs.selectsifiso.com/tag/script-task/" rel="tag">script task</a>, <a href="http://blogs.selectsifiso.com/tag/sql-server-2008/" rel="tag">SQL Server 2008</a>, <a href="http://blogs.selectsifiso.com/tag/sql-server-integration-services/" rel="tag">SQL Server Integration Services</a>, <a href="http://blogs.selectsifiso.com/tag/sql-view/" rel="tag">SQL view</a>, <a href="http://blogs.selectsifiso.com/tag/ssis/" rel="tag">SSIS</a>, <a href="http://blogs.selectsifiso.com/tag/update-view/" rel="tag">update view</a></span> 
+           						</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+				<nav class="nav-single">
+					<div class="assistive-text">Post navigation</div>
+					<span class="nav-previous"></span>
+					<span class="nav-next"><a href="http://blogs.selectsifiso.com/programmatically-extract-save-sql-statements-in-execute-sql-tasks-using-c/" rel="next">Extract &#038; Save SQL Statements in Execute SQL Tasks using C# <span class="meta-nav">&rarr;</span></a></span>
+				</nav><!-- .nav-single -->
+
+				
+<div id="comments" class="comments-area">
+
+	
+			<h2 class="comments-title">
+			23 thoughts on &ldquo;<span>Create SSIS Package with SQL Tasks using C#</span>&rdquo;		</h2>
+
+		<ol class="commentlist">
+				<li class="comment even thread-even depth-1" id="li-comment-21737">
+		<article id="comment-21737" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img src="http://blogs.selectsifiso.com/wp-content/uploads/sw_ndlovu-144x150.png" width="30" height="30" alt="" class="avatar avatar-30wp-user-avatar wp-user-avatar-30 alignnone photo avatar-default" /><cite class="fn">Nick </cite><a href="http://blogs.selectsifiso.com/programmatically-create-ssis-package-using-c/#comment-21737"><time datetime="2013-07-11T07:33:59+00:00">July 11, 2013</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Thanks, man. That really helped me!</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+				<a rel='nofollow' class='comment-reply-link' href='http://blogs.selectsifiso.com/programmatically-create-ssis-package-using-c/?replytocom=21737#respond' onclick='return addComment.moveForm( "comment-21737", "21737", "respond", "82" )' aria-label='Reply to Nick'>Reply</a> <span>&darr;</span>			</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-16523">
+		<article id="comment-16523" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img src="http://blogs.selectsifiso.com/wp-content/uploads/sw_ndlovu-144x150.png" width="30" height="30" alt="" class="avatar avatar-30wp-user-avatar wp-user-avatar-30 alignnone photo avatar-default" /><cite class="fn">Srini </cite><a href="http://blogs.selectsifiso.com/programmatically-create-ssis-package-using-c/#comment-16523"><time datetime="2013-02-08T12:35:48+00:00">February 8, 2013</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Thank you so much &#8211; very useful.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+				<a rel='nofollow' class='comment-reply-link' href='http://blogs.selectsifiso.com/programmatically-create-ssis-package-using-c/?replytocom=16523#respond' onclick='return addComment.moveForm( "comment-16523", "16523", "respond", "82" )' aria-label='Reply to Srini'>Reply</a> <span>&darr;</span>			</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	<ol class="children">
+	<li class="comment even depth-2" id="li-comment-16525">
+		<article id="comment-16525" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img src="http://blogs.selectsifiso.com/wp-content/uploads/sw_ndlovu-144x150.png" width="30" height="30" alt="" class="avatar avatar-30wp-user-avatar wp-user-avatar-30 alignnone photo avatar-default" /><cite class="fn"><a href='http://www.blogs.selectsifiso.com/' rel='external nofollow' class='url'>Sifiso</a> </cite><a href="http://blogs.selectsifiso.com/programmatically-create-ssis-package-using-c/#comment-16525"><time datetime="2013-02-08T17:45:52+00:00">February 8, 2013</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Pleasure</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+				<a rel='nofollow' class='comment-reply-link' href='http://blogs.selectsifiso.com/programmatically-create-ssis-package-using-c/?replytocom=16525#respond' onclick='return addComment.moveForm( "comment-16525", "16525", "respond", "82" )' aria-label='Reply to Sifiso'>Reply</a> <span>&darr;</span>			</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+	<li class="comment odd alt thread-even depth-1" id="li-comment-1950">
+		<article id="comment-1950" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img src="http://blogs.selectsifiso.com/wp-content/uploads/sw_ndlovu-144x150.png" width="30" height="30" alt="" class="avatar avatar-30wp-user-avatar wp-user-avatar-30 alignnone photo avatar-default" /><cite class="fn"><a href='http://www.mocktheveg.com/' rel='external nofollow' class='url'>veg mocking party</a> </cite><a href="http://blogs.selectsifiso.com/programmatically-create-ssis-package-using-c/#comment-1950"><time datetime="2011-10-19T08:26:03+00:00">October 19, 2011</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hey there I am so grateful I found your blog, I really found you by accident, while I was searching on Askjeeve for something else, Anyways I am here now and would just like to say many thanks for a tremendous post and a all round interesting blog (I also love the theme/design), I don’t have time to read through it all at the moment but I have bookmarked it and also added your RSS feeds, so when I have time I will be back to read much more, Please do keep up the great work.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+				<a rel='nofollow' class='comment-reply-link' href='http://blogs.selectsifiso.com/programmatically-create-ssis-package-using-c/?replytocom=1950#respond' onclick='return addComment.moveForm( "comment-1950", "1950", "respond", "82" )' aria-label='Reply to veg mocking party'>Reply</a> <span>&darr;</span>			</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-odd thread-alt depth-1" id="li-comment-599">
+		<article id="comment-599" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img src="http://blogs.selectsifiso.com/wp-content/uploads/sw_ndlovu-144x150.png" width="30" height="30" alt="" class="avatar avatar-30wp-user-avatar wp-user-avatar-30 alignnone photo avatar-default" /><cite class="fn"><a href='http://buy--synthroid.com' rel='external nofollow' class='url'>synthroid online</a> </cite><a href="http://blogs.selectsifiso.com/programmatically-create-ssis-package-using-c/#comment-599"><time datetime="2011-08-28T02:59:03+00:00">August 28, 2011</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Really interesting blog, keep up the good work!</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+				<a rel='nofollow' class='comment-reply-link' href='http://blogs.selectsifiso.com/programmatically-create-ssis-package-using-c/?replytocom=599#respond' onclick='return addComment.moveForm( "comment-599", "599", "respond", "82" )' aria-label='Reply to synthroid online'>Reply</a> <span>&darr;</span>			</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-even depth-1" id="li-comment-421">
+		<article id="comment-421" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img src="http://blogs.selectsifiso.com/wp-content/uploads/sw_ndlovu-144x150.png" width="30" height="30" alt="" class="avatar avatar-30wp-user-avatar wp-user-avatar-30 alignnone photo avatar-default" /><cite class="fn"><a href='http://www.howcast.com/users/tracytaylor981' rel='external nofollow' class='url'>grow roses</a> </cite><a href="http://blogs.selectsifiso.com/programmatically-create-ssis-package-using-c/#comment-421"><time datetime="2011-08-18T18:19:43+00:00">August 18, 2011</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Superb blog post, I have book marked this internet site so ideally I’ll see much more on this subject in the foreseeable future!</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+				<a rel='nofollow' class='comment-reply-link' href='http://blogs.selectsifiso.com/programmatically-create-ssis-package-using-c/?replytocom=421#respond' onclick='return addComment.moveForm( "comment-421", "421", "respond", "82" )' aria-label='Reply to grow roses'>Reply</a> <span>&darr;</span>			</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-odd thread-alt depth-1" id="li-comment-284">
+		<article id="comment-284" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img src="http://blogs.selectsifiso.com/wp-content/uploads/sw_ndlovu-144x150.png" width="30" height="30" alt="" class="avatar avatar-30wp-user-avatar wp-user-avatar-30 alignnone photo avatar-default" /><cite class="fn"><a href='http://www.august511.net' rel='external nofollow' class='url'>Claire</a> </cite><a href="http://blogs.selectsifiso.com/programmatically-create-ssis-package-using-c/#comment-284"><time datetime="2011-08-06T17:22:28+00:00">August 6, 2011</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Just thought i would comment and say neat design, did you code it yourself? Looks great.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+				<a rel='nofollow' class='comment-reply-link' href='http://blogs.selectsifiso.com/programmatically-create-ssis-package-using-c/?replytocom=284#respond' onclick='return addComment.moveForm( "comment-284", "284", "respond", "82" )' aria-label='Reply to Claire'>Reply</a> <span>&darr;</span>			</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	<ol class="children">
+	<li class="comment odd alt depth-2" id="li-comment-295">
+		<article id="comment-295" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img src="http://blogs.selectsifiso.com/wp-content/uploads/sw_ndlovu-144x150.png" width="30" height="30" alt="" class="avatar avatar-30wp-user-avatar wp-user-avatar-30 alignnone photo avatar-default" /><cite class="fn"><a href='http://www.blogs.selectsifiso.com/' rel='external nofollow' class='url'>Sifiso</a> </cite><a href="http://blogs.selectsifiso.com/programmatically-create-ssis-package-using-c/#comment-295"><time datetime="2011-08-08T10:48:56+00:00">August 8, 2011</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>thanks, Claire</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+				<a rel='nofollow' class='comment-reply-link' href='http://blogs.selectsifiso.com/programmatically-create-ssis-package-using-c/?replytocom=295#respond' onclick='return addComment.moveForm( "comment-295", "295", "respond", "82" )' aria-label='Reply to Sifiso'>Reply</a> <span>&darr;</span>			</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-282">
+		<article id="comment-282" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img src="http://blogs.selectsifiso.com/wp-content/uploads/sw_ndlovu-144x150.png" width="30" height="30" alt="" class="avatar avatar-30wp-user-avatar wp-user-avatar-30 alignnone photo avatar-default" /><cite class="fn"><a href='http://TOY--SOLDIER.INFO' rel='external nofollow' class='url'>Loris Roggeman</a> </cite><a href="http://blogs.selectsifiso.com/programmatically-create-ssis-package-using-c/#comment-282"><time datetime="2011-08-05T02:56:34+00:00">August 5, 2011</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Im thankful for the blog post.Much thanks again.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+				<a rel='nofollow' class='comment-reply-link' href='http://blogs.selectsifiso.com/programmatically-create-ssis-package-using-c/?replytocom=282#respond' onclick='return addComment.moveForm( "comment-282", "282", "respond", "82" )' aria-label='Reply to Loris Roggeman'>Reply</a> <span>&darr;</span>			</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	<ol class="children">
+	<li class="comment odd alt depth-2" id="li-comment-294">
+		<article id="comment-294" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img src="http://blogs.selectsifiso.com/wp-content/uploads/sw_ndlovu-144x150.png" width="30" height="30" alt="" class="avatar avatar-30wp-user-avatar wp-user-avatar-30 alignnone photo avatar-default" /><cite class="fn"><a href='http://www.blogs.selectsifiso.com/' rel='external nofollow' class='url'>Sifiso</a> </cite><a href="http://blogs.selectsifiso.com/programmatically-create-ssis-package-using-c/#comment-294"><time datetime="2011-08-08T10:48:40+00:00">August 8, 2011</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>pleasure is all mine, thanks</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+				<a rel='nofollow' class='comment-reply-link' href='http://blogs.selectsifiso.com/programmatically-create-ssis-package-using-c/?replytocom=294#respond' onclick='return addComment.moveForm( "comment-294", "294", "respond", "82" )' aria-label='Reply to Sifiso'>Reply</a> <span>&darr;</span>			</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+	<li class="comment even thread-odd thread-alt depth-1" id="li-comment-226">
+		<article id="comment-226" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img src="http://blogs.selectsifiso.com/wp-content/uploads/sw_ndlovu-144x150.png" width="30" height="30" alt="" class="avatar avatar-30wp-user-avatar wp-user-avatar-30 alignnone photo avatar-default" /><cite class="fn"><a href='http://tonycarroll1230.blog.com/' rel='external nofollow' class='url'>apricot tree</a> </cite><a href="http://blogs.selectsifiso.com/programmatically-create-ssis-package-using-c/#comment-226"><time datetime="2011-07-28T14:05:40+00:00">July 28, 2011</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I was extremely pleased to locate this web-site.I wanted to thanks for your time for this wonderful read!! I undoubtedly enjoying every little bit of it and I&#8217;ve you bookmarked to check out new stuff you weblog post.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+				<a rel='nofollow' class='comment-reply-link' href='http://blogs.selectsifiso.com/programmatically-create-ssis-package-using-c/?replytocom=226#respond' onclick='return addComment.moveForm( "comment-226", "226", "respond", "82" )' aria-label='Reply to apricot tree'>Reply</a> <span>&darr;</span>			</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-even depth-1" id="li-comment-124">
+		<article id="comment-124" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img src="http://blogs.selectsifiso.com/wp-content/uploads/sw_ndlovu-144x150.png" width="30" height="30" alt="" class="avatar avatar-30wp-user-avatar wp-user-avatar-30 alignnone photo avatar-default" /><cite class="fn"><a href='http://crush-the-castle.com' rel='external nofollow' class='url'>Jafitasty</a> </cite><a href="http://blogs.selectsifiso.com/programmatically-create-ssis-package-using-c/#comment-124"><time datetime="2011-06-11T01:53:11+00:00">June 11, 2011</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hi, I left you a DOFOLLOW backlink on my website. This isnt a spam message, i actually did leave you a backlink on my site. If you check the top of the page you will see &#8220;Sites we like&#8221; and there will be a link to this site. Would you be kind enough to leave me a backlink? If so my website is <a href="http://crush-the-castle.com" rel="nofollow">http://crush-the-castle.com</a> please use the anchor text &#8220;Crush The Castle&#8221; for the link and add it to a post or as a widget. Then please send me a email at <a href="mailto:backlink@crush-the-castle.com">backlink@crush-the-castle.com</a> &#8211; If you want me to change your links anchor text let me know. Thanks</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+				<a rel='nofollow' class='comment-reply-link' href='http://blogs.selectsifiso.com/programmatically-create-ssis-package-using-c/?replytocom=124#respond' onclick='return addComment.moveForm( "comment-124", "124", "respond", "82" )' aria-label='Reply to Jafitasty'>Reply</a> <span>&darr;</span>			</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-odd thread-alt depth-1" id="li-comment-83">
+		<article id="comment-83" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img src="http://blogs.selectsifiso.com/wp-content/uploads/sw_ndlovu-144x150.png" width="30" height="30" alt="" class="avatar avatar-30wp-user-avatar wp-user-avatar-30 alignnone photo avatar-default" /><cite class="fn"><a href='http://www.austrodach.ro' rel='external nofollow' class='url'>tigla metalica</a> </cite><a href="http://blogs.selectsifiso.com/programmatically-create-ssis-package-using-c/#comment-83"><time datetime="2011-05-30T17:11:49+00:00">May 30, 2011</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Yahoo displayed your blog when I looked for a specific keyword, that’s why I ended up here. Anyway, you have a great article, it’s worth reading and worthy of my time.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+				<a rel='nofollow' class='comment-reply-link' href='http://blogs.selectsifiso.com/programmatically-create-ssis-package-using-c/?replytocom=83#respond' onclick='return addComment.moveForm( "comment-83", "83", "respond", "82" )' aria-label='Reply to tigla metalica'>Reply</a> <span>&darr;</span>			</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	<ol class="children">
+	<li class="comment odd alt depth-2" id="li-comment-84">
+		<article id="comment-84" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img src="http://blogs.selectsifiso.com/wp-content/uploads/sw_ndlovu-144x150.png" width="30" height="30" alt="" class="avatar avatar-30wp-user-avatar wp-user-avatar-30 alignnone photo avatar-default" /><cite class="fn"><a href='http://www.blogs.selectsifiso.com/' rel='external nofollow' class='url'>Sifiso</a> </cite><a href="http://blogs.selectsifiso.com/programmatically-create-ssis-package-using-c/#comment-84"><time datetime="2011-05-30T17:12:25+00:00">May 30, 2011</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>thanks</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+				<a rel='nofollow' class='comment-reply-link' href='http://blogs.selectsifiso.com/programmatically-create-ssis-package-using-c/?replytocom=84#respond' onclick='return addComment.moveForm( "comment-84", "84", "respond", "82" )' aria-label='Reply to Sifiso'>Reply</a> <span>&darr;</span>			</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-71">
+		<article id="comment-71" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img src="http://blogs.selectsifiso.com/wp-content/uploads/sw_ndlovu-144x150.png" width="30" height="30" alt="" class="avatar avatar-30wp-user-avatar wp-user-avatar-30 alignnone photo avatar-default" /><cite class="fn"><a href='http://www.autowealthmaker.me' rel='external nofollow' class='url'>Ryze</a> </cite><a href="http://blogs.selectsifiso.com/programmatically-create-ssis-package-using-c/#comment-71"><time datetime="2011-05-23T17:08:46+00:00">May 23, 2011</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>How many people do you get on your site per day? I have been reading some of you content and i think its good but hardly anyone leaves any comments which makes me think your not getting much traffic? Check these guys out, they helped my site and i think they can help you achive your online goals <a href="http://www.autowealthmaker.me" rel="nofollow">http://www.autowealthmaker.me</a></p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+				<a rel='nofollow' class='comment-reply-link' href='http://blogs.selectsifiso.com/programmatically-create-ssis-package-using-c/?replytocom=71#respond' onclick='return addComment.moveForm( "comment-71", "71", "respond", "82" )' aria-label='Reply to Ryze'>Reply</a> <span>&darr;</span>			</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-65">
+		<article id="comment-65" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img src="http://blogs.selectsifiso.com/wp-content/uploads/sw_ndlovu-144x150.png" width="30" height="30" alt="" class="avatar avatar-30wp-user-avatar wp-user-avatar-30 alignnone photo avatar-default" /><cite class="fn"><a href='http://www.commissioncrusherx.net' rel='external nofollow' class='url'>unjurgine</a> </cite><a href="http://blogs.selectsifiso.com/programmatically-create-ssis-package-using-c/#comment-65"><time datetime="2011-05-22T08:49:07+00:00">May 22, 2011</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hi, I quickly read your posts and i can see that your website has potential however no matter how good your content is you NEED traffic and exposure to the huge wide web. I really think you will find something to help you on this site, it has really helped me with my blog and i am now making $10,000 + per month blogging. <a href="http://www.commissioncrusherx.net" rel="nofollow">http://www.commissioncrusherx.net</a></p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+				<a rel='nofollow' class='comment-reply-link' href='http://blogs.selectsifiso.com/programmatically-create-ssis-package-using-c/?replytocom=65#respond' onclick='return addComment.moveForm( "comment-65", "65", "respond", "82" )' aria-label='Reply to unjurgine'>Reply</a> <span>&darr;</span>			</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-62">
+		<article id="comment-62" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img src="http://blogs.selectsifiso.com/wp-content/uploads/sw_ndlovu-144x150.png" width="30" height="30" alt="" class="avatar avatar-30wp-user-avatar wp-user-avatar-30 alignnone photo avatar-default" /><cite class="fn"><a href='http://www.commissioncrusherx.net' rel='external nofollow' class='url'>Eroreicroxeri</a> </cite><a href="http://blogs.selectsifiso.com/programmatically-create-ssis-package-using-c/#comment-62"><time datetime="2011-05-20T10:52:29+00:00">May 20, 2011</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hi. I like your website but i can tell it probably isn&#8217;t getting much traffic? If you want to help imrpove that check this website out, he has a short video that i really suggest you watch. <a href="http://www.commissioncrusherx.net" rel="nofollow">Commission Crusher</a> P.S this isn&#8217;t my website and i&#8217;m not spamming your blog, i don&#8217;t care if you delete this comment. I am only trying to help you improve your site.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+				<a rel='nofollow' class='comment-reply-link' href='http://blogs.selectsifiso.com/programmatically-create-ssis-package-using-c/?replytocom=62#respond' onclick='return addComment.moveForm( "comment-62", "62", "respond", "82" )' aria-label='Reply to Eroreicroxeri'>Reply</a> <span>&darr;</span>			</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-33">
+		<article id="comment-33" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img src="http://blogs.selectsifiso.com/wp-content/uploads/sw_ndlovu-144x150.png" width="30" height="30" alt="" class="avatar avatar-30wp-user-avatar wp-user-avatar-30 alignnone photo avatar-default" /><cite class="fn"><a href='http://shine.org.pl' rel='external nofollow' class='url'>katalog stron www</a> </cite><a href="http://blogs.selectsifiso.com/programmatically-create-ssis-package-using-c/#comment-33"><time datetime="2011-05-15T20:41:24+00:00">May 15, 2011</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>whoah this blog is wonderful i love reading your articles. Keep up the good work! You know, many people are looking around for this info, you could aid them greatly.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+				<a rel='nofollow' class='comment-reply-link' href='http://blogs.selectsifiso.com/programmatically-create-ssis-package-using-c/?replytocom=33#respond' onclick='return addComment.moveForm( "comment-33", "33", "respond", "82" )' aria-label='Reply to katalog stron www'>Reply</a> <span>&darr;</span>			</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	<ol class="children">
+	<li class="comment even depth-2" id="li-comment-34">
+		<article id="comment-34" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img src="http://blogs.selectsifiso.com/wp-content/uploads/sw_ndlovu-144x150.png" width="30" height="30" alt="" class="avatar avatar-30wp-user-avatar wp-user-avatar-30 alignnone photo avatar-default" /><cite class="fn"><a href='http://www.blogs.selectsifiso.com/' rel='external nofollow' class='url'>Sifiso</a> </cite><a href="http://blogs.selectsifiso.com/programmatically-create-ssis-package-using-c/#comment-34"><time datetime="2011-05-16T08:43:45+00:00">May 16, 2011</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I appreciate it, many thanks.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+				<a rel='nofollow' class='comment-reply-link' href='http://blogs.selectsifiso.com/programmatically-create-ssis-package-using-c/?replytocom=34#respond' onclick='return addComment.moveForm( "comment-34", "34", "respond", "82" )' aria-label='Reply to Sifiso'>Reply</a> <span>&darr;</span>			</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+	<li class="pingback odd alt thread-even depth-1" id="comment-27">
+		<p>Pingback: <a href='http://www.blogs.selectsifiso.com/?p=284' rel='external nofollow' class='url'>Extract SQL Statements in Execute SQL Tasks and save them into a text delimited file using C#</a> </p>
+	</li><!-- #comment-## -->
+	<li class="pingback even thread-odd thread-alt depth-1" id="comment-26">
+		<p>Pingback: <a href='http://www.blogs.selectsifiso.com/?p=278' rel='external nofollow' class='url'>Extract SQL Statements in Execute SQL Tasks and save them into an Excel Workbook using C#</a> </p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-even depth-1" id="li-comment-14">
+		<article id="comment-14" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img src="http://blogs.selectsifiso.com/wp-content/uploads/sw_ndlovu-144x150.png" width="30" height="30" alt="" class="avatar avatar-30wp-user-avatar wp-user-avatar-30 alignnone photo avatar-default" /><cite class="fn"><a href='http://www.blogs.selectsifiso.com/' rel='external nofollow' class='url'>Sifiso</a> </cite><a href="http://blogs.selectsifiso.com/programmatically-create-ssis-package-using-c/#comment-14"><time datetime="2011-04-28T06:15:16+00:00">April 28, 2011</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>It&#8217;s a pleasure, Cornelia.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+				<a rel='nofollow' class='comment-reply-link' href='http://blogs.selectsifiso.com/programmatically-create-ssis-package-using-c/?replytocom=14#respond' onclick='return addComment.moveForm( "comment-14", "14", "respond", "82" )' aria-label='Reply to Sifiso'>Reply</a> <span>&darr;</span>			</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-odd thread-alt depth-1" id="li-comment-13">
+		<article id="comment-13" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img src="http://blogs.selectsifiso.com/wp-content/uploads/sw_ndlovu-144x150.png" width="30" height="30" alt="" class="avatar avatar-30wp-user-avatar wp-user-avatar-30 alignnone photo avatar-default" /><cite class="fn"><a href='http://www.seomarketingservicesonline.com/buy_backlinks.php' rel='external nofollow' class='url'>Cornelia Forand</a> </cite><a href="http://blogs.selectsifiso.com/programmatically-create-ssis-package-using-c/#comment-13"><time datetime="2011-04-26T23:00:26+00:00">April 26, 2011</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I have been searching for some information about it almost three hours. You helped me a lot indeed and reading this your article I have found many new and useful information about this subject. <a href="http://www.seomarketingservicesonline.com/buy_backlinks.php" rel="nofollow">Backlinks</a></p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+				<a rel='nofollow' class='comment-reply-link' href='http://blogs.selectsifiso.com/programmatically-create-ssis-package-using-c/?replytocom=13#respond' onclick='return addComment.moveForm( "comment-13", "13", "respond", "82" )' aria-label='Reply to Cornelia Forand'>Reply</a> <span>&darr;</span>			</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+		</ol><!-- .commentlist -->
+
+		
+		
+	
+					<div id="respond" class="comment-respond">
+			<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/programmatically-create-ssis-package-using-c/#respond" style="display:none;">Cancel reply</a></small></h3>				<form action="http://blogs.selectsifiso.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+					<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8"  aria-required="true" required="required"></textarea></p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" aria-required='true' required='required' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" aria-describedby="email-notes" aria-required='true' required='required' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" /></p>
+<p class="cptch_block"><br /><span class="cptch_wrap">
+				<label class="cptch_label" for="cptch_input">
+					<span class="cptch_span">nin&#101;</span>
+					<span class="cptch_span">&nbsp;&times;&nbsp;</span>
+					<span class="cptch_span">t&#104;&#114;e&#101;</span>
+					<span class="cptch_span">&nbsp;=&nbsp;</span>
+					<span class="cptch_span"><input id="cptch_input" class="cptch_input" type="text" autocomplete="off" name="cptch_number" value="" maxlength="2" size="2" aria-required="true" required="required" style="margin-bottom:0;display:inline;font-size: 12px;width: 40px;" /></span>
+					<input type="hidden" name="cptch_result" value="+SMe" />
+					<input type="hidden" name="cptch_time" value="1458083112" />
+					<input type="hidden" value="Version: 4.1.8" />
+				</label><span class="cptch_reload_button_wrap hide-if-no-js">
+					<noscript>
+						<style type="text/css">
+							.hide-if-no-js {
+								display: none !important;
+							}
+						</style>
+					</noscript>
+					<span class="cptch_reload_button dashicons dashicons-update"></span>
+				</span></span></p><p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment" /> <input type='hidden' name='comment_post_ID' value='82' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="1bcd623b80" /></p><p style="display:none;"><input type="text" name="nxts" value="1458083121" /><input type="text" name="nxts_signed" value="9b09e10baad4c21c1f3275456a269fd1fb0f9a4c" /><input type="text" name="07a8bb65771366f8ab4ec6f" value="3efe6dac701706d" /><input type="text" name="3cc709bd9e143" value="" /></p><p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="153"/></p>				</form>
+					</div><!-- #respond -->
+		
+</div><!-- #comments .comments-area -->
+			
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+
+		
+	 		<div id="secondary" class="widget-area" role="complementary">
+			<div class="widget widget_search">
+				<form role="search" method="get" id="searchform" class="searchform" action="http://blogs.selectsifiso.com/">
+				<div>
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Search" />
+				</div>
+			</form>			</div>
+			<div class="widget widget_recent_entries">
+				<p class="widget-title">Recent Posts</p>
+				<ul>	<li><a href='http://blogs.selectsifiso.com/duplicate-mysql-table-using-phpmyadmin/'>Duplicate MySQL Table Using phpMyAdmin</a></li>
+	<li><a href='http://blogs.selectsifiso.com/wheres-my-team-explorer-2015/'>Where&#8217;s my Team Explorer 2015?</a></li>
+	<li><a href='http://blogs.selectsifiso.com/sql-server-database-source-control-using-vso-git/'>SQL Server Database Source Control using VSO Git</a></li>
+	<li><a href='http://blogs.selectsifiso.com/dimensional-modelling-in-lucidchart-vs-visio-part-1/'>Dimensional Modelling in Lucidchart vs Visio: Part 1</a></li>
+	<li><a href='http://blogs.selectsifiso.com/execute-all-packages-within-ssis-project-catalog/'>Execute All Packages Within SSIS Project Catalog</a></li>
+</ul>
+			</div>
+			<div class="widget widget_pages">
+			<p class="widget-title">Pages</p>
+          <ul><li class="page_item page-item-776"><a href="http://blogs.selectsifiso.com/about/">About</a></li>
+<li class="page_item page-item-791"><a href="http://blogs.selectsifiso.com/articles/">Articles</a></li>
+<li class="page_item page-item-947"><a href="http://blogs.selectsifiso.com/codeplex/">CodePlex</a></li>
+<li class="page_item page-item-19"><a href="http://blogs.selectsifiso.com/contact/">Contact</a></li>
+<li class="page_item page-item-740"><a href="http://blogs.selectsifiso.com/contributors/">Contributors</a></li>
+<li class="page_item page-item-882"><a href="http://blogs.selectsifiso.com/disclaimer/">Disclaimer</a></li>
+<li class="page_item page-item-868"><a href="http://blogs.selectsifiso.com/events/">Events</a></li>
+<li class="page_item page-item-938"><a href="http://blogs.selectsifiso.com/github/">GitHub</a></li>
+<li class="page_item page-item-806"><a href="http://blogs.selectsifiso.com/manage-subscriptions/">Manage Subscriptions</a></li>
+<li class="page_item page-item-808"><a href="http://blogs.selectsifiso.com/nl-confirm-signup/">Newsletter Sign Up Confirmation</a></li>
+<li class="page_item page-item-809"><a href="http://blogs.selectsifiso.com/nl-unsubscribe-page/">Newsletter Unsubscription</a></li>
+<li class="page_item page-item-781"><a href="http://blogs.selectsifiso.com/newsletters/">Newsletters</a></li>
+<li class="page_item page-item-891"><a href="http://blogs.selectsifiso.com/privacy-policy/">Privacy Policy</a></li>
+<li class="page_item page-item-635"><a href="http://blogs.selectsifiso.com/rss-feeds/">RSS Feeds</a></li>
+<li class="page_item page-item-778"><a href="http://blogs.selectsifiso.com/source-code/">Source Code</a></li>
+<li class="page_item page-item-903"><a href="http://blogs.selectsifiso.com/terms/">Terms and Conditions</a></li>
+<li class="page_item page-item-780"><a href="http://blogs.selectsifiso.com/tutorials/">Videos</a></li>
+</ul>
+      </div>
+	  
+	  <div class="widget widget_tag_cloud">
+       <p class="widget-title">Tag Cloud</p>
+        <a href='http://blogs.selectsifiso.com/tag/adventureworks2008r2/' class='tag-link-21' title='20 topics' style='font-size: 17.826086956522px;'>AdventureWorks2008R2</a>
+<a href='http://blogs.selectsifiso.com/tag/c/' class='tag-link-12' title='30 topics' style='font-size: 19.673913043478px;'>C#</a>
+<a href='http://blogs.selectsifiso.com/tag/c-programming-language/' class='tag-link-15' title='32 topics' style='font-size: 20px;'>C# programming language</a>
+<a href='http://blogs.selectsifiso.com/tag/create-sql-view/' class='tag-link-17' title='13 topics' style='font-size: 15.978260869565px;'>create SQL view</a>
+<a href='http://blogs.selectsifiso.com/tag/create-ssis-package/' class='tag-link-18' title='24 topics' style='font-size: 18.695652173913px;'>Create SSIS Package</a>
+<a href='http://blogs.selectsifiso.com/tag/data-flow-task/' class='tag-link-193' title='10 topics' style='font-size: 14.782608695652px;'>Data Flow Task</a>
+<a href='http://blogs.selectsifiso.com/tag/destination-component/' class='tag-link-48' title='12 topics' style='font-size: 15.54347826087px;'>Destination Component</a>
+<a href='http://blogs.selectsifiso.com/tag/dts/' class='tag-link-43' title='9 topics' style='font-size: 14.347826086957px;'>DTS</a>
+<a href='http://blogs.selectsifiso.com/tag/dynamic-ssis-package/' class='tag-link-9' title='28 topics' style='font-size: 19.347826086957px;'>Dynamic SSIS Package</a>
+<a href='http://blogs.selectsifiso.com/tag/execute-sql-task/' class='tag-link-190' title='13 topics' style='font-size: 15.978260869565px;'>Execute SQL Task</a>
+<a href='http://blogs.selectsifiso.com/tag/extract-sql-statement-source/' class='tag-link-22' title='7 topics' style='font-size: 13.260869565217px;'>Extract SQL Statement source</a>
+<a href='http://blogs.selectsifiso.com/tag/file/' class='tag-link-39' title='4 topics' style='font-size: 11.086956521739px;'>file</a>
+<a href='http://blogs.selectsifiso.com/tag/foreach-loop/' class='tag-link-27' title='4 topics' style='font-size: 11.086956521739px;'>ForEach Loop</a>
+<a href='http://blogs.selectsifiso.com/tag/foreachloop-container/' class='tag-link-28' title='4 topics' style='font-size: 11.086956521739px;'>ForEachLoop Container</a>
+<a href='http://blogs.selectsifiso.com/tag/ole-db/' class='tag-link-44' title='15 topics' style='font-size: 16.521739130435px;'>OLE DB</a>
+<a href='http://blogs.selectsifiso.com/tag/oledb-destination/' class='tag-link-46' title='12 topics' style='font-size: 15.54347826087px;'>OLEDB Destination</a>
+<a href='http://blogs.selectsifiso.com/tag/oledb-source/' class='tag-link-45' title='11 topics' style='font-size: 15.217391304348px;'>OLEDB Source</a>
+<a href='http://blogs.selectsifiso.com/tag/read-sql-query/' class='tag-link-23' title='8 topics' style='font-size: 13.804347826087px;'>Read SQL Query</a>
+<a href='http://blogs.selectsifiso.com/tag/script-task/' class='tag-link-13' title='26 topics' style='font-size: 19.021739130435px;'>script task</a>
+<a href='http://blogs.selectsifiso.com/tag/sequence-container/' class='tag-link-191' title='3 topics' style='font-size: 10px;'>Sequence Container</a>
+<a href='http://blogs.selectsifiso.com/tag/source-component/' class='tag-link-47' title='10 topics' style='font-size: 14.782608695652px;'>Source Component</a>
+<a href='http://blogs.selectsifiso.com/tag/sql-server-2008/' class='tag-link-11' title='24 topics' style='font-size: 18.695652173913px;'>SQL Server 2008</a>
+<a href='http://blogs.selectsifiso.com/tag/sql-server-integration-services/' class='tag-link-19' title='31 topics' style='font-size: 19.891304347826px;'>SQL Server Integration Services</a>
+<a href='http://blogs.selectsifiso.com/tag/sql-view/' class='tag-link-14' title='13 topics' style='font-size: 15.978260869565px;'>SQL view</a>
+<a href='http://blogs.selectsifiso.com/tag/ssis/' class='tag-link-5' title='25 topics' style='font-size: 18.804347826087px;'>SSIS</a>
+<a href='http://blogs.selectsifiso.com/tag/ssis-2012/' class='tag-link-205' title='5 topics' style='font-size: 11.95652173913px;'>SSIS 2012</a>
+<a href='http://blogs.selectsifiso.com/tag/transformation/' class='tag-link-54' title='4 topics' style='font-size: 11.086956521739px;'>Transformation</a>
+<a href='http://blogs.selectsifiso.com/tag/update-view/' class='tag-link-16' title='11 topics' style='font-size: 15.217391304348px;'>update view</a>
+<a href='http://blogs.selectsifiso.com/tag/visual-studio-2010/' class='tag-link-95' title='4 topics' style='font-size: 11.086956521739px;'>Visual Studio 2010</a>
+<a href='http://blogs.selectsifiso.com/tag/xml/' class='tag-link-201' title='4 topics' style='font-size: 11.086956521739px;'>XML</a>			</div>
+		</div><!-- #secondary -->
+		</div><!-- #main .wrapper -->
+	<footer id="colophon" role="contentinfo">
+		<div class="site-info">
+		<div class="footercopy">custom footer text left</div>
+		<div class="footercredit">custom footer text right</div>
+		<div class="clear"></div>
+		</div><!-- .site-info -->
+		</footer><!-- #colophon -->
+		<div class="site-wordpress">
+				<a href="http://themonic.com/iconic-one/">Iconic One</a> Theme | Powered by <a href="http://wordpress.org">Wordpress</a>
+				</div><!-- .site-info -->
+				<div class="clear"></div>
+</div><!-- #page -->
+
+
+
+
+<script type='text/javascript' src='http://blogs.selectsifiso.com/wp-content/plugins/akismet/_inc/form.js?ver=06820f499ad3078ba51bb8a3026295a9'></script>
+<script type='text/javascript' src='http://blogs.selectsifiso.com/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=06820f499ad3078ba51bb8a3026295a9-2014.06.20'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"http:\/\/blogs.selectsifiso.com\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","recaptchaEmpty":"Please verify that you are not a robot.","sending":"Sending ..."};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://blogs.selectsifiso.com/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=06820f499ad3078ba51bb8a3026295a9'></script>
+<script type='text/javascript' src='http://blogs.selectsifiso.com/wp-includes/js/comment-reply.min.js?ver=06820f499ad3078ba51bb8a3026295a9'></script>
+<script type='text/javascript' src='http://blogs.selectsifiso.com/wp-content/themes/iconic-one/js/selectnav.js?ver=06820f499ad3078ba51bb8a3026295a9'></script>
+<script type='text/javascript' src='http://blogs.selectsifiso.com/wp-includes/js/wp-embed.min.js?ver=06820f499ad3078ba51bb8a3026295a9'></script>
+<script type='text/javascript' src='http://blogs.selectsifiso.com/wp-content/plugins/simplified-social-share/oss-social-sharing/assets/js/oss_share.js?ver=06820f499ad3078ba51bb8a3026295a9'></script>
+<script type='text/javascript' src='https://sharecdn.social9.com/v2/js/opensocialsharedefaulttheme.js?ver=06820f499ad3078ba51bb8a3026295a9'></script>
+<script type='text/javascript' src='https://sharecdn.social9.com/v2/js/opensocialshare.js?ver=06820f499ad3078ba51bb8a3026295a9'></script>
+
+               <script type="text/javascript">
+        var shareWidget = new OpenSocialShare();
+        shareWidget.init({
+             isEmailContentReadOnly:false,isTotalShare:true,isMobileFriendly:true,isShortenUrl:true,isOpenSingleWindow:false,                 
+            isCounterWidgetTheme: 0, // 0 or 1 - standard themes or counter widget themes
+            isHorizontalCounter: 0, // 0 or 1 - counter on top or counter to right - counter themes only
+            isHorizontalLayout: 1, // 0 or 1 - vertical layout or horizontal layout
+            widgetIconSize: "32", // "16" or "32" - 16px or 32px standard themes only
+                       widgetStyle: "responsive", //"image", "square" or "responsive" - standard themes only
+            
+           
+            providers: {
+                
+                   top: ["Facebook","Twitter","LinkedIn","GooglePlus","Pinterest","Email","Print"]
+                },
+           widgets: {
+                 //all : _private.getAllButtonName(_private.widgetConfig),
+                      top: ["Facebook Like","Twitter Tweet","Google+ Share","Pinterest Pin it","LinkedIn Share"]
+                      },
+                          theme: 'OpenSocialShareDefaultTheme',
+             
+        });
+        shareWidget.injectInterface(".oss_horizontal_share");
+        shareWidget.setWidgetTheme(".oss_horizontal_share");
+    </script>
+            </body>
+</html>

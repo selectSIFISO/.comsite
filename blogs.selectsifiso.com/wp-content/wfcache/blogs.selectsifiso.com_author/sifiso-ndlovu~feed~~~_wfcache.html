@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Sifiso Ndlovu &#8211; select SIFISO</title>
+	<atom:link href="http://blogs.selectsifiso.com/author/sifiso-ndlovu/feed/" rel="self" type="application/rss+xml" />
+	<link>http://blogs.selectsifiso.com</link>
+	<description>we know blogging</description>
+	<lastBuildDate>Mon, 07 Mar 2016 16:10:29 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	
+	<item>
+		<title>Duplicate MySQL Table Using phpMyAdmin</title>
+		<link>http://blogs.selectsifiso.com/duplicate-mysql-table-using-phpmyadmin/</link>
+		<comments>http://blogs.selectsifiso.com/duplicate-mysql-table-using-phpmyadmin/#respond</comments>
+		<pubDate>Sat, 14 Nov 2015 06:48:33 +0000</pubDate>
+		<dc:creator><![CDATA[Sifiso Ndlovu]]></dc:creator>
+				<category><![CDATA[Database]]></category>
+		<category><![CDATA[MySQL]]></category>
+		<category><![CDATA[phpMyAdmin]]></category>
+		<category><![CDATA[Copy table]]></category>
+		<category><![CDATA[Duplicate]]></category>
+		<category><![CDATA[Operations]]></category>
+
+		<guid isPermaLink="false">http://www.blogs.selectsifiso.com/?p=1204</guid>
+		<description><![CDATA[<div  class="oss_horizontal_share oss_title_replace" data-share-titles="Duplicate MySQL Table Using phpMyAdmin" data-share-description="There many reasons for creating copies of existing relational database tables. Sometimes you create " data-share-imageurl=""  data-share-url="http://blogs.selectsifiso.com/duplicate-mysql-table-using-phpmyadmin/"></div>There many reasons for creating copies of existing relational database tables. Sometimes you create duplicate tables for the purposes of table backup or for application testing purposes.  Whatever your reasons may be, you will notice that different relational database integrated development environments (IDE) implement table duplication differently. &#160; I would like to demonstrate how a… <span class="read-more"><a href="http://blogs.selectsifiso.com/duplicate-mysql-table-using-phpmyadmin/">Read More &#187;</a></span>]]></description>
+				<content:encoded><![CDATA[<p>There many reasons for creating copies of existing relational database tables. Sometimes you create duplicate tables for the purposes of table backup or for application testing purposes.  Whatever your reasons may be, you will notice that different relational database <a href="https://en.wikipedia.org/wiki/Integrated_development_environment" target="_blank">integrated development environments</a> (IDE) implement table duplication differently.</p>
+<p>&nbsp;</p>
+<p>I would like to demonstrate how a duplication of a <a href="https://www.mysql.com" target="_blank"><em>MySQL</em> </a>table can be achieved using <em><a href="https://www.phpmyadmin.net" target="_blank">phpMyAdmin</a></em>. I was introduced to <a href="https://www.phpmyadmin.net" target="_blank"><em>phpMyAdmin</em> </a>by my current website hosting provider as part of a <a href="https://en.wikipedia.org/wiki/Content_management_system" target="_blank">content management system</a> (CMS) package that I had signed up for. I&#8217;ve found <a href="https://www.phpmyadmin.net" target="_blank"><em>phpMyAdmin</em> </a>to be an effective application for managing my website&#8217;s <a href="https://www.mysql.com" target="_blank"><em>MySQL</em> </a>databases. The steps for doing all of this are quite simple:</p>
+<p>&nbsp;</p>
+<p><strong>Step 1:</strong> Login into your instance of <a href="https://www.phpmyadmin.net" target="_blank"><em>phpMyAdmin</em> </a>and navigate to the <em>Operations</em> menu tab. You will notice that you are presented with several options underneath this menu tab &#8211; the one we are interested in, is at the bottom right with a heading as &#8220;<em>Copy table to (database.table):</em>&#8220;.</p>
+<p><a href="http://www.blogs.selectsifiso.com/wp-content/uploads/2015/11/1.png"><img class="wp-image-1211 size-full alignnone" src="http://www.blogs.selectsifiso.com/wp-content/uploads/2015/11/1.png" alt="1" width="806" height="420" srcset="http://blogs.selectsifiso.com/wp-content/uploads/2015/11/1-300x156.png 300w, http://blogs.selectsifiso.com/wp-content/uploads/2015/11/1-600x313.png 600w, http://blogs.selectsifiso.com/wp-content/uploads/2015/11/1-660x344.png 660w, http://blogs.selectsifiso.com/wp-content/uploads/2015/11/1.png 806w" sizes="(max-width: 806px) 100vw, 806px" /></a></p>
+<p>&nbsp;</p>
+<p><strong>Step 2:</strong> select database and table that you want duplicated. There are also additional options that you can choose i.e. do you want to duplicate the table&#8217;s structure only or do you want both structure and its content?</p>
+<p><a href="http://www.blogs.selectsifiso.com/wp-content/uploads/2015/11/2.png"><img class="wp-image-1209 size-full alignnone" src="http://www.blogs.selectsifiso.com/wp-content/uploads/2015/11/2.png" alt="2" width="538" height="306" srcset="http://blogs.selectsifiso.com/wp-content/uploads/2015/11/2-300x171.png 300w, http://blogs.selectsifiso.com/wp-content/uploads/2015/11/2.png 538w" sizes="(max-width: 538px) 100vw, 538px" /></a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>Step 3:</strong> Finally, when you are done with your selections, press <em>Go</em> and you will receive a confirmation message box upon the completion of the duplication operation. As it can be seen below &#8211; I have successfully duplicated <em>select SIFISO</em> table into <em>select SIFISO Bak</em> table.</p>
+<p><a href="http://www.blogs.selectsifiso.com/wp-content/uploads/2015/11/3.png"><img class="wp-image-1207 size-full alignnone" src="http://www.blogs.selectsifiso.com/wp-content/uploads/2015/11/3.png" alt="3" width="451" height="135" srcset="http://blogs.selectsifiso.com/wp-content/uploads/2015/11/3-300x90.png 300w, http://blogs.selectsifiso.com/wp-content/uploads/2015/11/3.png 451w" sizes="(max-width: 451px) 100vw, 451px" /></a></p>
+<p>&nbsp;</p>
+<p>It&#8217;s that simple, folks!</p>
+<p>Until next time, Cheers.</p>
+<p>Sifiso</p>
+<p>&nbsp;<br />
+&nbsp;</p>
+<p><a style="display: none;" href="http://www.codeproject.com" rel="tag">CodeProject</a>
+<div class="pvc_clear"></div>
+<p id="pvc_stats_1204" class="pvc_stats " element-id="1204"><img src="http://blogs.selectsifiso.com/wp-content/plugins/page-views-count/ajax-loader.gif" border=0 /></p>
+<div class="pvc_clear"></div>
+]]></content:encoded>
+			<wfw:commentRss>http://blogs.selectsifiso.com/duplicate-mysql-table-using-phpmyadmin/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Where&#8217;s my Team Explorer 2015?</title>
+		<link>http://blogs.selectsifiso.com/wheres-my-team-explorer-2015/</link>
+		<comments>http://blogs.selectsifiso.com/wheres-my-team-explorer-2015/#respond</comments>
+		<pubDate>Tue, 03 Nov 2015 09:43:57 +0000</pubDate>
+		<dc:creator><![CDATA[Sifiso Ndlovu]]></dc:creator>
+				<category><![CDATA[Team Explorer]]></category>
+		<category><![CDATA[Team Foundation Server]]></category>
+		<category><![CDATA[on-prem]]></category>
+		<category><![CDATA[on-premise]]></category>
+		<category><![CDATA[Team Explorer 2015]]></category>
+		<category><![CDATA[TFS]]></category>
+
+		<guid isPermaLink="false">http://www.blogs.selectsifiso.com/?p=1188</guid>
+		<description><![CDATA[<div  class="oss_horizontal_share oss_title_replace" data-share-titles="Where&#8217;s my Team Explorer 2015?" data-share-description="Team Explorer is a client software that can be used to integrate Visual Studio with an instance of T" data-share-imageurl=""  data-share-url="http://blogs.selectsifiso.com/wheres-my-team-explorer-2015/"></div>Team Explorer is a client software that can be used to integrate Visual Studio with an instance of Team Foundation Server (on-premise or cloud based). Over the years of using TFS &#8211; I&#8217;ve looked forward to downloading and installing Team Explorer for every version of Team Foundation Server. So you will understand my bewilderment when… <span class="read-more"><a href="http://blogs.selectsifiso.com/wheres-my-team-explorer-2015/">Read More &#187;</a></span>]]></description>
+				<content:encoded><![CDATA[<p>Team Explorer is a client software that can be used to integrate Visual Studio with an instance of Team Foundation Server (on-premise or cloud based). Over the years of using TFS &#8211; I&#8217;ve looked forward to downloading and installing Team Explorer for every version of Team Foundation Server. So you will understand my bewilderment when I couldn’t locate the installer following a successful setup of on-premise TFS 2015 server instance for my employer.</p>
+<p>Read more here: <a href="http://www.sqlshack.com/wheres-my-team-explorer-2015/" target="_blank">http://www.sqlshack.com/wheres-my-team-explorer-2015/</a></p>
+<p>&nbsp;</p>
+<p><a style="display: none;" href="http://www.codeproject.com" rel="tag">CodeProject</a>
+<div class="pvc_clear"></div>
+<p id="pvc_stats_1188" class="pvc_stats " element-id="1188"><img src="http://blogs.selectsifiso.com/wp-content/plugins/page-views-count/ajax-loader.gif" border=0 /></p>
+<div class="pvc_clear"></div>
+]]></content:encoded>
+			<wfw:commentRss>http://blogs.selectsifiso.com/wheres-my-team-explorer-2015/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Dimensional Modelling in Lucidchart vs Visio: Part 1</title>
+		<link>http://blogs.selectsifiso.com/dimensional-modelling-in-lucidchart-vs-visio-part-1/</link>
+		<comments>http://blogs.selectsifiso.com/dimensional-modelling-in-lucidchart-vs-visio-part-1/#respond</comments>
+		<pubDate>Sun, 30 Aug 2015 11:33:41 +0000</pubDate>
+		<dc:creator><![CDATA[Sifiso Ndlovu]]></dc:creator>
+				<category><![CDATA[Data Management]]></category>
+		<category><![CDATA[Data modelling]]></category>
+		<category><![CDATA[Database]]></category>
+		<category><![CDATA[Dimensional]]></category>
+		<category><![CDATA[Dimensional Modelling]]></category>
+		<category><![CDATA[Modelling]]></category>
+		<category><![CDATA[Crow's Foot Database Notation]]></category>
+		<category><![CDATA[Database Notation]]></category>
+		<category><![CDATA[Dim]]></category>
+		<category><![CDATA[DimConsumer]]></category>
+		<category><![CDATA[DimDate]]></category>
+		<category><![CDATA[DimFruit]]></category>
+		<category><![CDATA[e-commerce]]></category>
+		<category><![CDATA[Entity]]></category>
+		<category><![CDATA[Entity Relational]]></category>
+		<category><![CDATA[Entity Relational Model]]></category>
+		<category><![CDATA[ERD]]></category>
+		<category><![CDATA[Fact]]></category>
+		<category><![CDATA[FactPurchases]]></category>
+		<category><![CDATA[Hockey ERD]]></category>
+		<category><![CDATA[Lucidchart]]></category>
+		<category><![CDATA[MS Visio]]></category>
+		<category><![CDATA[Visio]]></category>
+
+		<guid isPermaLink="false">http://www.blogs.selectsifiso.com/?p=1136</guid>
+		<description><![CDATA[<div  class="oss_horizontal_share oss_title_replace" data-share-titles="Dimensional Modelling in Lucidchart vs Visio: Part 1" data-share-description="Data modelling is a pivotal skill that every practitioner in data management should acquire. That " data-share-imageurl=""  data-share-url="http://blogs.selectsifiso.com/dimensional-modelling-in-lucidchart-vs-visio-part-1/"></div>Data modelling is a pivotal skill that every practitioner in data management should acquire. That said, there are numerous tools that can be used to model data. As a Certified Microsoft Professional, my default modelling tool has always been Microsoft (MS) Visio and sometimes, Visual Studio. However, I&#8217;ve recently been introduced to Lucidchart and it completely blew my… <span class="read-more"><a href="http://blogs.selectsifiso.com/dimensional-modelling-in-lucidchart-vs-visio-part-1/">Read More &#187;</a></span>]]></description>
+				<content:encoded><![CDATA[<p><a href="https://en.wikipedia.org/wiki/Data_modeling" target="_blank">Data modelling</a> is a pivotal skill that every practitioner in <a href="https://en.wikipedia.org/wiki/Data_management" target="_blank">data management</a> should acquire. That said, there are numerous tools that can be used to model data. As a <a href="https://en.wikipedia.org/wiki/Microsoft_Certified_Professional" target="_blank">Certified Microsoft Professional</a>, my default modelling tool has always been <a href="https://products.office.com/en-gb/visio/flowchart-software" target="_blank">Microsoft (MS) Visio</a> and sometimes, <a href="https://msdn.microsoft.com/en-us/library/vstudio/bb399247(v=vs.100).aspx" target="_blank">Visual Studio</a>. However, I&#8217;ve recently been introduced to <a href="https://www.lucidchart.com/" target="_blank">Lucidchart </a>and it completely blew my mind. Thus, this blog post is a comparison piece on basic <a href="http://www.kimballgroup.com/1997/08/a-dimensional-modeling-manifesto/" target="_blank">dimensional modelling</a> in <a href="https://products.office.com/en-gb/visio/flowchart-software" target="_blank">MS Visio</a> versus <a href="https://www.lucidchart.com/" target="_blank">Lucidchart</a>.</p>
+<p><strong>Case Study</strong></p>
+<p>I find it much easier to explain something using case studies. So, this blog post&#8217;s case in point is that of dimensional modelling an application that allows consumers to purchase delicious fruits via an <a href="https://en.wikipedia.org/wiki/E-commerce" target="_blank">e-commerce</a> website platform. There are several comparisons that could be done on <a href="https://products.office.com/en-gb/visio/flowchart-software" target="_blank">MS Visio</a> vs. <a href="https://www.lucidchart.com/" target="_blank">Lucidchart </a>such as pricing models, accessibility of the tool via mobile platforms, collaboration etc. However, for the purposes of keeping things basic &#8211; my comparisons will focus on modelling the aforementioned case study using <a href="http://www2.cs.uregina.ca/~bernatja/crowsfoot.html" target="_blank">Crow&#8217;s foot notation</a>:</p>
+<p>The <a href="https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model" target="_blank">Entity Relational Model</a> for our case study could look as shown below:</p>
+<p>&nbsp;</p>
+<p><img class="alignnone wp-image-1149" src="http://www.blogs.selectsifiso.com/wp-content/uploads/2015/08/image3.png" alt="image3" width="378" height="141" srcset="http://blogs.selectsifiso.com/wp-content/uploads/2015/08/image3-300x112.png 300w, http://blogs.selectsifiso.com/wp-content/uploads/2015/08/image3-600x223.png 600w, http://blogs.selectsifiso.com/wp-content/uploads/2015/08/image3-660x246.png 660w, http://blogs.selectsifiso.com/wp-content/uploads/2015/08/image3.png 784w" sizes="(max-width: 378px) 100vw, 378px" /></p>
+<p><strong>Dimensional Modelling in <a href="https://products.office.com/en-gb/visio/flowchart-software" target="_blank">Visio</a></strong></p>
+<p>Step 1: Launch <a href="https://products.office.com/en-gb/visio/flowchart-software" target="_blank">MS Visio</a></p>
+<p>Step 2: Select Crow&#8217;s Foot Database Notation template under the Software category as shown below:</p>
+<p><img class="alignnone wp-image-1146" src="http://www.blogs.selectsifiso.com/wp-content/uploads/2015/08/visio.png" alt="visio" width="439" height="313" srcset="http://blogs.selectsifiso.com/wp-content/uploads/2015/08/visio-300x214.png 300w, http://blogs.selectsifiso.com/wp-content/uploads/2015/08/visio.png 673w" sizes="(max-width: 439px) 100vw, 439px" /></p>
+<p>Step 3: Drag 4 Entities to the blank window</p>
+<p>Step 4: Rename Entities to <em>DimConsumer</em>, <em>DimDate</em>, <em>DimFruit</em>, and <em>FactPurchases </em>as shown below:</p>
+<p><a href="http://www.blogs.selectsifiso.com/wp-content/uploads/2015/08/visio_enty_final.png" target="_blank"><img class="alignnone wp-image-1165" src="http://www.blogs.selectsifiso.com/wp-content/uploads/2015/08/visio_entity1.png" alt="visio_entity1" width="546" height="265" srcset="http://blogs.selectsifiso.com/wp-content/uploads/2015/08/visio_entity1-300x146.png 300w, http://blogs.selectsifiso.com/wp-content/uploads/2015/08/visio_entity1-600x291.png 600w, http://blogs.selectsifiso.com/wp-content/uploads/2015/08/visio_entity1-660x320.png 660w, http://blogs.selectsifiso.com/wp-content/uploads/2015/08/visio_entity1.png 738w" sizes="(max-width: 546px) 100vw, 546px" /></a></p>
+<p>Step 5: Join <em>DimConsumer</em>, <em>DimDate</em>, <em>DimFruit</em> entities to <em>FactPurchases</em></p>
+<p>Step 6: Add attributes to entities as shown below:</p>
+<p><a href="http://www.blogs.selectsifiso.com/wp-content/uploads/2015/08/visio_enty_final.png" target="_blank"><img class="alignnone wp-image-1161" src="http://www.blogs.selectsifiso.com/wp-content/uploads/2015/08/visio_enty_final.png" alt="visio_enty_final" width="634" height="420" srcset="http://blogs.selectsifiso.com/wp-content/uploads/2015/08/visio_enty_final-300x199.png 300w, http://blogs.selectsifiso.com/wp-content/uploads/2015/08/visio_enty_final-600x398.png 600w, http://blogs.selectsifiso.com/wp-content/uploads/2015/08/visio_enty_final-660x438.png 660w, http://blogs.selectsifiso.com/wp-content/uploads/2015/08/visio_enty_final.png 813w" sizes="(max-width: 634px) 100vw, 634px" /></a></p>
+<p><strong>Dimensional Modelling in <a href="https://www.lucidchart.com/" target="_blank">Lucidchart</a></strong></p>
+<p>Step 1: Launch <a href="https://www.lucidchart.com/" target="_blank">Lucidchart</a></p>
+<p>Step 2: Create New Document</p>
+<p>Unlike <a href="https://products.office.com/en-gb/visio/flowchart-software" target="_blank">MS Visio</a> whereby you are redirected to a blank document, <a href="https://www.lucidchart.com/" target="_blank">Lucidchart</a> gives you an option to setup a new document from scratch (blank document) or use an existing template i,e, Hockey ERD:</p>
+<p><img class="alignnone wp-image-1147" src="http://www.blogs.selectsifiso.com/wp-content/uploads/2015/08/lucidcharts_templates.png" alt="lucidcharts_templates" width="687" height="436" srcset="http://blogs.selectsifiso.com/wp-content/uploads/2015/08/lucidcharts_templates-300x190.png 300w, http://blogs.selectsifiso.com/wp-content/uploads/2015/08/lucidcharts_templates-600x381.png 600w, http://blogs.selectsifiso.com/wp-content/uploads/2015/08/lucidcharts_templates-660x419.png 660w, http://blogs.selectsifiso.com/wp-content/uploads/2015/08/lucidcharts_templates.png 904w" sizes="(max-width: 687px) 100vw, 687px" /></p>
+<p>Step 3: Delete all entities until you are left with 4 entities in a T-Shape as shown below:</p>
+<p><a href="http://www.blogs.selectsifiso.com/wp-content/uploads/2015/08/relat2_lucidchart.png" target="_blank"><img class="alignnone wp-image-1155" src="http://www.blogs.selectsifiso.com/wp-content/uploads/2015/08/lucid_removed_2.png" alt="lucid_removed_2" width="725" height="418" srcset="http://blogs.selectsifiso.com/wp-content/uploads/2015/08/lucid_removed_2-300x173.png 300w, http://blogs.selectsifiso.com/wp-content/uploads/2015/08/lucid_removed_2-600x346.png 600w, http://blogs.selectsifiso.com/wp-content/uploads/2015/08/lucid_removed_2-660x380.png 660w, http://blogs.selectsifiso.com/wp-content/uploads/2015/08/lucid_removed_2.png 816w" sizes="(max-width: 725px) 100vw, 725px" /></a></p>
+<p>Step 4: Rename Entities to <em>DimConsumer</em>, <em>DimDate</em>, <em>DimFruit</em>, and <em>FactPurchases</em></p>
+<p>Step 5: Remove/add attributes until your document looks like below:</p>
+<p><img class="alignnone wp-image-1156" src="http://www.blogs.selectsifiso.com/wp-content/uploads/2015/08/mdm_lucid.png" alt="mdm_lucid" width="637" height="434" srcset="http://blogs.selectsifiso.com/wp-content/uploads/2015/08/mdm_lucid-300x204.png 300w, http://blogs.selectsifiso.com/wp-content/uploads/2015/08/mdm_lucid-600x409.png 600w, http://blogs.selectsifiso.com/wp-content/uploads/2015/08/mdm_lucid-660x449.png 660w, http://blogs.selectsifiso.com/wp-content/uploads/2015/08/mdm_lucid.png 705w" sizes="(max-width: 637px) 100vw, 637px" /></p>
+<p>&nbsp;</p>
+<p><strong><span style="line-height: 1.5;">Conclusion</span></strong></p>
+<p>Although modelling our case study using both <a href="https://products.office.com/en-gb/visio/flowchart-software" target="_blank">MS Visio</a> and <a href="https://www.lucidchart.com/" target="_blank">Lucidchart </a>seemed to have taken similar number of steps &#8211; modelling using <a href="https://products.office.com/en-gb/visio/flowchart-software" target="_blank">MS Visio</a> took significantly longer. For instance adding attributes in <em>FactPurchases</em> meant dragging and dropping attribute stencil several times whereas in <a href="https://www.lucidchart.com/" target="_blank">Lucidchart</a> you just needed to increase the fields counter value from 3 to 6 as shown below:</p>
+<p><a href="http://www.blogs.selectsifiso.com/wp-content/uploads/2015/08/lucid_cahrts_attr.png" target="_blank"><img class="alignnone wp-image-1184 size-full" src="http://www.blogs.selectsifiso.com/wp-content/uploads/2015/08/lucid_cahrts_attr.png" alt="lucid_cahrts_attr" width="439" height="208" srcset="http://blogs.selectsifiso.com/wp-content/uploads/2015/08/lucid_cahrts_attr-300x142.png 300w, http://blogs.selectsifiso.com/wp-content/uploads/2015/08/lucid_cahrts_attr.png 439w" sizes="(max-width: 439px) 100vw, 439px" /></a></p>
+<p>The second part of this blog will focus more on key differences of <a href="http://www.kimballgroup.com/1997/08/a-dimensional-modeling-manifesto/" target="_blank">dimensional modelling</a> using two applications. <a style="display: none;" href="http://www.codeproject.com" rel="tag">CodeProject</a>
+<div class="pvc_clear"></div>
+<p id="pvc_stats_1136" class="pvc_stats " element-id="1136"><img src="http://blogs.selectsifiso.com/wp-content/plugins/page-views-count/ajax-loader.gif" border=0 /></p>
+<div class="pvc_clear"></div>
+]]></content:encoded>
+			<wfw:commentRss>http://blogs.selectsifiso.com/dimensional-modelling-in-lucidchart-vs-visio-part-1/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Execute All Packages Within SSIS Project Catalog</title>
+		<link>http://blogs.selectsifiso.com/execute-all-packages-within-ssis-project-catalog/</link>
+		<comments>http://blogs.selectsifiso.com/execute-all-packages-within-ssis-project-catalog/#respond</comments>
+		<pubDate>Mon, 06 Jul 2015 16:34:08 +0000</pubDate>
+		<dc:creator><![CDATA[Sifiso Ndlovu]]></dc:creator>
+				<category><![CDATA[Catalog]]></category>
+		<category><![CDATA[Execute Package Task]]></category>
+		<category><![CDATA[Project Deployment Model]]></category>
+		<category><![CDATA[Project Deployment]]></category>
+		<category><![CDATA[SQL Server Integration Services]]></category>
+		<category><![CDATA[SSIS]]></category>
+		<category><![CDATA[SSIS Catalog]]></category>
+		<category><![CDATA[SSIS Package]]></category>
+
+		<guid isPermaLink="false">http://www.blogs.selectsifiso.com/?p=1112</guid>
+		<description><![CDATA[<div  class="oss_horizontal_share oss_title_replace" data-share-titles="Execute All Packages Within SSIS Project Catalog" data-share-description="The SSIS Project Deployment Model is great! It really is the best thing since sliced bread! I specif" data-share-imageurl=""  data-share-url="http://blogs.selectsifiso.com/execute-all-packages-within-ssis-project-catalog/"></div>The SSIS Project Deployment Model is great! It really is the best thing since sliced bread! I specifically appreciate the package execution logging and reporting that is provided by this model but &#8230;. (there is always a but :), right), lately I&#8217;ve been looking for ways to execute all packages within a project at once.… <span class="read-more"><a href="http://blogs.selectsifiso.com/execute-all-packages-within-ssis-project-catalog/">Read More &#187;</a></span>]]></description>
+				<content:encoded><![CDATA[<p>The <a href="https://msdn.microsoft.com/en-us/library/hh213290.aspx" target="_blank">SSIS Project Deployment Model</a> is great! It really is the best thing since sliced bread! I specifically appreciate the <a href="https://msdn.microsoft.com/en-us/library/hh231191.aspx" target="_blank">package execution logging</a> and <a href="https://msdn.microsoft.com/en-us/library/hh213362.aspx" target="_blank">reporting</a> that is provided by this model but &#8230;. (there is always a but :), right), lately I&#8217;ve been looking for ways to execute all <a href="https://msdn.microsoft.com/en-us/library/ms141134.aspx" target="_blank">packages </a>within a project at once.</p>
+<p>For instance, have a look at the below <em>Demo </em>project: it consists of <em>Package A</em> and <em>Package B</em>.</p>
+<p><a style="font-size: 8pt; text-decoration: none; color: black;"><em>demo project</em></a></p>
+<p><img class=" size-full wp-image-1113 alignnone" src="http://www.blogs.selectsifiso.com/wp-content/uploads/2015/07/1.png" alt="1" width="271" height="307" srcset="http://blogs.selectsifiso.com/wp-content/uploads/2015/07/1-265x300.png 265w, http://blogs.selectsifiso.com/wp-content/uploads/2015/07/1.png 271w" sizes="(max-width: 271px) 100vw, 271px" /></p>
+<p>I can manually execute <em>Package A</em> as shown below:</p>
+<p><a style="font-size: 8pt; text-decoration: none; color: black;"><em>manual execution of Package A</em></a></p>
+<p><img class=" size-full wp-image-1114 alignnone" src="http://www.blogs.selectsifiso.com/wp-content/uploads/2015/07/2.png" alt="2" width="371" height="406" srcset="http://blogs.selectsifiso.com/wp-content/uploads/2015/07/2-274x300.png 274w, http://blogs.selectsifiso.com/wp-content/uploads/2015/07/2.png 371w" sizes="(max-width: 371px) 100vw, 371px" /></p>
+<p>That&#8217;s great if I only wanted to execute <em>Package A</em>. What if I want to execute all packages?</p>
+<p>Unfortunately, you don&#8217;t have the &#8220;execute&#8221; option in the project:</p>
+<p><a style="font-size: 8pt; text-decoration: none; color: black;"><em>missing &#8220;execute&#8221; option at project level</em></a></p>
+<p><img class=" size-full wp-image-1115 alignnone" src="http://www.blogs.selectsifiso.com/wp-content/uploads/2015/07/3.png" alt="3" width="339" height="433" srcset="http://blogs.selectsifiso.com/wp-content/uploads/2015/07/3-235x300.png 235w, http://blogs.selectsifiso.com/wp-content/uploads/2015/07/3.png 339w" sizes="(max-width: 339px) 100vw, 339px" /></p>
+<p>So what happens if my project had 99 packages and I needed to execute all of them at once? (As is sometimes the case in <a href="https://en.wikipedia.org/wiki/Data_warehouse" target="_blank">data warehousing environments</a> whereby you need to extract and stage data from disparate sources).</p>
+<p>The current implementation would be to navigate to each package and execute them one at a time = hard labor.</p>
+<p>Alternatively, you could setup a master package that you could have used to execute each package using <a href="https://msdn.microsoft.com/en-us/library/ms137609.aspx" target="_blank">Execute Package Task (EPT)</a> &#8211; but that would still mean that you have to add 99 EPT controls into master package (plus configure each package within an EPT). Thus, such an alternate still feels like = hard labor.</p>
+<p>The best way to achieve out objective is via scripting.</p>
+<p>So, what I have done is coming up with a script that will help you execute packages using looping mechanism in a form of <a href="https://msdn.microsoft.com/en-us/library/ms180169.aspx" target="_blank">T-SQL Cursor</a>.</p>
+<p>You can find a copy of the script here: <a href="http://www.blogs.selectsifiso.com/wp-content/uploads/2015/07/sp_ExecuteAllPackagesWithinProjectCatalog.zip">sp_ExecuteAllPackagesWithinProjectCatalog</a></p>
+<p>All you need to do after downloading the script is to execute it (hopefully <strong>not</strong> within <a href="https://msdn.microsoft.com/en-us/library/ms178028.aspx" target="_blank">system databases</a>). This will create the stored procedure for you as shown here:</p>
+<p><a style="font-size: 8pt; text-decoration: none; color: black;"><em>stored procedure created</em></a></p>
+<p><img class=" size-full wp-image-1116 alignnone" src="http://www.blogs.selectsifiso.com/wp-content/uploads/2015/07/4.png" alt="4" width="380" height="213" srcset="http://blogs.selectsifiso.com/wp-content/uploads/2015/07/4-300x168.png 300w, http://blogs.selectsifiso.com/wp-content/uploads/2015/07/4.png 380w" sizes="(max-width: 380px) 100vw, 380px" /></p>
+<p>You can then execute the script by providing the name of the project and folder that whose packages you wish to execute.</p>
+<p>Now going back to above example, when I execute the script &#8211; both <em>Package A</em> and <em>Package B</em> are executed plus I also get a confirmation under the message tab:</p>
+<p><a style="font-size: 8pt; text-decoration: none; color: black;"><em>script execution results</em></a></p>
+<p><img class=" size-full wp-image-1117 alignnone" src="http://www.blogs.selectsifiso.com/wp-content/uploads/2015/07/5.png" alt="5" width="619" height="221" srcset="http://blogs.selectsifiso.com/wp-content/uploads/2015/07/5-300x107.png 300w, http://blogs.selectsifiso.com/wp-content/uploads/2015/07/5-600x214.png 600w, http://blogs.selectsifiso.com/wp-content/uploads/2015/07/5.png 619w" sizes="(max-width: 619px) 100vw, 619px" /></p>
+<p><a style="font-size: 8pt; text-decoration: none; color: black;"><em>script execution confirmation message</em></a></p>
+<p><img class=" size-full wp-image-1118 alignnone" src="http://www.blogs.selectsifiso.com/wp-content/uploads/2015/07/6.png" alt="6" width="559" height="167" srcset="http://blogs.selectsifiso.com/wp-content/uploads/2015/07/6-300x90.png 300w, http://blogs.selectsifiso.com/wp-content/uploads/2015/07/6.png 559w" sizes="(max-width: 559px) 100vw, 559px" /></p>
+<p>&nbsp;</p>
+<p>Have a look at the script and let me know what you think.</p>
+<p>Cheers,</p>
+<p>Sifiso.</p>
+<p><a style="display: none;" href="http://www.codeproject.com" rel="tag">CodeProject</a>
+<div class="pvc_clear"></div>
+<p id="pvc_stats_1112" class="pvc_stats " element-id="1112"><img src="http://blogs.selectsifiso.com/wp-content/plugins/page-views-count/ajax-loader.gif" border=0 /></p>
+<div class="pvc_clear"></div>
+]]></content:encoded>
+			<wfw:commentRss>http://blogs.selectsifiso.com/execute-all-packages-within-ssis-project-catalog/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Handling No Data in SSRS Controls</title>
+		<link>http://blogs.selectsifiso.com/handling-no-data-in-ssrs-controls/</link>
+		<comments>http://blogs.selectsifiso.com/handling-no-data-in-ssrs-controls/#respond</comments>
+		<pubDate>Mon, 15 Jun 2015 08:59:03 +0000</pubDate>
+		<dc:creator><![CDATA[Sifiso Ndlovu]]></dc:creator>
+				<category><![CDATA[Report Builder]]></category>
+		<category><![CDATA[Report Builder 3]]></category>
+		<category><![CDATA[Report Manager]]></category>
+		<category><![CDATA[SQL Server 2012]]></category>
+		<category><![CDATA[SSRS]]></category>
+		<category><![CDATA[Chart]]></category>
+		<category><![CDATA[DataSet]]></category>
+		<category><![CDATA[NoDataMessage]]></category>
+		<category><![CDATA[NoRowsMessage]]></category>
+		<category><![CDATA[Report Parameter]]></category>
+		<category><![CDATA[SQL Server Reporting Services]]></category>
+		<category><![CDATA[SSRS 2012]]></category>
+
+		<guid isPermaLink="false">http://www.blogs.selectsifiso.com/?p=1043</guid>
+		<description><![CDATA[<div  class="oss_horizontal_share oss_title_replace" data-share-titles="Handling No Data in SSRS Controls" data-share-description="When SQL Server Reporting Services (SSRS) successfully renders a given report control (i.e. Table, M" data-share-imageurl=""  data-share-url="http://blogs.selectsifiso.com/handling-no-data-in-ssrs-controls/"></div>When SQL Server Reporting Services (SSRS) successfully renders a given report control (i.e. Table, Matrix, List etc.), the result set can either be empty (which means no data returned) or actually show data. In cases whereby an empty result set is returned, SSRS controls, such as tables and charts, use NoDataMessage and NoRowsMessage properties to inform report users… <span class="read-more"><a href="http://blogs.selectsifiso.com/handling-no-data-in-ssrs-controls/">Read More &#187;</a></span>]]></description>
+				<content:encoded><![CDATA[<p>When <a href="https://msdn.microsoft.com/en-us/ms159106.aspx" target="_blank">SQL Server Reporting Services</a> (SSRS) successfully renders a given report control (i.e. <a href="https://msdn.microsoft.com/en-us/dd220592.aspx" target="_blank">Table, Matrix, List</a> etc.), the result set can either be empty (which means no data returned) or actually show data. In cases whereby an empty result set is returned, SSRS controls, such as tables and charts, use <a href="https://msdn.microsoft.com/en-us/dd220407.aspx" target="_blank"><em>NoDataMessage</em> </a>and <em><a href="https://msdn.microsoft.com/en-us/dd220407.aspx" target="_blank">NoRowsMessage </a></em>properties to inform report users of no data.</p>
+<p>&nbsp;</p>
+<p>Fortunately, some SSRS controls, such as charts, that references <a href="https://msdn.microsoft.com/en-us/dd220407.aspx" target="_blank"><em>NoDataMessage</em></a> property have by default the &#8220;No Data Available&#8221; caption to handle instances whereby an empty result set is returned. To illustrate this point &#8211; I have an <a href="https://msdn.microsoft.com/en-us/library/ee633675.aspx" target="_blank">SSRS dataset</a> in my report that sources <em>HumanResources.vEmployee</em> object from the <a href="http://msftdbprodsamples.codeplex.com/releases/view/55330" target="_blank">AdventureWorks2012 Sample Database</a>. I have also created another <a href="https://msdn.microsoft.com/en-us/library/ee633675.aspx" target="_blank">dataset</a> that will be used to populate report country <a href="https://msdn.microsoft.com/en-us/library/dd220464.aspx" target="_blank">parameter</a>.</p>
+<p><a style="font-size: 8pt; text-decoration: none; color: black;"><em>report main dataset</em></a></p>
+<pre id="code_snippet_151" style="position:relative;width:100%;border:0;padding:0;">SELECT
+    [BusinessEntityID]
+    ,[FirstName]
+    ,[LastName]
+    ,[JobTitle]
+    ,[PhoneNumberType]
+    ,[City]
+    ,[StateProvinceName]
+    ,[CountryRegionName]
+FROM [AdventureWorks2012].[HumanResources].[vEmployee]</pre>
+<p><a style="font-size: 8pt; text-decoration: none; color: black;"><em>country parameter dataset</em></a></p>
+<pre id="code_snippet_152" style="position:relative;width:100%;border:0;padding:0;">SELECT 'Australia' Country
+UNION
+SELECT 'Canada'
+UNION
+SELECT 'Germany'
+UNION
+SELECT 'France'
+UNION
+SELECT 'United Kingdom'
+UNION
+SELECT 'United States'
+UNION
+SELECT 'South Africa'</pre>
+<p><strong>NoDataMessage Property</strong></p>
+<p>I have used aforementioned datasets to add a vertical <a href="https://msdn.microsoft.com/en-us/library/dd239361.aspx" target="_blank">bar chart</a> in the report that shows a number of Adventure Works employees by country of origin. By default, the report looks as follows:<br />
+<a style="font-size: 8pt; text-decoration: none; color: black;"><em>Default Report view with all countries selected</em></a><br />
+<img class="wp-image-1051 size-full" src="http://www.blogs.selectsifiso.com/wp-content/uploads/2015/06/s4.png" alt="s4" width="716" height="688" srcset="http://blogs.selectsifiso.com/wp-content/uploads/2015/06/s4-300x288.png 300w, http://blogs.selectsifiso.com/wp-content/uploads/2015/06/s4-600x577.png 600w, http://blogs.selectsifiso.com/wp-content/uploads/2015/06/s4-660x634.png 660w, http://blogs.selectsifiso.com/wp-content/uploads/2015/06/s4.png 716w" sizes="(max-width: 716px) 100vw, 716px" /></p>
+<p>&nbsp;</p>
+<p>As shown in the above chart, United States has the most number of employees working for Adventure Works. The following images show the report filtered by France and later by South Africa. Whilst a single French employee is found, there are no South African employees and thus the &#8220;No Data Available&#8221; message is shown.</p>
+<p><a style="font-size: 8pt; text-decoration: none; color: black;"><em>Report filtered by France</em></a></p>
+<p><img class="wp-image-1053 size-full" src="http://www.blogs.selectsifiso.com/wp-content/uploads/2015/06/s6.png" alt="s6" width="779" height="695" srcset="http://blogs.selectsifiso.com/wp-content/uploads/2015/06/s6-300x268.png 300w, http://blogs.selectsifiso.com/wp-content/uploads/2015/06/s6-600x535.png 600w, http://blogs.selectsifiso.com/wp-content/uploads/2015/06/s6-660x589.png 660w, http://blogs.selectsifiso.com/wp-content/uploads/2015/06/s6.png 779w" sizes="(max-width: 779px) 100vw, 779px" /></p>
+<p><a style="font-size: 8pt; text-decoration: none; color: black;"><em>Report filtered by South Africa &#8211; No Data Available</em></a></p>
+<p><img class="wp-image-1055 size-full" src="http://www.blogs.selectsifiso.com/wp-content/uploads/2015/06/s8.png" alt="s8" width="770" height="699" srcset="http://blogs.selectsifiso.com/wp-content/uploads/2015/06/s8-300x272.png 300w, http://blogs.selectsifiso.com/wp-content/uploads/2015/06/s8-600x545.png 600w, http://blogs.selectsifiso.com/wp-content/uploads/2015/06/s8-660x599.png 660w, http://blogs.selectsifiso.com/wp-content/uploads/2015/06/s8.png 770w" sizes="(max-width: 770px) 100vw, 770px" /></p>
+<p>&nbsp;</p>
+<p><strong>NoRowsMessage Property</strong></p>
+<p>Unlike controls that references NoDataMessage property, SSRS controls that handle empty result sets using the <em><a href="https://msdn.microsoft.com/en-us/dd220407.aspx" target="_blank">NoRowsMessage </a></em>property &#8211; do not have a default caption. To illustrate this point, we again use the dataset that determine the number of Adventure Works employees by country of origin, however, instead of a using a chart control we will display result into a table.</p>
+<p><a style="font-size: 8pt; text-decoration: none; color: black;"><em>Table based off all countries</em></a></p>
+<p><img class=" size-full wp-image-1056 alignnone" src="http://www.blogs.selectsifiso.com/wp-content/uploads/2015/06/s9.png" alt="s9" width="483" height="384" srcset="http://blogs.selectsifiso.com/wp-content/uploads/2015/06/s9-300x239.png 300w, http://blogs.selectsifiso.com/wp-content/uploads/2015/06/s9.png 483w" sizes="(max-width: 483px) 100vw, 483px" /></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Again, when we filter the report by France &#8211; we are able to find the single French employee.</p>
+<p><a style="font-size: 8pt; text-decoration: none; color: black;"><em>Table filtered by France</em></a></p>
+<p><img class="wp-image-1058 size-full" src="http://www.blogs.selectsifiso.com/wp-content/uploads/2015/06/s11.png" alt="s11" width="445" height="263" srcset="http://blogs.selectsifiso.com/wp-content/uploads/2015/06/s11-300x177.png 300w, http://blogs.selectsifiso.com/wp-content/uploads/2015/06/s11.png 445w" sizes="(max-width: 445px) 100vw, 445px" /></p>
+<p><a style="font-size: 8pt; text-decoration: none; color: black;"><em>Table filtered by South Africa</em></a></p>
+<p><img class="wp-image-1060 size-full" src="http://www.blogs.selectsifiso.com/wp-content/uploads/2015/06/s13.png" alt="s13" width="478" height="227" srcset="http://blogs.selectsifiso.com/wp-content/uploads/2015/06/s13-300x142.png 300w, http://blogs.selectsifiso.com/wp-content/uploads/2015/06/s13.png 478w" sizes="(max-width: 478px) 100vw, 478px" /></p>
+<p>When the report is filtered by South Africa, as shown below, no data is found &#8211; however, unlike the chart control, the &#8220;No Data Available&#8221; caption is not shown in the table. We could fix this by editing the value of NoRowsMessage property. This is done by:</p>
+<p>Step 1:</p>
+<p>Highlight the Tablix and view it&#8217;s properties.</p>
+<p><a style="font-size: 8pt; text-decoration: none; color: black;"><em>Report Tablix and it&#8217;s properties</em></a></p>
+<p><img class="wp-image-1062 size-full" src="http://www.blogs.selectsifiso.com/wp-content/uploads/2015/06/s15.png" alt="s15" width="999" height="528" srcset="http://blogs.selectsifiso.com/wp-content/uploads/2015/06/s15-300x159.png 300w, http://blogs.selectsifiso.com/wp-content/uploads/2015/06/s15-600x317.png 600w, http://blogs.selectsifiso.com/wp-content/uploads/2015/06/s15-660x349.png 660w, http://blogs.selectsifiso.com/wp-content/uploads/2015/06/s15.png 999w" sizes="(max-width: 999px) 100vw, 999px" /></p>
+<p>Step 2:</p>
+<p>Set the NoRowsMessage to &#8220;Sorry, No Data&#8221;.</p>
+<p><a style="font-size: 8pt; text-decoration: none; color: black;"><em>Setting value of the NoRowsMessage property</em></a></p>
+<p><img class="wp-image-1063 size-full" src="http://www.blogs.selectsifiso.com/wp-content/uploads/2015/06/s16.png" alt="s16" width="999" height="533" srcset="http://blogs.selectsifiso.com/wp-content/uploads/2015/06/s16-300x160.png 300w, http://blogs.selectsifiso.com/wp-content/uploads/2015/06/s16-600x320.png 600w, http://blogs.selectsifiso.com/wp-content/uploads/2015/06/s16-660x352.png 660w, http://blogs.selectsifiso.com/wp-content/uploads/2015/06/s16.png 999w" sizes="(max-width: 999px) 100vw, 999px" /></p>
+<p>Step 3 (Optional):</p>
+<p>Set the Color property to Red.</p>
+<p><a style="font-size: 8pt; text-decoration: none; color: black;"><em>Setting value of Color property to Red</em></a></p>
+<p><img class="wp-image-1064 size-full" src="http://www.blogs.selectsifiso.com/wp-content/uploads/2015/06/s17.png" alt="s17" width="1007" height="513" srcset="http://blogs.selectsifiso.com/wp-content/uploads/2015/06/s17-300x153.png 300w, http://blogs.selectsifiso.com/wp-content/uploads/2015/06/s17-600x306.png 600w, http://blogs.selectsifiso.com/wp-content/uploads/2015/06/s17-660x336.png 660w, http://blogs.selectsifiso.com/wp-content/uploads/2015/06/s17.png 1007w" sizes="(max-width: 1007px) 100vw, 1007px" /></p>
+<p>When you rerun the report by using South Africa as a filter, you should be able to see the custom no data message as shown below:</p>
+<p><a style="font-size: 8pt; text-decoration: none; color: black;"><em>Report table control with a custom no data message</em></a></p>
+<p><img class="wp-image-1065 size-full" src="http://www.blogs.selectsifiso.com/wp-content/uploads/2015/06/s18.png" alt="s18" width="468" height="291" srcset="http://blogs.selectsifiso.com/wp-content/uploads/2015/06/s18-300x187.png 300w, http://blogs.selectsifiso.com/wp-content/uploads/2015/06/s18.png 468w" sizes="(max-width: 468px) 100vw, 468px" /></p>
+<p>&nbsp;</p>
+<p><strong>Conclusion</strong></p>
+<p>That&#8217;s it, folks. Till next time.</p>
+<p>Cheers,</p>
+<p>Sifiso.</p>
+<p><a style="display: none;" href="http://www.codeproject.com" rel="tag">CodeProject</a>
+<div class="pvc_clear"></div>
+<p id="pvc_stats_1043" class="pvc_stats " element-id="1043"><img src="http://blogs.selectsifiso.com/wp-content/plugins/page-views-count/ajax-loader.gif" border=0 /></p>
+<div class="pvc_clear"></div>
+]]></content:encoded>
+			<wfw:commentRss>http://blogs.selectsifiso.com/handling-no-data-in-ssrs-controls/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+	<p style="font-size:10px;">Plugin by <a target ="_blank" href="http://nickpowers.info/wordpress-plugins/social-author-bio/">Social Author Bio</a></p></channel>
+</rss>

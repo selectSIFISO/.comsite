@@ -164,7 +164,7 @@ class coming_soon_admin_menu{
 	}
 	
 	
-	/*#########################  LOGO   #################################*/
+	/*#########################  LOGO Section   #################################*/
 	public function generete_logo_section($page_parametrs){
 
 		?>
@@ -262,7 +262,7 @@ class coming_soon_admin_menu{
 		</div>        
 		<?php	
 	}
-	/*#########################  Title   #################################*/
+	/*#########################  Title Section   #################################*/
 	public function generete_title_section($page_parametrs){
 
 		?>

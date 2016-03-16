@@ -1,0 +1,418 @@
+log_type,log_priority,log_function,log_date,log_date_gmt,log_host,log_username,log_user,log_url,log_referrer,log_data
+away_mode,5,Away Mode Triggered,2015-10-10 20:56:26,2015-10-10 18:56:26,93.115.95.201,,,,,0=A host was prevented from accessing the dashboard due to away-mode restrictions being in effect
+brute_force,5,Invalid Login Attempt,2015-10-10 20:56:26,2015-10-10 18:56:26,93.115.95.201,admin,1,,,
+lockout,10,Host or User Lockout,2015-10-10 20:56:26,2015-10-10 18:56:26,,,1,,,expires=2015-10-10 21:11:26expires_gmt=2015-10-10 19:11:26type=brute_force
+away_mode,5,Away Mode Triggered,2015-10-10 20:56:28,2015-10-10 18:56:28,46.182.106.190,,,,,0=A host was prevented from accessing the dashboard due to away-mode restrictions being in effect
+away_mode,5,Away Mode Triggered,2015-10-10 22:04:47,2015-10-10 20:04:47,93.115.95.207,,,,,0=A host was prevented from accessing the dashboard due to away-mode restrictions being in effect
+brute_force,5,Invalid Login Attempt,2015-10-10 22:04:47,2015-10-10 20:04:47,93.115.95.207,admin,1,,,
+lockout,10,Host or User Lockout,2015-10-10 22:04:47,2015-10-10 20:04:47,,,1,,,expires=2015-10-10 22:19:47expires_gmt=2015-10-10 20:19:47type=brute_force
+away_mode,5,Away Mode Triggered,2015-10-10 22:53:07,2015-10-10 20:53:07,37.187.73.137,,,,,0=A host was prevented from accessing the dashboard due to away-mode restrictions being in effect
+brute_force,5,Invalid Login Attempt,2015-10-10 22:53:07,2015-10-10 20:53:07,37.187.73.137,admin,1,,,
+lockout,10,Host or User Lockout,2015-10-10 22:53:07,2015-10-10 20:53:07,,,1,,,expires=2015-10-10 23:08:07expires_gmt=2015-10-10 21:08:07type=brute_force
+away_mode,5,Away Mode Triggered,2015-10-10 22:53:40,2015-10-10 20:53:40,85.25.103.119,,,,,0=A host was prevented from accessing the dashboard due to away-mode restrictions being in effect
+away_mode,5,Away Mode Triggered,2015-10-11 01:01:15,2015-10-10 23:01:15,176.10.99.202,,,,,0=A host was prevented from accessing the dashboard due to away-mode restrictions being in effect
+brute_force,5,Invalid Login Attempt,2015-10-11 01:01:15,2015-10-10 23:01:15,176.10.99.202,admin,1,,,
+lockout,10,Host or User Lockout,2015-10-11 01:01:15,2015-10-10 23:01:15,,,1,,,expires=2015-10-11 01:16:15expires_gmt=2015-10-10 23:16:15type=brute_force
+away_mode,5,Away Mode Triggered,2015-10-11 06:48:44,2015-10-11 04:48:44,198.51.75.165,,,,,0=A host was prevented from accessing the dashboard due to away-mode restrictions being in effect
+brute_force,5,Invalid Login Attempt,2015-10-11 06:48:44,2015-10-11 04:48:44,198.51.75.165,admin,1,,,
+lockout,10,Host or User Lockout,2015-10-11 06:48:44,2015-10-11 04:48:44,,,1,,,expires=2015-10-11 07:03:44expires_gmt=2015-10-11 05:03:44type=brute_force
+away_mode,5,Away Mode Triggered,2015-10-11 08:31:58,2015-10-11 06:31:58,151.80.44.159,,,,,0=A host was prevented from accessing the dashboard due to away-mode restrictions being in effect
+brute_force,5,Invalid Login Attempt,2015-10-11 08:31:58,2015-10-11 06:31:58,151.80.44.159,admin,1,,,
+lockout,10,Host or User Lockout,2015-10-11 08:31:58,2015-10-11 06:31:58,,,1,,,expires=2015-10-11 08:46:58expires_gmt=2015-10-11 06:46:58type=brute_force
+away_mode,5,Away Mode Triggered,2015-10-11 08:37:00,2015-10-11 06:37:00,151.80.44.159,,,,,0=A host was prevented from accessing the dashboard due to away-mode restrictions being in effect
+away_mode,5,Away Mode Triggered,2015-10-11 08:39:23,2015-10-11 06:39:23,151.80.44.159,,,,,0=A host was prevented from accessing the dashboard due to away-mode restrictions being in effect
+away_mode,5,Away Mode Triggered,2015-10-11 08:42:31,2015-10-11 06:42:31,41.0.69.242,,,,,0=A host was prevented from accessing the dashboard due to away-mode restrictions being in effect
+away_mode,5,Away Mode Triggered,2015-10-11 08:42:47,2015-10-11 06:42:47,41.0.69.242,,,,,0=A host was prevented from accessing the dashboard due to away-mode restrictions being in effect
+brute_force,5,Invalid Login Attempt,2015-10-11 09:35:09,2015-10-11 07:35:09,162.247.72.213,admin,1,,,
+lockout,10,Host or User Lockout,2015-10-11 09:35:09,2015-10-11 07:35:09,,,1,,,expires=2015-10-11 09:50:09expires_gmt=2015-10-11 07:50:09type=brute_force
+away_mode,5,Away Mode Triggered,2015-10-14 07:36:54,2015-10-14 05:36:54,196.34.166.186,,,,,0=A host was prevented from accessing the dashboard due to away-mode restrictions being in effect
+away_mode,5,Away Mode Triggered,2015-10-14 07:37:10,2015-10-14 05:37:10,196.34.166.186,,,,,0=A host was prevented from accessing the dashboard due to away-mode restrictions being in effect
+away_mode,5,Away Mode Triggered,2015-10-14 07:38:15,2015-10-14 05:38:15,196.212.64.138,,,,,0=A host was prevented from accessing the dashboard due to away-mode restrictions being in effect
+away_mode,5,Away Mode Triggered,2015-10-14 07:40:59,2015-10-14 05:40:59,196.34.166.186,,,,,0=A host was prevented from accessing the dashboard due to away-mode restrictions being in effect
+away_mode,5,Away Mode Triggered,2015-10-14 07:41:19,2015-10-14 05:41:19,196.34.166.186,,,,,0=A host was prevented from accessing the dashboard due to away-mode restrictions being in effect
+away_mode,5,Away Mode Triggered,2015-10-14 07:42:33,2015-10-14 05:42:33,196.34.166.186,,,,,0=A host was prevented from accessing the dashboard due to away-mode restrictions being in effect
+away_mode,5,Away Mode Triggered,2015-10-14 07:52:08,2015-10-14 05:52:08,196.34.166.186,,,,,0=A host was prevented from accessing the dashboard due to away-mode restrictions being in effect
+away_mode,5,Away Mode Triggered,2015-10-14 07:52:53,2015-10-14 05:52:53,196.34.166.186,,,,,0=A host was prevented from accessing the dashboard due to away-mode restrictions being in effect
+away_mode,5,Away Mode Triggered,2015-10-14 07:53:51,2015-10-14 05:53:51,196.34.166.186,,,,,0=A host was prevented from accessing the dashboard due to away-mode restrictions being in effect
+away_mode,5,Away Mode Triggered,2015-10-14 07:54:04,2015-10-14 05:54:04,196.34.166.186,,,,,0=A host was prevented from accessing the dashboard due to away-mode restrictions being in effect
+away_mode,5,Away Mode Triggered,2015-10-14 07:54:44,2015-10-14 05:54:44,196.34.166.186,,,,,0=A host was prevented from accessing the dashboard due to away-mode restrictions being in effect
+away_mode,5,Away Mode Triggered,2015-10-14 07:55:50,2015-10-14 05:55:50,196.34.166.186,,,,,0=A host was prevented from accessing the dashboard due to away-mode restrictions being in effect
+away_mode,5,Away Mode Triggered,2015-10-14 07:56:26,2015-10-14 05:56:26,196.34.166.186,,,,,0=A host was prevented from accessing the dashboard due to away-mode restrictions being in effect
+away_mode,5,Away Mode Triggered,2015-10-26 19:36:15,2015-10-26 17:36:15,41.151.156.219,,,,,0=A host was prevented from accessing the dashboard due to away-mode restrictions being in effect
+away_mode,5,Away Mode Triggered,2015-10-27 20:38:12,2015-10-27 18:38:12,197.231.221.211,,,,,0=A host was prevented from accessing the dashboard due to away-mode restrictions being in effect
+away_mode,5,Away Mode Triggered,2015-10-31 05:21:45,2015-10-31 03:21:45,41.150.143.153,,,,,0=A host was prevented from accessing the dashboard due to away-mode restrictions being in effect
+away_mode,5,Away Mode Triggered,2015-10-31 08:27:56,2015-10-31 06:27:56,104.194.26.205,,,,,0=A host was prevented from accessing the dashboard due to away-mode restrictions being in effect
+away_mode,5,Away Mode Triggered,2015-11-02 21:35:26,2015-11-02 19:35:26,41.150.137.19,,,,,0=A host was prevented from accessing the dashboard due to away-mode restrictions being in effect
+away_mode,5,Away Mode Triggered,2015-11-02 21:35:55,2015-11-02 19:35:55,41.150.137.19,,,,,0=A host was prevented from accessing the dashboard due to away-mode restrictions being in effect
+four_oh_four,3,404 Error,2015-11-04 05:16:19,2015-11-04 03:16:19,217.12.204.163,,,/admin/fckeditor/editor/filemanager/connectors/php/upload.php,,query_string=
+four_oh_four,3,404 Error,2015-11-04 05:35:23,2015-11-04 03:35:23,195.154.188.9,,,/uploadify/uploadify.php,http://selectsifiso.net/uploadify/uploadify.php?folder=/,query_string=folder=/
+four_oh_four,3,404 Error,2015-11-04 09:02:23,2015-11-04 07:02:23,83.223.122.16,,,/,,query_string=p=39773
+four_oh_four,3,404 Error,2015-11-04 11:15:39,2015-11-04 09:15:39,157.55.39.47,,,/,,query_string=tag=oledb-destination&paged=3
+four_oh_four,3,404 Error,2015-11-04 11:16:22,2015-11-04 09:16:22,157.55.39.162,,,/,,query_string=tag=oledb-source&paged=3
+four_oh_four,3,404 Error,2015-11-04 14:43:50,2015-11-04 12:43:50,5.45.78.91,,,/wp-local.php,http://www.selectsifiso.net/wp-local.php,query_string=
+four_oh_four,3,404 Error,2015-11-04 16:48:21,2015-11-04 14:48:21,193.201.224.176,,,//license.php,http://www.selectsifiso.net//license.php,query_string=
+four_oh_four,3,404 Error,2015-11-04 16:48:28,2015-11-04 14:48:28,193.201.224.176,,,/1013s.php,,query_string=
+away_mode,5,Away Mode Triggered,2015-11-05 04:36:06,2015-11-05 02:36:06,188.143.234.142,,,,,0=A host was prevented from accessing the dashboard due to away-mode restrictions being in effect
+away_mode,5,Away Mode Triggered,2015-11-05 04:36:12,2015-11-05 02:36:12,188.143.234.142,,,,,0=A host was prevented from accessing the dashboard due to away-mode restrictions being in effect
+away_mode,5,Away Mode Triggered,2015-11-05 04:36:18,2015-11-05 02:36:18,188.143.234.142,,,,,0=A host was prevented from accessing the dashboard due to away-mode restrictions being in effect
+away_mode,5,Away Mode Triggered,2015-11-05 04:36:22,2015-11-05 02:36:22,188.143.234.142,,,,,0=A host was prevented from accessing the dashboard due to away-mode restrictions being in effect
+away_mode,5,Away Mode Triggered,2015-11-05 04:36:26,2015-11-05 02:36:26,188.143.234.142,,,,,0=A host was prevented from accessing the dashboard due to away-mode restrictions being in effect
+four_oh_four,3,404 Error,2015-11-05 16:23:13,2015-11-05 14:23:13,195.3.144.124,,,/admin.php,http://www.selectsifiso.net/admin.php,query_string=
+four_oh_four,3,404 Error,2015-11-05 19:35:15,2015-11-05 17:35:15,193.201.227.56,,,/admin.php,,query_string=
+four_oh_four,3,404 Error,2015-11-06 11:55:46,2015-11-06 09:55:46,91.200.233.168,,,/admin.php,,query_string=
+four_oh_four,3,404 Error,2015-11-06 17:50:09,2015-11-06 15:50:09,178.213.1.160,,,/admin.php,,query_string=
+four_oh_four,3,404 Error,2015-11-07 10:58:48,2015-11-07 08:58:48,88.90.248.228,,,/apple-touch-icon-120x120-precomposed.png,,query_string=
+four_oh_four,3,404 Error,2015-11-07 10:58:50,2015-11-07 08:58:50,88.90.248.228,,,/apple-touch-icon-120x120.png,,query_string=
+four_oh_four,3,404 Error,2015-11-07 22:24:51,2015-11-07 20:24:51,58.216.156.126,,,/,http://www.selectsifiso.net/,query_string=p=21
+four_oh_four,3,404 Error,2015-11-10 02:35:39,2015-11-10 00:35:39,207.46.13.183,,,/,,query_string=page_id=160
+four_oh_four,3,404 Error,2015-11-10 09:25:54,2015-11-10 07:25:54,66.249.79.126,,,/,,query_string=p=42
+four_oh_four,3,404 Error,2015-11-10 22:12:47,2015-11-10 20:12:47,122.96.59.106,,,http://www.selectsifiso.net/,http://www.selectsifiso.net/,query_string=p=479
+four_oh_four,3,404 Error,2015-11-11 00:38:42,2015-11-10 22:38:42,188.143.233.220,,,/includer.php,http://selectsifiso.net/wp-content/plugins/akismet/akismet.php,query_string=
+four_oh_four,3,404 Error,2015-11-11 00:38:44,2015-11-10 22:38:44,188.143.233.220,,,/wp-xmpp.php,http://selectsifiso.net/wp-content/plugins/akismet/akismet.php,query_string=
+four_oh_four,3,404 Error,2015-11-11 00:38:46,2015-11-10 22:38:46,188.143.233.220,,,/old_site_bkp/beta/wp-content/uploads/2012/08/Root/eha.php,http://selectsifiso.net/wp-content/plugins/akismet/akismet.php,query_string=
+four_oh_four,3,404 Error,2015-11-11 00:38:48,2015-11-10 22:38:48,188.143.233.220,,,/old_site_bkp/wp-content/upgrade/BoxTheme/satan.php,http://selectsifiso.net/wp-content/plugins/akismet/akismet.php,query_string=
+four_oh_four,3,404 Error,2015-11-11 00:38:51,2015-11-10 22:38:51,188.143.233.220,,,/cpanel.php,http://selectsifiso.net/wp-content/plugins/akismet/akismet.php,query_string=
+four_oh_four,3,404 Error,2015-11-11 04:03:08,2015-11-11 02:03:08,183.136.220.242,,,http://www.selectsifiso.net/,http://www.selectsifiso.net/,query_string=p=317
+four_oh_four,3,404 Error,2015-11-11 11:18:16,2015-11-11 09:18:16,40.77.167.32,,,/img/apps/pd-box.gif,,query_string=
+four_oh_four,3,404 Error,2015-11-13 15:44:44,2015-11-13 13:44:44,46.185.84.181,,,/admin.php,,query_string=
+four_oh_four,3,404 Error,2015-11-13 22:12:14,2015-11-13 20:12:14,157.55.39.139,,,/,,query_string=tag=oledb-destination&paged=3
+four_oh_four,3,404 Error,2015-11-13 22:36:50,2015-11-13 20:36:50,66.249.69.83,,,/author/feed/,,query_string=
+four_oh_four,3,404 Error,2015-11-14 02:24:58,2015-11-14 00:24:58,192.169.112.237,,,/,,query_string=p=1
+four_oh_four,3,404 Error,2015-11-14 11:39:41,2015-11-14 09:39:41,188.116.183.23,,,/robotstxt.txt,,query_string=
+four_oh_four,3,404 Error,2015-11-14 20:24:41,2015-11-14 18:24:41,221.6.206.114,,,/,http://www.selectsifiso.net/,query_string=p=2
+four_oh_four,3,404 Error,2015-11-14 21:11:41,2015-11-14 19:11:41,188.163.109.104,,,/admin.php,,query_string=
+four_oh_four,3,404 Error,2015-11-15 01:17:07,2015-11-14 23:17:07,120.151.179.159,,,/apple-touch-icon-120x120-precomposed.png,,query_string=
+four_oh_four,3,404 Error,2015-11-15 01:17:09,2015-11-14 23:17:09,120.151.179.159,,,/apple-touch-icon-120x120.png,,query_string=
+four_oh_four,3,404 Error,2015-11-15 03:49:50,2015-11-15 01:49:50,212.117.170.192,,,/license.php,,query_string=
+four_oh_four,3,404 Error,2015-11-15 13:02:57,2015-11-15 11:02:57,84.201.138.13,,,/author/feed/,,query_string=
+four_oh_four,3,404 Error,2015-11-15 23:03:24,2015-11-15 21:03:24,221.1.215.138,,,/,http://www.selectsifiso.net/,query_string=p=39
+four_oh_four,3,404 Error,2015-11-17 06:10:31,2015-11-17 04:10:31,23.96.201.105,,,http://www.selectsifiso.net/,http://www.selectsifiso.net/,query_string=p=82
+four_oh_four,3,404 Error,2015-11-17 10:01:55,2015-11-17 08:01:55,180.140.111.160,,,/trackback/,http://www.selectsifiso.net/?p=578,query_string=
+four_oh_four,3,404 Error,2015-11-17 12:03:34,2015-11-17 10:03:34,185.92.73.125,,,/halloween/js/mod.php,http://selectsifiso.net/halloween/js/mod.php,query_string=
+four_oh_four,3,404 Error,2015-11-18 06:32:46,2015-11-18 04:32:46,188.163.110.121,,,/admin.php,,query_string=
+four_oh_four,3,404 Error,2015-11-18 08:03:10,2015-11-18 06:03:10,122.96.59.106,,,http://www.selectsifiso.net/,http://www.selectsifiso.net/,query_string=p=337
+four_oh_four,3,404 Error,2015-11-18 20:29:45,2015-11-18 18:29:45,168.1.5.196,,,/images/stories/nob0dy.gif,,query_string=
+four_oh_four,3,404 Error,2015-11-18 20:30:05,2015-11-18 18:30:05,168.1.5.196,,,/tag/destination-component/images/stories/nob0dy.gif,,query_string=
+four_oh_four,3,404 Error,2015-11-19 13:44:01,2015-11-19 11:44:01,180.120.168.136,,,/www.selectsifiso.net.rar,,query_string=
+four_oh_four,3,404 Error,2015-11-19 13:44:16,2015-11-19 11:44:16,180.120.168.136,,,/www.selectsifiso.net.rar,,query_string=
+four_oh_four,3,404 Error,2015-11-19 13:44:19,2015-11-19 11:44:19,180.120.168.136,,,/www.7z,,query_string=
+four_oh_four,3,404 Error,2015-11-19 13:44:26,2015-11-19 11:44:26,180.120.168.136,,,/www.7z,,query_string=
+four_oh_four,3,404 Error,2015-11-19 13:44:28,2015-11-19 11:44:28,180.120.168.136,,,/www.7z,,query_string=
+four_oh_four,3,404 Error,2015-11-20 20:15:59,2015-11-20 18:15:59,166.216.165.60,,,/apple-touch-icon-120x120-precomposed.png,,query_string=
+four_oh_four,3,404 Error,2015-11-20 20:16:03,2015-11-20 18:16:03,166.216.165.60,,,/apple-touch-icon-120x120.png,,query_string=
+four_oh_four,3,404 Error,2015-11-20 20:17:06,2015-11-20 18:17:06,166.216.165.60,,,/apple-touch-icon-120x120-precomposed.png,,query_string=
+four_oh_four,3,404 Error,2015-11-20 20:17:09,2015-11-20 18:17:09,166.216.165.60,,,/apple-touch-icon-120x120.png,,query_string=
+four_oh_four,3,404 Error,2015-11-20 20:24:01,2015-11-20 18:24:01,166.216.165.60,,,/apple-touch-icon-120x120-precomposed.png,,query_string=
+four_oh_four,3,404 Error,2015-11-20 20:24:03,2015-11-20 18:24:03,166.216.165.60,,,/apple-touch-icon-120x120.png,,query_string=
+four_oh_four,3,404 Error,2015-11-20 20:37:19,2015-11-20 18:37:19,185.92.73.125,,,/wp-includes/SimplePie/HTTP/mod.php,http://selectsifiso.net/wp-includes/SimplePie/HTTP/mod.php,query_string=
+four_oh_four,3,404 Error,2015-11-21 00:38:22,2015-11-20 22:38:22,66.249.75.109,,,/apple-app-site-association,,query_string=
+four_oh_four,3,404 Error,2015-11-23 12:34:26,2015-11-23 10:34:26,68.180.229.233,,,/,,query_string=page_id=1197
+four_oh_four,3,404 Error,2015-11-23 21:38:51,2015-11-23 19:38:51,121.14.138.50,,,/,http://www.selectsifiso.net/,query_string=p=5
+away_mode,5,Away Mode Triggered,2015-11-24 01:18:27,2015-11-23 23:18:27,197.231.221.211,,,,,0=A host was prevented from accessing the dashboard due to away-mode restrictions being in effect
+four_oh_four,3,404 Error,2015-11-24 10:41:10,2015-11-24 08:41:10,40.77.167.55,,,/,,query_string=m=201106&paged=2
+four_oh_four,3,404 Error,2015-11-25 12:12:47,2015-11-25 10:12:47,207.46.13.183,,,/,,query_string=m=201106&paged=2
+four_oh_four,3,404 Error,2015-11-26 01:14:32,2015-11-25 23:14:32,1.82.229.201,,,/,http://www.selectsifiso.net/,query_string=p=3
+four_oh_four,3,404 Error,2015-11-26 09:37:54,2015-11-26 07:37:54,122.96.59.106,,,http://www.selectsifiso.net/,http://www.selectsifiso.net/,query_string=p=459
+four_oh_four,3,404 Error,2015-11-26 16:36:58,2015-11-26 14:36:58,195.154.251.131,,,/samplc.php,,query_string=
+four_oh_four,3,404 Error,2015-11-26 16:37:13,2015-11-26 14:37:13,195.154.251.131,,,/tmp-upload-images/samplc.php,,query_string=
+four_oh_four,3,404 Error,2015-11-26 16:37:24,2015-11-26 14:37:24,195.154.251.131,,,/components/com_creativecontactform/fileupload/files/samplc.php,,query_string=
+four_oh_four,3,404 Error,2015-11-26 16:37:51,2015-11-26 14:37:51,195.154.251.131,,,/server/php/files/samplc.php,,query_string=
+four_oh_four,3,404 Error,2015-11-26 22:27:59,2015-11-26 20:27:59,66.249.64.222,,,/author/feed/,,query_string=
+four_oh_four,3,404 Error,2015-11-26 23:58:21,2015-11-26 21:58:21,185.92.73.100,,,/wp-config.php-s,http://selectsifiso.net/wp-config.php-s,query_string=
+four_oh_four,3,404 Error,2015-11-27 06:44:13,2015-11-27 04:44:13,97.74.234.15,,,/.libs.php,,query_string=
+four_oh_four,3,404 Error,2015-11-27 06:44:18,2015-11-27 04:44:18,97.74.234.15,,,/wp-xmlrpc.php,,query_string=
+four_oh_four,3,404 Error,2015-11-27 06:44:22,2015-11-27 04:44:22,97.74.234.15,,,/wp-content.php,,query_string=
+four_oh_four,3,404 Error,2015-11-27 06:44:31,2015-11-27 04:44:31,97.74.234.15,,,/bogel.php,,query_string=
+four_oh_four,3,404 Error,2015-11-27 06:44:40,2015-11-27 04:44:40,97.74.234.15,,,/.libs.php,,query_string=
+four_oh_four,3,404 Error,2015-11-27 06:44:45,2015-11-27 04:44:45,97.74.234.15,,,/wp-xmlrpc.php,,query_string=
+four_oh_four,3,404 Error,2015-11-27 06:44:49,2015-11-27 04:44:49,97.74.234.15,,,/wp-content.php,,query_string=
+four_oh_four,3,404 Error,2015-11-27 06:44:57,2015-11-27 04:44:57,97.74.234.15,,,/bogel.php,,query_string=
+four_oh_four,3,404 Error,2015-11-27 08:09:29,2015-11-27 06:09:29,97.74.234.15,,,/.libs.php,,query_string=
+four_oh_four,3,404 Error,2015-11-27 08:09:34,2015-11-27 06:09:34,97.74.234.15,,,/wp-xmlrpc.php,,query_string=
+four_oh_four,3,404 Error,2015-11-27 08:09:37,2015-11-27 06:09:37,97.74.234.15,,,/wp-content.php,,query_string=
+four_oh_four,3,404 Error,2015-11-27 08:09:44,2015-11-27 06:09:44,97.74.234.15,,,/bogel.php,,query_string=
+four_oh_four,3,404 Error,2015-11-27 08:09:52,2015-11-27 06:09:52,97.74.234.15,,,/.libs.php,,query_string=
+four_oh_four,3,404 Error,2015-11-27 08:09:58,2015-11-27 06:09:58,97.74.234.15,,,/wp-xmlrpc.php,,query_string=
+four_oh_four,3,404 Error,2015-11-27 08:10:02,2015-11-27 06:10:02,97.74.234.15,,,/wp-content.php,,query_string=
+four_oh_four,3,404 Error,2015-11-27 08:10:10,2015-11-27 06:10:10,97.74.234.15,,,/bogel.php,,query_string=
+four_oh_four,3,404 Error,2015-11-27 08:24:23,2015-11-27 06:24:23,97.74.234.15,,,/.libs.php,,query_string=
+four_oh_four,3,404 Error,2015-11-27 08:24:28,2015-11-27 06:24:28,97.74.234.15,,,/wp-xmlrpc.php,,query_string=
+four_oh_four,3,404 Error,2015-11-27 08:24:31,2015-11-27 06:24:31,97.74.234.15,,,/wp-content.php,,query_string=
+four_oh_four,3,404 Error,2015-11-27 08:24:38,2015-11-27 06:24:38,97.74.234.15,,,/bogel.php,,query_string=
+four_oh_four,3,404 Error,2015-11-27 08:24:46,2015-11-27 06:24:46,97.74.234.15,,,/.libs.php,,query_string=
+four_oh_four,3,404 Error,2015-11-27 08:24:52,2015-11-27 06:24:52,97.74.234.15,,,/wp-xmlrpc.php,,query_string=
+four_oh_four,3,404 Error,2015-11-27 08:24:57,2015-11-27 06:24:57,97.74.234.15,,,/wp-content.php,,query_string=
+four_oh_four,3,404 Error,2015-11-27 08:25:03,2015-11-27 06:25:03,97.74.234.15,,,/bogel.php,,query_string=
+four_oh_four,3,404 Error,2015-11-27 08:42:33,2015-11-27 06:42:33,188.143.233.220,,,/includer.php,http://selectsifiso.net/wp-content/plugins/akismet/akismet.php,query_string=
+four_oh_four,3,404 Error,2015-11-27 08:42:36,2015-11-27 06:42:36,188.143.233.220,,,/wp-xmpp.php,http://selectsifiso.net/wp-content/plugins/akismet/akismet.php,query_string=
+four_oh_four,3,404 Error,2015-11-27 08:42:38,2015-11-27 06:42:38,188.143.233.220,,,/old_site_bkp/beta/wp-content/uploads/2012/08/Root/eha.php,http://selectsifiso.net/wp-content/plugins/akismet/akismet.php,query_string=
+four_oh_four,3,404 Error,2015-11-27 08:42:41,2015-11-27 06:42:41,188.143.233.220,,,/old_site_bkp/wp-content/upgrade/BoxTheme/satan.php,http://selectsifiso.net/wp-content/plugins/akismet/akismet.php,query_string=
+four_oh_four,3,404 Error,2015-11-27 08:42:48,2015-11-27 06:42:48,188.143.233.220,,,/cpanel.php,http://selectsifiso.net/wp-content/plugins/akismet/akismet.php,query_string=
+away_mode,5,Away Mode Triggered,2015-11-28 05:36:32,2015-11-28 03:36:32,46.148.18.226,,,,,0=A host was prevented from accessing the dashboard due to away-mode restrictions being in effect
+four_oh_four,3,404 Error,2015-11-28 09:22:32,2015-11-28 07:22:32,66.249.64.232,,,/author/feed/,,query_string=
+four_oh_four,3,404 Error,2015-11-28 19:44:14,2015-11-28 17:44:14,195.154.250.133,,,/uploadify/uploadify.php,http://selectsifiso.net/uploadify/uploadify.php,query_string=
+four_oh_four,3,404 Error,2015-11-28 19:44:18,2015-11-28 17:44:18,195.154.250.133,,,/samplc.php,,query_string=
+four_oh_four,3,404 Error,2015-11-28 19:44:32,2015-11-28 17:44:32,195.154.250.133,,,/php-ofc-library/ofc_upload_image.php,http://selectsifiso.net/php-ofc-library/ofc_upload_image.php?name=sample.php,query_string=name=sample.php
+four_oh_four,3,404 Error,2015-11-28 19:44:33,2015-11-28 17:44:33,195.154.250.133,,,/tmp-upload-images/samplc.php,,query_string=
+four_oh_four,3,404 Error,2015-11-28 19:44:36,2015-11-28 17:44:36,195.154.250.133,,,/components/com_creativecontactform/fileupload/index.php,http://selectsifiso.net/components/com_creativecontactform/fileupload/index.php,query_string=
+four_oh_four,3,404 Error,2015-11-28 19:44:39,2015-11-28 17:44:39,195.154.250.133,,,/components/com_creativecontactform/fileupload/files/samplc.php,,query_string=
+four_oh_four,3,404 Error,2015-11-28 19:44:52,2015-11-28 17:44:52,195.154.250.133,,,/server/php/,http://selectsifiso.net/server/php/,query_string=
+four_oh_four,3,404 Error,2015-11-28 19:44:56,2015-11-28 17:44:56,195.154.250.133,,,/server/php/files/samplc.php,,query_string=
+away_mode,5,Away Mode Triggered,2015-11-29 04:01:26,2015-11-29 02:01:26,46.73.125.168,,,,,0=A host was prevented from accessing the dashboard due to away-mode restrictions being in effect
+away_mode,5,Away Mode Triggered,2015-11-29 04:01:32,2015-11-29 02:01:32,46.73.125.168,,,,,0=A host was prevented from accessing the dashboard due to away-mode restrictions being in effect
+four_oh_four,3,404 Error,2015-11-29 04:01:57,2015-11-29 02:01:57,46.73.125.168,,,/admin.php,,query_string=
+four_oh_four,3,404 Error,2015-11-29 21:07:25,2015-11-29 19:07:25,178.255.215.90,,,/,,query_string=page_id=160
+four_oh_four,3,404 Error,2015-11-29 21:26:32,2015-11-29 19:26:32,5.61.39.5,,,/wp-admin/edit-form-tags.php,,query_string=
+four_oh_four,3,404 Error,2015-11-29 23:33:41,2015-11-29 21:33:41,185.117.74.157,,,/wp-admin/image-import.php,,query_string=
+away_mode,5,Away Mode Triggered,2015-11-30 01:10:58,2015-11-29 23:10:58,69.30.244.186,,,,,0=A host was prevented from accessing the dashboard due to away-mode restrictions being in effect
+four_oh_four,3,404 Error,2015-11-30 02:27:29,2015-11-30 00:27:29,188.163.110.14,,,/admin.php,,query_string=
+four_oh_four,3,404 Error,2015-11-30 02:51:33,2015-11-30 00:51:33,5.61.39.5,,,/wp-admin/edit-link-class.php,,query_string=
+four_oh_four,3,404 Error,2015-11-30 02:57:16,2015-11-30 00:57:16,68.180.229.233,,,/author/feed/,,query_string=
+four_oh_four,3,404 Error,2015-11-30 04:21:57,2015-11-30 02:21:57,180.76.15.136,,,/author/feed/,,query_string=
+four_oh_four,3,404 Error,2015-11-30 05:29:44,2015-11-30 03:29:44,5.61.39.5,,,/wp-includes/js/tinymce/plugins/fullscreen/temperament.php,,query_string=
+four_oh_four,3,404 Error,2015-11-30 05:33:08,2015-11-30 03:33:08,207.46.13.165,,,/,,query_string=page_id=160
+four_oh_four,3,404 Error,2015-11-30 21:18:08,2015-11-30 19:18:08,106.39.160.104,,,/,http://www.selectsifiso.net/,query_string=p=39
+four_oh_four,3,404 Error,2015-12-01 10:05:39,2015-12-01 08:05:39,185.117.74.157,,,/wp-includes/wp-admin/includes/core.php,,query_string=
+away_mode,5,Away Mode Triggered,2015-12-02 03:10:03,2015-12-02 01:10:03,104.194.26.204,,,,,0=A host was prevented from accessing the dashboard due to away-mode restrictions being in effect
+away_mode,5,Away Mode Triggered,2015-12-03 05:11:19,2015-12-03 03:11:19,5.153.238.103,,,,,0=A host was prevented from accessing the dashboard due to away-mode restrictions being in effect
+four_oh_four,3,404 Error,2015-12-03 13:18:46,2015-12-03 11:18:46,195.242.191.45,,,/administrator/components/com_civicrm/civicrm/packages/OpenFlashChart/php-ofc-library/ofc_upload_image.php,,query_string=name=magic.php
+four_oh_four,3,404 Error,2015-12-03 13:18:51,2015-12-03 11:18:51,195.242.191.45,,,/administrator/components/com_civicrm/civicrm/packages/OpenFlashChart/php-ofc-library/ofc_upload_image.php,,query_string=name=magic.php.pHp
+four_oh_four,3,404 Error,2015-12-03 13:18:53,2015-12-03 11:18:53,195.242.191.45,,,/components/com_civicrm/civicrm/packages/OpenFlashChart/php-ofc-library/ofc_upload_image.php,,query_string=name=magic.php
+four_oh_four,3,404 Error,2015-12-03 13:18:55,2015-12-03 11:18:55,195.242.191.45,,,/components/com_civicrm/civicrm/packages/OpenFlashChart/php-ofc-library/ofc_upload_image.php,,query_string=name=magic.php.pHp
+four_oh_four,3,404 Error,2015-12-03 13:18:56,2015-12-03 11:18:56,195.242.191.45,,,/administrator/components/com_acymailing/inc/openflash/php-ofc-library/ofc_upload_image.php,,query_string=name=magic.php
+four_oh_four,3,404 Error,2015-12-03 13:18:58,2015-12-03 11:18:58,195.242.191.45,,,/administrator/components/com_acymailing/inc/openflash/php-ofc-library/ofc_upload_image.php,,query_string=name=magic.php.pHp
+four_oh_four,3,404 Error,2015-12-03 13:19:00,2015-12-03 11:19:00,195.242.191.45,,,/components/com_acymailing/inc/openflash/php-ofc-library/ofc_upload_image.php,,query_string=name=magic.php
+four_oh_four,3,404 Error,2015-12-03 13:19:02,2015-12-03 11:19:02,195.242.191.45,,,/components/com_acymailing/inc/openflash/php-ofc-library/ofc_upload_image.php,,query_string=name=magic.php.pHp
+four_oh_four,3,404 Error,2015-12-03 13:19:03,2015-12-03 11:19:03,195.242.191.45,,,/administrator/components/com_jnewsletter/includes/openflashchart/php-ofc-library/ofc_upload_image.php,,query_string=name=magic.php
+four_oh_four,3,404 Error,2015-12-03 13:19:07,2015-12-03 11:19:07,195.242.191.45,,,/administrator/components/com_jnewsletter/includes/openflashchart/php-ofc-library/ofc_upload_image.php,,query_string=name=magic.php.pHp
+four_oh_four,3,404 Error,2015-12-03 13:19:12,2015-12-03 11:19:12,195.242.191.45,,,/components/com_jnewsletter/includes/openflashchart/php-ofc-library/ofc_upload_image.php,,query_string=name=magic.php
+four_oh_four,3,404 Error,2015-12-03 13:19:16,2015-12-03 11:19:16,195.242.191.45,,,/components/com_jnewsletter/includes/openflashchart/php-ofc-library/ofc_upload_image.php,,query_string=name=magic.php.pHp
+four_oh_four,3,404 Error,2015-12-03 13:19:18,2015-12-03 11:19:18,195.242.191.45,,,/administrator/components/com_jinc/classes/graphics/php-ofc-library/ofc_upload_image.php,,query_string=name=magic.php
+four_oh_four,3,404 Error,2015-12-03 13:19:20,2015-12-03 11:19:20,195.242.191.45,,,/administrator/components/com_jinc/classes/graphics/php-ofc-library/ofc_upload_image.php,,query_string=name=magic.php.pHp
+four_oh_four,3,404 Error,2015-12-03 13:19:22,2015-12-03 11:19:22,195.242.191.45,,,/components/com_jinc/classes/graphics/php-ofc-library/ofc_upload_image.php,,query_string=name=magic.php
+four_oh_four,3,404 Error,2015-12-03 13:19:25,2015-12-03 11:19:25,195.242.191.45,,,/components/com_jinc/classes/graphics/php-ofc-library/ofc_upload_image.php,,query_string=name=magic.php.pHp
+four_oh_four,3,404 Error,2015-12-03 13:19:27,2015-12-03 11:19:27,195.242.191.45,,,/administrator/components/com_maian15/charts/php-ofc-library/ofc_upload_image.php,,query_string=name=magic.php
+four_oh_four,3,404 Error,2015-12-03 13:19:29,2015-12-03 11:19:29,195.242.191.45,,,/administrator/components/com_maian15/charts/php-ofc-library/ofc_upload_image.php,,query_string=name=magic.php.pHp
+four_oh_four,3,404 Error,2015-12-03 13:19:32,2015-12-03 11:19:32,195.242.191.45,,,/components/com_maian15/charts/php-ofc-library/ofc_upload_image.php,,query_string=name=magic.php
+four_oh_four,3,404 Error,2015-12-03 13:19:33,2015-12-03 11:19:33,195.242.191.45,,,/components/com_maian15/charts/php-ofc-library/ofc_upload_image.php,,query_string=name=magic.php.pHp
+lockout,10,Host or User Lockout,2015-12-03 13:19:33,2015-12-03 11:19:33,195.242.191.45,,,,,expires=2015-12-03 13:34:33expires_gmt=2015-12-03 11:34:33type=four_oh_four
+four_oh_four,3,404 Error,2015-12-04 02:47:16,2015-12-04 00:47:16,66.249.64.39,,,/apple-app-site-association,,query_string=
+four_oh_four,3,404 Error,2015-12-04 14:06:06,2015-12-04 12:06:06,93.171.205.49,,,/wp-admin/media-parse-new.php,http://selectsifiso.net/wp-admin/media-parse-new.php,query_string=
+four_oh_four,3,404 Error,2015-12-04 14:24:02,2015-12-04 12:24:02,180.153.163.211,,,/sharecdn.social9.com/v1/social9.min.js,http://www.selectsifiso.net//sharecdn.social9.com/v1/social9.min.js?ver=0e36dc6d94add3243547fcfbdb2d441e,query_string=ver=0e36dc6d94add3243547fcfbdb2d441e
+four_oh_four,3,404 Error,2015-12-04 14:24:10,2015-12-04 12:24:10,180.153.163.211,,,/s7.addthis.com/js/300/addthis_widget.js,http://www.selectsifiso.net//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-554794b55a06e901,query_string=
+four_oh_four,3,404 Error,2015-12-05 14:23:21,2015-12-05 12:23:21,5.61.39.5,,,/wp-includes/pomo/was-wp.php,,query_string=
+four_oh_four,3,404 Error,2015-12-06 20:07:42,2015-12-06 18:07:42,208.109.54.127,,,/,,query_string=gf_page=upload
+four_oh_four,3,404 Error,2015-12-07 08:49:07,2015-12-07 06:49:07,112.64.235.245,,,/sharecdn.social9.com/v1/social9.min.js,http://www.selectsifiso.net//sharecdn.social9.com/v1/social9.min.js?ver=258255f4684801dddafcf6c69a49e000,query_string=ver=258255f4684801dddafcf6c69a49e000
+four_oh_four,3,404 Error,2015-12-07 08:49:09,2015-12-07 06:49:09,112.64.235.245,,,/s7.addthis.com/js/300/addthis_widget.js,http://www.selectsifiso.net//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-554794b55a06e901,query_string=
+four_oh_four,3,404 Error,2015-12-07 11:12:15,2015-12-07 09:12:15,217.69.133.239,,,/,,query_string=page_id=160
+four_oh_four,3,404 Error,2015-12-07 19:03:41,2015-12-07 17:03:41,40.77.167.21,,,/,,query_string=page_id=160
+four_oh_four,3,404 Error,2015-12-08 00:39:14,2015-12-07 22:39:14,91.200.12.136,,,/execute-process-task-compress-file-using-7-zip/#comment-47168,,query_string=
+four_oh_four,3,404 Error,2015-12-08 16:34:33,2015-12-08 14:34:33,178.211.183.204,,,/license.php,http://www.selectsifiso.net/license.php,query_string=
+four_oh_four,3,404 Error,2015-12-08 20:44:28,2015-12-08 18:44:28,52.53.245.147,,,/admin.php,,query_string=
+four_oh_four,3,404 Error,2015-12-08 23:00:55,2015-12-08 21:00:55,195.154.251.131,,,/uploadify/uploadify.php,http://selectsifiso.net/uploadify/uploadify.php,query_string=
+four_oh_four,3,404 Error,2015-12-08 23:00:59,2015-12-08 21:00:59,195.154.251.131,,,/samplc.php,,query_string=
+four_oh_four,3,404 Error,2015-12-08 23:01:11,2015-12-08 21:01:11,195.154.251.131,,,/php-ofc-library/ofc_upload_image.php,http://selectsifiso.net/php-ofc-library/ofc_upload_image.php?name=sample.php,query_string=name=sample.php
+four_oh_four,3,404 Error,2015-12-08 23:01:13,2015-12-08 21:01:13,195.154.251.131,,,/tmp-upload-images/samplc.php,,query_string=
+four_oh_four,3,404 Error,2015-12-08 23:01:20,2015-12-08 21:01:20,195.154.251.131,,,/components/com_creativecontactform/fileupload/index.php,http://selectsifiso.net/components/com_creativecontactform/fileupload/index.php,query_string=
+four_oh_four,3,404 Error,2015-12-08 23:01:22,2015-12-08 21:01:22,195.154.251.131,,,/components/com_creativecontactform/fileupload/files/samplc.php,,query_string=
+four_oh_four,3,404 Error,2015-12-08 23:01:38,2015-12-08 21:01:38,195.154.251.131,,,/server/php/,http://selectsifiso.net/server/php/,query_string=
+four_oh_four,3,404 Error,2015-12-08 23:01:41,2015-12-08 21:01:41,195.154.251.131,,,/server/php/files/samplc.php,,query_string=
+four_oh_four,3,404 Error,2015-12-08 23:09:11,2015-12-08 21:09:11,199.127.82.11,,,/tfsoutlookconnector/TFS.Outlook.Connector.vsto,,query_string=
+four_oh_four,3,404 Error,2015-12-09 00:43:20,2015-12-08 22:43:20,8.37.70.123,,,/tfsoutlookconnector/TFS.Outlook.Connector.vsto,,query_string=
+four_oh_four,3,404 Error,2015-12-09 05:59:30,2015-12-09 03:59:30,40.77.167.21,,,/scripts/imageSwap.js,,query_string=1703806667
+four_oh_four,3,404 Error,2015-12-09 05:59:31,2015-12-09 03:59:31,40.77.167.21,,,/scripts/siteUtil.js,,query_string=1703806667
+four_oh_four,3,404 Error,2015-12-11 09:33:26,2015-12-11 07:33:26,40.77.167.21,,,/,,query_string=page_id=160
+four_oh_four,3,404 Error,2015-12-11 11:39:25,2015-12-11 09:39:25,117.177.250.152,,,/,http://www.selectsifiso.net/,query_string=p=3
+four_oh_four,3,404 Error,2015-12-11 21:30:53,2015-12-11 19:30:53,66.249.73.249,,,/,,query_string=p=34
+four_oh_four,3,404 Error,2015-12-12 13:29:19,2015-12-12 11:29:19,101.226.33.226,,,/s7.addthis.com/js/300/addthis_widget.js,http://www.selectsifiso.net//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-554794b55a06e901,query_string=
+four_oh_four,3,404 Error,2015-12-12 13:29:20,2015-12-12 11:29:20,101.226.33.226,,,/sharecdn.social9.com/v1/social9.min.js,http://www.selectsifiso.net//sharecdn.social9.com/v1/social9.min.js?ver=e48dce06b6039f1469f966c697722c40,query_string=ver=e48dce06b6039f1469f966c697722c40
+four_oh_four,3,404 Error,2015-12-12 15:37:33,2015-12-12 13:37:33,117.136.234.5,,,http://www.selectsifiso.net/,http://www.selectsifiso.net/,query_string=p=397
+four_oh_four,3,404 Error,2015-12-13 07:25:49,2015-12-13 05:25:49,204.16.0.243,,,/tag/destination-component/&amp;sa=U&amp;ved=0ahUKEwjii7bmg9jJAhXLXSwKHZOSC9M4rAIQFgjEAzBU&amp;usg=AFQjCNF4KH3geE7WzmPjlAbgOMx1LrBR8g/,,query_string=option=com_myblog&task=ajaxupload
+four_oh_four,3,404 Error,2015-12-13 07:28:31,2015-12-13 05:28:31,204.16.0.243,,,/tag/destination-component/&amp;sa=U&amp;ved=0ahUKEwjxoefng9jJAhXFBywKHbvSCpo43gIQFgh2MBU&amp;usg=AFQjCNF4KH3geE7WzmPjlAbgOMx1LrBR8g/,,query_string=option=com_myblog&task=ajaxupload
+four_oh_four,3,404 Error,2015-12-13 16:20:08,2015-12-13 14:20:08,91.200.12.106,,,/duplicate-mysql-table-using-phpmyadmin/#comment-47185,,query_string=
+four_oh_four,3,404 Error,2015-12-13 19:31:48,2015-12-13 17:31:48,62.210.250.218,,,/wordpress/,http://kairosathletics.com/wordpress/,query_string=
+four_oh_four,3,404 Error,2015-12-15 02:14:50,2015-12-15 00:14:50,91.200.12.143,,,/duplicate-mysql-table-using-phpmyadmin/#comment-47186,,query_string=
+four_oh_four,3,404 Error,2015-12-16 12:44:07,2015-12-16 10:44:07,27.154.45.76,,,/webmanage/fckeditor/editor/filemanager/browser/default/connectors/asp/connector.asp,http://www.selectsifiso.net/webmanage/fckeditor/editor/filemanager/browser/default/connectors/asp/connector.asp,query_string=
+four_oh_four,3,404 Error,2015-12-16 12:44:10,2015-12-16 10:44:10,27.154.45.76,,,/editor/editor/filemanager/browser/default/connectors/asp/connector.asp,http://www.selectsifiso.net/editor/editor/filemanager/browser/default/connectors/asp/connector.asp,query_string=
+four_oh_four,3,404 Error,2015-12-16 12:44:53,2015-12-16 10:44:53,27.154.45.76,,,/admin/fckeditor/editor/filemanager/browser/default/connectors/asp/connector.asp,http://www.selectsifiso.net/admin/fckeditor/editor/filemanager/browser/default/connectors/asp/connector.asp,query_string=
+four_oh_four,3,404 Error,2015-12-16 12:44:55,2015-12-16 10:44:55,27.154.45.76,,,/editor/filemanager/browser/default/connectors/asp/connector.asp,http://www.selectsifiso.net/editor/filemanager/browser/default/connectors/asp/connector.asp,query_string=
+four_oh_four,3,404 Error,2015-12-16 12:44:56,2015-12-16 10:44:56,27.154.45.76,,,/manage/fckeditor/editor/filemanager/browser/default/connectors/asp/connector.asp,http://www.selectsifiso.net/manage/fckeditor/editor/filemanager/browser/default/connectors/asp/connector.asp,query_string=
+four_oh_four,3,404 Error,2015-12-16 13:20:24,2015-12-16 11:20:24,101.226.89.117,,,/s7.addthis.com/js/300/addthis_widget.js,http://www.selectsifiso.net//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-554794b55a06e901,query_string=
+four_oh_four,3,404 Error,2015-12-16 13:20:34,2015-12-16 11:20:34,101.226.89.117,,,/sharecdn.social9.com/v1/social9.min.js,http://www.selectsifiso.net//sharecdn.social9.com/v1/social9.min.js?ver=e48dce06b6039f1469f966c697722c40,query_string=ver=e48dce06b6039f1469f966c697722c40
+four_oh_four,3,404 Error,2015-12-16 13:20:35,2015-12-16 11:20:35,101.226.89.117,,,/s7.addthis.com/js/300/addthis_widget.js,http://www.selectsifiso.net//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-554794b55a06e901,query_string=
+four_oh_four,3,404 Error,2015-12-17 01:22:47,2015-12-16 23:22:47,104.236.22.218,,,/joomla/libraries/simplepie/README.txt,,query_string=
+four_oh_four,3,404 Error,2015-12-17 12:20:15,2015-12-17 10:20:15,85.93.89.97,,,/images/stories/petx.php,,query_string=baca
+four_oh_four,3,404 Error,2015-12-17 12:20:22,2015-12-17 10:20:22,85.93.89.97,,,/images/stories/explore.php,,query_string=baca
+four_oh_four,3,404 Error,2015-12-17 12:20:45,2015-12-17 10:20:45,85.93.89.97,,,/images/stories/magic.php.png,,query_string=
+four_oh_four,3,404 Error,2015-12-17 12:20:47,2015-12-17 10:20:47,85.93.89.97,,,/page/2/images/stories/petx.php,,query_string=baca
+four_oh_four,3,404 Error,2015-12-17 12:20:51,2015-12-17 10:20:51,85.93.89.97,,,/page/2/images/stories/explore.php,,query_string=baca
+four_oh_four,3,404 Error,2015-12-17 12:21:13,2015-12-17 10:21:13,85.93.89.97,,,/page/2/images/stories/magic.php.png,,query_string=
+four_oh_four,3,404 Error,2015-12-17 13:01:01,2015-12-17 11:01:01,123.56.100.105,,,/,http://www.selectsifiso.net/,query_string=p=5
+four_oh_four,3,404 Error,2015-12-17 23:59:29,2015-12-17 21:59:29,117.136.234.12,,,http://www.selectsifiso.net/,http://www.selectsifiso.net/,query_string=p=1043
+four_oh_four,3,404 Error,2015-12-18 05:13:26,2015-12-18 03:13:26,69.194.234.51,,,/logs/parser.php,,query_string=opn
+four_oh_four,3,404 Error,2015-12-18 05:13:32,2015-12-18 03:13:32,69.194.234.51,,,/modules/mod_banners/,,query_string=opn
+four_oh_four,3,404 Error,2015-12-18 05:13:47,2015-12-18 03:13:47,69.194.234.51,,,/images/parser.php.xxxjpg,,query_string=opn
+four_oh_four,3,404 Error,2015-12-18 05:13:53,2015-12-18 03:13:53,69.194.234.51,,,/images/stories/parser.php.xxxjpg,,query_string=opn
+four_oh_four,3,404 Error,2015-12-18 05:13:59,2015-12-18 03:13:59,69.194.234.51,,,/images/0/parser.php.xxxjpg,,query_string=opn
+four_oh_four,3,404 Error,2015-12-18 05:14:06,2015-12-18 03:14:06,69.194.234.51,,,/images/blog/parser.php.xxxjpg,,query_string=opn
+four_oh_four,3,404 Error,2015-12-18 05:14:12,2015-12-18 03:14:12,69.194.234.51,,,/images/0/yena.PhP.pjpeg,,query_string=
+four_oh_four,3,404 Error,2015-12-18 05:14:19,2015-12-18 03:14:19,69.194.234.51,,,/images/yena.PhP.pjpeg,,query_string=
+four_oh_four,3,404 Error,2015-12-18 05:14:26,2015-12-18 03:14:26,69.194.234.51,,,/images/blog/yena.PhP.pjpeg,,query_string=
+four_oh_four,3,404 Error,2015-12-18 05:14:32,2015-12-18 03:14:32,69.194.234.51,,,/images/stories/yena.PhP.pjpeg,,query_string=
+four_oh_four,3,404 Error,2015-12-18 05:14:39,2015-12-18 03:14:39,69.194.234.51,,,/images/0/images.PhP.pjpeg,,query_string=
+four_oh_four,3,404 Error,2015-12-18 05:14:47,2015-12-18 03:14:47,69.194.234.51,,,/images/images.PhP.pjpeg,,query_string=
+four_oh_four,3,404 Error,2015-12-18 05:14:54,2015-12-18 03:14:54,69.194.234.51,,,/images/bogel.PhP.pjpeg,,query_string=
+four_oh_four,3,404 Error,2015-12-18 05:15:00,2015-12-18 03:15:00,69.194.234.51,,,/images/xx.PhP.pjpeg,,query_string=
+four_oh_four,3,404 Error,2015-12-18 05:15:07,2015-12-18 03:15:07,69.194.234.51,,,/images/0/xx.PhP.pjpeg,,query_string=
+four_oh_four,3,404 Error,2015-12-18 05:15:13,2015-12-18 03:15:13,69.194.234.51,,,/images/blog/xx.PhP.pjpeg,,query_string=
+four_oh_four,3,404 Error,2015-12-18 05:15:19,2015-12-18 03:15:19,69.194.234.51,,,/images/stories/xx.PhP.pjpeg,,query_string=
+four_oh_four,3,404 Error,2015-12-18 05:15:25,2015-12-18 03:15:25,69.194.234.51,,,/images/0/bogel.PhP.pjpeg,,query_string=
+four_oh_four,3,404 Error,2015-12-18 05:15:34,2015-12-18 03:15:34,69.194.234.51,,,/images/blog/bogel.PhP.pjpeg,,query_string=
+four_oh_four,3,404 Error,2015-12-18 05:15:34,2015-12-18 03:15:34,69.194.234.51,,,/tag/destination-/,,query_string=option=com_myblog&task=ajaxupload
+lockout,10,Host or User Lockout,2015-12-18 05:15:34,2015-12-18 03:15:34,69.194.234.51,,,,,expires=2015-12-18 05:30:34expires_gmt=2015-12-18 03:30:34type=four_oh_four
+four_oh_four,3,404 Error,2015-12-18 08:00:12,2015-12-18 06:00:12,62.210.190.10,,,/wpfoot1.php,http://www.googlebot.com/bot.html,query_string=
+four_oh_four,3,404 Error,2015-12-18 13:24:00,2015-12-18 11:24:00,101.226.66.193,,,/s7.addthis.com/js/300/addthis_widget.js,http://www.selectsifiso.net//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-554794b55a06e901,query_string=
+four_oh_four,3,404 Error,2015-12-18 13:24:01,2015-12-18 11:24:01,101.226.66.193,,,/sharecdn.social9.com/v1/social9.min.js,http://www.selectsifiso.net//sharecdn.social9.com/v1/social9.min.js?ver=e48dce06b6039f1469f966c697722c40,query_string=ver=e48dce06b6039f1469f966c697722c40
+four_oh_four,3,404 Error,2015-12-18 13:40:22,2015-12-18 11:40:22,93.114.64.76,,,/tag/destination-component/logs/myluph.phpjdownloads.php,,query_string=url=www.selectsifiso.net/tag/destination-component/
+four_oh_four,3,404 Error,2015-12-18 13:40:26,2015-12-18 11:40:26,93.114.64.76,,,/logs/myluph.phpjdownloads.php,,query_string=url=www.selectsifiso.net/
+four_oh_four,3,404 Error,2015-12-18 13:40:28,2015-12-18 11:40:28,93.114.64.76,,,/images/jdownloads/screenshots/m.libs.up.php.j,,query_string=clone
+four_oh_four,3,404 Error,2015-12-18 13:40:30,2015-12-18 11:40:30,93.114.64.76,,,/tag/destination-component/images/jdownloads/screenshots/m.libs.up.php.j,,query_string=clone
+four_oh_four,3,404 Error,2015-12-18 13:40:30,2015-12-18 11:40:30,93.114.64.76,,,/images/recky.php,,query_string=
+four_oh_four,3,404 Error,2015-12-18 13:40:32,2015-12-18 11:40:32,93.114.64.76,,,/images/metri.php,,query_string=
+four_oh_four,3,404 Error,2015-12-18 13:40:37,2015-12-18 11:40:37,93.114.64.76,,,/tag/destination-component/images/recky.php,,query_string=
+four_oh_four,3,404 Error,2015-12-18 13:40:39,2015-12-18 11:40:39,93.114.64.76,,,/images/metri.php,,query_string=
+four_oh_four,3,404 Error,2015-12-18 13:40:44,2015-12-18 11:40:44,93.114.64.76,,,/tag/destination-component/images/metri.php,,query_string=
+four_oh_four,3,404 Error,2015-12-18 13:40:50,2015-12-18 11:40:50,93.114.64.76,,,/tag/destination-component/images/metri.php,,query_string=
+four_oh_four,3,404 Error,2015-12-18 13:46:30,2015-12-18 11:46:30,93.114.64.76,,,/tag/destination-component/logs/myluph.phpjdownloads.php,,query_string=url=www.selectsifiso.net/tag/destination-component/
+four_oh_four,3,404 Error,2015-12-18 13:46:37,2015-12-18 11:46:37,93.114.64.76,,,/tag/destination-component/images/jdownloads/screenshots/m.libs.up.php.j,,query_string=clone
+four_oh_four,3,404 Error,2015-12-18 13:46:45,2015-12-18 11:46:45,93.114.64.76,,,/tag/destination-component/images/recky.php,,query_string=
+four_oh_four,3,404 Error,2015-12-18 13:46:52,2015-12-18 11:46:52,93.114.64.76,,,/tag/destination-component/images/metri.php,,query_string=
+four_oh_four,3,404 Error,2015-12-18 13:47:10,2015-12-18 11:47:10,93.114.64.76,,,/tag/destination-component/images/metri.php,,query_string=
+four_oh_four,3,404 Error,2015-12-18 13:47:13,2015-12-18 11:47:13,93.114.64.76,,,/images/jdownloads/screenshots/m.libs.up.php.j,,query_string=clone
+four_oh_four,3,404 Error,2015-12-18 13:47:56,2015-12-18 11:47:56,93.114.64.76,,,/images/metri.php,,query_string=
+four_oh_four,3,404 Error,2015-12-19 11:27:51,2015-12-19 09:27:51,62.192.60.38,,,/,http://www.selectsifiso.net/?cat=127\\\\\\\'A=0,query_string=cat=127\\\\\\\'A=0
+four_oh_four,3,404 Error,2015-12-19 17:35:05,2015-12-19 15:35:05,178.150.20.55,,,/wp-includes/pomo/cache_checkexpress.php5,http://selectsifiso.net/wp-includes/pomo/cache_checkexpress.php5,query_string=
+four_oh_four,3,404 Error,2015-12-20 02:35:59,2015-12-20 00:35:59,78.135.114.114,,,/admin.php,,query_string=
+four_oh_four,3,404 Error,2015-12-20 02:36:03,2015-12-20 00:36:03,78.135.114.114,,,/bitrix/admin/,,query_string=lang=en
+four_oh_four,3,404 Error,2015-12-20 02:36:06,2015-12-20 00:36:06,78.135.114.114,,,/admin/login.php,,query_string=
+four_oh_four,3,404 Error,2015-12-20 02:36:11,2015-12-20 00:36:11,78.135.114.114,,,/user/,,query_string=
+four_oh_four,3,404 Error,2015-12-20 04:08:00,2015-12-20 02:08:00,177.47.187.20,,,/components/com_jnews/includes/openflashchart/php-ofc-library/ofc_upload_image.php,,query_string=name=mil.php
+four_oh_four,3,404 Error,2015-12-20 04:08:02,2015-12-20 02:08:02,177.47.187.20,,,/administrator/components/com_acymailing/inc/openflash/php-ofc-library/ofc_upload_image.php,,query_string=name=mil.php
+four_oh_four,3,404 Error,2015-12-20 04:08:02,2015-12-20 02:08:02,177.47.187.20,,,/images/stories/mil.gif,,query_string=
+four_oh_four,3,404 Error,2015-12-20 04:08:04,2015-12-20 02:08:04,177.47.187.20,,,/administrator/components/com_jnewsletter/includes/openflashchart/php-ofc-library/ofc_upload_image.php,,query_string=
+four_oh_four,3,404 Error,2015-12-20 04:08:06,2015-12-20 02:08:06,177.47.187.20,,,/administrator/components/com_civicrm/civicrm/packages/OpenFlashChart/php-ofc-library/ofc_upload_image.php,,query_string=
+four_oh_four,3,404 Error,2015-12-20 04:08:08,2015-12-20 02:08:08,177.47.187.20,,,/administrator/components/com_jinc/classes/graphics/php-ofc-library/ofc_upload_image.php,,query_string=
+four_oh_four,3,404 Error,2015-12-20 04:08:10,2015-12-20 02:08:10,177.47.187.20,,,/administrator/components/com_maianmedia/utilities/charts/php-ofc-library/ofc_upload_image.php,,query_string=
+four_oh_four,3,404 Error,2015-12-20 04:08:12,2015-12-20 02:08:12,177.47.187.20,,,/administrator/components/com_maian15/charts/php-ofc-library/ofc_upload_image.php,,query_string=
+four_oh_four,3,404 Error,2015-12-20 04:08:14,2015-12-20 02:08:14,177.47.187.20,,,/administrator/components/com_redmystic/chart/ofc-library/ofc_upload_image.php,,query_string=
+four_oh_four,3,404 Error,2015-12-20 04:08:14,2015-12-20 02:08:14,177.47.187.20,,,/images/stories/pbot.php,,query_string=
+four_oh_four,3,404 Error,2015-12-20 04:08:16,2015-12-20 02:08:16,177.47.187.20,,,/administrator/components/com_joomleague/assets/classes/open-flash-chart/ofc_upload_image.php,,query_string=
+four_oh_four,3,404 Error,2015-12-20 04:08:18,2015-12-20 02:08:18,177.47.187.20,,,/administrator/components/com_bt_portfolio/helpers/uploadify/uploadify.php,,query_string=
+four_oh_four,3,404 Error,2015-12-20 04:08:23,2015-12-20 02:08:23,177.47.187.20,,,/cfg-contactform-1/inc/upload.php,,query_string=
+four_oh_four,3,404 Error,2015-12-20 04:08:25,2015-12-20 02:08:25,177.47.187.20,,,/components/com_sexycontactform/fileupload/,,query_string=
+four_oh_four,3,404 Error,2015-12-20 04:08:27,2015-12-20 02:08:27,177.47.187.20,,,/cfg-contactform-2/inc/upload.php,,query_string=
+four_oh_four,3,404 Error,2015-12-20 04:08:27,2015-12-20 02:08:27,177.47.187.20,,,/components/com_creativecontactform/fileupload/,,query_string=
+four_oh_four,3,404 Error,2015-12-20 04:08:31,2015-12-20 02:08:31,177.47.187.20,,,/cfg-contactform-3/inc/upload.php,,query_string=
+four_oh_four,3,404 Error,2015-12-20 04:08:32,2015-12-20 02:08:32,177.47.187.20,,,/components/com_hwdvideoshare/assets/uploads/flash/flash_upload.php,,query_string=jqUploader=1
+four_oh_four,3,404 Error,2015-12-20 04:08:35,2015-12-20 02:08:35,177.47.187.20,,,/cfg-contactform-4/inc/upload.php,,query_string=
+four_oh_four,3,404 Error,2015-12-20 04:08:38,2015-12-20 02:08:38,177.47.187.20,,,/cfg-contactform-5/inc/upload.php,,query_string=
+four_oh_four,3,404 Error,2015-12-20 04:08:42,2015-12-20 02:08:42,177.47.187.20,,,/cfg-contactform-6/inc/upload.php,,query_string=
+lockout,10,Host or User Lockout,2015-12-20 04:08:42,2015-12-20 02:08:42,177.47.187.20,,,,,expires=2015-12-20 04:23:42expires_gmt=2015-12-20 02:23:42type=four_oh_four
+away_mode,5,Away Mode Triggered,2015-12-20 05:09:21,2015-12-20 03:09:21,149.210.233.129,,,,,0=A host was prevented from accessing the dashboard due to away-mode restrictions being in effect
+four_oh_four,3,404 Error,2015-12-20 18:27:45,2015-12-20 16:27:45,144.76.201.69,,,/,,query_string=page_id=160
+brute_force,5,Invalid Login Attempt,2015-12-20 18:30:28,2015-12-20 16:30:28,46.119.59.92,admin,,,,
+lockout,10,Host or User Lockout,2015-12-20 18:30:28,2015-12-20 16:30:28,46.119.59.92,,,,,expires=2015-12-20 18:45:28expires_gmt=2015-12-20 16:45:28type=brute_force
+four_oh_four,3,404 Error,2015-12-21 04:51:48,2015-12-21 02:51:48,66.249.66.33,,,/author/feed/,,query_string=
+four_oh_four,3,404 Error,2015-12-21 14:15:38,2015-12-21 12:15:38,82.85.14.105,,,/FCKeditor/_whatsnew.html,,query_string=
+four_oh_four,3,404 Error,2015-12-21 14:15:40,2015-12-21 12:15:40,82.85.14.105,,,/Admin/Fckeditor/_whatsnew.html,,query_string=
+four_oh_four,3,404 Error,2015-12-21 14:15:42,2015-12-21 12:15:42,82.85.14.105,,,/Editor/Editor/dialog/fck_about.html,,query_string=
+four_oh_four,3,404 Error,2015-12-21 22:50:55,2015-12-21 20:50:55,95.178.128.16,,,/wp-includes/pomo/config_options.php,http://selectsifiso.net/wp-includes/pomo/config_options.php,query_string=
+away_mode,5,Away Mode Triggered,2015-12-22 00:18:11,2015-12-21 22:18:11,62.210.190.10,,,,,0=A host was prevented from accessing the dashboard due to away-mode restrictions being in effect
+away_mode,5,Away Mode Triggered,2015-12-22 01:02:31,2015-12-21 23:02:31,185.93.187.49,,,,,0=A host was prevented from accessing the dashboard due to away-mode restrictions being in effect
+four_oh_four,3,404 Error,2015-12-22 13:29:46,2015-12-22 11:29:46,101.226.66.174,,,/sharecdn.social9.com/v1/social9.min.js,http://www.selectsifiso.net//sharecdn.social9.com/v1/social9.min.js?ver=e48dce06b6039f1469f966c697722c40,query_string=ver=e48dce06b6039f1469f966c697722c40
+four_oh_four,3,404 Error,2015-12-22 13:29:49,2015-12-22 11:29:49,101.226.66.174,,,/s7.addthis.com/js/300/addthis_widget.js,http://www.selectsifiso.net//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-554794b55a06e901,query_string=
+four_oh_four,3,404 Error,2015-12-22 13:29:54,2015-12-22 11:29:54,101.226.66.174,,,/s7.addthis.com/js/300/addthis_widget.js,http://www.selectsifiso.net//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-554794b55a06e901,query_string=
+four_oh_four,3,404 Error,2015-12-22 23:39:30,2015-12-22 21:39:30,110.164.189.12,,,/tag/destination-/,,query_string=option=com_myblog&task=ajaxupload
+four_oh_four,3,404 Error,2015-12-22 23:39:32,2015-12-22 21:39:32,110.164.189.12,,,/cache/version.php,,query_string=x1
+four_oh_four,3,404 Error,2015-12-22 23:39:43,2015-12-22 21:39:43,110.164.189.12,,,/media/system/css/,,query_string=x1
+four_oh_four,3,404 Error,2015-12-22 23:40:08,2015-12-22 21:40:08,110.164.189.12,,,/images/version.xxxjpg,,query_string=x1
+four_oh_four,3,404 Error,2015-12-22 23:40:23,2015-12-22 21:40:23,110.164.189.12,,,/images/stories/version.xxxjpg,,query_string=x1
+four_oh_four,3,404 Error,2015-12-22 23:40:34,2015-12-22 21:40:34,110.164.189.12,,,/images/0/version.xxxjpg,,query_string=x1
+four_oh_four,3,404 Error,2015-12-22 23:40:48,2015-12-22 21:40:48,110.164.189.12,,,/images/blog/version.xxxjpg,,query_string=x1
+four_oh_four,3,404 Error,2015-12-23 08:28:45,2015-12-23 06:28:45,27.0.123.42,,,/common_configuration.php,http://selectsifiso.net/common_configuration.php,query_string=
+four_oh_four,3,404 Error,2015-12-23 22:17:29,2015-12-23 20:17:29,37.122.166.104,,,/resource/UserFollowResource/create/,http://www.selectsifiso.net/tag/read-sql-query/,query_string=
+away_mode,5,Away Mode Triggered,2015-12-25 00:54:05,2015-12-24 22:54:05,195.154.168.82,,,,,0=A host was prevented from accessing the dashboard due to away-mode restrictions being in effect
+four_oh_four,3,404 Error,2015-12-25 17:09:42,2015-12-25 15:09:42,207.46.13.161,,,/internacional/public/office/js/jquery.timeago.iso.js,,query_string=
+four_oh_four,3,404 Error,2015-12-25 17:09:43,2015-12-25 15:09:43,207.46.13.161,,,/internacional/public/office/site/fonts/MyriadPro-Regular/myriadpro-regular.css,,query_string=
+four_oh_four,3,404 Error,2015-12-25 17:18:37,2015-12-25 15:18:37,40.77.167.31,,,/internacional/public/office/site/fonts/Festus-Regular/stylesheet.css,,query_string=
+four_oh_four,3,404 Error,2015-12-26 00:50:24,2015-12-25 22:50:24,172.246.109.47,,,/fckeditor/editor/,,query_string=
+four_oh_four,3,404 Error,2015-12-26 08:23:46,2015-12-26 06:23:46,182.185.80.171,,,/40as3d.php,http://selectsifiso.net/40as3d.php,query_string=
+four_oh_four,3,404 Error,2015-12-26 12:12:49,2015-12-26 10:12:49,172.246.109.47,,,/js/fckeditor/editor/,,query_string=
+four_oh_four,3,404 Error,2015-12-26 17:22:39,2015-12-26 15:22:39,193.201.227.91,,,//,,query_string=gf_page=upload
+four_oh_four,3,404 Error,2015-12-26 23:19:03,2015-12-26 21:19:03,172.246.109.47,,,/fckeditor/editor/,,query_string=
+four_oh_four,3,404 Error,2015-12-27 03:57:31,2015-12-27 01:57:31,172.246.109.47,,,/js/fckeditor/editor/,,query_string=
+four_oh_four,3,404 Error,2015-12-27 08:27:15,2015-12-27 06:27:15,172.246.109.47,,,/includes/fckeditor/editor/,,query_string=
+away_mode,5,Away Mode Triggered,2015-12-29 03:07:18,2015-12-29 01:07:18,46.119.58.184,,,,,0=A host was prevented from accessing the dashboard due to away-mode restrictions being in effect
+brute_force,5,Invalid Login Attempt,2015-12-29 03:07:18,2015-12-29 01:07:18,46.119.58.184,admin,,,,
+lockout,10,Host or User Lockout,2015-12-29 03:07:18,2015-12-29 01:07:18,46.119.58.184,,,,,expires=2015-12-29 03:22:18expires_gmt=2015-12-29 01:22:18type=brute_force
+four_oh_four,3,404 Error,2015-12-30 01:25:26,2015-12-29 23:25:26,68.180.229.233,,,/,,query_string=page_id=1197
+four_oh_four,3,404 Error,2015-12-30 11:35:35,2015-12-30 09:35:35,176.9.57.228,,,/magmi/web/magmi.php,,query_string=
+four_oh_four,3,404 Error,2015-12-30 11:35:37,2015-12-30 09:35:37,176.9.57.228,,,/nl-confirm-signup/magmi/web/magmi.php,,query_string=
+four_oh_four,3,404 Error,2015-12-30 19:24:27,2015-12-30 17:24:27,207.46.13.97,,,/,,query_string=page_id=827
+four_oh_four,3,404 Error,2015-12-30 23:05:02,2015-12-30 21:05:02,104.43.163.249,,,/bitrix/admin/,http://www.selectsifiso.net/bitrix/admin/,query_string=
+four_oh_four,3,404 Error,2015-12-31 23:13:25,2015-12-31 21:13:25,86.38.119.189,,,/logs/access_151229.log,http://selectsifiso.net/logs/access_151229.log,query_string=
+away_mode,5,Away Mode Triggered,2016-01-01 05:42:43,2016-01-01 03:42:43,62.149.143.154,,,,,0=A host was prevented from accessing the dashboard due to away-mode restrictions being in effect
+four_oh_four,3,404 Error,2016-01-01 13:28:44,2016-01-01 11:28:44,180.153.206.27,,,/s7.addthis.com/js/300/addthis_widget.js,http://www.selectsifiso.net//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-554794b55a06e901,query_string=
+four_oh_four,3,404 Error,2016-01-01 13:28:45,2016-01-01 11:28:45,180.153.206.27,,,/sharecdn.social9.com/v1/social9.min.js,http://www.selectsifiso.net//sharecdn.social9.com/v1/social9.min.js?ver=e48dce06b6039f1469f966c697722c40,query_string=ver=e48dce06b6039f1469f966c697722c40
+away_mode,5,Away Mode Triggered,2016-01-02 02:58:30,2016-01-02 00:58:30,109.162.43.74,,,,,0=A host was prevented from accessing the dashboard due to away-mode restrictions being in effect
+brute_force,5,Invalid Login Attempt,2016-01-02 02:58:30,2016-01-02 00:58:30,109.162.43.74,admin,,,,
+lockout,10,Host or User Lockout,2016-01-02 02:58:30,2016-01-02 00:58:30,109.162.43.74,,,,,expires=2016-01-02 03:13:30expires_gmt=2016-01-02 01:13:30type=brute_force
+four_oh_four,3,404 Error,2016-01-02 22:41:29,2016-01-02 20:41:29,88.90.248.228,,,/apple-touch-icon-152x152-precomposed.png,,query_string=
+four_oh_four,3,404 Error,2016-01-02 22:41:30,2016-01-02 20:41:30,88.90.248.228,,,/apple-touch-icon-152x152.png,,query_string=
+four_oh_four,3,404 Error,2016-01-03 00:29:57,2016-01-02 22:29:57,66.249.69.91,,,/,,query_string=p=42
+away_mode,5,Away Mode Triggered,2016-01-03 05:12:55,2016-01-03 03:12:55,62.149.143.154,,,,,0=A host was prevented from accessing the dashboard due to away-mode restrictions being in effect
+four_oh_four,3,404 Error,2016-01-03 07:50:21,2016-01-03 05:50:21,131.253.38.67,,,/BingSiteAuth.xml,,query_string=
+four_oh_four,3,404 Error,2016-01-03 07:50:26,2016-01-03 05:50:26,131.253.38.67,,,/bingsiteauth.xml,,query_string=
+four_oh_four,3,404 Error,2016-01-03 07:50:27,2016-01-03 05:50:27,131.253.38.67,,,/LiveSearchSiteAuth.xml,,query_string=
+four_oh_four,3,404 Error,2016-01-03 12:09:28,2016-01-03 10:09:28,180.76.15.150,,,/author/feed/,,query_string=
+four_oh_four,3,404 Error,2016-01-03 13:28:50,2016-01-03 11:28:50,180.153.214.189,,,/sharecdn.social9.com/v1/social9.min.js,http://www.selectsifiso.net//sharecdn.social9.com/v1/social9.min.js?ver=e48dce06b6039f1469f966c697722c40,query_string=ver=e48dce06b6039f1469f966c697722c40
+four_oh_four,3,404 Error,2016-01-03 13:28:51,2016-01-03 11:28:51,180.153.214.189,,,/s7.addthis.com/js/300/addthis_widget.js,http://www.selectsifiso.net//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-554794b55a06e901,query_string=
+four_oh_four,3,404 Error,2016-01-04 04:56:48,2016-01-04 02:56:48,218.109.253.112,,,/fckeditor/editor/,,query_string=
+four_oh_four,3,404 Error,2016-01-04 20:47:13,2016-01-04 18:47:13,117.136.234.11,,,http://www.selectsifiso.net/,http://www.selectsifiso.net/,query_string=p=442
+four_oh_four,3,404 Error,2016-01-05 02:51:03,2016-01-05 00:51:03,117.177.250.152,,,/,http://www.selectsifiso.net/,query_string=p=3
+four_oh_four,3,404 Error,2016-01-05 04:27:51,2016-01-05 02:27:51,192.185.83.189,,,/application/configs/application.ini,,query_string=
+four_oh_four,3,404 Error,2016-01-05 08:34:59,2016-01-05 06:34:59,218.109.253.112,,,/js/fckeditor/editor/,,query_string=
+four_oh_four,3,404 Error,2016-01-05 11:26:40,2016-01-05 09:26:40,192.185.4.89,,,/application/configs/application.ini,,query_string=
+four_oh_four,3,404 Error,2016-01-06 12:37:25,2016-01-06 10:37:25,218.109.253.112,,,/includes/fckeditor/editor/,,query_string=
+four_oh_four,3,404 Error,2016-01-07 22:52:23,2016-01-07 20:52:23,94.77.184.94,,,/admin.php,,query_string=
+four_oh_four,3,404 Error,2016-01-08 12:20:30,2016-01-08 10:20:30,221.7.216.48,,,/,http://www.selectsifiso.net/,query_string=p=5
+four_oh_four,3,404 Error,2016-01-09 05:16:52,2016-01-09 03:16:52,192.243.55.132,,,/,,query_string=page_id=160
+four_oh_four,3,404 Error,2016-01-09 06:02:48,2016-01-09 04:02:48,157.55.39.22,,,/common/chie_detail-min.js,,query_string=v=1.0.2
+four_oh_four,3,404 Error,2016-01-09 06:02:50,2016-01-09 04:02:50,157.55.39.22,,,/common/jquery.multiProfile.js,,query_string=ver=20140529
+four_oh_four,3,404 Error,2016-01-09 06:02:52,2016-01-09 04:02:52,157.55.39.22,,,/common/question_detail.js,,query_string=
+four_oh_four,3,404 Error,2016-01-09 06:04:17,2016-01-09 04:04:17,207.46.13.90,,,/SearchAppContent/style-for-datasheet.css,,query_string=
+four_oh_four,3,404 Error,2016-01-09 06:04:49,2016-01-09 04:04:49,157.55.39.22,,,/js/ding.js,,query_string=
+four_oh_four,3,404 Error,2016-01-09 06:04:51,2016-01-09 04:04:51,157.55.39.155,,,/SearchAppContent/jquery.simplebanner.css,,query_string=
+four_oh_four,3,404 Error,2016-01-09 07:05:25,2016-01-09 05:05:25,157.55.39.23,,,/js/ding.js,,query_string=
+four_oh_four,3,404 Error,2016-01-09 07:05:29,2016-01-09 05:05:29,207.46.13.90,,,/SearchAppContent/style-for-datasheet.css,,query_string=
+four_oh_four,3,404 Error,2016-01-09 13:23:47,2016-01-09 11:23:47,111.56.13.152,,,http://www.selectsifiso.net/,http://www.selectsifiso.net/,query_string=p=284
+four_oh_four,3,404 Error,2016-01-10 18:44:35,2016-01-10 16:44:35,192.126.156.246,,,/upgrade-browser,http://www.yellowpages.com,query_string=
+four_oh_four,3,404 Error,2016-01-11 15:20:34,2016-01-11 13:20:34,58.101.104.219,,,/fckeditor/editor/,,query_string=
+four_oh_four,3,404 Error,2016-01-12 14:31:51,2016-01-12 12:31:51,122.193.14.109,,,http://www.selectsifiso.net/,http://www.selectsifiso.net/,query_string=p=284
+four_oh_four,3,404 Error,2016-01-12 15:34:44,2016-01-12 13:34:44,58.101.104.219,,,/includes/fckeditor/editor/,,query_string=
+four_oh_four,3,404 Error,2016-01-12 21:58:13,2016-01-12 19:58:13,95.181.179.203,,,/support.php,http://selectsifiso.net/support.php,query_string=
+four_oh_four,3,404 Error,2016-01-13 01:34:51,2016-01-12 23:34:51,117.136.234.9,,,http://www.selectsifiso.net/,http://www.selectsifiso.net/,query_string=p=284
+four_oh_four,3,404 Error,2016-01-13 16:51:24,2016-01-13 14:51:24,58.101.104.219,,,/admin/fckeditor/editor/,,query_string=
+four_oh_four,3,404 Error,2016-01-14 16:53:33,2016-01-14 14:53:33,58.20.128.123,,,/,http://www.selectsifiso.net/,query_string=p=39
+four_oh_four,3,404 Error,2016-01-15 02:43:16,2016-01-15 00:43:16,92.243.117.198,,,/component/users/,http://www.selectsifiso.net/component/users/?view=registration,query_string=view=registration
+away_mode,5,Away Mode Triggered,2016-01-16 05:37:29,2016-01-16 03:37:29,50.63.196.119,,,,,0=A host was prevented from accessing the dashboard due to away-mode restrictions being in effect
+four_oh_four,3,404 Error,2016-01-17 13:30:28,2016-01-17 11:30:28,101.226.51.229,,,/s7.addthis.com/js/300/addthis_widget.js,http://www.selectsifiso.net//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-554794b55a06e901,query_string=
+four_oh_four,3,404 Error,2016-01-17 13:30:28,2016-01-17 11:30:28,101.226.51.229,,,/sharecdn.social9.com/v1/social9.min.js,http://www.selectsifiso.net//sharecdn.social9.com/v1/social9.min.js?ver=5d901101de6ee970101fecbb12115225,query_string=ver=5d901101de6ee970101fecbb12115225
+four_oh_four,3,404 Error,2016-01-17 21:19:34,2016-01-17 19:19:34,157.55.39.235,,,/,,query_string=tag=oledb-destination&paged=3
+four_oh_four,3,404 Error,2016-01-17 21:42:55,2016-01-17 19:42:55,95.181.179.203,,,/wp-admin/network/wp-error-log.php,http://selectsifiso.net/wp-admin/network/wp-error-log.php,query_string=
+four_oh_four,3,404 Error,2016-01-18 05:46:18,2016-01-18 03:46:18,195.242.80.26,,,/abpout,http://ya.ru/?q=http%3A%2F%2Fwww.selectsifiso.net%2Fabpout,query_string=
+four_oh_four,3,404 Error,2016-01-18 13:43:36,2016-01-18 11:43:36,188.138.89.8,,,/wordpress/,http://www.select-jewelers.net/wordpress/,query_string=
+brute_force,5,Invalid Login Attempt,2016-01-19 15:10:37,2016-01-19 13:10:37,196.212.64.138,sifad,316,,,
+brute_force,5,Invalid Login Attempt,2016-01-19 15:10:57,2016-01-19 13:10:57,196.212.64.138,sifad,316,,,
+lockout,10,Host or User Lockout,2016-01-19 15:10:57,2016-01-19 13:10:57,196.212.64.138,,,,,expires=2016-01-19 15:25:57expires_gmt=2016-01-19 13:25:57type=brute_force
+lockout,10,Host or User Lockout,2016-01-19 15:10:57,2016-01-19 13:10:57,,,316,,,expires=2016-01-19 15:25:57expires_gmt=2016-01-19 13:25:57type=brute_force

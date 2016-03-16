@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?><feed
+  xmlns="http://www.w3.org/2005/Atom"
+  xmlns:thr="http://purl.org/syndication/thread/1.0"
+  xml:lang="en-US"
+  xml:base="http://blogs.selectsifiso.com/wp-atom.php"
+   >
+	<title type="text">select SIFISO</title>
+	<subtitle type="text">we know blogging</subtitle>
+
+	<updated>2016-03-07T16:10:29Z</updated>
+
+	<link rel="alternate" type="text/html" href="http://blogs.selectsifiso.com" />
+	<id>http://blogs.selectsifiso.com/feed/atom/</id>
+	<link rel="self" type="application/atom+xml" href="http://blogs.selectsifiso.com/feed/atom/" />
+
+	
+	<entry>
+		<author>
+			<name>Sifiso Ndlovu</name>
+						<uri>http://www.blogs.selectsifiso.com</uri>
+					</author>
+		<title type="html"><![CDATA[Duplicate MySQL Table Using phpMyAdmin]]></title>
+		<link rel="alternate" type="text/html" href="http://blogs.selectsifiso.com/duplicate-mysql-table-using-phpmyadmin/" />
+		<id>http://www.blogs.selectsifiso.com/?p=1204</id>
+		<updated>2015-11-17T05:14:11Z</updated>
+		<published>2015-11-14T06:48:33Z</published>
+		<category scheme="http://blogs.selectsifiso.com" term="Database" /><category scheme="http://blogs.selectsifiso.com" term="MySQL" /><category scheme="http://blogs.selectsifiso.com" term="phpMyAdmin" /><category scheme="http://blogs.selectsifiso.com" term="Copy table" /><category scheme="http://blogs.selectsifiso.com" term="Duplicate" /><category scheme="http://blogs.selectsifiso.com" term="Operations" />		<summary type="html"><![CDATA[<div  class="oss_horizontal_share oss_title_replace" data-share-titles="Duplicate MySQL Table Using phpMyAdmin" data-share-description="There many reasons for creating copies of existing relational database tables. Sometimes you create " data-share-imageurl=""  data-share-url="http://blogs.selectsifiso.com/duplicate-mysql-table-using-phpmyadmin/"></div>There many reasons for creating copies of existing relational database tables. Sometimes you create duplicate tables for the purposes of table backup or for application testing purposes.  Whatever your reasons may be, you will notice that different relational database integrated development environments (IDE) implement table duplication differently. &#160; I would like to demonstrate how a… <span class="read-more"><a href="http://blogs.selectsifiso.com/duplicate-mysql-table-using-phpmyadmin/">Read More &#187;</a></span>]]></summary>
+		<content type="html" xml:base="http://blogs.selectsifiso.com/duplicate-mysql-table-using-phpmyadmin/"><![CDATA[<p>There many reasons for creating copies of existing relational database tables. Sometimes you create duplicate tables for the purposes of table backup or for application testing purposes.  Whatever your reasons may be, you will notice that different relational database <a href="https://en.wikipedia.org/wiki/Integrated_development_environment" target="_blank">integrated development environments</a> (IDE) implement table duplication differently.</p>
+<p>&nbsp;</p>
+<p>I would like to demonstrate how a duplication of a <a href="https://www.mysql.com" target="_blank"><em>MySQL</em> </a>table can be achieved using <em><a href="https://www.phpmyadmin.net" target="_blank">phpMyAdmin</a></em>. I was introduced to <a href="https://www.phpmyadmin.net" target="_blank"><em>phpMyAdmin</em> </a>by my current website hosting provider as part of a <a href="https://en.wikipedia.org/wiki/Content_management_system" target="_blank">content management system</a> (CMS) package that I had signed up for. I&#8217;ve found <a href="https://www.phpmyadmin.net" target="_blank"><em>phpMyAdmin</em> </a>to be an effective application for managing my website&#8217;s <a href="https://www.mysql.com" target="_blank"><em>MySQL</em> </a>databases. The steps for doing all of this are quite simple:</p>
+<p>&nbsp;</p>
+<p><strong>Step 1:</strong> Login into your instance of <a href="https://www.phpmyadmin.net" target="_blank"><em>phpMyAdmin</em> </a>and navigate to the <em>Operations</em> menu tab. You will notice that you are presented with several options underneath this menu tab &#8211; the one we are interested in, is at the bottom right with a heading as &#8220;<em>Copy table to (database.table):</em>&#8220;.</p>
+<p><a href="http://www.blogs.selectsifiso.com/wp-content/uploads/2015/11/1.png"><img class="wp-image-1211 size-full alignnone" src="http://www.blogs.selectsifiso.com/wp-content/uploads/2015/11/1.png" alt="1" width="806" height="420" srcset="http://blogs.selectsifiso.com/wp-content/uploads/2015/11/1-300x156.png 300w, http://blogs.selectsifiso.com/wp-content/uploads/2015/11/1-600x313.png 600w, http://blogs.selectsifiso.com/wp-content/uploads/2015/11/1-660x344.png 660w, http://blogs.selectsifiso.com/wp-content/uploads/2015/11/1.png 806w" sizes="(max-width: 806px) 100vw, 806px" /></a></p>
+<p>&nbsp;</p>
+<p><strong>Step 2:</strong> select database and table that you want duplicated. There are also additional options that you can choose i.e. do you want to duplicate the table&#8217;s structure only or do you want both structure and its content?</p>
+<p><a href="http://www.blogs.selectsifiso.com/wp-content/uploads/2015/11/2.png"><img class="wp-image-1209 size-full alignnone" src="http://www.blogs.selectsifiso.com/wp-content/uploads/2015/11/2.png" alt="2" width="538" height="306" srcset="http://blogs.selectsifiso.com/wp-content/uploads/2015/11/2-300x171.png 300w, http://blogs.selectsifiso.com/wp-content/uploads/2015/11/2.png 538w" sizes="(max-width: 538px) 100vw, 538px" /></a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>Step 3:</strong> Finally, when you are done with your selections, press <em>Go</em> and you will receive a confirmation message box upon the completion of the duplication operation. As it can be seen below &#8211; I have successfully duplicated <em>select SIFISO</em> table into <em>select SIFISO Bak</em> table.</p>
+<p><a href="http://www.blogs.selectsifiso.com/wp-content/uploads/2015/11/3.png"><img class="wp-image-1207 size-full alignnone" src="http://www.blogs.selectsifiso.com/wp-content/uploads/2015/11/3.png" alt="3" width="451" height="135" srcset="http://blogs.selectsifiso.com/wp-content/uploads/2015/11/3-300x90.png 300w, http://blogs.selectsifiso.com/wp-content/uploads/2015/11/3.png 451w" sizes="(max-width: 451px) 100vw, 451px" /></a></p>
+<p>&nbsp;</p>
+<p>It&#8217;s that simple, folks!</p>
+<p>Until next time, Cheers.</p>
+<p>Sifiso</p>
+<p>&nbsp;<br />
+&nbsp;</p>
+<p><a style="display: none;" href="http://www.codeproject.com" rel="tag">CodeProject</a>
+<div class="pvc_clear"></div>
+<p id="pvc_stats_1204" class="pvc_stats " element-id="1204"><img src="http://blogs.selectsifiso.com/wp-content/plugins/page-views-count/ajax-loader.gif" border=0 /></p>
+<div class="pvc_clear"></div>
+]]></content>
+			<link rel="replies" type="text/html" href="http://blogs.selectsifiso.com/duplicate-mysql-table-using-phpmyadmin/#comments" thr:count="0"/>
+		<link rel="replies" type="application/atom+xml" href="http://blogs.selectsifiso.com/duplicate-mysql-table-using-phpmyadmin/feed/atom/" thr:count="0"/>
+		<thr:total>0</thr:total>
+		</entry>
+		<entry>
+		<author>
+			<name>Sifiso Ndlovu</name>
+						<uri>http://www.blogs.selectsifiso.com</uri>
+					</author>
+		<title type="html"><![CDATA[Where&#8217;s my Team Explorer 2015?]]></title>
+		<link rel="alternate" type="text/html" href="http://blogs.selectsifiso.com/wheres-my-team-explorer-2015/" />
+		<id>http://www.blogs.selectsifiso.com/?p=1188</id>
+		<updated>2015-11-03T09:43:57Z</updated>
+		<published>2015-11-03T09:43:57Z</published>
+		<category scheme="http://blogs.selectsifiso.com" term="Team Explorer" /><category scheme="http://blogs.selectsifiso.com" term="Team Foundation Server" /><category scheme="http://blogs.selectsifiso.com" term="on-prem" /><category scheme="http://blogs.selectsifiso.com" term="on-premise" /><category scheme="http://blogs.selectsifiso.com" term="Team Explorer 2015" /><category scheme="http://blogs.selectsifiso.com" term="TFS" />		<summary type="html"><![CDATA[<div  class="oss_horizontal_share oss_title_replace" data-share-titles="Where&#8217;s my Team Explorer 2015?" data-share-description="Team Explorer is a client software that can be used to integrate Visual Studio with an instance of T" data-share-imageurl=""  data-share-url="http://blogs.selectsifiso.com/wheres-my-team-explorer-2015/"></div>Team Explorer is a client software that can be used to integrate Visual Studio with an instance of Team Foundation Server (on-premise or cloud based). Over the years of using TFS &#8211; I&#8217;ve looked forward to downloading and installing Team Explorer for every version of Team Foundation Server. So you will understand my bewilderment when… <span class="read-more"><a href="http://blogs.selectsifiso.com/wheres-my-team-explorer-2015/">Read More &#187;</a></span>]]></summary>
+		<content type="html" xml:base="http://blogs.selectsifiso.com/wheres-my-team-explorer-2015/"><![CDATA[<p>Team Explorer is a client software that can be used to integrate Visual Studio with an instance of Team Foundation Server (on-premise or cloud based). Over the years of using TFS &#8211; I&#8217;ve looked forward to downloading and installing Team Explorer for every version of Team Foundation Server. So you will understand my bewilderment when I couldn’t locate the installer following a successful setup of on-premise TFS 2015 server instance for my employer.</p>
+<p>Read more here: <a href="http://www.sqlshack.com/wheres-my-team-explorer-2015/" target="_blank">http://www.sqlshack.com/wheres-my-team-explorer-2015/</a></p>
+<p>&nbsp;</p>
+<p><a style="display: none;" href="http://www.codeproject.com" rel="tag">CodeProject</a>
+<div class="pvc_clear"></div>
+<p id="pvc_stats_1188" class="pvc_stats " element-id="1188"><img src="http://blogs.selectsifiso.com/wp-content/plugins/page-views-count/ajax-loader.gif" border=0 /></p>
+<div class="pvc_clear"></div>
+]]></content>
+			<link rel="replies" type="text/html" href="http://blogs.selectsifiso.com/wheres-my-team-explorer-2015/#comments" thr:count="0"/>
+		<link rel="replies" type="application/atom+xml" href="http://blogs.selectsifiso.com/wheres-my-team-explorer-2015/feed/atom/" thr:count="0"/>
+		<thr:total>0</thr:total>
+		</entry>
+		<entry>
+		<author>
+			<name>sifisondlovu</name>
+						<uri>http://www.blogs.selectsifiso.com</uri>
+					</author>
+		<title type="html"><![CDATA[SQL Server Database Source Control using VSO Git]]></title>
+		<link rel="alternate" type="text/html" href="http://blogs.selectsifiso.com/sql-server-database-source-control-using-vso-git/" />
+		<id>http://www.blogs.selectsifiso.com/?p=1196</id>
+		<updated>2015-10-26T11:12:21Z</updated>
+		<published>2015-10-26T11:12:21Z</published>
+		<category scheme="http://blogs.selectsifiso.com" term="Database" /><category scheme="http://blogs.selectsifiso.com" term="SQL Server 2012" /><category scheme="http://blogs.selectsifiso.com" term="Continuous Integration" /><category scheme="http://blogs.selectsifiso.com" term="Database Source Control" /><category scheme="http://blogs.selectsifiso.com" term="Git" /><category scheme="http://blogs.selectsifiso.com" term="Source Control" /><category scheme="http://blogs.selectsifiso.com" term="SQL Server Git" /><category scheme="http://blogs.selectsifiso.com" term="TFS" /><category scheme="http://blogs.selectsifiso.com" term="Visual Studio Online" /><category scheme="http://blogs.selectsifiso.com" term="VSO" /><category scheme="http://blogs.selectsifiso.com" term="VSO Git" />		<summary type="html"><![CDATA[<div  class="oss_horizontal_share oss_title_replace" data-share-titles="SQL Server Database Source Control using VSO Git" data-share-description="For a while now, I have ensured that the source code of new projects that I have undertaken (in both" data-share-imageurl=""  data-share-url="http://blogs.selectsifiso.com/sql-server-database-source-control-using-vso-git/"></div>For a while now, I have ensured that the source code of new projects that I have undertaken (in both contract and permanent employment) is version controlled. In some instances, some clients have their local installation of source control system and in such cases I would integrate with the clients source control system. However, in numerous… <span class="read-more"><a href="http://blogs.selectsifiso.com/sql-server-database-source-control-using-vso-git/">Read More &#187;</a></span>]]></summary>
+		<content type="html" xml:base="http://blogs.selectsifiso.com/sql-server-database-source-control-using-vso-git/"><![CDATA[<p>For a while now, I have ensured that the source code of new projects that I have undertaken (in both contract and permanent employment) is version controlled. In some instances, some clients have their local installation of source control system and in such cases I would integrate with the clients source control system. However, in numerous instances, as a consultant, I&#8217;ve had to find ways to keep track of my own source code.</p>
+<p>Over the years, I have used several source control systems &#8211; and I have taken time out to share my experiences with you guys on one such source control system which is Visual Studio Online Git source control.</p>
+<p>The article can be found at SQLShack.com: <em><strong><a href="http://www.sqlshack.com/sql-server-database-source-control-using-visual-studio-online-git/" target="_blank">http://www.sqlshack.com/sql-server-database-source-control-using-visual-studio-online-git/</a></strong></em></p>
+<p>&nbsp;
+<div class="pvc_clear"></div>
+<p id="pvc_stats_1196" class="pvc_stats " element-id="1196"><img src="http://blogs.selectsifiso.com/wp-content/plugins/page-views-count/ajax-loader.gif" border=0 /></p>
+<div class="pvc_clear"></div>
+]]></content>
+			<link rel="replies" type="text/html" href="http://blogs.selectsifiso.com/sql-server-database-source-control-using-vso-git/#comments" thr:count="0"/>
+		<link rel="replies" type="application/atom+xml" href="http://blogs.selectsifiso.com/sql-server-database-source-control-using-vso-git/feed/atom/" thr:count="0"/>
+		<thr:total>0</thr:total>
+		</entry>
+		<entry>
+		<author>
+			<name>Sifiso Ndlovu</name>
+						<uri>http://www.blogs.selectsifiso.com</uri>
+					</author>
+		<title type="html"><![CDATA[Dimensional Modelling in Lucidchart vs Visio: Part 1]]></title>
+		<link rel="alternate" type="text/html" href="http://blogs.selectsifiso.com/dimensional-modelling-in-lucidchart-vs-visio-part-1/" />
+		<id>http://www.blogs.selectsifiso.com/?p=1136</id>
+		<updated>2015-08-30T11:33:41Z</updated>
+		<published>2015-08-30T11:33:41Z</published>
+		<category scheme="http://blogs.selectsifiso.com" term="Data Management" /><category scheme="http://blogs.selectsifiso.com" term="Data modelling" /><category scheme="http://blogs.selectsifiso.com" term="Database" /><category scheme="http://blogs.selectsifiso.com" term="Dimensional" /><category scheme="http://blogs.selectsifiso.com" term="Dimensional Modelling" /><category scheme="http://blogs.selectsifiso.com" term="Modelling" /><category scheme="http://blogs.selectsifiso.com" term="Crow&#039;s Foot Database Notation" /><category scheme="http://blogs.selectsifiso.com" term="Database Notation" /><category scheme="http://blogs.selectsifiso.com" term="Dim" /><category scheme="http://blogs.selectsifiso.com" term="DimConsumer" /><category scheme="http://blogs.selectsifiso.com" term="DimDate" /><category scheme="http://blogs.selectsifiso.com" term="DimFruit" /><category scheme="http://blogs.selectsifiso.com" term="e-commerce" /><category scheme="http://blogs.selectsifiso.com" term="Entity" /><category scheme="http://blogs.selectsifiso.com" term="Entity Relational" /><category scheme="http://blogs.selectsifiso.com" term="Entity Relational Model" /><category scheme="http://blogs.selectsifiso.com" term="ERD" /><category scheme="http://blogs.selectsifiso.com" term="Fact" /><category scheme="http://blogs.selectsifiso.com" term="FactPurchases" /><category scheme="http://blogs.selectsifiso.com" term="Hockey ERD" /><category scheme="http://blogs.selectsifiso.com" term="Lucidchart" /><category scheme="http://blogs.selectsifiso.com" term="MS Visio" /><category scheme="http://blogs.selectsifiso.com" term="Visio" />		<summary type="html"><![CDATA[<div  class="oss_horizontal_share oss_title_replace" data-share-titles="Dimensional Modelling in Lucidchart vs Visio: Part 1" data-share-description="Data modelling is a pivotal skill that every practitioner in data management should acquire. That " data-share-imageurl=""  data-share-url="http://blogs.selectsifiso.com/dimensional-modelling-in-lucidchart-vs-visio-part-1/"></div>Data modelling is a pivotal skill that every practitioner in data management should acquire. That said, there are numerous tools that can be used to model data. As a Certified Microsoft Professional, my default modelling tool has always been Microsoft (MS) Visio and sometimes, Visual Studio. However, I&#8217;ve recently been introduced to Lucidchart and it completely blew my… <span class="read-more"><a href="http://blogs.selectsifiso.com/dimensional-modelling-in-lucidchart-vs-visio-part-1/">Read More &#187;</a></span>]]></summary>
+		<content type="html" xml:base="http://blogs.selectsifiso.com/dimensional-modelling-in-lucidchart-vs-visio-part-1/"><![CDATA[<p><a href="https://en.wikipedia.org/wiki/Data_modeling" target="_blank">Data modelling</a> is a pivotal skill that every practitioner in <a href="https://en.wikipedia.org/wiki/Data_management" target="_blank">data management</a> should acquire. That said, there are numerous tools that can be used to model data. As a <a href="https://en.wikipedia.org/wiki/Microsoft_Certified_Professional" target="_blank">Certified Microsoft Professional</a>, my default modelling tool has always been <a href="https://products.office.com/en-gb/visio/flowchart-software" target="_blank">Microsoft (MS) Visio</a> and sometimes, <a href="https://msdn.microsoft.com/en-us/library/vstudio/bb399247(v=vs.100).aspx" target="_blank">Visual Studio</a>. However, I&#8217;ve recently been introduced to <a href="https://www.lucidchart.com/" target="_blank">Lucidchart </a>and it completely blew my mind. Thus, this blog post is a comparison piece on basic <a href="http://www.kimballgroup.com/1997/08/a-dimensional-modeling-manifesto/" target="_blank">dimensional modelling</a> in <a href="https://products.office.com/en-gb/visio/flowchart-software" target="_blank">MS Visio</a> versus <a href="https://www.lucidchart.com/" target="_blank">Lucidchart</a>.</p>
+<p><strong>Case Study</strong></p>
+<p>I find it much easier to explain something using case studies. So, this blog post&#8217;s case in point is that of dimensional modelling an application that allows consumers to purchase delicious fruits via an <a href="https://en.wikipedia.org/wiki/E-commerce" target="_blank">e-commerce</a> website platform. There are several comparisons that could be done on <a href="https://products.office.com/en-gb/visio/flowchart-software" target="_blank">MS Visio</a> vs. <a href="https://www.lucidchart.com/" target="_blank">Lucidchart </a>such as pricing models, accessibility of the tool via mobile platforms, collaboration etc. However, for the purposes of keeping things basic &#8211; my comparisons will focus on modelling the aforementioned case study using <a href="http://www2.cs.uregina.ca/~bernatja/crowsfoot.html" target="_blank">Crow&#8217;s foot notation</a>:</p>
+<p>The <a href="https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model" target="_blank">Entity Relational Model</a> for our case study could look as shown below:</p>
+<p>&nbsp;</p>
+<p><img class="alignnone wp-image-1149" src="http://www.blogs.selectsifiso.com/wp-content/uploads/2015/08/image3.png" alt="image3" width="378" height="141" srcset="http://blogs.selectsifiso.com/wp-content/uploads/2015/08/image3-300x112.png 300w, http://blogs.selectsifiso.com/wp-content/uploads/2015/08/image3-600x223.png 600w, http://blogs.selectsifiso.com/wp-content/uploads/2015/08/image3-660x246.png 660w, http://blogs.selectsifiso.com/wp-content/uploads/2015/08/image3.png 784w" sizes="(max-width: 378px) 100vw, 378px" /></p>
+<p><strong>Dimensional Modelling in <a href="https://products.office.com/en-gb/visio/flowchart-software" target="_blank">Visio</a></strong></p>
+<p>Step 1: Launch <a href="https://products.office.com/en-gb/visio/flowchart-software" target="_blank">MS Visio</a></p>
+<p>Step 2: Select Crow&#8217;s Foot Database Notation template under the Software category as shown below:</p>
+<p><img class="alignnone wp-image-1146" src="http://www.blogs.selectsifiso.com/wp-content/uploads/2015/08/visio.png" alt="visio" width="439" height="313" srcset="http://blogs.selectsifiso.com/wp-content/uploads/2015/08/visio-300x214.png 300w, http://blogs.selectsifiso.com/wp-content/uploads/2015/08/visio.png 673w" sizes="(max-width: 439px) 100vw, 439px" /></p>
+<p>Step 3: Drag 4 Entities to the blank window</p>
+<p>Step 4: Rename Entities to <em>DimConsumer</em>, <em>DimDate</em>, <em>DimFruit</em>, and <em>FactPurchases </em>as shown below:</p>
+<p><a href="http://www.blogs.selectsifiso.com/wp-content/uploads/2015/08/visio_enty_final.png" target="_blank"><img class="alignnone wp-image-1165" src="http://www.blogs.selectsifiso.com/wp-content/uploads/2015/08/visio_entity1.png" alt="visio_entity1" width="546" height="265" srcset="http://blogs.selectsifiso.com/wp-content/uploads/2015/08/visio_entity1-300x146.png 300w, http://blogs.selectsifiso.com/wp-content/uploads/2015/08/visio_entity1-600x291.png 600w, http://blogs.selectsifiso.com/wp-content/uploads/2015/08/visio_entity1-660x320.png 660w, http://blogs.selectsifiso.com/wp-content/uploads/2015/08/visio_entity1.png 738w" sizes="(max-width: 546px) 100vw, 546px" /></a></p>
+<p>Step 5: Join <em>DimConsumer</em>, <em>DimDate</em>, <em>DimFruit</em> entities to <em>FactPurchases</em></p>
+<p>Step 6: Add attributes to entities as shown below:</p>
+<p><a href="http://www.blogs.selectsifiso.com/wp-content/uploads/2015/08/visio_enty_final.png" target="_blank"><img class="alignnone wp-image-1161" src="http://www.blogs.selectsifiso.com/wp-content/uploads/2015/08/visio_enty_final.png" alt="visio_enty_final" width="634" height="420" srcset="http://blogs.selectsifiso.com/wp-content/uploads/2015/08/visio_enty_final-300x199.png 300w, http://blogs.selectsifiso.com/wp-content/uploads/2015/08/visio_enty_final-600x398.png 600w, http://blogs.selectsifiso.com/wp-content/uploads/2015/08/visio_enty_final-660x438.png 660w, http://blogs.selectsifiso.com/wp-content/uploads/2015/08/visio_enty_final.png 813w" sizes="(max-width: 634px) 100vw, 634px" /></a></p>
+<p><strong>Dimensional Modelling in <a href="https://www.lucidchart.com/" target="_blank">Lucidchart</a></strong></p>
+<p>Step 1: Launch <a href="https://www.lucidchart.com/" target="_blank">Lucidchart</a></p>
+<p>Step 2: Create New Document</p>
+<p>Unlike <a href="https://products.office.com/en-gb/visio/flowchart-software" target="_blank">MS Visio</a> whereby you are redirected to a blank document, <a href="https://www.lucidchart.com/" target="_blank">Lucidchart</a> gives you an option to setup a new document from scratch (blank document) or use an existing template i,e, Hockey ERD:</p>
+<p><img class="alignnone wp-image-1147" src="http://www.blogs.selectsifiso.com/wp-content/uploads/2015/08/lucidcharts_templates.png" alt="lucidcharts_templates" width="687" height="436" srcset="http://blogs.selectsifiso.com/wp-content/uploads/2015/08/lucidcharts_templates-300x190.png 300w, http://blogs.selectsifiso.com/wp-content/uploads/2015/08/lucidcharts_templates-600x381.png 600w, http://blogs.selectsifiso.com/wp-content/uploads/2015/08/lucidcharts_templates-660x419.png 660w, http://blogs.selectsifiso.com/wp-content/uploads/2015/08/lucidcharts_templates.png 904w" sizes="(max-width: 687px) 100vw, 687px" /></p>
+<p>Step 3: Delete all entities until you are left with 4 entities in a T-Shape as shown below:</p>
+<p><a href="http://www.blogs.selectsifiso.com/wp-content/uploads/2015/08/relat2_lucidchart.png" target="_blank"><img class="alignnone wp-image-1155" src="http://www.blogs.selectsifiso.com/wp-content/uploads/2015/08/lucid_removed_2.png" alt="lucid_removed_2" width="725" height="418" srcset="http://blogs.selectsifiso.com/wp-content/uploads/2015/08/lucid_removed_2-300x173.png 300w, http://blogs.selectsifiso.com/wp-content/uploads/2015/08/lucid_removed_2-600x346.png 600w, http://blogs.selectsifiso.com/wp-content/uploads/2015/08/lucid_removed_2-660x380.png 660w, http://blogs.selectsifiso.com/wp-content/uploads/2015/08/lucid_removed_2.png 816w" sizes="(max-width: 725px) 100vw, 725px" /></a></p>
+<p>Step 4: Rename Entities to <em>DimConsumer</em>, <em>DimDate</em>, <em>DimFruit</em>, and <em>FactPurchases</em></p>
+<p>Step 5: Remove/add attributes until your document looks like below:</p>
+<p><img class="alignnone wp-image-1156" src="http://www.blogs.selectsifiso.com/wp-content/uploads/2015/08/mdm_lucid.png" alt="mdm_lucid" width="637" height="434" srcset="http://blogs.selectsifiso.com/wp-content/uploads/2015/08/mdm_lucid-300x204.png 300w, http://blogs.selectsifiso.com/wp-content/uploads/2015/08/mdm_lucid-600x409.png 600w, http://blogs.selectsifiso.com/wp-content/uploads/2015/08/mdm_lucid-660x449.png 660w, http://blogs.selectsifiso.com/wp-content/uploads/2015/08/mdm_lucid.png 705w" sizes="(max-width: 637px) 100vw, 637px" /></p>
+<p>&nbsp;</p>
+<p><strong><span style="line-height: 1.5;">Conclusion</span></strong></p>
+<p>Although modelling our case study using both <a href="https://products.office.com/en-gb/visio/flowchart-software" target="_blank">MS Visio</a> and <a href="https://www.lucidchart.com/" target="_blank">Lucidchart </a>seemed to have taken similar number of steps &#8211; modelling using <a href="https://products.office.com/en-gb/visio/flowchart-software" target="_blank">MS Visio</a> took significantly longer. For instance adding attributes in <em>FactPurchases</em> meant dragging and dropping attribute stencil several times whereas in <a href="https://www.lucidchart.com/" target="_blank">Lucidchart</a> you just needed to increase the fields counter value from 3 to 6 as shown below:</p>
+<p><a href="http://www.blogs.selectsifiso.com/wp-content/uploads/2015/08/lucid_cahrts_attr.png" target="_blank"><img class="alignnone wp-image-1184 size-full" src="http://www.blogs.selectsifiso.com/wp-content/uploads/2015/08/lucid_cahrts_attr.png" alt="lucid_cahrts_attr" width="439" height="208" srcset="http://blogs.selectsifiso.com/wp-content/uploads/2015/08/lucid_cahrts_attr-300x142.png 300w, http://blogs.selectsifiso.com/wp-content/uploads/2015/08/lucid_cahrts_attr.png 439w" sizes="(max-width: 439px) 100vw, 439px" /></a></p>
+<p>The second part of this blog will focus more on key differences of <a href="http://www.kimballgroup.com/1997/08/a-dimensional-modeling-manifesto/" target="_blank">dimensional modelling</a> using two applications. <a style="display: none;" href="http://www.codeproject.com" rel="tag">CodeProject</a>
+<div class="pvc_clear"></div>
+<p id="pvc_stats_1136" class="pvc_stats " element-id="1136"><img src="http://blogs.selectsifiso.com/wp-content/plugins/page-views-count/ajax-loader.gif" border=0 /></p>
+<div class="pvc_clear"></div>
+]]></content>
+			<link rel="replies" type="text/html" href="http://blogs.selectsifiso.com/dimensional-modelling-in-lucidchart-vs-visio-part-1/#comments" thr:count="0"/>
+		<link rel="replies" type="application/atom+xml" href="http://blogs.selectsifiso.com/dimensional-modelling-in-lucidchart-vs-visio-part-1/feed/atom/" thr:count="0"/>
+		<thr:total>0</thr:total>
+		</entry>
+		<entry>
+		<author>
+			<name>Sifiso Ndlovu</name>
+						<uri>http://www.blogs.selectsifiso.com</uri>
+					</author>
+		<title type="html"><![CDATA[Execute All Packages Within SSIS Project Catalog]]></title>
+		<link rel="alternate" type="text/html" href="http://blogs.selectsifiso.com/execute-all-packages-within-ssis-project-catalog/" />
+		<id>http://www.blogs.selectsifiso.com/?p=1112</id>
+		<updated>2015-07-06T16:34:08Z</updated>
+		<published>2015-07-06T16:34:08Z</published>
+		<category scheme="http://blogs.selectsifiso.com" term="Catalog" /><category scheme="http://blogs.selectsifiso.com" term="Execute Package Task" /><category scheme="http://blogs.selectsifiso.com" term="Project Deployment Model" /><category scheme="http://blogs.selectsifiso.com" term="Project Deployment" /><category scheme="http://blogs.selectsifiso.com" term="SQL Server Integration Services" /><category scheme="http://blogs.selectsifiso.com" term="SSIS" /><category scheme="http://blogs.selectsifiso.com" term="SSIS Catalog" /><category scheme="http://blogs.selectsifiso.com" term="SSIS Package" />		<summary type="html"><![CDATA[<div  class="oss_horizontal_share oss_title_replace" data-share-titles="Execute All Packages Within SSIS Project Catalog" data-share-description="The SSIS Project Deployment Model is great! It really is the best thing since sliced bread! I specif" data-share-imageurl=""  data-share-url="http://blogs.selectsifiso.com/execute-all-packages-within-ssis-project-catalog/"></div>The SSIS Project Deployment Model is great! It really is the best thing since sliced bread! I specifically appreciate the package execution logging and reporting that is provided by this model but &#8230;. (there is always a but :), right), lately I&#8217;ve been looking for ways to execute all packages within a project at once.… <span class="read-more"><a href="http://blogs.selectsifiso.com/execute-all-packages-within-ssis-project-catalog/">Read More &#187;</a></span>]]></summary>
+		<content type="html" xml:base="http://blogs.selectsifiso.com/execute-all-packages-within-ssis-project-catalog/"><![CDATA[<p>The <a href="https://msdn.microsoft.com/en-us/library/hh213290.aspx" target="_blank">SSIS Project Deployment Model</a> is great! It really is the best thing since sliced bread! I specifically appreciate the <a href="https://msdn.microsoft.com/en-us/library/hh231191.aspx" target="_blank">package execution logging</a> and <a href="https://msdn.microsoft.com/en-us/library/hh213362.aspx" target="_blank">reporting</a> that is provided by this model but &#8230;. (there is always a but :), right), lately I&#8217;ve been looking for ways to execute all <a href="https://msdn.microsoft.com/en-us/library/ms141134.aspx" target="_blank">packages </a>within a project at once.</p>
+<p>For instance, have a look at the below <em>Demo </em>project: it consists of <em>Package A</em> and <em>Package B</em>.</p>
+<p><a style="font-size: 8pt; text-decoration: none; color: black;"><em>demo project</em></a></p>
+<p><img class=" size-full wp-image-1113 alignnone" src="http://www.blogs.selectsifiso.com/wp-content/uploads/2015/07/1.png" alt="1" width="271" height="307" srcset="http://blogs.selectsifiso.com/wp-content/uploads/2015/07/1-265x300.png 265w, http://blogs.selectsifiso.com/wp-content/uploads/2015/07/1.png 271w" sizes="(max-width: 271px) 100vw, 271px" /></p>
+<p>I can manually execute <em>Package A</em> as shown below:</p>
+<p><a style="font-size: 8pt; text-decoration: none; color: black;"><em>manual execution of Package A</em></a></p>
+<p><img class=" size-full wp-image-1114 alignnone" src="http://www.blogs.selectsifiso.com/wp-content/uploads/2015/07/2.png" alt="2" width="371" height="406" srcset="http://blogs.selectsifiso.com/wp-content/uploads/2015/07/2-274x300.png 274w, http://blogs.selectsifiso.com/wp-content/uploads/2015/07/2.png 371w" sizes="(max-width: 371px) 100vw, 371px" /></p>
+<p>That&#8217;s great if I only wanted to execute <em>Package A</em>. What if I want to execute all packages?</p>
+<p>Unfortunately, you don&#8217;t have the &#8220;execute&#8221; option in the project:</p>
+<p><a style="font-size: 8pt; text-decoration: none; color: black;"><em>missing &#8220;execute&#8221; option at project level</em></a></p>
+<p><img class=" size-full wp-image-1115 alignnone" src="http://www.blogs.selectsifiso.com/wp-content/uploads/2015/07/3.png" alt="3" width="339" height="433" srcset="http://blogs.selectsifiso.com/wp-content/uploads/2015/07/3-235x300.png 235w, http://blogs.selectsifiso.com/wp-content/uploads/2015/07/3.png 339w" sizes="(max-width: 339px) 100vw, 339px" /></p>
+<p>So what happens if my project had 99 packages and I needed to execute all of them at once? (As is sometimes the case in <a href="https://en.wikipedia.org/wiki/Data_warehouse" target="_blank">data warehousing environments</a> whereby you need to extract and stage data from disparate sources).</p>
+<p>The current implementation would be to navigate to each package and execute them one at a time = hard labor.</p>
+<p>Alternatively, you could setup a master package that you could have used to execute each package using <a href="https://msdn.microsoft.com/en-us/library/ms137609.aspx" target="_blank">Execute Package Task (EPT)</a> &#8211; but that would still mean that you have to add 99 EPT controls into master package (plus configure each package within an EPT). Thus, such an alternate still feels like = hard labor.</p>
+<p>The best way to achieve out objective is via scripting.</p>
+<p>So, what I have done is coming up with a script that will help you execute packages using looping mechanism in a form of <a href="https://msdn.microsoft.com/en-us/library/ms180169.aspx" target="_blank">T-SQL Cursor</a>.</p>
+<p>You can find a copy of the script here: <a href="http://www.blogs.selectsifiso.com/wp-content/uploads/2015/07/sp_ExecuteAllPackagesWithinProjectCatalog.zip">sp_ExecuteAllPackagesWithinProjectCatalog</a></p>
+<p>All you need to do after downloading the script is to execute it (hopefully <strong>not</strong> within <a href="https://msdn.microsoft.com/en-us/library/ms178028.aspx" target="_blank">system databases</a>). This will create the stored procedure for you as shown here:</p>
+<p><a style="font-size: 8pt; text-decoration: none; color: black;"><em>stored procedure created</em></a></p>
+<p><img class=" size-full wp-image-1116 alignnone" src="http://www.blogs.selectsifiso.com/wp-content/uploads/2015/07/4.png" alt="4" width="380" height="213" srcset="http://blogs.selectsifiso.com/wp-content/uploads/2015/07/4-300x168.png 300w, http://blogs.selectsifiso.com/wp-content/uploads/2015/07/4.png 380w" sizes="(max-width: 380px) 100vw, 380px" /></p>
+<p>You can then execute the script by providing the name of the project and folder that whose packages you wish to execute.</p>
+<p>Now going back to above example, when I execute the script &#8211; both <em>Package A</em> and <em>Package B</em> are executed plus I also get a confirmation under the message tab:</p>
+<p><a style="font-size: 8pt; text-decoration: none; color: black;"><em>script execution results</em></a></p>
+<p><img class=" size-full wp-image-1117 alignnone" src="http://www.blogs.selectsifiso.com/wp-content/uploads/2015/07/5.png" alt="5" width="619" height="221" srcset="http://blogs.selectsifiso.com/wp-content/uploads/2015/07/5-300x107.png 300w, http://blogs.selectsifiso.com/wp-content/uploads/2015/07/5-600x214.png 600w, http://blogs.selectsifiso.com/wp-content/uploads/2015/07/5.png 619w" sizes="(max-width: 619px) 100vw, 619px" /></p>
+<p><a style="font-size: 8pt; text-decoration: none; color: black;"><em>script execution confirmation message</em></a></p>
+<p><img class=" size-full wp-image-1118 alignnone" src="http://www.blogs.selectsifiso.com/wp-content/uploads/2015/07/6.png" alt="6" width="559" height="167" srcset="http://blogs.selectsifiso.com/wp-content/uploads/2015/07/6-300x90.png 300w, http://blogs.selectsifiso.com/wp-content/uploads/2015/07/6.png 559w" sizes="(max-width: 559px) 100vw, 559px" /></p>
+<p>&nbsp;</p>
+<p>Have a look at the script and let me know what you think.</p>
+<p>Cheers,</p>
+<p>Sifiso.</p>
+<p><a style="display: none;" href="http://www.codeproject.com" rel="tag">CodeProject</a>
+<div class="pvc_clear"></div>
+<p id="pvc_stats_1112" class="pvc_stats " element-id="1112"><img src="http://blogs.selectsifiso.com/wp-content/plugins/page-views-count/ajax-loader.gif" border=0 /></p>
+<div class="pvc_clear"></div>
+]]></content>
+			<link rel="replies" type="text/html" href="http://blogs.selectsifiso.com/execute-all-packages-within-ssis-project-catalog/#comments" thr:count="0"/>
+		<link rel="replies" type="application/atom+xml" href="http://blogs.selectsifiso.com/execute-all-packages-within-ssis-project-catalog/feed/atom/" thr:count="0"/>
+		<thr:total>0</thr:total>
+		</entry>
+	</feed>

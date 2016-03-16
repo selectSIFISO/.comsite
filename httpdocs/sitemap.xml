@@ -1,50 +1,27 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="http://www.selectsifiso.com/wp-content/plugins/google-xml-sitemaps-v3-for-qtranslate/sitemap.xsl"?><!-- generator="wordpress/4.4" -->
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="http://www.selectsifiso.com/wp-content/plugins/google-xml-sitemaps-v3-for-qtranslate/sitemap.xsl"?><!-- generator="wordpress/4.4.1" -->
 <!-- sitemap-generator-url="http://www.arnebrachhold.de" sitemap-generator-version="3.4.1" -->
-<!-- generated-on="December 28, 2015 4:40 PM" -->
-<!-- Debug: Total comment count: 91 -->
+<!-- generated-on="February 2, 2016 1:28 PM" -->
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">	<url>
 		<loc>http://www.selectsifiso.com/</loc>
-		<lastmod>2015-12-28T16:40:28+00:00</lastmod>
+		<lastmod>2016-01-04T19:42:21+00:00</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
-<!-- Debug: Start Postings -->
 	<url>
-		<loc>http://www.selectsifiso.com/events/</loc>
-		<lastmod>2015-12-28T16:40:28+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>0.6</priority>
-	</url>
-<!-- Debug: Priority report of postID 1112: Comments: 0 of 91 = 0 points -->
-	<url>
-		<loc>http://www.selectsifiso.com/execute-all-packages-within-ssis-project-catalog/</loc>
-		<lastmod>2015-07-06T16:34:08+00:00</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.2</priority>
-	</url>
-<!-- Debug: Priority report of postID 1043: Comments: 0 of 91 = 0 points -->
-	<url>
-		<loc>http://www.selectsifiso.com/handling-no-data-in-ssrs-controls/</loc>
-		<lastmod>2015-06-15T09:05:59+00:00</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.2</priority>
-	</url>
-<!-- Debug: Priority report of postID 1009: Comments: 1 of 91 = 0 points -->
-	<url>
-		<loc>http://www.selectsifiso.com/using-ssis-to-import-http-based-xml-document/</loc>
-		<lastmod>2015-05-17T15:02:22+00:00</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.2</priority>
-	</url>
-	<url>
-		<loc>http://www.selectsifiso.com/newsletters/</loc>
-		<lastmod>2015-05-14T13:53:22+00:00</lastmod>
+		<loc>http://www.selectsifiso.com/products/</loc>
+		<lastmod>2016-01-04T19:17:29+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
-		<loc>http://www.selectsifiso.com/rss-feeds/</loc>
-		<lastmod>2015-05-14T12:03:26+00:00</lastmod>
+		<loc>http://www.selectsifiso.com/contact-us-page/</loc>
+		<lastmod>2016-01-04T18:43:36+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>http://www.selectsifiso.com/services/</loc>
+		<lastmod>2016-01-03T06:42:22+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
 	</url>
@@ -54,78 +31,10 @@
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
 	</url>
-<!-- Debug: Priority report of postID 981: Comments: 0 of 91 = 0 points -->
-	<url>
-		<loc>http://www.selectsifiso.com/xml-document-sourced-ssrs-report-using-http-url/</loc>
-		<lastmod>2015-05-11T17:46:47+00:00</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.2</priority>
-	</url>
 	<url>
 		<loc>http://www.selectsifiso.com/contact/</loc>
 		<lastmod>2015-05-10T07:15:48+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
 	</url>
-<!-- Debug: Priority report of postID 442: Comments: 7 of 91 = 0.1 points -->
-	<url>
-		<loc>http://www.selectsifiso.com/programmatically-import-delimited-text-file-with-derived-columns-into-flat-file-destination-using-ssiss-script-task-tool/</loc>
-		<lastmod>2012-04-19T14:19:14+00:00</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.2</priority>
-	</url>
-<!-- Debug: Priority report of postID 397: Comments: 27 of 91 = 0.3 points -->
-	<url>
-		<loc>http://www.selectsifiso.com/programmatically-import-flat-file-data-source-into-sql-server-2008-using-ssiss-script-task-tool/</loc>
-		<lastmod>2012-03-25T08:56:26+00:00</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.3</priority>
-	</url>
-<!-- Debug: Priority report of postID 386: Comments: 0 of 91 = 0 points -->
-	<url>
-		<loc>http://www.selectsifiso.com/download-save-ssis-packages-from-sql-server-2008-instance-to-xml-format/</loc>
-		<lastmod>2012-02-10T10:04:07+00:00</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.2</priority>
-	</url>
-<!-- Debug: Priority report of postID 321: Comments: 13 of 91 = 0.1 points -->
-	<url>
-		<loc>http://www.selectsifiso.com/programmatically-create-data-flow-task-with-row-count-transformation-in-ssis-package-using-c/</loc>
-		<lastmod>2011-06-23T12:58:31+00:00</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.2</priority>
-	</url>
-<!-- Debug: Priority report of postID 317: Comments: 10 of 91 = 0.1 points -->
-	<url>
-		<loc>http://www.selectsifiso.com/programmatically-create-data-flow-task-inside-a-foreachloop-container-using-c/</loc>
-		<lastmod>2011-06-07T10:01:20+00:00</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.2</priority>
-	</url>
-<!-- Debug: Priority report of postID 310: Comments: 6 of 91 = 0.1 points -->
-	<url>
-		<loc>http://www.selectsifiso.com/programmatically-create-data-flow-task-inside-a-forloop-container-using-c/</loc>
-		<lastmod>2011-06-04T11:29:27+00:00</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.2</priority>
-	</url>
-<!-- Debug: Priority report of postID 177: Comments: 4 of 91 = 0 points -->
-	<url>
-		<loc>http://www.selectsifiso.com/programmatically-extract-save-sql-statements-in-execute-sql-tasks-using-c/</loc>
-		<lastmod>2011-04-23T09:22:22+00:00</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.2</priority>
-	</url>
-<!-- Debug: Priority report of postID 82: Comments: 23 of 91 = 0.3 points -->
-	<url>
-		<loc>http://www.selectsifiso.com/programmatically-create-ssis-package-using-c/</loc>
-		<lastmod>2011-04-23T09:18:44+00:00</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.3</priority>
-	</url>
-<!-- Debug: End Postings -->
-<!-- Debug: Start Custom Pages -->
-<!-- Debug: End Custom Pages -->
-<!-- Debug: Start additional URLs -->
-<!-- Debug: End additional URLs -->
 </urlset>

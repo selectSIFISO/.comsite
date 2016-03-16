@@ -23,6 +23,7 @@
 <meta name="viewport" content="width=device-width" />
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
+<link id="favicon" href="http://www.selectsifiso.com/wp-content/uploads/2016/01/logo.ico" rel="shortcut icon" type="image/vnd.microsoft.icon"/>
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <?php // Loads HTML5 JavaScript file to add support for HTML5 elements in older IE versions. ?>
 <!--[if lt IE 9]>
@@ -50,8 +51,16 @@
 					<a href="<?php echo esc_url(get_theme_mod( 'plus_url', 'default_value' ) ); ?>" rel="author" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/gplus.png" alt="Follow us on Google Plus"/></a>
 			<?php } ?>
 			<?php if( get_theme_mod( 'rss_url' ) !== '' ) { ?>
-			<a class="rss" href="<?php echo esc_url( get_theme_mod( 'rss_url', 'default_value' ) ); ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/rss.png" alt="Follow us on rss"/></a>			
+			<a class="rss" href="https://www.linkedin.com/company/select-sifiso?trk=biz-companies-cym" target="_blank"><img src="http://www.selectsifiso.net/wp-content/uploads/2015/05/linkedin_321.png" alt="Connect with us on LinkedIn"/></a>			
 			<?php } ?>
+			<?php if( get_theme_mod( 'rss_url' ) !== '' ) { ?>
+			<a class="rss" href="https://www.youtube.com/channel/UCjloZMqHJaRiXXlnt3y7ZKQ" target="_blank"><img src="http://www.selectsifiso.com/wp-content/uploads/2016/01/youtube32x32.png" alt="Tune into our YouTube channel"/></a>			
+			<?php } ?>
+			
+			<div class="widget widget_search">
+				<?php get_search_form(); ?>
+			</div>
+			
 		</div>
 	<?php } ?>	
 

@@ -71,7 +71,7 @@ class W4PL_Core
 
 	public function load_plugin_textdomain()
 	{
-		load_plugin_textdomain( W4PL_TD, false, basename(dirname(dirname( __FILE__ ))) . '/languages'  );
+		load_plugin_textdomain( 'w4pl', false, basename(dirname(dirname( __FILE__ ))) . '/languages'  );
 	}
 
 	public function the_content( $content )
@@ -95,7 +95,7 @@ class W4PL_Core
 				'name' 					=> _x('Lists', 'post type general name'),
 				'singular_name' 		=> _x('List', 'post type singular name'),
 				'menu_name'				=> W4PL_NAME,
-				'all_items'				=> __('All Lists', W4PL_TD),
+				'all_items'				=> __('All Lists', 'w4pl'),
 				'add_new' 				=> _x('Add New', 'note item'),
 				'add_new_item' 			=> __('New List'),
 				'edit_item' 			=> __('Edit List'),
@@ -272,14 +272,14 @@ class W4PL_Core
 		$fields['before_field_group_type'] = array(
 			'position'		=> '2',
 			'html' 			=> '<div id="w4pl_field_group_type" class="w4pl_field_group">
-								<div class="w4pl_group_title">'. __('List Type', W4PL_TD) .'</div>
+								<div class="w4pl_group_title">'. __('List Type', 'w4pl') .'</div>
 								<div class="w4pl_group_fields">'
 		);
 		$fields['list_type'] = array(
 			'position'		=> '3',
 			'option_name' 	=> 'list_type',
 			'name' 			=> 'w4pl[list_type]',
-			'label' 		=> __('List Type', W4PL_TD),
+			'label' 		=> __('List Type', 'w4pl'),
 			'type' 			=> 'radio',
 			'option' 		=> self::list_type_options(),
 			'input_class'	=> 'w4pl_onchange_lfr'
@@ -294,15 +294,15 @@ class W4PL_Core
 		$fields['before_field_group_template'] = array(
 			'position'		=> '150',
 			'html' 			=> '<div id="w4pl_field_group_template" class="w4pl_field_group">
-				<div class="w4pl_group_title">'. __('Template', W4PL_TD) .'</div>
+				<div class="w4pl_group_title">'. __('Template', 'w4pl') .'</div>
 				<div class="w4pl_group_fields">'
 		);
 
 		$template_html = '
 		<div class="wffw wffwi_w4pl_template wffwt_textarea">
 			<p style="margin-top:0px;">
-				<a href="#" class="button w4pl_toggler" data-target="#w4pl_template_examples">'. __('Template Example', W4PL_TD) .'</a>
-				<a href="#" class="button w4pl_toggler" data-target="#w4pl_template_buttons">'. __('Shortcodes', W4PL_TD) .'</a>
+				<a href="#" class="button w4pl_toggler" data-target="#w4pl_template_examples">'. __('Template Example', 'w4pl') .'</a>
+				<a href="#" class="button w4pl_toggler" data-target="#w4pl_template_buttons">'. __('Shortcodes', 'w4pl') .'</a>
 			</p>
 			<div id="w4pl_template_examples" class="csshide">'
 			. "<pre style='width:auto'>\n[groups]\n\t[group_title]\n\t[posts]\n\t\t[post_title]\n\t[/posts]\n[/groups]\n[nav]</pre>"
@@ -835,11 +835,11 @@ table.wff_clone_table th:last-child{
 	public static function list_type_options()
 	{
 		$return = array(
-			'posts' 		=> __('Posts', W4PL_TD) .' - <small>'. implode(', ', self::post_type_options()) .'</small>',
-			'terms' 		=> __('Terms', W4PL_TD) .' - <small>'. implode(', ', self::taxonomies_options()) .'</small>',
-			'users' 		=> __('Users', W4PL_TD),
-			'terms.posts' 	=> __('Terms + Posts', W4PL_TD),
-			'users.posts' 	=> __('Users + Posts', W4PL_TD)
+			'posts' 		=> __('Posts', 'w4pl') .' - <small>'. implode(', ', self::post_type_options()) .'</small>',
+			'terms' 		=> __('Terms', 'w4pl') .' - <small>'. implode(', ', self::taxonomies_options()) .'</small>',
+			'users' 		=> __('Users', 'w4pl'),
+			'terms.posts' 	=> __('Terms + Posts', 'w4pl'),
+			'users.posts' 	=> __('Users + Posts', 'w4pl')
 		);
 
 		return $return;
@@ -905,13 +905,13 @@ table.wff_clone_table th:last-child{
 	public static function post_groupby_options( $post_types = array() )
 	{
 		$return = array(
-			'' 				=> __('None', 			W4PL_TD),
-			'year' 			=> __('Year', 			W4PL_TD),
-			'month' 		=> __('Month', 			W4PL_TD),
-			'yearmonth' 	=> __('Year Months', 	W4PL_TD),
-			'author' 		=> __('Author',			W4PL_TD),
-			'parent' 		=> __('Parent', 		W4PL_TD),
-			'meta_value'	=> __('Custom field', 	W4PL_TD)
+			'' 				=> __('None', 			'w4pl'),
+			'year' 			=> __('Year', 			'w4pl'),
+			'month' 		=> __('Month', 			'w4pl'),
+			'yearmonth' 	=> __('Year Months', 	'w4pl'),
+			'author' 		=> __('Author',			'w4pl'),
+			'parent' 		=> __('Parent', 		'w4pl'),
+			'meta_value'	=> __('Custom field', 	'w4pl')
 		);
 
 		if( ! is_array($post_types) ){
@@ -933,18 +933,18 @@ table.wff_clone_table th:last-child{
 	public static function post_orderby_options( $post_types = array() )
 	{
 		$return = array(
-			'ID'				=> __( 'ID', 					W4PL_TD),
-			'title'				=> __( 'Title', 				W4PL_TD),
-			'name'				=> __( 'Name', 					W4PL_TD),
-			'date'				=> __( 'Publish Date', 			W4PL_TD),
-			'modified'			=> __( 'Modified Date', 		W4PL_TD),
-			'menu_order'		=> __( 'Menu Order', 			W4PL_TD),
-			'meta_value'		=> __( 'Meta value', 			W4PL_TD),
-			'meta_value_num'	=> __( 'Meta numeric value', 	W4PL_TD),
-			'comment_count'		=> __( 'Comment Count', 		W4PL_TD),
-			'rand'				=> __( 'Random', 				W4PL_TD),
-			'none'				=> __( 'None', 					W4PL_TD),
-			'post__in'			=> __( 'Include posts', 	W4PL_TD),
+			'ID'				=> __( 'ID', 					'w4pl'),
+			'title'				=> __( 'Title', 				'w4pl'),
+			'name'				=> __( 'Name', 					'w4pl'),
+			'date'				=> __( 'Publish Date', 			'w4pl'),
+			'modified'			=> __( 'Modified Date', 		'w4pl'),
+			'menu_order'		=> __( 'Menu Order', 			'w4pl'),
+			'meta_value'		=> __( 'Meta value', 			'w4pl'),
+			'meta_value_num'	=> __( 'Meta numeric value', 	'w4pl'),
+			'comment_count'		=> __( 'Comment Count', 		'w4pl'),
+			'rand'				=> __( 'Random', 				'w4pl'),
+			'none'				=> __( 'None', 					'w4pl'),
+			'post__in'			=> __( 'Include posts', 	'w4pl'),
 		);
 
 		return $return;

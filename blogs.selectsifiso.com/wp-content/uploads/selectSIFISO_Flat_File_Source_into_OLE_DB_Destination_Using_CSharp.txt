@@ -1,0 +1,204 @@
+using System;
+using System.Data;
+using System.Data.Sql;
+using System.Data.SqlTypes;
+using System.Data.SqlClient;
+using Microsoft.SqlServer.Server;
+using Microsoft.SqlServer.Dts.Tasks;
+using Microsoft.SqlServer.Dts.Runtime;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+using RuntimeWrapper = Microsoft.SqlServer.Dts.Runtime.Wrapper;
+using System.IO;
+
+namespace ST_94a9f0913c0a487aa85d3139c2ca8c59.csproj
+{
+    [System.AddIn.AddIn("ScriptMain", Version = "1.0", Publisher = "", Description = "")]
+    public partial class ScriptMain : Microsoft.SqlServer.Dts.Tasks.ScriptTask.VSTARTScriptObjectModelBase
+    {
+
+        #region VSTA generated code
+        enum ScriptResults
+        {
+            Success = Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Success,
+            Failure = Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Failure
+        };
+        #endregion        
+        public void Main()
+        {
+            //Declare new aplication
+            Application selectSIFISO_app = new Application();
+
+            //Create package
+            Package sS_pkg = new Package();
+
+            //Assign relevant package name and description
+            sS_pkg.Name = "Load Flat File Source into OLE DB Destination Using C#";
+            sS_pkg.Description = "Programmatically create an SSIS 2008 package that loads a Flat File Source into OLE DB Destination Using Script Task's C# language";
+
+            //Insert the Data Flow Task with appropriate name and some buffer space for processing of file            
+            sS_pkg.Executables.Add("STOCK:PipelineTask");
+            TaskHost taskHost = sS_pkg.Executables[0] as TaskHost;
+            MainPipe dataFlowTask = (MainPipe)taskHost.InnerObject;
+            taskHost.Name = "Dynamic Data Flow Task";
+            taskHost.Properties["DefaultBufferMaxRows"].SetValue(taskHost, "1000000");
+
+            //Insert the Flat File connection
+            ConnectionManager connectionManagerFlatFile = sS_pkg.Connections.Add("FLATFILE");
+            //You can change this path depending on where you have stored the flat file
+            connectionManagerFlatFile.ConnectionString = @"C:\Temp\flat_src.txt";
+            //Assign name to the flat file connection
+            connectionManagerFlatFile.Name = "TXT_FlatFile";
+            //Indicate that the flat file is delimited
+            connectionManagerFlatFile.Properties["Format"].SetValue(connectionManagerFlatFile, "Delimited");
+            //Indicate whether the source file has column headings or not - in this case, our sample data has column headings.
+            connectionManagerFlatFile.Properties["ColumnNamesInFirstDataRow"].SetValue(connectionManagerFlatFile, Convert.ToBoolean(true));
+
+            //Get native Flat File connection 
+            RuntimeWrapper.IDTSConnectionManagerFlatFile100 connectionFlatFile = connectionManagerFlatFile.InnerObject as RuntimeWrapper.IDTSConnectionManagerFlatFile100;
+            
+            string line;
+            
+            //Determine the number of columns by reading the sample Flat File - line by line.            
+            using (StreamReader file = new StreamReader(@"C:\Temp\flat_src.txt"))
+            {
+                try
+                   {
+                      while ((line = file.ReadLine()) != null)
+                        {
+                          char[] delimiters = new char[] { '|' };
+                          string[] parts = line.Split(delimiters, StringSplitOptions.RemoveEmptyEntries);
+                          
+                          for (int i = 0; i < parts.Length; i++)
+                            {
+                               RuntimeWrapper.IDTSConnectionManagerFlatFileColumn100 flatFileCol = connectionFlatFile.Columns.Add() as RuntimeWrapper.IDTSConnectionManagerFlatFileColumn100;
+                               sS_AssignColumnProperties(flatFileCol, parts[i], "|");
+                            }
+                          //Exit file after reading the first line
+                          break;
+                        }                
+                    }
+                catch (Exception ex)
+                   {
+                       throw ex;
+                   }
+                finally
+                   {
+                       file.Close();
+                   }
+            }
+                        
+            //Edit the last Flat File column delimiter into NewLine instead of a Comma
+            connectionFlatFile.Columns[connectionFlatFile.Columns.Count - 1].ColumnDelimiter = Environment.NewLine;
+
+            //Insert Flat File source component
+            IDTSComponentMetaData100 componentSource = dataFlowTask.ComponentMetaDataCollection.New();
+            componentSource.Name = "FlatFileSource";
+            componentSource.ComponentClassID = "DTSAdapter.FlatFileSource";
+
+            //Insert source design-time instance and initialise component
+            CManagedComponentWrapper instanceSource = componentSource.Instantiate();
+            instanceSource.ProvideComponentProperties();
+
+            //Set source connection
+            componentSource.RuntimeConnectionCollection[0].ConnectionManagerID = connectionManagerFlatFile.ID;
+            componentSource.RuntimeConnectionCollection[0].ConnectionManager = DtsConvert.ToConnectionManager90(connectionManagerFlatFile);
+
+            //Reinitialize Flat File source metadata, 
+            instanceSource.AcquireConnections(null);
+            instanceSource.ReinitializeMetaData();
+            instanceSource.ReleaseConnections();
+
+            //Insert the SQL Server 2008 OLE-DB connection
+            ConnectionManager connectionManagerOleDb = sS_pkg.Connections.Add("OLEDB");
+            connectionManagerOleDb.ConnectionString = string.Format("Provider=SQLOLEDB.1;Data Source={0};Initial Catalog={1};Integrated Security=SSPI;", "SIFISOWIN7-PC", "AdventureWorks");
+            connectionManagerOleDb.Name = "OLEDB";
+            connectionManagerOleDb.Description = "OLEDB Connection";
+
+            //Insert OLE-DB destination
+            IDTSComponentMetaData100 componentDestination = dataFlowTask.ComponentMetaDataCollection.New();
+            componentDestination.Name = "OLEDBDestination";
+            componentDestination.Description = "OLEDB Destination for the Flat File data load";
+            componentDestination.ComponentClassID = "DTSAdapter.OLEDBDestination";
+
+            //Insert destination design-time instance and initialise component
+            CManagedComponentWrapper instanceDestination = componentDestination.Instantiate();
+            instanceDestination.ProvideComponentProperties();
+
+            //Set destination connection
+            componentDestination.RuntimeConnectionCollection[0].ConnectionManagerID = connectionManagerOleDb.ID;
+            componentDestination.RuntimeConnectionCollection[0].ConnectionManager = DtsConvert.ToConnectionManager90(connectionManagerOleDb);
+            //Indicates the name of the database object used to open a rowset
+            instanceDestination.SetComponentProperty("OpenRowset", "[dbo].[sS_flatfileLoad]");
+            //Specifies the mode used to open the database
+            instanceDestination.SetComponentProperty("AccessMode", 3);
+            //Specifies options to be used with fast load. Applies only if fast load is turned on
+            instanceDestination.SetComponentProperty("FastLoadOptions", "TABLOCK,CHECK_CONSTRAINTS");
+            //Indicates whether the values supplied for identity columns will be copied to the destination or not
+            //In this case, we have set this property to false
+            instanceDestination.SetComponentProperty("FastLoadKeepIdentity", false);
+            //Indicates whether the columns containing null willhave null inserted in the destination or not
+            //In this case, we have opted no to insert nulls
+            instanceDestination.SetComponentProperty("FastLoadKeepNulls", false);
+            //Specifies the column code page to use when code page information is unavailable from the data source
+            //In this case we used the default - 1252
+            instanceDestination.SetComponentProperty("DefaultCodePage", 1252);
+            //Specifies when commits are issued during data insertion
+            //In this case, we have opted for the default size which is set to 2147483647
+            instanceDestination.SetComponentProperty("FastLoadMaxInsertCommitSize", 2147483647);
+            //Indicates the number of seconds before a command times out
+            //In this case, we have opted for the default value of 0 which indicates an infinite time-out
+            instanceDestination.SetComponentProperty("CommandTimeout", 0);
+            //Indicates the usage of DefaultCodePage property value when describing the character data
+            //In this case, we have opted for the default value of false
+            instanceDestination.SetComponentProperty("AlwaysUseDefaultCodePage", false);
+            
+            //Connect the Flat File source to the OLE DB Destination component
+            dataFlowTask.PathCollection.New().AttachPathAndPropagateNotifications(componentSource.OutputCollection[0],componentDestination.InputCollection[0]);
+
+            //Get input and virtual input for destination to select and map columns
+            IDTSInput100 destinationInput = componentDestination.InputCollection[0];
+            IDTSVirtualInput100 destinationVirtualInput = destinationInput.GetVirtualInput();
+            IDTSVirtualInputColumnCollection100 destinationVirtualInputColumns = destinationVirtualInput.VirtualInputColumnCollection;
+
+            //Reinitialize the metadata, generating exernal columns from flat file columns
+            instanceDestination.AcquireConnections(null);
+            instanceDestination.ReinitializeMetaData();
+            instanceDestination.ReleaseConnections();
+
+            //Select and map destination columns
+            foreach (IDTSVirtualInputColumn100 virtualInputColumn in destinationVirtualInputColumns)
+            {
+                // Select column, and retain new input column
+                IDTSInputColumn100 inputColumn = instanceDestination.SetUsageType(destinationInput.ID,destinationVirtualInput, virtualInputColumn.LineageID, DTSUsageType.UT_READONLY);
+                // Find external column by name
+                IDTSExternalMetadataColumn100 externalColumn = destinationInput.ExternalMetadataColumnCollection[inputColumn.Name];
+                // Map input column to external column
+                instanceDestination.MapInputColumn(destinationInput.ID, inputColumn.ID, externalColumn.ID);
+            }
+
+            //Execute the package or disable the below code if you intend running the package later
+            sS_pkg.Execute();
+
+            //Finally, save the package - in this case, we have opted to save the package into file system
+            selectSIFISO_app.SaveToXml(@"E:\newArticle.dtsx", sS_pkg, null);   
+         
+            Dts.TaskResult = (int)ScriptResults.Success;
+        }
+
+        private static void sS_AssignColumnProperties(RuntimeWrapper.IDTSConnectionManagerFlatFileColumn100 flatFileCol, string getColName, string getDelim)
+        {
+            //Assign delimiter
+            flatFileCol.ColumnType = "Delimited";
+            flatFileCol.ColumnDelimiter = getDelim;
+
+            //Indicate column data type - in this case, all the source columns will be set to String Data Type
+            flatFileCol.DataType = RuntimeWrapper.DataType.DT_STR;
+            //Indicate column width - in this case, width of all source columns will be set to a length of 100
+            flatFileCol.ColumnWidth = 100;
+
+            //Assign column name
+            RuntimeWrapper.IDTSName100 columnName = flatFileCol as RuntimeWrapper.IDTSName100;
+            columnName.Name = getColName.ToString();
+        }
+    }
+}

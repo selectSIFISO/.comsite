@@ -31,57 +31,57 @@ class W4PL_Helper_Posts extends W4PL_Core
 			'id' => array(
 				'group' 	=> 'Post', 
 				'callback' 	=> array('W4PL_Helper_Posts', 'post_id'),
-				'desc' 		=> '<strong>'. __('Output', W4PL_TD) .'</strong>: post id'
+				'desc' 		=> '<strong>'. __('Output', 'w4pl') .'</strong>: post id'
 			),
 			'ID' => array(
 				'group' 	=> 'Post', 
 				'callback' 	=> array('W4PL_Helper_Posts', 'post_id'),
-				'desc' 		=> '<strong>'. __('Output', W4PL_TD) .'</strong>: post id'
+				'desc' 		=> '<strong>'. __('Output', 'w4pl') .'</strong>: post id'
 			),
 			'post_id' => array(
 				'group' 	=> 'Post', 
 				'callback' 	=> array('W4PL_Helper_Posts', 'post_id'),
-				'desc' 		=> '<strong>'. __('Output', W4PL_TD) .'</strong>: post id'
+				'desc' 		=> '<strong>'. __('Output', 'w4pl') .'</strong>: post id'
 			),
 			'post_type' => array(
 				'group' 	=> 'Post', 
 				'callback' 	=> array('W4PL_Helper_Posts', 'post_type'),
-				'desc' 		=> '<strong>'. __('Output', W4PL_TD) .'</strong>: post type'
+				'desc' 		=> '<strong>'. __('Output', 'w4pl') .'</strong>: post type'
 			),
 			'post_type_label' => array(
 				'group' 	=> 'Post', 
 				'callback' 	=> array('W4PL_Helper_Posts', 'post_type_label'),
-				'desc' 		=> '<strong>'. __('Output', W4PL_TD) .'</strong>: post type label'
+				'desc' 		=> '<strong>'. __('Output', 'w4pl') .'</strong>: post type label'
 			),
 			'post_status' => array(
 				'group' 	=> 'Post', 
 				'callback' 	=> array('W4PL_Helper_Posts', 'post_status'),
-				'desc' 		=> '<strong>'. __('Output', W4PL_TD) .'</strong>: post status'
+				'desc' 		=> '<strong>'. __('Output', 'w4pl') .'</strong>: post status'
 			),
 			'post_status_label' => array(
 				'group' 	=> 'Post', 
 				'callback' 	=> array('W4PL_Helper_Posts', 'post_status_label'),
-				'desc' 		=> '<strong>'. __('Output', W4PL_TD) .'</strong>: post status label'
+				'desc' 		=> '<strong>'. __('Output', 'w4pl') .'</strong>: post status label'
 			),
 			'post_number' => array(
 				'group' 	=> 'Post', 
 				'callback' 	=> array('W4PL_Helper_Posts', 'post_number'),
-				'desc' 		=> '<strong>'. __('Output', W4PL_TD) .'</strong>: post item number, starting from 1'
+				'desc' 		=> '<strong>'. __('Output', 'w4pl') .'</strong>: post item number, starting from 1'
 			),
 			'post_permalink' => array(
 				'group' 	=> 'Post', 
 				'callback' 	=> array('W4PL_Helper_Posts', 'post_permalink'),
-				'desc' 		=> '<strong>'. __('Output', W4PL_TD) .'</strong>: post url/link'
+				'desc' 		=> '<strong>'. __('Output', 'w4pl') .'</strong>: post url/link'
 			),
 			'post_class' => array(
 				'group' 	=> 'Post', 
 				'callback' 	=> array('W4PL_Helper_Posts', 'post_class'),
-				'desc' 		=> '<strong>'. __('Output', W4PL_TD) .'</strong>: post html classes'
+				'desc' 		=> '<strong>'. __('Output', 'w4pl') .'</strong>: post html classes'
 			),
 			'post_title' => array(
 				'group' 	=> 'Post', 
 				'callback' 	=> array('W4PL_Helper_Posts', 'post_title'),
-				'desc' 		=> '<strong>'. __('Output', W4PL_TD) .'</strong>: post title
+				'desc' 		=> '<strong>'. __('Output', 'w4pl') .'</strong>: post title
 				<br /><br /><strong>Attributes:</strong>
 				<br /><strong>wordlimit</strong> = (number), limit number of words to display
 				<br /><strong>charlimit</strong> = (number), limit number of characters to display'
@@ -89,23 +89,23 @@ class W4PL_Helper_Posts extends W4PL_Core
 			'post_name' => array(
 				'group' 	=> 'Post', 
 				'callback' 	=> array('W4PL_Helper_Posts', 'post_name'),
-				'desc' 		=> '<strong>'. __('Output', W4PL_TD) .'</strong>: post name'
+				'desc' 		=> '<strong>'. __('Output', 'w4pl') .'</strong>: post name'
 			),
 			'post_comment_url' => array(
 				'group' 	=> 'Post', 
 				'callback' 	=> array('W4PL_Helper_Posts', 'post_comment_url'),
-				'desc' 		=> '<strong>'. __('Output', W4PL_TD) .'</strong>: post comment form link/url'
+				'desc' 		=> '<strong>'. __('Output', 'w4pl') .'</strong>: post comment form link/url'
 			),
 			'post_comment_count'=> array(
 				'group' 	=> 'Post', 
 				'callback' 	=> array('W4PL_Helper_Posts', 'post_comment_count'),
-				'desc' 		=> '<strong>'. __('Output', W4PL_TD) .'</strong>: (numeric) amount of approved comments'
+				'desc' 		=> '<strong>'. __('Output', 'w4pl') .'</strong>: (numeric) amount of approved comments'
 			),
 			'post_the_date' => array(
 				'group' 	=> 'Post', 
 				'code' 		=> '[post_the_date format="'. get_option('date_format') .'" before="" after=""]', 
 				'callback' 	=> array('W4PL_Helper_Posts', 'post_the_date'),
-				'desc' 		=> '<strong>'. __('Output', W4PL_TD) .'</strong>: unique post date, ignored on current item if previous post date and curent post date is same (date formatted)
+				'desc' 		=> '<strong>'. __('Output', 'w4pl') .'</strong>: unique post date, ignored on current item if previous post date and curent post date is same (date formatted)
 				<br /><br /><strong>Attributes:</strong>
 				<br /><strong>format</strong> = php datetime format
 				<br /><strong>before</strong> = before date
@@ -115,7 +115,7 @@ class W4PL_Helper_Posts extends W4PL_Core
 				'group' 	=> 'Post', 
 				'code' 		=> '[post_date format="'. get_option('date_format') .'"]', 
 				'callback' 	=> array('W4PL_Helper_Posts', 'post_date'),
-				'desc' 		=> '<strong>'. __('Output', W4PL_TD) .'</strong>: post date (date formatted)
+				'desc' 		=> '<strong>'. __('Output', 'w4pl') .'</strong>: post date (date formatted)
 				<br /><br /><strong>Attributes:</strong>
 				<br /><strong>format</strong> = php datetime format'
 			),
@@ -123,7 +123,7 @@ class W4PL_Helper_Posts extends W4PL_Core
 				'group' 	=> 'Post', 
 				'code' 		=> '[post_time format="'. get_option('time_format') .'"]', 
 				'callback' 	=> array('W4PL_Helper_Posts', 'post_time'),
-				'desc' 		=> '<strong>'. __('Output', W4PL_TD) .'</strong>: post date (time formatted)
+				'desc' 		=> '<strong>'. __('Output', 'w4pl') .'</strong>: post date (time formatted)
 				<br /><br /><strong>Attributes:</strong>
 				<br /><strong>format</strong> = php datetime format'
 			),
@@ -131,7 +131,7 @@ class W4PL_Helper_Posts extends W4PL_Core
 				'group' 	=> 'Post', 
 				'code' 		=> '[post_modified_date format="'. get_option('date_format') .'"]', 
 				'callback' 	=> array('W4PL_Helper_Posts', 'post_modified_date'),
-				'desc' 		=> '<strong>'. __('Output', W4PL_TD) .'</strong>: post modified date (date formatted)
+				'desc' 		=> '<strong>'. __('Output', 'w4pl') .'</strong>: post modified date (date formatted)
 				<br /><br /><strong>Attributes:</strong>
 				<br /><strong>format</strong> = php datetime format'
 			),
@@ -139,7 +139,7 @@ class W4PL_Helper_Posts extends W4PL_Core
 				'group' 	=> 'Post', 
 				'code' 		=> '[post_modified_time format="'. get_option('time_format') .'"]', 
 				'callback' 	=> array('W4PL_Helper_Posts', 'post_modified_time'),
-				'desc' 		=> '<strong>'. __('Output', W4PL_TD) .'</strong>: post modified date (time formatted)
+				'desc' 		=> '<strong>'. __('Output', 'w4pl') .'</strong>: post modified date (time formatted)
 				<br /><br /><strong>Attributes:</strong>
 				<br /><strong>format</strong> = php datetime format'
 			),
@@ -147,30 +147,30 @@ class W4PL_Helper_Posts extends W4PL_Core
 				'group' 	=> 'Post', 
 				'code' 		=> '[post_author_meta name=""]', 
 				'callback' 	=> array('W4PL_Helper_Posts', 'post_author_meta'),
-				'desc' 		=> '<strong>'. __('Output', W4PL_TD) .'</strong>: post author meta value
+				'desc' 		=> '<strong>'. __('Output', 'w4pl') .'</strong>: post author meta value
 				<br /><br /><strong>Attributes:</strong>
 				<br /><strong>name</strong> = ex: display_name, bio, user_email etc'
 			),
 			'post_author_name' => array(
 				'group' 	=> 'Post', 
 				'callback' 	=> array('W4PL_Helper_Posts', 'post_author_name'),
-				'desc' 		=> '<strong>'. __('Output', W4PL_TD) .'</strong>: post author name'
+				'desc' 		=> '<strong>'. __('Output', 'w4pl') .'</strong>: post author name'
 			),
 			'post_author_url'	=> array(
 				'group' 	=> 'Post', 
 				'callback' 	=> array('W4PL_Helper_Posts', 'post_author_url'),
-				'desc' 		=> '<strong>'. __('Output', W4PL_TD) .'</strong>: post author name url'
+				'desc' 		=> '<strong>'. __('Output', 'w4pl') .'</strong>: post author name url'
 			),
 			'post_author_email'	=> array(
 				'group' 	=> 'Post', 
 				'callback' 	=> array('W4PL_Helper_Posts', 'post_author_email'),
-				'desc' 		=> '<strong>'. __('Output', W4PL_TD) .'</strong>: post author email address'
+				'desc' 		=> '<strong>'. __('Output', 'w4pl') .'</strong>: post author email address'
 			),
 			'post_author_avatar'=> array(
 				'group' 	=> 'Post', 
 				'code' 		=> '[post_author_avatar size=""]', 
 				'callback' 	=> array('W4PL_Helper_Posts', 'post_author_avatar'),
-				'desc' 		=> '<strong>'. __('Output', W4PL_TD) .'</strong>: post author avatar
+				'desc' 		=> '<strong>'. __('Output', 'w4pl') .'</strong>: post author avatar
 				<br /><br /><strong>attributes:</strong>
 				<br /><strong>size</strong> = (number), avatar image size'
 			),
@@ -178,20 +178,20 @@ class W4PL_Helper_Posts extends W4PL_Core
 				'group' 	=> 'Post', 
 				'code' 		=> '[post_excerpt wordlimit=""]', 
 				'callback' 	=> array('W4PL_Helper_Posts', 'post_excerpt'),
-				'desc' 		=> '<strong>'. __('Output', W4PL_TD) .'</strong>: post excerpt/short description
+				'desc' 		=> '<strong>'. __('Output', 'w4pl') .'</strong>: post excerpt/short description
 				<br /><br /><strong>Attributes:</strong>
 				<br /><strong>wordlimit</strong> = (number), limit number of words to display'
 			),
 			'post_content'		=> array(
 				'group' 	=> 'Post', 
 				'callback' 	=> array('W4PL_Helper_Posts', 'post_content'),
-				'desc' 		=> '<strong>'. __('Output', W4PL_TD) .'</strong>: post content'
+				'desc' 		=> '<strong>'. __('Output', 'w4pl') .'</strong>: post content'
 			),
 			'post_thumbnail' => array(
 				'group' 	=> 'Post', 
 				'code' 		=> '[post_thumbnail size="" return=""]', 
 				'callback' 	=> array('W4PL_Helper_Posts', 'post_thumbnail'),
-				'desc' 		=> '<strong>'. __('Output', W4PL_TD) .'</strong>: (text|number) based on the rerurn attribute & only if the post has a thumbnail assigned
+				'desc' 		=> '<strong>'. __('Output', 'w4pl') .'</strong>: (text|number) based on the rerurn attribute & only if the post has a thumbnail assigned
 				<br /><br /><strong>Attributes:</strong>
 				<br /><strong>return</strong> = (id|src|html), 
 				<br />----"src" - will return src of the image, 
@@ -207,7 +207,7 @@ class W4PL_Helper_Posts extends W4PL_Core
 				'group' 	=> 'Post', 
 				'code' 		=> '[post_image use_fallback="1"]', 
 				'callback' 	=> array('W4PL_Helper_Posts', 'post_image'),
-				'desc' 		=> '<strong>'. __('Output', W4PL_TD) .'</strong>: <strong>first</strong> or <strong>last</strong> image source (src="") from post content
+				'desc' 		=> '<strong>'. __('Output', 'w4pl') .'</strong>: <strong>first</strong> or <strong>last</strong> image source (src="") from post content
 				<br /><br /><strong>Attributes:</strong>
 				<br /><strong>position</strong> = (first|last)
 				<br /><strong>return</strong> = (text|number), 
@@ -222,7 +222,7 @@ class W4PL_Helper_Posts extends W4PL_Core
 				'group' 	=> 'Post', 
 				'code' 		=> '[post_meta key="" multiple="0"]', 
 				'callback' 	=> array('W4PL_Helper_Posts', 'post_meta'),
-				'desc' 		=> '<strong>'. __('Output', W4PL_TD) .'</strong>: post meta value. if return value is an array, it will be migrated to string by using explode function
+				'desc' 		=> '<strong>'. __('Output', 'w4pl') .'</strong>: post meta value. if return value is an array, it will be migrated to string by using explode function
 				<br /><br /><strong>Attributes:</strong>
 				<br /><strong>key</strong> = (text|number), meta key name
 				<br /><strong>sub_key</strong> = (text|number), if meta value is array|object, display a specific value by it\'s key
@@ -233,7 +233,7 @@ class W4PL_Helper_Posts extends W4PL_Core
 				'group' 	=> 'Post', 
 				'code' 		=> '[post_terms tax="category" sep=", "]', 
 				'callback' 	=> array('W4PL_Helper_Posts', 'post_terms'),
-				'desc' 		=> '<strong>'. __('Output', W4PL_TD) .'</strong>: post type terms. if return value is an array, it will be migrated to string by using explode function
+				'desc' 		=> '<strong>'. __('Output', 'w4pl') .'</strong>: post type terms. if return value is an array, it will be migrated to string by using explode function
 				<br /><br /><strong>Attributes:</strong>
 				<br /><strong>tax</strong> = (string), taxonomy name
 				<br /><strong>sep</strong> = (string), separate array meta value into string
@@ -243,7 +243,7 @@ class W4PL_Helper_Posts extends W4PL_Core
 				'group' 	=> 'Post', 
 				'code' 		=> '[attachment_thumbnail size=""]', 
 				'callback' 	=> array('W4PL_Helper_Posts', 'attachment_thumbnail'),
-				'desc' 		=> '<strong>'. __('Output', W4PL_TD) .'</strong>: if the post type is attachment, the attached file thumb is displayed.
+				'desc' 		=> '<strong>'. __('Output', 'w4pl') .'</strong>: if the post type is attachment, the attached file thumb is displayed.
 				<br /><br /><strong>Attributes:</strong>
 				<br /><strong>id</strong> = (string), attachment id
 				<br /><strong>meta_key</strong> = (string), retrieve attachment id from meta value
@@ -260,14 +260,14 @@ class W4PL_Helper_Posts extends W4PL_Core
 			'attachment_url' => array(
 				'group' 	=> 'Post', 
 				'callback' 	=> array('W4PL_Helper_Posts', 'attachment_url'),
-				'desc' 		=> '<strong>'. __('Output', W4PL_TD) .'</strong>:  if the post is an attachment, the attached image source is returned'
+				'desc' 		=> '<strong>'. __('Output', 'w4pl') .'</strong>:  if the post is an attachment, the attached image source is returned'
 			),
 
 			'parent_permalink' => array(
 				'group' 	=> 'Post', 
 				'code' 		=> '[parent_permalink self=1]', 
 				'callback' 	=> array('W4PL_Helper_Posts', 'parent_permalink'),
-				'desc' 		=> '<strong>'. __('Output', W4PL_TD) .'</strong>: if the post type is hierarchical, it\'s parent post permalink is returned
+				'desc' 		=> '<strong>'. __('Output', 'w4pl') .'</strong>: if the post type is hierarchical, it\'s parent post permalink is returned
 				<br /><br /><strong>Attributes:</strong>
 				<br /><strong>self</strong> = (int), if no parent item exist, return the self permalink'
 			),
@@ -275,48 +275,48 @@ class W4PL_Helper_Posts extends W4PL_Core
 			'title' => array(
 				'group' 	=> 'Post', 
 				'callback' 	=> array('W4PL_Helper_Posts', 'template_title'),
-				'desc' 		=> '<strong>'. __('Output', W4PL_TD) .'</strong>: title template'
+				'desc' 		=> '<strong>'. __('Output', 'w4pl') .'</strong>: title template'
 			),
 			'meta' => array(
 				'group' 	=> 'Post', 
 				'callback' 	=> array('W4PL_Helper_Posts', 'template_meta'),
-				'desc' 		=> '<strong>'. __('Output', W4PL_TD) .'</strong>: meta template'
+				'desc' 		=> '<strong>'. __('Output', 'w4pl') .'</strong>: meta template'
 			),
 			'publish' => array(
 				'group' 	=> 'Post', 
 				'callback'	=> array('W4PL_Helper_Posts', 'template_date'),
-				'desc' 		=> '<strong>'. __('Output', W4PL_TD) .'</strong>: publish time template'
+				'desc' 		=> '<strong>'. __('Output', 'w4pl') .'</strong>: publish time template'
 			),
 			'date' => array(
 				'group' 	=> 'Post', 
 				'callback' 	=> array('W4PL_Helper_Posts', 'template_date'),
-				'desc' 		=> '<strong>'. __('Output', W4PL_TD) .'</strong>: publish time template'
+				'desc' 		=> '<strong>'. __('Output', 'w4pl') .'</strong>: publish time template'
 			),
 			'modified' => array(
 				'group' 	=> 'Post', 
 				'callback' 	=> array('W4PL_Helper_Posts', 'template_modified'),
-				'desc' 		=> '<strong>'. __('Output', W4PL_TD) .'</strong>: modified time template'
+				'desc' 		=> '<strong>'. __('Output', 'w4pl') .'</strong>: modified time template'
 			),
 			'author' => array(
 				'group' 	=> 'Post', 
 				'callback' 	=> array('W4PL_Helper_Posts', 'template_author'),
-				'desc' 		=> '<strong>'. __('Output', W4PL_TD) .'</strong>: author template'
+				'desc' 		=> '<strong>'. __('Output', 'w4pl') .'</strong>: author template'
 			),
 			'excerpt' => array(
 				'group' 	=> 'Post', 
 				'callback' 	=> array('W4PL_Helper_Posts', 'template_excerpt'),
-				'desc' 		=> '<strong>'. __('Output', W4PL_TD) .'</strong>: excerpt template'
+				'desc' 		=> '<strong>'. __('Output', 'w4pl') .'</strong>: excerpt template'
 			),
 			'content' => array(
 				'group' 	=> 'Post', 
 				'callback' 	=> array('W4PL_Helper_Posts', 'template_content'),
-				'desc' 		=> '<strong>'. __('Output', W4PL_TD) .'</strong>: content template'
+				'desc' 		=> '<strong>'. __('Output', 'w4pl') .'</strong>: content template'
 			),
 			'more' => array(
 				'group' 	=> 'Post', 
 				'code' 		=> '[more text="Continue Reading"]', 
 				'callback' 	=> array('W4PL_Helper_Posts', 'template_more'),
-				'desc' 		=> '<strong>'. __('Output', W4PL_TD) .'</strong>: more link template
+				'desc' 		=> '<strong>'. __('Output', 'w4pl') .'</strong>: more link template
 				<br /><br /><strong>Attributes:</strong>
 				<br /><strong>text</strong> = (string), text to be displayed'
 			),
@@ -324,17 +324,17 @@ class W4PL_Helper_Posts extends W4PL_Core
 			'group_id' => array(
 				'group' 	=> 'Group', 
 				'callback' 	=> array('W4PL_Helper_Posts', 'post_group_id'),
-				'desc' 		=> '<strong>'. __('Output', W4PL_TD) .'</strong>: group name / title'
+				'desc' 		=> '<strong>'. __('Output', 'w4pl') .'</strong>: group name / title'
 			),
 			'group_title' => array(
 				'group' 	=> 'Group', 
 				'callback' 	=> array('W4PL_Helper_Posts', 'post_group_title'),
-				'desc' 		=> '<strong>'. __('Output', W4PL_TD) .'</strong>: group name / title'
+				'desc' 		=> '<strong>'. __('Output', 'w4pl') .'</strong>: group name / title'
 			),
 			'group_url' => array(
 				'group' 	=> 'Group', 
 				'callback' 	=> array('W4PL_Helper_Posts', 'post_group_url'),
-				'desc' 		=> '<strong>'. __('Output', W4PL_TD) .'</strong>: group page link'
+				'desc' 		=> '<strong>'. __('Output', 'w4pl') .'</strong>: group page link'
 			)
 		);
 
@@ -753,7 +753,7 @@ class W4PL_Helper_Posts extends W4PL_Core
 	}
 	public static function template_meta($attr, $cont){
 		return sprintf( 
-			__('Posted on',W4PL_TD). ': <abbr class="published post-date" title="%1$s">%2$s</abbr> <span class="post_author">'. __('by',W4PL_TD) .' %3$s</span>', 
+			__('Posted on','w4pl'). ': <abbr class="published post-date" title="%1$s">%2$s</abbr> <span class="post_author">'. __('by','w4pl') .' %3$s</span>', 
 			get_the_time( get_option('time_format') ), 
 			get_the_time( get_option('date_format') ), 
 			get_the_author()
@@ -761,14 +761,14 @@ class W4PL_Helper_Posts extends W4PL_Core
 	}
 	public static function template_date($attr, $cont){
 		return sprintf( 
-			'<abbr class="published post-date" title="%1$s"><strong>'. __('Published',W4PL_TD) .'</strong>: %2$s</abbr>',
+			'<abbr class="published post-date" title="%1$s"><strong>'. __('Published','w4pl') .'</strong>: %2$s</abbr>',
 			get_the_time( get_option('time_format') ), 
 			get_the_time( get_option('date_format') )
 		);
 	}
 	public static function template_modified($attr, $cont){
 		return sprintf( 
-			'<abbr class="modified post-modified" title="%1$s"><strong>'. __('Updated',W4PL_TD) .'</strong>: %2$s</abbr>',
+			'<abbr class="modified post-modified" title="%1$s"><strong>'. __('Updated','w4pl') .'</strong>: %2$s</abbr>',
 			get_post_modified_time( get_option('time_format')), 
 			get_post_modified_time( get_option('date_format'))
 		);
@@ -793,7 +793,7 @@ class W4PL_Helper_Posts extends W4PL_Core
 		);
 	}
 	public static function template_more($attr, $cont){
-		$read_more = !empty( $attr['text'] ) ? $attr['text'] : __( 'Continue reading &raquo;', W4PL_TD );
+		$read_more = !empty( $attr['text'] ) ? $attr['text'] : __( 'Continue reading &raquo;', 'w4pl' );
 		return sprintf( 
 			'<a class="read_more" href="%1$s" title="%3$s %2$s">%3$s</a>', 
 			get_permalink(), 
@@ -877,7 +877,7 @@ class W4PL_Helper_Posts extends W4PL_Core
 			'position'		=> '55',
 			'option_name' 	=> 'post_type',
 			'name' 			=> 'w4pl[post_type]',
-			'label' 		=> __('Post type', W4PL_TD),
+			'label' 		=> __('Post type', 'w4pl'),
 			'type' 			=> 'checkbox',
 			'option' 		=> self::post_type_options(),
 			'input_class'	=> 'w4pl_onchange_lfr'
@@ -890,7 +890,7 @@ class W4PL_Helper_Posts extends W4PL_Core
 				'position' 		=> '56',
 				'option_name' 	=> 'post_mime_type',
 				'name' 			=> 'w4pl[post_mime_type]',
-				'label' 		=> __('Post mime type', W4PL_TD),
+				'label' 		=> __('Post mime type', 'w4pl'),
 				'type' 			=> 'checkbox',
 				'option' 		=> $mime_type_options,
 				'desc' 			=> 'if displaying attachment, choose mime type to restrcit result to specific file types.'
@@ -901,14 +901,14 @@ class W4PL_Helper_Posts extends W4PL_Core
 			'position'		=> '60',
 			'option_name' 	=> 'post_status',
 			'name' 			=> 'w4pl[post_status]',
-			'label' 		=> __('Post status', W4PL_TD),
+			'label' 		=> __('Post status', 'w4pl'),
 			'type' 			=> 'checkbox',
 			'option' 		=> array(
-				'any' 			=> __('Any', W4PL_TD), 
-				'publish' 		=> __('Publish', W4PL_TD), 
-				'pending' 		=> __('Pending', W4PL_TD), 
-				'future' 		=> __('Future', W4PL_TD), 
-				'inherit' 		=> __('Inherit', W4PL_TD)
+				'any' 			=> __('Any', 'w4pl'), 
+				'publish' 		=> __('Publish', 'w4pl'), 
+				'pending' 		=> __('Pending', 'w4pl'), 
+				'future' 		=> __('Future', 'w4pl'), 
+				'inherit' 		=> __('Inherit', 'w4pl')
 			)
 		);
 
@@ -916,7 +916,7 @@ class W4PL_Helper_Posts extends W4PL_Core
 			'position'		=> '64',
 			'option_name' 	=> 'post_s',
 			'name' 			=> 'w4pl[post_s]',
-			'label' 		=> __('Search keywords', W4PL_TD),
+			'label' 		=> __('Search keywords', 'w4pl'),
 			'type' 			=> 'text',
 			'input_class' 	=> 'widefat',
 			'desc' 			=> 'search posts'
@@ -925,7 +925,7 @@ class W4PL_Helper_Posts extends W4PL_Core
 			'position'		=> '65',
 			'option_name' 	=> 'post__in',
 			'name' 			=> 'w4pl[post__in]',
-			'label' 		=> __('Include posts', W4PL_TD),
+			'label' 		=> __('Include posts', 'w4pl'),
 			'type' 			=> 'text',
 			'input_class' 	=> 'widefat',
 			'desc' 			=> 'comma separated post id'
@@ -934,7 +934,7 @@ class W4PL_Helper_Posts extends W4PL_Core
 			'position'		=> '66',
 			'option_name' 	=> 'post__not_in',
 			'name' 			=> 'w4pl[post__not_in]',
-			'label' 		=> __('Exclude posts', W4PL_TD),
+			'label' 		=> __('Exclude posts', 'w4pl'),
 			'type' 			=> 'text',
 			'input_class' 	=> 'widefat',
 			'desc' 			=> 'comma separated post id'
@@ -943,7 +943,7 @@ class W4PL_Helper_Posts extends W4PL_Core
 			'position'		=> '67',
 			'option_name' 	=> 'post_parent__in',
 			'name' 			=> 'w4pl[post_parent__in]',
-			'label' 		=> __('Post parent', W4PL_TD),
+			'label' 		=> __('Post parent', 'w4pl'),
 			'type' 			=> 'text',
 			'input_class' 	=> 'widefat',
 			'desc' 			=> 'display child posts. comma separated parent post ids'
@@ -952,7 +952,7 @@ class W4PL_Helper_Posts extends W4PL_Core
 			'position'		=> '68',
 			'option_name' 	=> 'author__in',
 			'name' 			=> 'w4pl[author__in]',
-			'label' 		=> __('Post author', W4PL_TD),
+			'label' 		=> __('Post author', 'w4pl'),
 			'type' 			=> 'text',
 			'input_class' 	=> 'widefat',
 			'desc' 			=> 'comma separated user/author ids'
@@ -962,7 +962,7 @@ class W4PL_Helper_Posts extends W4PL_Core
 			'position'		=> '69',
 			'option_name' 	=> 'exclude_self',
 			'name' 			=> 'w4pl[exclude_self]',
-			'label' 		=> __('Exclude self', W4PL_TD),
+			'label' 		=> __('Exclude self', 'w4pl'),
 			'type' 			=> 'radio',
 			'option' 		=> array('' => 'No', 'yes' => 'Yes')
 		);
@@ -970,7 +970,7 @@ class W4PL_Helper_Posts extends W4PL_Core
 			'position'		=> '69.1',
 			'option_name' 	=> 'child_of_self',
 			'name' 			=> 'w4pl[child_of_self]',
-			'label' 		=> __('Child of self', W4PL_TD),
+			'label' 		=> __('Child of self', 'w4pl'),
 			'type' 			=> 'radio',
 			'option' 		=> array('' => 'No', 'yes' => 'Yes'),
 			'desc' 			=> 'use current post as parent'
@@ -980,7 +980,7 @@ class W4PL_Helper_Posts extends W4PL_Core
 			'position'		=> '70',
 			'option_name' 	=> 'orderby',
 			'name' 			=> 'w4pl[orderby]',
-			'label' 		=> __('Orderby', W4PL_TD),
+			'label' 		=> __('Orderby', 'w4pl'),
 			'type' 			=> 'select',
 			'option' 		=> self::post_orderby_options( $options['post_type'] ),
 			'input_after'	=> '<div id="orderby_meta_key_wrap">Meta key: <input name="w4pl[orderby_meta_key]" type="text" value="'
@@ -990,7 +990,7 @@ class W4PL_Helper_Posts extends W4PL_Core
 			'position'		=> '71',
 			'option_name' 	=> 'order',
 			'name' 			=> 'w4pl[order]',
-			'label' 		=> __('Order', W4PL_TD),
+			'label' 		=> __('Order', 'w4pl'),
 			'type' 			=> 'radio',
 			'option' 		=> array('ASC' => 'ASC', 'DESC' => 'DESC')
 		);
@@ -1000,7 +1000,7 @@ class W4PL_Helper_Posts extends W4PL_Core
 			'position'		=> '76',
 			'option_name' 	=> 'limit',
 			'name' 			=> 'w4pl[limit]',
-			'label' 		=> __('Maximum items', W4PL_TD),
+			'label' 		=> __('Maximum items', 'w4pl'),
 			'type' 			=> 'text',
 			'desc2' 		=> 'maximum results to display in total, restrict number of items even while paginating'
 		);
@@ -1011,7 +1011,7 @@ class W4PL_Helper_Posts extends W4PL_Core
 				'position'		=> '77',
 				'option_name' 	=> 'offset',
 				'name' 			=> 'w4pl[offset]',
-				'label' 		=> __('Offset', W4PL_TD),
+				'label' 		=> __('Offset', 'w4pl'),
 				'type' 			=> 'text',
 				'desc2' 		=> 'skip given number of posts from beginning. while building lists using the same filters but to display on separate places, use offset to skip the previously displayed amount of posts'
 			);
@@ -1019,7 +1019,7 @@ class W4PL_Helper_Posts extends W4PL_Core
 				'position'		=> '75',
 				'option_name' 	=> 'posts_per_page',
 				'name' 			=> 'w4pl[posts_per_page]',
-				'label' 		=> __('Items per page', W4PL_TD),
+				'label' 		=> __('Items per page', 'w4pl'),
 				'type' 			=> 'text',
 				'placeholder'	=> get_option('posts_per_page'),
 				'desc' 			=> 'number of items to show per page
@@ -1033,7 +1033,7 @@ class W4PL_Helper_Posts extends W4PL_Core
 				'position' 		=> '95',
 				'option_name' 	=> 'groupby',
 				'name' 			=> 'w4pl[groupby]',
-				'label' 		=> __('Group by', W4PL_TD),
+				'label' 		=> __('Group by', 'w4pl'),
 				'type' 			=> 'select',
 				'option' 		=> self::post_groupby_options($options['post_type']),
 				'input_class'	=> 'w4pl_onchange_lfr'
@@ -1045,7 +1045,7 @@ class W4PL_Helper_Posts extends W4PL_Core
 					'position' 		=> '95.5',
 					'option_name' 	=> 'groupby_time',
 					'name' 			=> 'w4pl[groupby_time]',
-					'label' 		=> __('Group by Date', W4PL_TD),
+					'label' 		=> __('Group by Date', 'w4pl'),
 					'type' 			=> 'radio',
 					'option' 		=> array('post_date' => 'Publish date', 'post_modified' => 'Modified date'),
 					'desc2' 		=> 'which date we will use to caculate the group time'
@@ -1057,7 +1057,7 @@ class W4PL_Helper_Posts extends W4PL_Core
 					'position' 		=> '95.5',
 					'option_name' 	=> 'groupby_meta_key',
 					'name' 			=> 'w4pl[groupby_meta_key]',
-					'label' 		=> __('Group by "Custom field" name', W4PL_TD),
+					'label' 		=> __('Group by "Custom field" name', 'w4pl'),
 					'type' 			=> 'text'
 				);
 			}
@@ -1066,7 +1066,7 @@ class W4PL_Helper_Posts extends W4PL_Core
 				'position' 		=> '96',
 				'option_name' 	=> 'group_order',
 				'name' 			=> 'w4pl[group_order]',
-				'label' 		=> __('Group Order', W4PL_TD),
+				'label' 		=> __('Group Order', 'w4pl'),
 				'type' 			=> 'radio',
 				'option' 		=> array('' => 'None', 'ASC' => 'ASC', 'DESC' => 'DESC')
 			);

@@ -38,11 +38,11 @@ class W4PL_Helper_Date_Query extends W4PL_Core
 		$html .= '<table id="w4pl_date_query_table" class="widefat wff_clone_table">
 			<thead>
 				<tr>
-					<th class="column">'. 	__('Column', W4PL_TD) 		.'</th>
-					<th class="key">'. 		__('Key', W4PL_TD) 		.'</th>
-					<th class="compare">'. 	__('Compare', W4PL_TD) 	.'</th>
-					<th class="value">'. 	__('Value', W4PL_TD) 	.'</th>
-					<th class="action">'. 	__('Action', W4PL_TD) 	.'</th>
+					<th class="column">'. 	__('Column', 'w4pl') 		.'</th>
+					<th class="key">'. 		__('Key', 'w4pl') 		.'</th>
+					<th class="compare">'. 	__('Compare', 'w4pl') 	.'</th>
+					<th class="value">'. 	__('Value', 'w4pl') 	.'</th>
+					<th class="action">'. 	__('Action', 'w4pl') 	.'</th>
 				</tr>
 			</thead>
 			<tbody class="wff_clone_to">';
@@ -67,16 +67,16 @@ class W4PL_Helper_Date_Query extends W4PL_Core
 		</div>';
 
 		$html .= '
-		<p style="text-align:right;"><a href="#" class="button wff_clone_btn">'. __('+ Add', W4PL_TD) .'</a></p>
+		<p style="text-align:right;"><a href="#" class="button wff_clone_btn">'. __('+ Add', 'w4pl') .'</a></p>
 
 		<table class="csshide"><tbody class="wff_clone_from">'. $this->get_date_query_form() .'</table>';
 
 		$html .= w4pl_form_field_html( array(
 			'field_wrap' 	=> false,
 			'name' 			=> 'w4pl[date_query_relation]',
-			'label' 		=> __('Relation', W4PL_TD),
+			'label' 		=> __('Relation', 'w4pl'),
 			'type' 			=> 'radio',
-			'option' 		=> array('OR' => __('OR', W4PL_TD), 'AND' => __('AND', W4PL_TD)),
+			'option' 		=> array('OR' => __('OR', 'w4pl'), 'AND' => __('AND', 'w4pl')),
 			'value' 		=> $post_data['date_query_relation']
 		));
 
@@ -169,7 +169,7 @@ class W4PL_Helper_Date_Query extends W4PL_Core
 			))
 			. '</td>'
 			. '<td class="w4pl_date_query_action_cell">
-				<span class="wff_clone_remove_btn button">'. __('Remove', W4PL_TD) .'</span>
+				<span class="wff_clone_remove_btn button">'. __('Remove', 'w4pl') .'</span>
 			</td>'
 			.'
 		</tr>';

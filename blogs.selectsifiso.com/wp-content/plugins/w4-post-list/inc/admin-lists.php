@@ -32,7 +32,7 @@ class W4PL_Lists_Admin extends W4PL_Core
 		add_action( 'edit_form_after_title', array($this, 'list_options_meta_box') );
 
 		// add plugin news metabox one right side
-		add_meta_box( "w4pl_news_meta_box", "Plugin Updates", array($this, 'news_meta_box'), W4PL_SLUG, "side", 'core');
+		add_meta_box( "w4pl_news_meta_box", __('Plugin Updates', 'w4pl'), array($this, 'news_meta_box'), W4PL_SLUG, "side", 'core');
 
 		// enqueue script files, print css on header and print js on footer
 		add_action('admin_head', array( $this, 'admin_head') );
@@ -134,15 +134,15 @@ class W4PL_Lists_Admin extends W4PL_Core
 		);
 
 		$messages[W4PL_SLUG] = array(
-			 1 => sprintf( __('List updated. Shortcode %s', W4PL_TD), $input_attr ),
+			 1 => sprintf( __('List updated. Shortcode %s', 'w4pl'), $input_attr ),
 			 2 => '',
 			 3 => '',
 			 4 => __('List updated.'),
 			 5 => '',
-			 6 => sprintf( __('List published. Shortcode %s', W4PL_TD), $input_attr ),
+			 6 => sprintf( __('List published. Shortcode %s', 'w4pl'), $input_attr ),
 			 7 => __('List saved.'),
-			 8 => sprintf( __('List submitted. Shortcode %s', W4PL_TD), $input_attr ),
-			 9 => sprintf( __('List scheduled. Shortcode %s', W4PL_TD), $input_attr ),
+			 8 => sprintf( __('List submitted. Shortcode %s', 'w4pl'), $input_attr ),
+			 9 => sprintf( __('List scheduled. Shortcode %s', 'w4pl'), $input_attr ),
 			10 => ''
 		);
 		return $messages;
@@ -237,7 +237,12 @@ class W4PL_Lists_Admin extends W4PL_Core
 		global $wp_post_types;
 		$post_labels = array();
 		foreach( $post_types as $post_type ){
-			$post_labels[] = $wp_post_types[$post_type]->label;
+			if( isset($wp_post_types[$post_type]) ){
+				$post_labels[] = $wp_post_types[$post_type]->label;
+			}
+			else{
+				$post_labels[] = __('Unregistered');
+			}
 		}
 		return implode(', ', $post_labels);
 	}
@@ -261,9 +266,8 @@ class W4PL_Lists_Admin extends W4PL_Core
 			$request = wp_remote_request('http://w4dev.com/w4pl.txt');
 			$content = wp_remote_retrieve_body($request);
 
-			if( is_wp_error( $content ) ){
-				$output = get_option( $transient_old );
-			}
+			if( is_wp_error( $content ) )
+			{ $output = get_option( $transient_old ); }
 			else
 			{
 				$output = $content;
@@ -276,10 +280,10 @@ class W4PL_Lists_Admin extends W4PL_Core
 
 		$output = preg_replace( '/[\n]/', '<br />', $output );
 
-		if( !$echo )
-			return $output;
+		if( ! $echo )
+		{ return $output; }
 		else
-			echo $output;
+		{ echo $output; }
 	}
 }
 

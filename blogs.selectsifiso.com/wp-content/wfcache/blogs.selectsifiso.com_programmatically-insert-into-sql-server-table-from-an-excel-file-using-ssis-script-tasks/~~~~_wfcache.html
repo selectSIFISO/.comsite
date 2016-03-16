@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>Programmatically Insert into SQL Server Table from an Excel File Using SSIS Script Tasks | select SIFISO</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="" />
+<!--[if lt IE 9]>
+<script src="http://blogs.selectsifiso.com/wp-content/themes/iconic-one/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+
+<!-- BEGIN Metadata added by the Add-Meta-Tags WordPress plugin -->
+<meta name="robots" content="index,follow,ssis,c#,business intelligence,package" />
+<meta name="description" content="Abstract This article explains how to Programmatically create an SQL Server Integration Services (SSIS) package with a Script Task component. Requirements Microsoft Visual Studio 2008 (or later editions) SQL Server 2005 (or later editions) AdventureWorks2008 database (downloadable dat..." />
+<meta name="keywords" content="creating ssis packages, excel workbooks, oledb connection, adventureworks2008r2, c#, c# programming language, create ssis package, destination component, dynamic ssis package, excel, excel document, excel source, ole db, oledb destination, oledb source, sql server 2008, sql server integration services, ssis, workbook" />
+<!-- END Metadata added by the Add-Meta-Tags WordPress plugin -->
+
+    <!-- PVC Template -->
+    <script type="text/template" id="pvc-stats-view-template">
+	<% if ( total_view > 0 ) { %>
+		<%= total_view %> <%= total_view > 1 ? "total views" : "total view" %>,
+		<% if ( today_view > 0 ) { %>
+			<%= today_view %> <%= today_view > 1 ? "views today" : "view today" %>
+		<% } else { %>
+		no views today		<% } %>
+	<% } else { %>
+	No views yet	<% } %>
+	</script>
+    <link rel="alternate" type="application/rss+xml" title="select SIFISO &raquo; Feed" href="http://blogs.selectsifiso.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="select SIFISO &raquo; Comments Feed" href="http://blogs.selectsifiso.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="select SIFISO &raquo; Programmatically Insert into SQL Server Table from an Excel File Using SSIS Script Tasks Comments Feed" href="http://blogs.selectsifiso.com/programmatically-insert-into-sql-server-table-from-an-excel-file-using-ssis-script-tasks/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/blogs.selectsifiso.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=06820f499ad3078ba51bb8a3026295a9"}};
+			!function(a,b,c){function d(a){var c,d=b.createElement("canvas"),e=d.getContext&&d.getContext("2d"),f=String.fromCharCode;return e&&e.fillText?(e.textBaseline="top",e.font="600 32px Arial","flag"===a?(e.fillText(f(55356,56806,55356,56826),0,0),d.toDataURL().length>3e3):"diversity"===a?(e.fillText(f(55356,57221),0,0),c=e.getImageData(16,16,1,1).data.toString(),e.fillText(f(55356,57221,55356,57343),0,0),c!==e.getImageData(16,16,1,1).data.toString()):("simple"===a?e.fillText(f(55357,56835),0,0):e.fillText(f(55356,57135),0,0),0!==e.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag"),unicode8:d("unicode8"),diversity:d("diversity")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag&&c.supports.unicode8&&c.supports.diversity||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='validate-engine-css-css'  href='http://blogs.selectsifiso.com/wp-content/plugins/wysija-newsletters/css/validationEngine.jquery.css?ver=06820f499ad3078ba51bb8a3026295a9' type='text/css' media='all' />
+<link rel='stylesheet' id='oss-social-sharing-front-css'  href='http://blogs.selectsifiso.com/wp-content/plugins/simplified-social-share/oss-social-sharing/assets/css/oss-social-sharing-front.css?ver=06820f499ad3078ba51bb8a3026295a9' type='text/css' media='all' />
+<link rel='stylesheet' id='oss-share-widget-style-css'  href='https://sharecdn.social9.com/v2/css/os-share-widget-style.css?ver=06820f499ad3078ba51bb8a3026295a9' type='text/css' media='all' />
+<link rel='stylesheet' id='cptch_stylesheet-css'  href='http://blogs.selectsifiso.com/wp-content/plugins/captcha/css/style.css?ver=06820f499ad3078ba51bb8a3026295a9' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css'  href='http://blogs.selectsifiso.com/wp-includes/css/dashicons.min.css?ver=06820f499ad3078ba51bb8a3026295a9' type='text/css' media='all' />
+<link rel='stylesheet' id='cptch_desktop_style-css'  href='http://blogs.selectsifiso.com/wp-content/plugins/captcha/css/desktop_style.css?ver=06820f499ad3078ba51bb8a3026295a9' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='http://blogs.selectsifiso.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=06820f499ad3078ba51bb8a3026295a9' type='text/css' media='all' />
+<link rel='stylesheet' id='a3-pvc-style-css'  href='http://blogs.selectsifiso.com/wp-content/plugins/page-views-count/assets/css/style.min.css?ver=06820f499ad3078ba51bb8a3026295a9' type='text/css' media='all' />
+<link rel='stylesheet' id='themonic-fonts-css'  href='http://fonts.googleapis.com/css?family=Ubuntu:400,700&#038;subset=latin,latin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='themonic-style-css'  href='http://blogs.selectsifiso.com/wp-content/themes/iconic-one/style.css?ver=06820f499ad3078ba51bb8a3026295a9' type='text/css' media='all' />
+<link rel='stylesheet' id='custom-style-css'  href='http://blogs.selectsifiso.com/wp-content/themes/iconic-one/custom.css?ver=06820f499ad3078ba51bb8a3026295a9' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='themonic-ie-css'  href='http://blogs.selectsifiso.com/wp-content/themes/iconic-one/css/ie.css?ver=06820f499ad3078ba51bb8a3026295a9' type='text/css' media='all' />
+<![endif]-->
+<link rel='stylesheet' id='tablepress-default-css'  href='http://blogs.selectsifiso.com/wp-content/plugins/tablepress/css/default.min.css?ver=06820f499ad3078ba51bb8a3026295a9' type='text/css' media='all' />
+<link rel='stylesheet' id='counterize_stylesheet-css'  href='http://blogs.selectsifiso.com/wp-content/plugins/counterize/counterize.css.php?ver=06820f499ad3078ba51bb8a3026295a9' type='text/css' media='all' />
+<script type='text/javascript' src='http://blogs.selectsifiso.com/wp-includes/js/jquery/jquery.js?ver=06820f499ad3078ba51bb8a3026295a9'></script>
+<script type='text/javascript' src='http://blogs.selectsifiso.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=06820f499ad3078ba51bb8a3026295a9'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var cptch_vars = {"nonce":"bd324e9ed7","ajaxurl":"http:\/\/blogs.selectsifiso.com\/wp-admin\/admin-ajax.php","enlarge":"0"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://blogs.selectsifiso.com/wp-content/plugins/captcha/js/front_end_script.js?ver=06820f499ad3078ba51bb8a3026295a9'></script>
+<script type='text/javascript' src='http://d1n0x3qji82z53.cloudfront.net/src-min-noconflict/ace.js?ver=06820f499ad3078ba51bb8a3026295a9'></script>
+<script type='text/javascript' src='http://blogs.selectsifiso.com/wp-includes/js/underscore.min.js?ver=06820f499ad3078ba51bb8a3026295a9'></script>
+<script type='text/javascript' src='http://blogs.selectsifiso.com/wp-includes/js/backbone.min.js?ver=06820f499ad3078ba51bb8a3026295a9'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var vars = {"api_url":"http:\/\/blogs.selectsifiso.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://blogs.selectsifiso.com/wp-content/plugins/page-views-count/assets/js/pvc.backbone.min.js?ver=06820f499ad3078ba51bb8a3026295a9'></script>
+<script type='text/javascript' src='http://blogs.selectsifiso.com/wp-content/plugins/counterize/counterize.js.php?ver=06820f499ad3078ba51bb8a3026295a9'></script>
+<link rel='https://api.w.org/' href='http://blogs.selectsifiso.com/wp-json/' />
+<link rel='prev' title='Programmatically Transfer SQL Server Objects (Schema) Using C#' href='http://blogs.selectsifiso.com/programmatically-transfer-sql-server-objects-schema-using-c/' />
+<link rel='next' title='Download &#038; Save SSIS Packages from SQL Server 2008 Instance to XML Format' href='http://blogs.selectsifiso.com/download-save-ssis-packages-from-sql-server-2008-instance-to-xml-format/' />
+
+<link rel="canonical" href="http://blogs.selectsifiso.com/programmatically-insert-into-sql-server-table-from-an-excel-file-using-ssis-script-tasks/" />
+<link rel='shortlink' href='http://blogs.selectsifiso.com/?p=376' />
+<link rel="alternate" type="application/json+oembed" href="http://blogs.selectsifiso.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fblogs.selectsifiso.com%2Fprogrammatically-insert-into-sql-server-table-from-an-excel-file-using-ssis-script-tasks%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://blogs.selectsifiso.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fblogs.selectsifiso.com%2Fprogrammatically-insert-into-sql-server-table-from-an-excel-file-using-ssis-script-tasks%2F&#038;format=xml" />
+<meta property="og:locale" content="en_US" />
+<link rel="publisher" href="https://plus.google.com/u/1/103041474356156114889" />
+<meta name="google-site-verification" content="4GM7tP12ESZ2vVeffPTZGhIJ6Z1KrA44j-EpxBbzk5Q" />
+<meta name="msvalidate.01" content="79A618AD90CC58A6052A24AA79F83725" />
+<meta name="alexaVerifyID" content="B8h6vtsLdGOfpu2c9ARG5Qfcc78" />
+<meta name="yandex-verification" content="69149779cf0fd27c" />
+<meta name="p:domain_verify" content="" />
+<meta property="og:site_name" content="select SIFISO" />
+<meta property="article:publisher" content="https://www.facebook.com/pages/select-SIFISO/652751321424822?ref=bookmarks" />
+<meta property="article:author" content="https://www.facebook.com/pages/select-SIFISO/652751321424822?ref=bookmarks" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:site" content="@@selectsifiso"/>
+<meta name="twitter:domain" content="@selectsifiso"/>
+<meta name="twitter:creator" content="@@selectsifiso"/>    
+<meta name="robots" content="index, follow" />
+<meta name="revisit-after" content="21 days" />
+<meta name="creator" content="Name,Designer,Email Address,or Company" />
+<meta name="publisher" content="Designer, Company or Website Name" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Programmatically Insert into SQL Server Table from an Excel File Using SSIS Script Tasks" />
+<meta property="og:description" content="Abstract This article explains how to Programmatically create an SQL Server Integration Services (SSIS) package with a Script Task component. Require" />
+<meta property="og:url" content="http://blogs.selectsifiso.com/programmatically-insert-into-sql-server-table-from-an-excel-file-using-ssis-script-tasks/" />
+<meta property="article:section" content="Creating SSIS Packages"  />
+<meta property="article:published_time" content="2012-01-30 13:50:50"/>
+<meta property="article:modified_time" content="2012-01-30 13:55:38" />
+<meta property="og:updated_time" content="2012-01-30 13:55:38" />
+<meta property="og:image" content="" />
+<meta property="og:image" content="" />
+<meta name="twitter:image:src" content="" />
+<meta itemprop="name" content="Programmatically Insert into SQL Server Table from an Excel File Using SSIS Script Tasks">
+<meta itemprop="description" content="Abstract This article explains how to Programmatically create an SQL Server Integration Services (SSIS) package with a Script Task component. Require">
+<meta itemprop="image" content="" >
+<meta name="classification" content="AdventureWorks2008R2, C#, C# programming language, Create SSIS Package, Destination Component, Dynamic SSIS Package, Excel, Excel Document, Excel Source, OLE DB, OLEDB Destination, OLEDB Source, SQL Server 2008, SQL Server Integration Services, SSIS, Workbook" />
+<meta name="distribution" content="Creating SSIS Packages" />
+<meta name="rating" content="Creating SSIS Packages" />
+<style type="text/css">
+#author-bio-box {
+	width:632px;
+	background: #;
+	border: 1px solid #bbb;
+	box-shadow: 5px 5px 2px #888;
+	padding: 5px;
+}
+#author-bio-box img {
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 2px;
+}
+#author-bio-box .author-name {
+	font-weight: bold;
+	margin: 0px;
+	font-size: 14px;
+}
+#author-bio-box p {
+	font-size: 10px;
+	line-height: 14px;
+}
+#author-bio-box thead th {
+	border: 0;
+}
+#author-bio-box tbody {
+	border: 0;
+}
+.bio-spacer { min-height:44px; padding: 1px; display: block; clear: both; border:1px;}
+.bio-socials {
+	border-top:solid 1px;
+	border-bottom:none;
+	border-left:none;
+	border-right:none;
+	width: 628px;
+	height: 32px;
+	clear: both;
+}
+</style></head>
+<body class="single single-post postid-376 single-format-standard custom-font-enabled">
+<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header" role="banner">
+					
+		<div class="themonic-logo">
+        <a href="http://blogs.selectsifiso.com/" title="select SIFISO" rel="home"><img src="http://blogs.selectsifiso.com/wp-content/uploads/2015/09/selectSIFISOforBlogsNew.png" alt="select SIFISO"></a>
+		</div>
+		
+		<div class="socialmedia">
+							<a href="http://default_value" target="_blank"><img src="http://blogs.selectsifiso.com/wp-content/themes/iconic-one/img/twitter.png" alt="Follow us on Twitter"/></a> 
+											<a href="http://default_value" target="_blank"><img src="http://blogs.selectsifiso.com/wp-content/themes/iconic-one/img/facebook.png" alt="Follow us on Facebook"/></a>
+											<a href="http://default_value" rel="author" target="_blank"><img src="http://blogs.selectsifiso.com/wp-content/themes/iconic-one/img/gplus.png" alt="Follow us on Google Plus"/></a>
+									<a class="rss" href="https://www.linkedin.com/company/select-sifiso?trk=biz-companies-cym" target="_blank"><img src="http://blogs.selectsifiso.com/wp-content/uploads/2015/05/linkedin_321.png" alt="Connect with us on LinkedIn"/></a>			
+									<a class="rss" href="https://www.youtube.com/channel/UCjloZMqHJaRiXXlnt3y7ZKQ" target="_blank"><img src="http://blogs.selectsifiso.com/wp-content/uploads/2015/05/youtube_logo.png" alt="Tune into our YouTube channel"/></a>			
+									<a class="rss" href="http://default_value" target="_blank"><img src="http://blogs.selectsifiso.com/wp-content/themes/iconic-one/img/rss.png" alt="Follow us on rss"/></a>			
+						<div class="widget widget_search">
+				<form role="search" method="get" id="searchform" class="searchform" action="http://blogs.selectsifiso.com/">
+				<div>
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Search" />
+				</div>
+			</form>			</div>
+		</div>
+		
+
+		
+		<nav id="site-navigation" class="themonic-nav" role="navigation">
+			<a class="assistive-text" href="#content" title="Skip to content">Skip to content</a>
+			<ul id="menu-top" class="nav-menu"><li id="menu-item-11" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11"><a title="Homepage of select SIFISO Blogs" href="http://www.blogs.selectsifiso.com/">Home</a></li>
+<li id="menu-item-790" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-790"><a title="About select SIFISO Blogs" href="http://blogs.selectsifiso.com/about/">About</a></li>
+<li id="menu-item-793" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-793"><a title="Blog Posts Archive" href="http://blogs.selectsifiso.com/articles/">Articles</a></li>
+<li id="menu-item-741" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-741"><a title="Contributors to select SIFISO Blogs" href="http://blogs.selectsifiso.com/contributors/">Contributors</a></li>
+</ul>		</nav><!-- #site-navigation -->
+		<div class="clear"></div>
+	</header><!-- #masthead -->
+
+	<div id="main" class="wrapper">	<div id="primary" class="site-content">
+		<div id="content" role="main">
+
+			
+				
+	<article id="post-376" class="post-376 post type-post status-publish format-standard hentry category-creating-ssis-packages category-excel-workbook category-oledb-connection tag-adventureworks2008r2 tag-c tag-c-programming-language tag-create-ssis-package tag-destination-component tag-dynamic-ssis-package tag-excel tag-excel-document tag-excel-source tag-ole-db tag-oledb-destination tag-oledb-source tag-sql-server-2008 tag-sql-server-integration-services tag-ssis tag-workbook">
+				<header class="entry-header">
+						<h1 class="entry-title">Programmatically Insert into SQL Server Table from an Excel File Using SSIS Script Tasks</h1>
+									
+	<div class="below-title-meta">
+		<div class="adt">
+		By        <span class="author">
+         <a href="http://blogs.selectsifiso.com/author/sifiso-ndlovu/" title="Posts by Sifiso Ndlovu" rel="author">Sifiso Ndlovu</a>        </span>
+         <span class="meta-sep">|</span> 
+         January 30, 2012 
+         </div>
+		 <div class="adt-comment">
+		 <a class="link-comments" href="http://blogs.selectsifiso.com/programmatically-insert-into-sql-server-table-from-an-excel-file-using-ssis-script-tasks/#comments">2 Comments</a> 
+         </div>       
+     </div><!-- below title meta end -->
+			
+						
+			</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<div  class="oss_horizontal_share oss_title_replace" data-share-titles="Programmatically Insert into SQL Server Table from an Excel File Using SSIS Script Tasks" data-share-description="Abstract
+
+This article explains how to Programmatically create an SQL Server Integration Services " data-share-imageurl=""  data-share-url="http://blogs.selectsifiso.com/programmatically-insert-into-sql-server-table-from-an-excel-file-using-ssis-script-tasks/"></div><p><strong>Abstract</strong></p>
+<p><em>This article explains how to Programmatically create an SQL Server Integration Services (SSIS) package with a <a href="http://msdn.microsoft.com/en-us/library/ms141752.aspx">Script Task</a> component.</em></p>
+<p><strong>Requirements</strong></p>
+<ul>
+<li><em><a href="http://www.microsoft.com/downloads/en/details.aspx?FamilyID=17319eb4-299c-43b8-a360-a1c2bd6a421b">Microsoft Visual Studio 2008 (or later editions)</a></em><em> </em></li>
+<li><em><a href="http://www.microsoft.com/sqlserver/2008/en/us/overview.aspx">SQL Server 2005 (or later editions)</a></em></li>
+<li><em>AdventureWorks2008 database (downloadable database file available <a href="http://msftdbprodsamples.codeplex.com/">here</a>)</em></li>
+</ul>
+<p><strong>Article</strong></p>
+<p>If the above requirements are all met, we will begin by launching Microsoft Visual Studio edition.</p>
+<p>Create a new project <a href="http://msdn.microsoft.com/en-us/library/ms138028.aspx">Integration Services Project</a> which is located under <a href="http://msdn.microsoft.com/en-us/library/ms173767.aspx">Business Intelligence Projects</a>.</p>
+<p>After you have named the new project, proceed to click and drag the <a href="http://msdn.microsoft.com/en-us/library/ms141752.aspx">script task</a> in Control Flow pane of the new package.</p>
+<p>Right click the script task and click on &#8220;Edit&#8221;</p>
+<p>Under the Script Task Editor change the &#8220;ScriptLanguage&#8221; to &#8220;Microsoft Visual C# 2008&#8221;.</p>
+<p>In Project Explorer import relevant references and ensure that you have declared namespaces as below:</p>
+<p><a>using</a> <a href="http://msdn.microsoft.com/en-us/library/system.aspx">System</a>;<br />
+<a>using</a> <a href="http://msdn.microsoft.com/en-us/library/system.data.aspx">System.Data</a>;<br />
+<a>using</a> <a href="http://msdn.microsoft.com/en-us/library/system.data.sql.aspx">System.Data.Sql</a>;<br />
+<a>using</a> <a href="http://msdn.microsoft.com/en-us/library/system.data.sqltypes.aspx">System.Data.SqlTypes</a>;<br />
+<a>using</a> <a href="http://msdn.microsoft.com/en-us/library/system.data.sqlclient.aspx">System.Data.SqlClient</a>;<br />
+<a>using</a> <a href="http://msdn.microsoft.com/en-us/library/system.io.aspx">System.IO</a>;<br />
+<a>using</a> <a href="http://msdn.microsoft.com/en-us/library/system.windows.forms.aspx">System.Windows.Forms</a>;<br />
+<a>using</a> <a href="http://msdn.microsoft.com/en-us/library/microsoft.office.interop.excel.aspx">Microsoft.Office.Interop.Excel</a>;</p>
+<p>After declarations, create an instance of application, workbook, workshet and range:<br />
+<a style="text-decoration: none; font-size: 10pt; color: #9900ff; font-family: Calibri;"><br />
+public void Main()<br />
+{<br />
+Excel.Application xlApp;<br />
+Excel.Workbook xlWorkBook;<br />
+Excel.Worksheet xlWorkSheet;<br />
+Excel.Range range;</p>
+<p>string INS_str =&#8221;&#8221;;</p>
+<p>string str;<br />
+double str2;<br />
+string str3;<br />
+int rCnt = 0;<br />
+int cCnt = 0;</p>
+<p>xlApp = new Excel.ApplicationClass();<br />
+xlWorkBook = xlApp.Workbooks.Open(&#8220;C:\\your_excel_file.xls&#8221;, 0, true, 5, &#8220;&#8221;, &#8220;&#8221;, true, Microsoft.Office.Interop.Excel.XlPlatform.xlWindows, &#8220;\t&#8221;, false, false, 0, true, 1, 0);<br />
+xlWorkSheet = (Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);</p>
+<p>range = xlWorkSheet.UsedRange;</a></p>
+<p>Establish a connection to your SQL Server instance:<br />
+<a style="text-decoration: none; font-size: 10pt; color: #9900ff; font-family: Calibri;"></p>
+<p>SqlConnection connection = new SqlConnection(string.Format(&#8220;Data Source={0};Initial Catalog={1};Integrated Security=SSPI;&#8221;, &#8220;your_sql_server&#8221;, &#8220;your_sql_table&#8221;));<br />
+SqlCommand command;<br />
+connection.Open();</p>
+<p>for (rCnt = 2; rCnt {<br />
+for (cCnt = 1; cCnt 1)<br />
+{<br />
+if (str.Contains(&#8220;&#8216;&#8221;))<br />
+{<br />
+INS_str = INS_str + &#8220;&#8216;&#8221; + str.Replace(&#8220;&#8216;&#8221;, &#8220;&#8221;&#8221;) + &#8220;&#8216;,&#8221;;<br />
+}<br />
+else<br />
+{<br />
+INS_str = INS_str + &#8220;&#8216;&#8221; + str + &#8220;&#8216;,&#8221;;<br />
+}<br />
+}<br />
+else<br />
+{<br />
+if (str.Contains(&#8220;&#8216;&#8221;))<br />
+{<br />
+INS_str = &#8220;&#8216;&#8221; + str.Replace(&#8220;&#8216;&#8221;, &#8220;&#8221;&#8221;) + &#8220;&#8216;,&#8221;;<br />
+}<br />
+else<br />
+{<br />
+INS_str = &#8220;&#8216;&#8221; + str + &#8220;&#8216;,&#8221;;<br />
+}<br />
+}<br />
+}</a></p>
+<p>Exception handling:<br />
+<a style="text-decoration: none; font-size: 10pt; color: #9900ff; font-family: Calibri;"><br />
+catch (Exception exc)<br />
+{<br />
+if (exc.Message.Contains(&#8220;&#8221;))<br />
+{<br />
+str2 = Convert.ToDouble((range.Cells[rCnt, cCnt] as Excel.Range).Value2);<br />
+str3 = Convert.ToString(str2);<br />
+}<br />
+}</p>
+<p>}<br />
+}</p>
+<p>xlWorkBook.Close(true, null, null);<br />
+xlApp.Quit();</p>
+<p>releaseObject(xlWorkSheet);<br />
+releaseObject(xlWorkBook);<br />
+releaseObject(xlApp);<br />
+}<br />
+private void releaseObject(object obj)<br />
+{<br />
+try<br />
+{<br />
+System.Runtime.InteropServices.Marshal.ReleaseComObject(obj);<br />
+obj = null;<br />
+}<br />
+catch (Exception ex)<br />
+{<br />
+obj = null;<br />
+MessageBox.Show(&#8220;Unable to release the Object &#8221; + ex.ToString());<br />
+}<br />
+finally<br />
+{<br />
+GC.Collect();<br />
+}<br />
+}</p>
+<p>We then save the package into a file system.</p>
+<p><a style="text-decoration: none; font-size: 10pt; color: #9900ff; font-family: Calibri;">Dts.TaskResult = (int)ScriptResults.Success;</a><br />
+<a style="text-decoration: none; font-size: 10pt; color: #9900ff; font-family: Calibri;">SIFISO_app.SaveToXml(&#8220;C:\\TEMP\\pkg_Read_Excel_Into_Csharp.dtsx&#8221;, p, null);</a></p>
+<p><strong>Conclusion</strong></p>
+<p>It&#8217;s that simple!</p>
+<p>You can now execute your script task and the data will be inserted into your destination table.
+<div class="pvc_clear"></div>
+<p id="pvc_stats_376" class="pvc_stats pvc_load_by_ajax_update" element-id="376"><img src="http://blogs.selectsifiso.com/wp-content/plugins/page-views-count/ajax-loader.gif" border=0 /></p>
+<div class="pvc_clear"></div>
+<div  class="oss_horizontal_share oss_title_replace" data-share-titles="Programmatically Insert into SQL Server Table from an Excel File Using SSIS Script Tasks" data-share-description="Abstract
+
+This article explains how to Programmatically create an SQL Server Integration Services " data-share-imageurl="" data-share-url="http://blogs.selectsifiso.com/programmatically-insert-into-sql-server-table-from-an-excel-file-using-ssis-script-tasks/" ></div><div id="author-bio-box"><img src="http://blogs.selectsifiso.com/wp-content/uploads/sw_ndlovu-144x150.png" width="77" height="80" alt="" class="avatar avatar-80 wp-user-avatar wp-user-avatar-80 photo avatar-default" /><span class="author-name"> Sifiso Ndlovu (<a href="http://blogs.selectsifiso.com/author/sifiso-ndlovu/">45 Posts</a>)</span><p></p><div class="bio-socials"><a href="http://www.blogs.selectsifiso.com" target="_blank"><img src="http://blogs.selectsifiso.com/wp-content/plugins/social-autho-bio/images/Wordpress.png"></a></div></div><br/>					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+		<span>Category: <a href="http://blogs.selectsifiso.com/category/creating-ssis-packages/" rel="category tag">Creating SSIS Packages</a> <a href="http://blogs.selectsifiso.com/category/excel-workbook/" rel="category tag">Excel Workbooks</a> <a href="http://blogs.selectsifiso.com/category/oledb-connection/" rel="category tag">OLEDB Connection</a></span> <span>Tags: <a href="http://blogs.selectsifiso.com/tag/adventureworks2008r2/" rel="tag">AdventureWorks2008R2</a>, <a href="http://blogs.selectsifiso.com/tag/c/" rel="tag">C#</a>, <a href="http://blogs.selectsifiso.com/tag/c-programming-language/" rel="tag">C# programming language</a>, <a href="http://blogs.selectsifiso.com/tag/create-ssis-package/" rel="tag">Create SSIS Package</a>, <a href="http://blogs.selectsifiso.com/tag/destination-component/" rel="tag">Destination Component</a>, <a href="http://blogs.selectsifiso.com/tag/dynamic-ssis-package/" rel="tag">Dynamic SSIS Package</a>, <a href="http://blogs.selectsifiso.com/tag/excel/" rel="tag">Excel</a>, <a href="http://blogs.selectsifiso.com/tag/excel-document/" rel="tag">Excel Document</a>, <a href="http://blogs.selectsifiso.com/tag/excel-source/" rel="tag">Excel Source</a>, <a href="http://blogs.selectsifiso.com/tag/ole-db/" rel="tag">OLE DB</a>, <a href="http://blogs.selectsifiso.com/tag/oledb-destination/" rel="tag">OLEDB Destination</a>, <a href="http://blogs.selectsifiso.com/tag/oledb-source/" rel="tag">OLEDB Source</a>, <a href="http://blogs.selectsifiso.com/tag/sql-server-2008/" rel="tag">SQL Server 2008</a>, <a href="http://blogs.selectsifiso.com/tag/sql-server-integration-services/" rel="tag">SQL Server Integration Services</a>, <a href="http://blogs.selectsifiso.com/tag/ssis/" rel="tag">SSIS</a>, <a href="http://blogs.selectsifiso.com/tag/workbook/" rel="tag">Workbook</a></span> 
+           						</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+				<nav class="nav-single">
+					<div class="assistive-text">Post navigation</div>
+					<span class="nav-previous"><a href="http://blogs.selectsifiso.com/programmatically-transfer-sql-server-objects-schema-using-c/" rel="prev"><span class="meta-nav">&larr;</span> Programmatically Transfer SQL Server Objects (Schema) Using C#</a></span>
+					<span class="nav-next"><a href="http://blogs.selectsifiso.com/download-save-ssis-packages-from-sql-server-2008-instance-to-xml-format/" rel="next">Download &#038; Save SSIS Packages from SQL Server 2008 Instance to XML Format <span class="meta-nav">&rarr;</span></a></span>
+				</nav><!-- .nav-single -->
+
+				
+<div id="comments" class="comments-area">
+
+	
+			<h2 class="comments-title">
+			2 thoughts on &ldquo;<span>Programmatically Insert into SQL Server Table from an Excel File Using SSIS Script Tasks</span>&rdquo;		</h2>
+
+		<ol class="commentlist">
+				<li class="comment even thread-even depth-1" id="li-comment-15866">
+		<article id="comment-15866" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img src="http://blogs.selectsifiso.com/wp-content/uploads/sw_ndlovu-144x150.png" width="30" height="30" alt="" class="avatar avatar-30wp-user-avatar wp-user-avatar-30 alignnone photo avatar-default" /><cite class="fn">Dnyaneshwar </cite><a href="http://blogs.selectsifiso.com/programmatically-insert-into-sql-server-table-from-an-excel-file-using-ssis-script-tasks/#comment-15866"><time datetime="2012-12-11T05:42:04+00:00">December 11, 2012</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hi Sifiso,</p>
+<p>I am new to C#. I used above mentioned code in script task. However I am getting syntax errors in for loop. I am not sure where am I doing wrong. Could you please elaborate what exactly is happening in this for block? Thanks.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+				<a rel='nofollow' class='comment-reply-link' href='http://blogs.selectsifiso.com/programmatically-insert-into-sql-server-table-from-an-excel-file-using-ssis-script-tasks/?replytocom=15866#respond' onclick='return addComment.moveForm( "comment-15866", "15866", "respond", "376" )' aria-label='Reply to Dnyaneshwar'>Reply</a> <span>&darr;</span>			</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-13433">
+		<article id="comment-13433" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img src="http://blogs.selectsifiso.com/wp-content/uploads/sw_ndlovu-144x150.png" width="30" height="30" alt="" class="avatar avatar-30wp-user-avatar wp-user-avatar-30 alignnone photo avatar-default" /><cite class="fn"><a href='http://parchain.co.id/' rel='external nofollow' class='url'>Wireless Portable Sound System</a> </cite><a href="http://blogs.selectsifiso.com/programmatically-insert-into-sql-server-table-from-an-excel-file-using-ssis-script-tasks/#comment-13433"><time datetime="2012-07-03T04:52:51+00:00">July 3, 2012</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>I am actually grateful to the holder of this web page who has shared this great piece<br />
+of writing at at this place.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+				<a rel='nofollow' class='comment-reply-link' href='http://blogs.selectsifiso.com/programmatically-insert-into-sql-server-table-from-an-excel-file-using-ssis-script-tasks/?replytocom=13433#respond' onclick='return addComment.moveForm( "comment-13433", "13433", "respond", "376" )' aria-label='Reply to Wireless Portable Sound System'>Reply</a> <span>&darr;</span>			</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+		</ol><!-- .commentlist -->
+
+		
+		
+	
+					<div id="respond" class="comment-respond">
+			<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/programmatically-insert-into-sql-server-table-from-an-excel-file-using-ssis-script-tasks/#respond" style="display:none;">Cancel reply</a></small></h3>				<form action="http://blogs.selectsifiso.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+					<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8"  aria-required="true" required="required"></textarea></p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" aria-required='true' required='required' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" aria-describedby="email-notes" aria-required='true' required='required' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" /></p>
+<p class="cptch_block"><br /><span class="cptch_wrap">
+				<label class="cptch_label" for="cptch_input">
+					<span class="cptch_span"><input id="cptch_input" class="cptch_input" type="text" autocomplete="off" name="cptch_number" value="" maxlength="2" size="2" aria-required="true" required="required" style="margin-bottom:0;display:inline;font-size: 12px;width: 40px;" /></span>
+					<span class="cptch_span">&nbsp;&minus;&nbsp;</span>
+					<span class="cptch_span">tw&#111;</span>
+					<span class="cptch_span">&nbsp;=&nbsp;</span>
+					<span class="cptch_span"><img class="cptch_img " src="data: image/png;base64,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" /></span>
+					<input type="hidden" name="cptch_result" value="n4o=" />
+					<input type="hidden" name="cptch_time" value="1458119639" />
+					<input type="hidden" value="Version: 4.1.8" />
+				</label><span class="cptch_reload_button_wrap hide-if-no-js">
+					<noscript>
+						<style type="text/css">
+							.hide-if-no-js {
+								display: none !important;
+							}
+						</style>
+					</noscript>
+					<span class="cptch_reload_button dashicons dashicons-update"></span>
+				</span></span></p><p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment" /> <input type='hidden' name='comment_post_ID' value='376' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="9059d04847" /></p><p style="display:none;"><input type="text" name="nxts" value="1458119648" /><input type="text" name="nxts_signed" value="473c69106e254f67db0ae1efc835c1cbd4fcd470" /><input type="text" name="3cc709bd9e143" value="" /><input type="text" name="07a8bb65771366f8ab4ec6f" value="3efe6dac701706d" /></p><p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="11"/></p>				</form>
+					</div><!-- #respond -->
+		
+</div><!-- #comments .comments-area -->
+			
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+
+		
+	 		<div id="secondary" class="widget-area" role="complementary">
+			<div class="widget widget_search">
+				<form role="search" method="get" id="searchform" class="searchform" action="http://blogs.selectsifiso.com/">
+				<div>
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Search" />
+				</div>
+			</form>			</div>
+			<div class="widget widget_recent_entries">
+				<p class="widget-title">Recent Posts</p>
+				<ul>	<li><a href='http://blogs.selectsifiso.com/duplicate-mysql-table-using-phpmyadmin/'>Duplicate MySQL Table Using phpMyAdmin</a></li>
+	<li><a href='http://blogs.selectsifiso.com/wheres-my-team-explorer-2015/'>Where&#8217;s my Team Explorer 2015?</a></li>
+	<li><a href='http://blogs.selectsifiso.com/sql-server-database-source-control-using-vso-git/'>SQL Server Database Source Control using VSO Git</a></li>
+	<li><a href='http://blogs.selectsifiso.com/dimensional-modelling-in-lucidchart-vs-visio-part-1/'>Dimensional Modelling in Lucidchart vs Visio: Part 1</a></li>
+	<li><a href='http://blogs.selectsifiso.com/execute-all-packages-within-ssis-project-catalog/'>Execute All Packages Within SSIS Project Catalog</a></li>
+</ul>
+			</div>
+			<div class="widget widget_pages">
+			<p class="widget-title">Pages</p>
+          <ul><li class="page_item page-item-776"><a href="http://blogs.selectsifiso.com/about/">About</a></li>
+<li class="page_item page-item-791"><a href="http://blogs.selectsifiso.com/articles/">Articles</a></li>
+<li class="page_item page-item-947"><a href="http://blogs.selectsifiso.com/codeplex/">CodePlex</a></li>
+<li class="page_item page-item-19"><a href="http://blogs.selectsifiso.com/contact/">Contact</a></li>
+<li class="page_item page-item-740"><a href="http://blogs.selectsifiso.com/contributors/">Contributors</a></li>
+<li class="page_item page-item-882"><a href="http://blogs.selectsifiso.com/disclaimer/">Disclaimer</a></li>
+<li class="page_item page-item-868"><a href="http://blogs.selectsifiso.com/events/">Events</a></li>
+<li class="page_item page-item-938"><a href="http://blogs.selectsifiso.com/github/">GitHub</a></li>
+<li class="page_item page-item-806"><a href="http://blogs.selectsifiso.com/manage-subscriptions/">Manage Subscriptions</a></li>
+<li class="page_item page-item-808"><a href="http://blogs.selectsifiso.com/nl-confirm-signup/">Newsletter Sign Up Confirmation</a></li>
+<li class="page_item page-item-809"><a href="http://blogs.selectsifiso.com/nl-unsubscribe-page/">Newsletter Unsubscription</a></li>
+<li class="page_item page-item-781"><a href="http://blogs.selectsifiso.com/newsletters/">Newsletters</a></li>
+<li class="page_item page-item-891"><a href="http://blogs.selectsifiso.com/privacy-policy/">Privacy Policy</a></li>
+<li class="page_item page-item-635"><a href="http://blogs.selectsifiso.com/rss-feeds/">RSS Feeds</a></li>
+<li class="page_item page-item-778"><a href="http://blogs.selectsifiso.com/source-code/">Source Code</a></li>
+<li class="page_item page-item-903"><a href="http://blogs.selectsifiso.com/terms/">Terms and Conditions</a></li>
+<li class="page_item page-item-780"><a href="http://blogs.selectsifiso.com/tutorials/">Videos</a></li>
+</ul>
+      </div>
+	  
+	  <div class="widget widget_tag_cloud">
+       <p class="widget-title">Tag Cloud</p>
+        <a href='http://blogs.selectsifiso.com/tag/adventureworks2008r2/' class='tag-link-21' title='20 topics' style='font-size: 17.826086956522px;'>AdventureWorks2008R2</a>
+<a href='http://blogs.selectsifiso.com/tag/c/' class='tag-link-12' title='30 topics' style='font-size: 19.673913043478px;'>C#</a>
+<a href='http://blogs.selectsifiso.com/tag/c-programming-language/' class='tag-link-15' title='32 topics' style='font-size: 20px;'>C# programming language</a>
+<a href='http://blogs.selectsifiso.com/tag/create-sql-view/' class='tag-link-17' title='13 topics' style='font-size: 15.978260869565px;'>create SQL view</a>
+<a href='http://blogs.selectsifiso.com/tag/create-ssis-package/' class='tag-link-18' title='24 topics' style='font-size: 18.695652173913px;'>Create SSIS Package</a>
+<a href='http://blogs.selectsifiso.com/tag/data-flow-task/' class='tag-link-193' title='10 topics' style='font-size: 14.782608695652px;'>Data Flow Task</a>
+<a href='http://blogs.selectsifiso.com/tag/destination-component/' class='tag-link-48' title='12 topics' style='font-size: 15.54347826087px;'>Destination Component</a>
+<a href='http://blogs.selectsifiso.com/tag/dts/' class='tag-link-43' title='9 topics' style='font-size: 14.347826086957px;'>DTS</a>
+<a href='http://blogs.selectsifiso.com/tag/dynamic-ssis-package/' class='tag-link-9' title='28 topics' style='font-size: 19.347826086957px;'>Dynamic SSIS Package</a>
+<a href='http://blogs.selectsifiso.com/tag/execute-sql-task/' class='tag-link-190' title='13 topics' style='font-size: 15.978260869565px;'>Execute SQL Task</a>
+<a href='http://blogs.selectsifiso.com/tag/extract-sql-statement-source/' class='tag-link-22' title='7 topics' style='font-size: 13.260869565217px;'>Extract SQL Statement source</a>
+<a href='http://blogs.selectsifiso.com/tag/file/' class='tag-link-39' title='4 topics' style='font-size: 11.086956521739px;'>file</a>
+<a href='http://blogs.selectsifiso.com/tag/foreach-loop/' class='tag-link-27' title='4 topics' style='font-size: 11.086956521739px;'>ForEach Loop</a>
+<a href='http://blogs.selectsifiso.com/tag/foreachloop-container/' class='tag-link-28' title='4 topics' style='font-size: 11.086956521739px;'>ForEachLoop Container</a>
+<a href='http://blogs.selectsifiso.com/tag/ole-db/' class='tag-link-44' title='15 topics' style='font-size: 16.521739130435px;'>OLE DB</a>
+<a href='http://blogs.selectsifiso.com/tag/oledb-destination/' class='tag-link-46' title='12 topics' style='font-size: 15.54347826087px;'>OLEDB Destination</a>
+<a href='http://blogs.selectsifiso.com/tag/oledb-source/' class='tag-link-45' title='11 topics' style='font-size: 15.217391304348px;'>OLEDB Source</a>
+<a href='http://blogs.selectsifiso.com/tag/read-sql-query/' class='tag-link-23' title='8 topics' style='font-size: 13.804347826087px;'>Read SQL Query</a>
+<a href='http://blogs.selectsifiso.com/tag/script-task/' class='tag-link-13' title='26 topics' style='font-size: 19.021739130435px;'>script task</a>
+<a href='http://blogs.selectsifiso.com/tag/sequence-container/' class='tag-link-191' title='3 topics' style='font-size: 10px;'>Sequence Container</a>
+<a href='http://blogs.selectsifiso.com/tag/source-component/' class='tag-link-47' title='10 topics' style='font-size: 14.782608695652px;'>Source Component</a>
+<a href='http://blogs.selectsifiso.com/tag/sql-server-2008/' class='tag-link-11' title='24 topics' style='font-size: 18.695652173913px;'>SQL Server 2008</a>
+<a href='http://blogs.selectsifiso.com/tag/sql-server-integration-services/' class='tag-link-19' title='31 topics' style='font-size: 19.891304347826px;'>SQL Server Integration Services</a>
+<a href='http://blogs.selectsifiso.com/tag/sql-view/' class='tag-link-14' title='13 topics' style='font-size: 15.978260869565px;'>SQL view</a>
+<a href='http://blogs.selectsifiso.com/tag/ssis/' class='tag-link-5' title='25 topics' style='font-size: 18.804347826087px;'>SSIS</a>
+<a href='http://blogs.selectsifiso.com/tag/ssis-2012/' class='tag-link-205' title='5 topics' style='font-size: 11.95652173913px;'>SSIS 2012</a>
+<a href='http://blogs.selectsifiso.com/tag/transformation/' class='tag-link-54' title='4 topics' style='font-size: 11.086956521739px;'>Transformation</a>
+<a href='http://blogs.selectsifiso.com/tag/update-view/' class='tag-link-16' title='11 topics' style='font-size: 15.217391304348px;'>update view</a>
+<a href='http://blogs.selectsifiso.com/tag/visual-studio-2010/' class='tag-link-95' title='4 topics' style='font-size: 11.086956521739px;'>Visual Studio 2010</a>
+<a href='http://blogs.selectsifiso.com/tag/xml/' class='tag-link-201' title='4 topics' style='font-size: 11.086956521739px;'>XML</a>			</div>
+		</div><!-- #secondary -->
+		</div><!-- #main .wrapper -->
+	<footer id="colophon" role="contentinfo">
+		<div class="site-info">
+		<div class="footercopy">custom footer text left</div>
+		<div class="footercredit">custom footer text right</div>
+		<div class="clear"></div>
+		</div><!-- .site-info -->
+		</footer><!-- #colophon -->
+		<div class="site-wordpress">
+				<a href="http://themonic.com/iconic-one/">Iconic One</a> Theme | Powered by <a href="http://wordpress.org">Wordpress</a>
+				</div><!-- .site-info -->
+				<div class="clear"></div>
+</div><!-- #page -->
+
+
+
+
+<script type='text/javascript' src='http://blogs.selectsifiso.com/wp-content/plugins/akismet/_inc/form.js?ver=06820f499ad3078ba51bb8a3026295a9'></script>
+<script type='text/javascript' src='http://blogs.selectsifiso.com/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=06820f499ad3078ba51bb8a3026295a9-2014.06.20'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"http:\/\/blogs.selectsifiso.com\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","recaptchaEmpty":"Please verify that you are not a robot.","sending":"Sending ..."};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://blogs.selectsifiso.com/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=06820f499ad3078ba51bb8a3026295a9'></script>
+<script type='text/javascript' src='http://blogs.selectsifiso.com/wp-includes/js/comment-reply.min.js?ver=06820f499ad3078ba51bb8a3026295a9'></script>
+<script type='text/javascript' src='http://blogs.selectsifiso.com/wp-content/themes/iconic-one/js/selectnav.js?ver=06820f499ad3078ba51bb8a3026295a9'></script>
+<script type='text/javascript' src='http://blogs.selectsifiso.com/wp-includes/js/wp-embed.min.js?ver=06820f499ad3078ba51bb8a3026295a9'></script>
+<script type='text/javascript' src='http://blogs.selectsifiso.com/wp-content/plugins/simplified-social-share/oss-social-sharing/assets/js/oss_share.js?ver=06820f499ad3078ba51bb8a3026295a9'></script>
+<script type='text/javascript' src='https://sharecdn.social9.com/v2/js/opensocialsharedefaulttheme.js?ver=06820f499ad3078ba51bb8a3026295a9'></script>
+<script type='text/javascript' src='https://sharecdn.social9.com/v2/js/opensocialshare.js?ver=06820f499ad3078ba51bb8a3026295a9'></script>
+
+               <script type="text/javascript">
+        var shareWidget = new OpenSocialShare();
+        shareWidget.init({
+             isEmailContentReadOnly:false,isTotalShare:true,isMobileFriendly:true,isShortenUrl:true,isOpenSingleWindow:false,                 
+            isCounterWidgetTheme: 0, // 0 or 1 - standard themes or counter widget themes
+            isHorizontalCounter: 0, // 0 or 1 - counter on top or counter to right - counter themes only
+            isHorizontalLayout: 1, // 0 or 1 - vertical layout or horizontal layout
+            widgetIconSize: "32", // "16" or "32" - 16px or 32px standard themes only
+                       widgetStyle: "responsive", //"image", "square" or "responsive" - standard themes only
+            
+           
+            providers: {
+                
+                   top: ["Facebook","Twitter","LinkedIn","GooglePlus","Pinterest","Email","Print"]
+                },
+           widgets: {
+                 //all : _private.getAllButtonName(_private.widgetConfig),
+                      top: ["Facebook Like","Twitter Tweet","Google+ Share","Pinterest Pin it","LinkedIn Share"]
+                      },
+                          theme: 'OpenSocialShareDefaultTheme',
+             
+        });
+        shareWidget.injectInterface(".oss_horizontal_share");
+        shareWidget.setWidgetTheme(".oss_horizontal_share");
+    </script>
+            </body>
+</html>

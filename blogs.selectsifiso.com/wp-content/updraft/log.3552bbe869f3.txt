@@ -1,0 +1,1225 @@
+0000.187 (0) Opened log file at time: Tue, 25 Aug 2015 20:29:46 +0000 on http://www.selectsifiso.net
+0000.300 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.10.3 WP: 4.2.4 PHP: 5.3.2-1ubuntu4.28 (Linux gnoll.imaginet.co.za 2.6.32-73-server #140-Ubuntu SMP Tue Feb 10 15:26:08 UTC 2015 x86_64) MySQL: 5.1.73-0ubuntu0.10.04.1 Server: Apache safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 83.9M | 84.8M) multisite: N mcrypt: Y LANG:  ZipArchive::addFile: Y
+0000.301 (0) Free space on disk containing Updraft's temporary directory: 62840.5 Mb
+0000.583 (0) Tasks: Backup files: 1 (schedule: weekly) Backup DB:  (schedule: weekly)
+0000.584 (0) Processed schedules. Tasks now: Backup files: 1 Backup DB: 1
+0000.743 (0) Requesting semaphore lock (fd)
+0000.745 (0) Semaphore (fd) was stuck, set lock time to 2015-08-25 20:29:47
+0000.746 (0) Semaphore (fd) reset to 1
+0000.747 (0) Set semaphore last lock (fd) time to 2015-08-25 20:29:47
+0000.748 (0) Semaphore lock (fd) complete
+0000.797 (0) Backup run: resumption=0, nonce=3552bbe869f3, begun at=1440534586 (1s ago), job type=backup
+0000.800 (0) Scheduling a resumption (1) after 533 seconds (1440535120) in case this run gets aborted
+0000.947 (0) Checking if we have a zip executable available
+0001.021 (0) Creation of backups of directories: beginning
+0001.026 (0) Beginning creation of dump of plugins (split every: 500 Mb)
+0020.922 (0) Total entities for the zip file: 766 directories, 5782 files (0 skipped as non-modified), 73.9 Mb
+0020.932 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0 Mb, 1 (1) files added so far); re-opening (prior size: 0 Kb)
+0020.982 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip.tmp: 100 files added (on-disk size: 121.7 Kb)
+0021.005 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip.tmp: 200 files added (on-disk size: 121.7 Kb)
+0021.032 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip.tmp: 300 files added (on-disk size: 121.7 Kb)
+0021.055 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip.tmp: 400 files added (on-disk size: 121.7 Kb)
+0021.078 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip.tmp: 500 files added (on-disk size: 121.7 Kb)
+0021.079 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (7.5 Mb, 5782 files batched, 501 (502) added so far); re-opening (prior size: 121.7 Kb)
+0036.112 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip.tmp: 600 files added (on-disk size: 3483.1 Kb)
+0036.138 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip.tmp: 700 files added (on-disk size: 3483.1 Kb)
+0036.168 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip.tmp: 800 files added (on-disk size: 3483.1 Kb)
+0036.192 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip.tmp: 900 files added (on-disk size: 3483.1 Kb)
+0036.217 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip.tmp: 1000 files added (on-disk size: 3483.1 Kb)
+0036.219 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (7.7 Mb, 5782 files batched, 501 (1003) added so far); re-opening (prior size: 3483.1 Kb)
+0050.030 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip.tmp: 1100 files added (on-disk size: 6395.2 Kb)
+0050.057 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip.tmp: 1200 files added (on-disk size: 6395.2 Kb)
+0050.082 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip.tmp: 1300 files added (on-disk size: 6395.2 Kb)
+0050.110 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip.tmp: 1400 files added (on-disk size: 6395.2 Kb)
+0050.136 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip.tmp: 1500 files added (on-disk size: 6395.2 Kb)
+0050.139 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (9 Mb, 5782 files batched, 501 (1504) added so far); re-opening (prior size: 6395.2 Kb)
+0068.230 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip.tmp: 1600 files added (on-disk size: 9686.2 Kb)
+0068.321 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip.tmp: 1700 files added (on-disk size: 9686.2 Kb)
+0068.379 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip.tmp: 1800 files added (on-disk size: 9686.2 Kb)
+0068.447 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip.tmp: 1900 files added (on-disk size: 9686.2 Kb)
+0068.519 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip.tmp: 2000 files added (on-disk size: 9686.2 Kb)
+0068.527 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (4.2 Mb, 5782 files batched, 501 (2005) added so far); re-opening (prior size: 9686.2 Kb)
+0083.340 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip.tmp: 2100 files added (on-disk size: 12315.4 Kb)
+0083.374 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip.tmp: 2200 files added (on-disk size: 12315.4 Kb)
+0083.409 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip.tmp: 2300 files added (on-disk size: 12315.4 Kb)
+0083.452 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip.tmp: 2400 files added (on-disk size: 12315.4 Kb)
+0083.490 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip.tmp: 2500 files added (on-disk size: 12315.4 Kb)
+0083.494 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (13.8 Mb, 5782 files batched, 501 (2506) added so far); re-opening (prior size: 12315.4 Kb)
+0105.330 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip.tmp: 2600 files added (on-disk size: 16649.7 Kb)
+0105.377 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip.tmp: 2700 files added (on-disk size: 16649.7 Kb)
+0105.425 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip.tmp: 2800 files added (on-disk size: 16649.7 Kb)
+0105.469 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip.tmp: 2900 files added (on-disk size: 16649.7 Kb)
+0105.507 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip.tmp: 3000 files added (on-disk size: 16649.7 Kb)
+0105.511 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (1.8 Mb, 5782 files batched, 501 (3007) added so far); re-opening (prior size: 16649.7 Kb)
+0111.519 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip.tmp: 3100 files added (on-disk size: 17300.6 Kb)
+0111.558 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip.tmp: 3200 files added (on-disk size: 17300.6 Kb)
+0111.593 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip.tmp: 3300 files added (on-disk size: 17300.6 Kb)
+0111.631 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip.tmp: 3400 files added (on-disk size: 17300.6 Kb)
+0111.686 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip.tmp: 3500 files added (on-disk size: 17300.6 Kb)
+0111.690 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (6.5 Mb, 5782 files batched, 501 (3508) added so far); re-opening (prior size: 17300.6 Kb)
+0123.705 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip.tmp: 3600 files added (on-disk size: 20009.8 Kb)
+0123.738 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip.tmp: 3700 files added (on-disk size: 20009.8 Kb)
+0123.772 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip.tmp: 3800 files added (on-disk size: 20009.8 Kb)
+0123.807 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip.tmp: 3900 files added (on-disk size: 20009.8 Kb)
+0123.843 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip.tmp: 4000 files added (on-disk size: 20009.8 Kb)
+0123.847 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (7.1 Mb, 5782 files batched, 501 (4009) added so far); re-opening (prior size: 20009.8 Kb)
+0140.974 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip.tmp: 4100 files added (on-disk size: 23736.7 Kb)
+0141.018 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip.tmp: 4200 files added (on-disk size: 23736.7 Kb)
+0141.063 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip.tmp: 4300 files added (on-disk size: 23736.7 Kb)
+0141.115 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip.tmp: 4400 files added (on-disk size: 23736.7 Kb)
+0141.159 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip.tmp: 4500 files added (on-disk size: 23736.7 Kb)
+0141.164 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (8.6 Mb, 5782 files batched, 501 (4510) added so far); re-opening (prior size: 23736.7 Kb)
+0160.622 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip.tmp: 4600 files added (on-disk size: 26914.3 Kb)
+0160.680 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip.tmp: 4700 files added (on-disk size: 26914.3 Kb)
+0160.723 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip.tmp: 4800 files added (on-disk size: 26914.3 Kb)
+0160.764 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip.tmp: 4900 files added (on-disk size: 26914.3 Kb)
+0160.801 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip.tmp: 5000 files added (on-disk size: 26914.3 Kb)
+0160.806 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (3.3 Mb, 5782 files batched, 501 (5011) added so far); re-opening (prior size: 26914.3 Kb)
+0174.500 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip.tmp: 5100 files added (on-disk size: 28357.9 Kb)
+0174.544 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip.tmp: 5200 files added (on-disk size: 28357.9 Kb)
+0174.710 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip.tmp: 5300 files added (on-disk size: 28357.9 Kb)
+0174.749 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip.tmp: 5400 files added (on-disk size: 28357.9 Kb)
+0174.787 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip.tmp: 5500 files added (on-disk size: 28357.9 Kb)
+0174.793 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (3 Mb, 5782 files batched, 501 (5512) added so far); re-opening (prior size: 28357.9 Kb)
+0187.119 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip.tmp: 5600 files added (on-disk size: 29311.6 Kb)
+0187.160 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip.tmp: 5700 files added (on-disk size: 29311.6 Kb)
+0195.469 (0) Created plugins zip (0) - 30169.5 Kb in 194.2 s (155.4 Kb/s) (SHA1 checksum: e220ad20ee9850888a8ec7fd9101344cac505d91)
+0195.473 (0) Beginning creation of dump of themes (split every: 500 Mb)
+0195.841 (0) Total entities for the zip file: 14 directories, 104 files (0 skipped as non-modified), 0.6 Mb
+0195.858 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-themes.zip.tmp: 100 files added (on-disk size: 0 Kb)
+0199.114 (0) Created themes zip (0) - 487.8 Kb in 3.6 s (134.1 Kb/s) (SHA1 checksum: 4b7980473f553ebf7a963043eeb2e16a4b7832a0)
+0199.118 (0) Exclusion option setting (uploads): backup*,*backups,backwpup*,wp-clone
+0199.120 (0) Looking for candidates to back up in: /var/www/vhosts/selectsifiso.net/httpdocs/wp-content/uploads
+0199.121 (0) finding files: pic1.gif: adding to list (1)
+0199.122 (0) finding files: 11-300x25.png: adding to list (2)
+0199.123 (0) finding files: pic26.png: adding to list (3)
+0199.124 (0) finding files: tweets_ssis.zip: adding to list (4)
+0199.125 (0) finding files: language.jpg: adding to list (5)
+0199.126 (0) finding files: script.jpg: adding to list (6)
+0199.127 (0) finding files: wysija: adding to list (7)
+0199.128 (0) finding files: sw_ndlovu2-144x150.png: adding to list (8)
+0199.129 (0) finding files: pic24-150x150.png: adding to list (9)
+0199.130 (0) finding files: selectSIFISO_Flat_File_Source_into_Derived_then_FlatFile_Destination_Using_CSharp.txt: adding to list (10)
+0199.131 (0) finding files: photo-gallery: adding to list (11)
+0199.132 (0) finding files: pic21-150x150.png: adding to list (12)
+0199.133 (0) finding files: main1.png: adding to list (13)
+0199.134 (0) finding files: language-1024x794.jpg: adding to list (14)
+0199.135 (0) finding files: reporting_serv-300x221.png: adding to list (15)
+0199.136 (0) finding files: MCITPrgb_12572.gif: adding to list (16)
+0199.137 (0) finding files: SolDev_AppsLcMgmt_Blk-150x134.png: adding to list (17)
+0199.138 (0) finding files: 118-150x150.png: adding to list (18)
+0199.138 (0) finding files: main-150x150.png: adding to list (19)
+0199.139 (0) finding files: SolDev_AppsLcMgmt_Blk.png: adding to list (20)
+0199.140 (0) finding files: main.png: adding to list (21)
+0199.141 (0) finding files: 114-300x178.png: adding to list (22)
+0199.142 (0) finding files: script-150x150.jpg: adding to list (23)
+0199.143 (0) finding files: main5-300x61.png: adding to list (24)
+0199.144 (0) finding files: pic23.png: adding to list (25)
+0199.145 (0) finding files: st1-300x232.jpg: adding to list (26)
+0199.146 (0) finding files: MCITPrgb_12572-150x36.gif: adding to list (27)
+0199.147 (0) finding files: Chrysanthemum.jpg: adding to list (28)
+0199.148 (0) finding files: script-1024x794.jpg: adding to list (29)
+0199.149 (0) finding files: main6.png: adding to list (30)
+0199.150 (0) finding files: st1-150x150.jpg: adding to list (31)
+0199.151 (0) finding files: sys_user-300x101.png: adding to list (32)
+0199.152 (0) finding files: images.jpg: adding to list (33)
+0199.153 (0) finding files: script-300x232.jpg: adding to list (34)
+0199.154 (0) finding files: shela-150x150.png: adding to list (35)
+0199.155 (0) finding files: 118.png: adding to list (36)
+0199.156 (0) finding files: MCITPrgb_1257-150x60.gif: adding to list (37)
+0199.157 (0) finding files: pic21.png: adding to list (38)
+0199.158 (0) finding files: tweets_dft-286x300.png: adding to list (39)
+0199.159 (0) finding files: ref2.jpg: adding to list (40)
+0199.160 (0) finding files: 12-150x150.jpg: adding to list (41)
+0199.161 (0) finding files: pic2-300x130.png: adding to list (42)
+0199.162 (0) finding files: pic23-150x150.png: adding to list (43)
+0199.163 (0) finding files: untitled-150x118.png: adding to list (44)
+0199.164 (0) finding files: main4-300x166.png: adding to list (45)
+0199.165 (0) finding files: main3-300x169.png: adding to list (46)
+0199.166 (0) finding files: language-150x150.jpg: adding to list (47)
+0199.167 (0) finding files: pic25-300x142.png: adding to list (48)
+0199.168 (0) finding files: st1-1024x795.jpg: adding to list (49)
+0199.169 (0) finding files: 2014: adding to list (50)
+0199.170 (0) finding files: 112-150x150.png: adding to list (51)
+0199.170 (0) finding files: MCTSrgb_1270-150x80.gif: adding to list (52)
+0199.170 (0) finding files: pull_tweets.png: adding to list (53)
+0199.170 (0) finding files: site_settings_after-300x93.png: adding to list (54)
+0199.170 (0) finding files: 11-150x150.jpg: adding to list (55)
+0199.170 (0) finding files: sys_user.png: adding to list (56)
+0199.170 (0) finding files: MCITPrgb_1257.gif: adding to list (57)
+0199.170 (0) finding files: 114.png: adding to list (58)
+0199.170 (0) finding files: create_table_script.txt: adding to list (59)
+0199.170 (0) finding files: ok-256x2561.png: adding to list (60)
+0199.170 (0) finding files: site_settings.png: adding to list (61)
+0199.170 (0) finding files: pull_tweets-150x150.png: adding to list (62)
+0199.170 (0) finding files: site_settings_after-150x150.png: adding to list (63)
+0199.170 (0) finding files: site_settings-150x150.png: adding to list (64)
+0199.170 (0) finding files: 117-300x151.png: adding to list (65)
+0199.170 (0) finding files: 11-150x52.png: adding to list (66)
+0199.170 (0) finding files: 12-1024x446.jpg: adding to list (67)
+0199.170 (0) finding files: reporting_serv.png: adding to list (68)
+0199.170 (0) finding files: pic22-150x150.png: adding to list (69)
+0199.170 (0) finding files: flat_src1.txt: adding to list (70)
+0199.170 (0) finding files: main3-150x150.png: adding to list (71)
+0199.170 (0) finding files: 114-150x150.png: adding to list (72)
+0199.170 (0) finding files: pic24.png: adding to list (73)
+0199.170 (0) finding files: pull_tweets-300x281.png: adding to list (74)
+0199.171 (0) finding files: new_sys_role-150x150.png: adding to list (75)
+0199.171 (0) finding files: new_role_assign_2.png: adding to list (76)
+0199.171 (0) finding files: main5.png: adding to list (77)
+0199.171 (0) finding files: main4.png: adding to list (78)
+0199.171 (0) finding files: language-300x232.jpg: adding to list (79)
+0199.171 (0) finding files: 111-150x150.png: adding to list (80)
+0199.171 (0) finding files: pic1.png: adding to list (81)
+0199.171 (0) finding files: site_settings_after.png: adding to list (82)
+0199.171 (0) finding files: SIFISO_Test.csv: adding to list (83)
+0199.171 (0) finding files: tweets_dft-150x150.png: adding to list (84)
+0199.171 (0) finding files: 112.png: adding to list (85)
+0199.171 (0) finding files: shela.png: adding to list (86)
+0199.171 (0) finding files: MCITPrgb_12571-150x60.gif: adding to list (87)
+0199.171 (0) finding files: SolAssoc_SQLSrvr2012_Blk.png: adding to list (88)
+0199.171 (0) finding files: sw_ndlovu1-144x150.png: adding to list (89)
+0199.171 (0) finding files: 112-300x178.png: adding to list (90)
+0199.171 (0) finding files: 11-300x130.jpg: adding to list (91)
+0199.171 (0) finding files: sw_ndlovu2.png: adding to list (92)
+0199.171 (0) finding files: ref2-1024x795.jpg: adding to list (93)
+0199.171 (0) finding files: shela-300x253.png: adding to list (94)
+0199.171 (0) finding files: 12.jpg: adding to list (95)
+0199.171 (0) finding files: main2-150x129.png: adding to list (96)
+0199.171 (0) finding files: main1-150x124.png: adding to list (97)
+0199.171 (0) finding files: pic21-300x157.png: adding to list (98)
+0199.171 (0) finding files: sS_CompressFileWithArguements-Copy.rar: adding to list (99)
+0199.171 (0) finding files: main5-150x123.png: adding to list (100)
+0199.172 (0) finding files: ithemes-security: adding to list (101)
+0199.173 (0) finding files: main4-150x150.png: adding to list (102)
+0199.173 (0) finding files: main3.png: adding to list (103)
+0199.173 (0) finding files: namespace-300x232.jpg: adding to list (104)
+0199.173 (0) finding files: sS_ConditionalSplit.zip: adding to list (105)
+0199.173 (0) finding files: new_role_assign_2-1024x334.png: adding to list (106)
+0199.173 (0) finding files: 115-300x159.png: adding to list (107)
+0199.173 (0) finding files: 111.png: adding to list (108)
+0199.173 (0) finding files: tweets_dft.png: adding to list (109)
+0199.173 (0) finding files: exam70-457-300x139.png: adding to list (110)
+0199.173 (0) finding files: test.JPG: adding to list (111)
+0199.173 (0) finding files: exam70-457.png: adding to list (112)
+0199.173 (0) finding files: main6-150x109.png: adding to list (113)
+0199.173 (0) finding files: 13-150x150.jpg: adding to list (114)
+0199.173 (0) finding files: pic24-300x142.png: adding to list (115)
+0199.173 (0) finding files: filebase: adding to list (116)
+0199.173 (0) finding files: namespace-1024x795.jpg: adding to list (117)
+0199.173 (0) finding files: pic25-150x150.png: adding to list (118)
+0199.173 (0) finding files: MCTSrgb_1270.gif: adding to list (119)
+0199.173 (0) finding files: RunReportBuilder-300x185.png: adding to list (120)
+0199.173 (0) finding files: output_table_definitions.zip: adding to list (121)
+0199.173 (0) finding files: 11.jpg: adding to list (122)
+0199.173 (0) finding files: st.JPG: adding to list (123)
+0199.173 (0) finding files: sw_ndlovu.png: adding to list (124)
+0199.173 (0) finding files: MCTSrgb_1270-300x66.gif: adding to list (125)
+0199.173 (0) finding files: new_role_assign_2-150x150.png: adding to list (126)
+0199.173 (0) finding files: main1-300x63.png: adding to list (127)
+0199.173 (0) finding files: pic22.png: adding to list (128)
+0199.174 (0) finding files: simple_photo_gallery: adding to list (129)
+0199.174 (0) finding files: pic23-300x170.png: adding to list (130)
+0199.174 (0) finding files: untitled.png: adding to list (131)
+0199.174 (0) finding files: 113.png: adding to list (132)
+0199.174 (0) finding files: RunReportBuilder-150x150.png: adding to list (133)
+0199.174 (0) finding files: pic2.png: adding to list (134)
+0199.174 (0) finding files: sw_ndlovu1.png: adding to list (135)
+0199.174 (0) finding files: MCITPrgb_1257-300x54.gif: adding to list (136)
+0199.174 (0) finding files: 12-300x130.jpg: adding to list (137)
+0199.174 (0) finding files: sw_ndlovu-144x150.png: adding to list (138)
+0199.174 (0) finding files: 13-300x130.jpg: adding to list (139)
+0199.174 (0) finding files: pic26-150x150.png: adding to list (140)
+0199.174 (0) finding files: namespace.jpg: adding to list (141)
+0199.174 (0) finding files: reporting_serv-150x150.png: adding to list (142)
+0199.174 (0) finding files: 2015: adding to list (143)
+0199.174 (0) finding files: wftmptest.txt: adding to list (144)
+0199.174 (0) finding files: RunReportBuilder.png: adding to list (145)
+0199.174 (0) finding files: main-300x78.png: adding to list (146)
+0199.174 (0) finding files: pic22-300x174.png: adding to list (147)
+0199.174 (0) finding files: selectSIFISO_Flat_File_Source_into_OLE_DB_Destination_Using_CSharp.txt: adding to list (148)
+0199.174 (0) finding files: st1.jpg: adding to list (149)
+0199.174 (0) finding files: exam70-457-150x150.png: adding to list (150)
+0199.174 (0) finding files: 115.png: adding to list (151)
+0199.174 (0) finding files: pic26-300x206.png: adding to list (152)
+0199.175 (0) finding files: 113-150x150.png: adding to list (153)
+0199.175 (0) finding files: newsletters-lite: adding to list (154)
+0199.175 (0) finding files: 111-300x233.png: adding to list (155)
+0199.175 (0) finding files: ref2-300x232.jpg: adding to list (156)
+0199.175 (0) finding files: 117-150x150.png: adding to list (157)
+0199.175 (0) finding files: 118-300x211.png: adding to list (158)
+0199.175 (0) finding files: 1.jpg: adding to list (159)
+0199.175 (0) finding files: 113-300x178.png: adding to list (160)
+0199.175 (0) finding files: 11-1024x446.jpg: adding to list (161)
+0199.175 (0) finding files: ok-256x2561-150x150.png: adding to list (162)
+0199.175 (0) finding files: MCITPrgb_12571-300x54.gif: adding to list (163)
+0199.175 (0) finding files: 116-300x158.png: adding to list (164)
+0199.175 (0) finding files: new_role_assign_2-300x98.png: adding to list (165)
+0199.175 (0) finding files: MCITPrgb_12571.gif: adding to list (166)
+0199.175 (0) finding files: 116.png: adding to list (167)
+0199.175 (0) finding files: pic25.png: adding to list (168)
+0199.175 (0) finding files: namespace-150x150.jpg: adding to list (169)
+0199.175 (0) finding files: main6-300x46.png: adding to list (170)
+0199.175 (0) finding files: main2-300x74.png: adding to list (171)
+0199.175 (0) finding files: ref2-150x150.jpg: adding to list (172)
+0199.175 (0) finding files: MCTSrgb_12701-150x44.gif: adding to list (173)
+0199.175 (0) finding files: pic2-150x150.png: adding to list (174)
+0199.175 (0) finding files: sys_user-150x150.png: adding to list (175)
+0199.175 (0) finding files: 11.png: adding to list (176)
+0199.175 (0) finding files: SolAssoc_SQLSrvr2012_Blk-150x118.png: adding to list (177)
+0199.176 (0) finding files: new_sys_role.png: adding to list (178)
+0199.176 (0) finding files: MCTSrgb_12701.gif: adding to list (179)
+0199.176 (0) finding files: 116-150x150.png: adding to list (180)
+0199.176 (0) finding files: 117.png: adding to list (181)
+0199.176 (0) finding files: 115-150x150.png: adding to list (182)
+0199.176 (0) finding files: new_sys_role-300x211.png: adding to list (183)
+0199.176 (0) finding files: main2.png: adding to list (184)
+0199.176 (0) finding files: 13.jpg: adding to list (185)
+0199.176 (0) finding files: flat_src.txt: adding to list (186)
+0199.176 (0) Beginning creation of dump of uploads (split every: 500 Mb)
+0201.888 (0) Total entities for the zip file: 67 directories, 745 files (0 skipped as non-modified), 24.4 Mb
+0201.890 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0 Mb, 1 (1) files added so far); re-opening (prior size: 0 Kb)
+0201.960 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-uploads.zip.tmp: 100 files added (on-disk size: 31.7 Kb)
+0201.981 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-uploads.zip.tmp: 200 files added (on-disk size: 31.7 Kb)
+0202.000 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-uploads.zip.tmp: 300 files added (on-disk size: 31.7 Kb)
+0202.020 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-uploads.zip.tmp: 400 files added (on-disk size: 31.7 Kb)
+0202.041 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-uploads.zip.tmp: 500 files added (on-disk size: 31.7 Kb)
+0202.043 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (14.7 Mb, 745 files batched, 501 (502) added so far); re-opening (prior size: 31.7 Kb)
+0222.435 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-uploads.zip.tmp: 600 files added (on-disk size: 14449.4 Kb)
+0222.459 (0) Zip: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-uploads.zip.tmp: 700 files added (on-disk size: 14449.4 Kb)
+0235.383 (0) Created uploads zip (0) - 24087.3 Kb in 36.2 s (665.3 Kb/s) (SHA1 checksum: 6f563cc866f0c6b16615f0bd752169b9efa679b7)
+0235.387 (0) Beginning backup of other directories found in the content directory (index: 0)
+0235.389 (0) Exclusion option setting (others): upgrade,cache,updraft,backup*,*backups
+0235.390 (0) Looking for candidates to back up in: /var/www/vhosts/selectsifiso.net/httpdocs/wp-content
+0235.391 (0) finding files: logs: adding to list (1)
+0235.392 (0) finding files: uploads: skipping: this is the uploads directory
+0235.393 (0) finding files: updraft: skipping: this is the updraft directory
+0235.394 (0) finding files: microsoft-ajax-translation.tmp: adding to list (2)
+0235.395 (0) finding files: extensions: adding to list (3)
+0235.397 (0) finding files: syntax-highlighter-mt.tmp: adding to list (4)
+0235.398 (0) finding files: sedlex: adding to list (5)
+0235.399 (0) finding files: plugins: skipping: this is the plugins directory
+0235.400 (0) finding files: index.php: adding to list (6)
+0235.401 (0) finding files: syntaxhighlighter2.tmp: adding to list (7)
+0235.402 (0) finding files: cache: skipping: excluded by options
+0235.403 (0) finding files: themes: skipping: this is the themes directory
+0235.404 (0) finding files: tubepress-content: adding to list (8)
+0235.405 (0) finding files: w3tc-config: adding to list (9)
+0235.406 (0) finding files: flagallery: adding to list (10)
+0235.407 (0) finding files: upgrade: skipping: excluded by options
+0235.408 (0) finding files: wfcache: adding to list (11)
+0235.939 (0) Total entities for the zip file: 20 directories, 25 files (0 skipped as non-modified), 1 Mb
+0237.097 (0) Created others zip (0) - 961.6 Kb in 1.7 s (570.8 Kb/s) (SHA1 checksum: a381c9c3ffb4de6e198e5dfe2c7f2404014f048b)
+0237.106 (0) Saving backup status to database (elements: 8)
+0237.109 (0) Beginning creation of database dump (WordPress DB)
+0237.145 (0) Table wp_options: Total expected rows (approximate): 1528
+0237.238 (0) Table wp_options: Total rows added: 1527 in 0.09 seconds
+0237.240 (0) Table wp_options: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_options.table.gz - 218.6 Kb)
+0237.248 (0) Table wp_users: Total expected rows (approximate): 2
+0237.251 (0) Table wp_users: Total rows added: 2 in 0.00 seconds
+0237.252 (0) Table wp_users: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_users.table.gz - 0.6 Kb)
+0237.260 (0) Table wp_usermeta: Total expected rows (approximate): 120
+0237.443 (0) Table wp_usermeta: Total rows added: 120 in 0.18 seconds
+0237.444 (0) Table wp_usermeta: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_usermeta.table.gz - 3.1 Kb)
+0237.497 (0) Table wp_commentmeta: Total expected rows (approximate): 1477
+0237.657 (0) Table wp_commentmeta: Total rows added: 1477 in 0.16 seconds
+0237.659 (0) Table wp_commentmeta: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_commentmeta.table.gz - 17.5 Kb)
+0237.667 (0) Table wp_comments: Total expected rows (approximate): 357
+0237.727 (0) Table wp_comments: Total rows added: 357 in 0.06 seconds
+0237.729 (0) Table wp_comments: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_comments.table.gz - 42.7 Kb)
+0237.900 (0) Table wp_links: Total expected rows (approximate): 7
+0237.927 (0) Table wp_links: Total rows added: 7 in 0.03 seconds
+0237.929 (0) Table wp_links: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_links.table.gz - 0.6 Kb)
+0237.938 (0) Table wp_postmeta: Total expected rows (approximate): 1188
+0238.114 (0) Table wp_postmeta: Total rows added: 1188 in 0.18 seconds
+0238.116 (0) Table wp_postmeta: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_postmeta.table.gz - 23.5 Kb)
+0238.124 (0) Table wp_posts: Total expected rows (approximate): 890
+0239.098 (0) Table wp_posts: Total rows added: 890 in 0.97 seconds
+0239.101 (0) Table wp_posts: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_posts.table.gz - 203.3 Kb)
+0239.108 (0) Table wp_term_relationships: Total expected rows (approximate): 725
+0239.122 (0) Table wp_term_relationships: Total rows added: 725 in 0.01 seconds
+0239.124 (0) Table wp_term_relationships: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_term_relationships.table.gz - 2.1 Kb)
+0239.132 (0) Table wp_term_taxonomy: Total expected rows (approximate): 189
+0239.141 (0) Table wp_term_taxonomy: Total rows added: 189 in 0.01 seconds
+0239.142 (0) Table wp_term_taxonomy: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_term_taxonomy.table.gz - 1.7 Kb)
+0239.150 (0) Table wp_terms: Total expected rows (approximate): 160
+0239.158 (0) Table wp_terms: Total rows added: 160 in 0.01 seconds
+0239.159 (0) Table wp_terms: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_terms.table.gz - 2.6 Kb)
+0239.167 (0) Table wp_Counterize: Total expected rows (approximate): 459497
+0239.171 (0) [Warning] Table wp_Counterize has very many rows (459497) - we hope your web hosting company gives you enough resources to dump out that table in the backup
+0295.576 (0) Table wp_Counterize: Total rows added: 459497 in 56.40 seconds
+0295.581 (0) Table wp_Counterize: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_Counterize.table.gz - 5989.6 Kb)
+0295.590 (0) Table wp_Counterize_Countries: Total expected rows (approximate): 266
+0295.598 (0) Table wp_Counterize_Countries: Total rows added: 266 in 0.01 seconds
+0295.599 (0) Table wp_Counterize_Countries: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_Counterize_Countries.table.gz - 1.9 Kb)
+0295.607 (0) Table wp_Counterize_Keywords: Total expected rows (approximate): 1217
+0295.726 (0) Table wp_Counterize_Keywords: Total rows added: 1217 in 0.12 seconds
+0295.728 (0) Table wp_Counterize_Keywords: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_Counterize_Keywords.table.gz - 17.4 Kb)
+0295.771 (0) Table wp_Counterize_Outlinks: Total expected rows (approximate): 52
+0295.801 (0) Table wp_Counterize_Outlinks: Total rows added: 52 in 0.03 seconds
+0295.803 (0) Table wp_Counterize_Outlinks: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_Counterize_Outlinks.table.gz - 1.5 Kb)
+0295.811 (0) Table wp_Counterize_Pages: Total expected rows (approximate): 8624
+0296.057 (0) Table wp_Counterize_Pages: Total rows added: 8624 in 0.24 seconds
+0296.061 (0) Table wp_Counterize_Pages: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_Counterize_Pages.table.gz - 215.3 Kb)
+0296.074 (0) Table wp_Counterize_Referers: Total expected rows (approximate): 14720
+0297.542 (0) Table wp_Counterize_Referers: Total rows added: 14720 in 1.47 seconds
+0297.544 (0) Table wp_Counterize_Referers: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_Counterize_Referers.table.gz - 570.3 Kb)
+0297.562 (0) Table wp_Counterize_UserAgents: Total expected rows (approximate): 3948
+0298.056 (0) Table wp_Counterize_UserAgents: Total rows added: 3948 in 0.49 seconds
+0298.058 (0) Table wp_Counterize_UserAgents: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_Counterize_UserAgents.table.gz - 93.7 Kb)
+0298.078 (0) Table wp_botnetblocker: Total expected rows (approximate): 1
+0298.081 (0) Table wp_botnetblocker: Total rows added: 1 in 0.00 seconds
+0298.082 (0) Table wp_botnetblocker: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_botnetblocker.table.gz - 0.4 Kb)
+0298.191 (0) Table wp_bwg_album: Total expected rows (approximate): 1
+0298.212 (0) Table wp_bwg_album: Total rows added: 1 in 0.02 seconds
+0298.213 (0) Table wp_bwg_album: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_bwg_album.table.gz - 0.4 Kb)
+0298.235 (0) Table wp_bwg_album_gallery: Total expected rows (approximate): 1
+0298.288 (0) Table wp_bwg_album_gallery: Total rows added: 1 in 0.05 seconds
+0298.291 (0) Table wp_bwg_album_gallery: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_bwg_album_gallery.table.gz - 0.3 Kb)
+0298.398 (0) Table wp_bwg_gallery: Total expected rows (approximate): 1
+0298.463 (0) Table wp_bwg_gallery: Total rows added: 1 in 0.06 seconds
+0298.465 (0) Table wp_bwg_gallery: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_bwg_gallery.table.gz - 0.5 Kb)
+0298.485 (0) Table wp_bwg_image: Total expected rows (approximate): 1
+0298.499 (0) Table wp_bwg_image: Total rows added: 1 in 0.01 seconds
+0298.501 (0) Table wp_bwg_image: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_bwg_image.table.gz - 0.5 Kb)
+0298.741 (0) Table wp_bwg_image_comment: Total expected rows (approximate): 0
+0298.744 (0) Table wp_bwg_image_comment: Total rows added: 0 in 0.00 seconds
+0298.746 (0) Table wp_bwg_image_comment: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_bwg_image_comment.table.gz - 0.3 Kb)
+0298.918 (0) Table wp_bwg_image_rate: Total expected rows (approximate): 0
+0298.921 (0) Table wp_bwg_image_rate: Total rows added: 0 in 0.00 seconds
+0298.922 (0) Table wp_bwg_image_rate: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_bwg_image_rate.table.gz - 0.3 Kb)
+0298.952 (0) Table wp_bwg_image_tag: Total expected rows (approximate): 0
+0298.955 (0) Table wp_bwg_image_tag: Total rows added: 0 in 0.00 seconds
+0298.956 (0) Table wp_bwg_image_tag: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_bwg_image_tag.table.gz - 0.3 Kb)
+0299.034 (0) Table wp_bwg_option: Total expected rows (approximate): 1
+0299.174 (0) Table wp_bwg_option: Total rows added: 1 in 0.14 seconds
+0299.176 (0) Table wp_bwg_option: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_bwg_option.table.gz - 1.4 Kb)
+0299.208 (0) Table wp_bwg_shortcode: Total expected rows (approximate): 3
+0299.220 (0) Table wp_bwg_shortcode: Total rows added: 3 in 0.01 seconds
+0299.221 (0) Table wp_bwg_shortcode: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_bwg_shortcode.table.gz - 0.8 Kb)
+0299.290 (0) Table wp_bwg_theme: Total expected rows (approximate): 2
+0299.349 (0) Table wp_bwg_theme: Total rows added: 2 in 0.06 seconds
+0299.352 (0) Table wp_bwg_theme: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_bwg_theme.table.gz - 3.2 Kb)
+0299.419 (0) Table wp_caa_profile_db: Total expected rows (approximate): 0
+0299.422 (0) Table wp_caa_profile_db: Total rows added: 0 in 0.00 seconds
+0299.423 (0) Table wp_caa_profile_db: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_caa_profile_db.table.gz - 0.5 Kb)
+0299.504 (0) Table wp_comment_rating: Total expected rows (approximate): 4
+0299.529 (0) Table wp_comment_rating: Total rows added: 4 in 0.02 seconds
+0299.531 (0) Table wp_comment_rating: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_comment_rating.table.gz - 0.3 Kb)
+0299.674 (0) Table wp_demon_imagenote: Total expected rows (approximate): 0
+0299.677 (0) Table wp_demon_imagenote: Total rows added: 0 in 0.00 seconds
+0299.678 (0) Table wp_demon_imagenote: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_demon_imagenote.table.gz - 0.4 Kb)
+0299.829 (0) Table wp_ean_newsletter: Total expected rows (approximate): 0
+0299.832 (0) Table wp_ean_newsletter: Total rows added: 0 in 0.00 seconds
+0299.833 (0) Table wp_ean_newsletter: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_ean_newsletter.table.gz - 0.4 Kb)
+0299.987 (0) Table wp_easymail_recipients: Total expected rows (approximate): 0
+0299.990 (0) Table wp_easymail_recipients: Total rows added: 0 in 0.00 seconds
+0299.991 (0) Table wp_easymail_recipients: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_easymail_recipients.table.gz - 0.3 Kb)
+0300.087 (0) Table wp_easymail_stats: Total expected rows (approximate): 0
+0300.095 (0) Table wp_easymail_stats: Total rows added: 0 in 0.00 seconds
+0300.096 (0) Table wp_easymail_stats: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_easymail_stats.table.gz - 0.3 Kb)
+0300.181 (0) Table wp_easymail_subscribers: Total expected rows (approximate): 0
+0300.184 (0) Table wp_easymail_subscribers: Total rows added: 0 in 0.00 seconds
+0300.185 (0) Table wp_easymail_subscribers: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_easymail_subscribers.table.gz - 0.4 Kb)
+0300.266 (0) Table wp_easymail_unsubscribed: Total expected rows (approximate): 0
+0300.269 (0) Table wp_easymail_unsubscribed: Total rows added: 0 in 0.00 seconds
+0300.271 (0) Table wp_easymail_unsubscribed: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_easymail_unsubscribed.table.gz - 0.3 Kb)
+0300.417 (0) Table wp_eemail_newsletter: Total expected rows (approximate): 2
+0300.494 (0) Table wp_eemail_newsletter: Total rows added: 2 in 0.08 seconds
+0300.496 (0) Table wp_eemail_newsletter: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_eemail_newsletter.table.gz - 0.9 Kb)
+0300.619 (0) Table wp_eemail_newsletter_sub: Total expected rows (approximate): 0
+0300.622 (0) Table wp_eemail_newsletter_sub: Total rows added: 0 in 0.00 seconds
+0300.623 (0) Table wp_eemail_newsletter_sub: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_eemail_newsletter_sub.table.gz - 0.3 Kb)
+0300.640 (0) Table wp_effecto: Total expected rows (approximate): 1
+0300.643 (0) Table wp_effecto: Total rows added: 1 in 0.00 seconds
+0300.645 (0) Table wp_effecto: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_effecto.table.gz - 0.5 Kb)
+0300.774 (0) Table wp_flag_album: Total expected rows (approximate): 1
+0300.786 (0) Table wp_flag_album: Total rows added: 1 in 0.01 seconds
+0300.788 (0) Table wp_flag_album: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_flag_album.table.gz - 0.4 Kb)
+0300.851 (0) Table wp_flag_comments: Total expected rows (approximate): 0
+0300.854 (0) Table wp_flag_comments: Total rows added: 0 in 0.00 seconds
+0300.855 (0) Table wp_flag_comments: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_flag_comments.table.gz - 0.4 Kb)
+0300.949 (0) Table wp_flag_gallery: Total expected rows (approximate): 1
+0301.040 (0) Table wp_flag_gallery: Total rows added: 1 in 0.09 seconds
+0301.042 (0) Table wp_flag_gallery: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_flag_gallery.table.gz - 0.4 Kb)
+0301.141 (0) Table wp_flag_pictures: Total expected rows (approximate): 0
+0301.146 (0) Table wp_flag_pictures: Total rows added: 0 in 0.00 seconds
+0301.148 (0) Table wp_flag_pictures: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_flag_pictures.table.gz - 0.5 Kb)
+0301.235 (0) Table wp_fsr_post: Total expected rows (approximate): 0
+0301.237 (0) Table wp_fsr_post: Total rows added: 0 in 0.00 seconds
+0301.239 (0) Table wp_fsr_post: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_fsr_post.table.gz - 0.3 Kb)
+0301.303 (0) Table wp_fsr_user: Total expected rows (approximate): 0
+0301.306 (0) Table wp_fsr_user: Total rows added: 0 in 0.00 seconds
+0301.307 (0) Table wp_fsr_user: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_fsr_user.table.gz - 0.3 Kb)
+0301.345 (0) Table wp_gdsr_data_article: Total expected rows (approximate): 10
+0301.410 (0) Table wp_gdsr_data_article: Total rows added: 10 in 0.06 seconds
+0301.411 (0) Table wp_gdsr_data_article: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_gdsr_data_article.table.gz - 0.7 Kb)
+0301.434 (0) Table wp_gdsr_data_category: Total expected rows (approximate): 0
+0301.437 (0) Table wp_gdsr_data_category: Total rows added: 0 in 0.00 seconds
+0301.443 (0) Table wp_gdsr_data_category: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_gdsr_data_category.table.gz - 0.4 Kb)
+0301.476 (0) Table wp_gdsr_data_comment: Total expected rows (approximate): 1
+0301.483 (0) Table wp_gdsr_data_comment: Total rows added: 1 in 0.00 seconds
+0301.485 (0) Table wp_gdsr_data_comment: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_gdsr_data_comment.table.gz - 0.5 Kb)
+0301.536 (0) Table wp_gdsr_ips: Total expected rows (approximate): 0
+0301.539 (0) Table wp_gdsr_ips: Total rows added: 0 in 0.00 seconds
+0301.540 (0) Table wp_gdsr_ips: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_gdsr_ips.table.gz - 0.3 Kb)
+0301.566 (0) Table wp_gdsr_moderate: Total expected rows (approximate): 0
+0301.569 (0) Table wp_gdsr_moderate: Total rows added: 0 in 0.00 seconds
+0301.570 (0) Table wp_gdsr_moderate: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_gdsr_moderate.table.gz - 0.4 Kb)
+0301.598 (0) Table wp_gdsr_multis: Total expected rows (approximate): 0
+0301.600 (0) Table wp_gdsr_multis: Total rows added: 0 in 0.00 seconds
+0301.602 (0) Table wp_gdsr_multis: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_gdsr_multis.table.gz - 0.4 Kb)
+0301.632 (0) Table wp_gdsr_multis_data: Total expected rows (approximate): 0
+0301.636 (0) Table wp_gdsr_multis_data: Total rows added: 0 in 0.00 seconds
+0301.637 (0) Table wp_gdsr_multis_data: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_gdsr_multis_data.table.gz - 0.5 Kb)
+0301.646 (0) Table wp_gdsr_multis_trend: Total expected rows (approximate): 0
+0301.649 (0) Table wp_gdsr_multis_trend: Total rows added: 0 in 0.00 seconds
+0301.650 (0) Table wp_gdsr_multis_trend: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_gdsr_multis_trend.table.gz - 0.4 Kb)
+0301.659 (0) Table wp_gdsr_multis_values: Total expected rows (approximate): 0
+0301.661 (0) Table wp_gdsr_multis_values: Total rows added: 0 in 0.00 seconds
+0301.663 (0) Table wp_gdsr_multis_values: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_gdsr_multis_values.table.gz - 0.3 Kb)
+0301.708 (0) Table wp_gdsr_templates: Total expected rows (approximate): 44
+0301.751 (0) Table wp_gdsr_templates: Total rows added: 44 in 0.04 seconds
+0301.753 (0) Table wp_gdsr_templates: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_gdsr_templates.table.gz - 2.8 Kb)
+0301.762 (0) Table wp_gdsr_votes_log: Total expected rows (approximate): 2
+0301.795 (0) Table wp_gdsr_votes_log: Total rows added: 2 in 0.03 seconds
+0301.797 (0) Table wp_gdsr_votes_log: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_gdsr_votes_log.table.gz - 0.5 Kb)
+0301.806 (0) Table wp_gdsr_votes_trend: Total expected rows (approximate): 2
+0301.841 (0) Table wp_gdsr_votes_trend: Total rows added: 2 in 0.03 seconds
+0301.843 (0) Table wp_gdsr_votes_trend: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_gdsr_votes_trend.table.gz - 0.4 Kb)
+0301.933 (0) Table wp_gsom_subscribers: Total expected rows (approximate): 12
+0302.066 (0) Table wp_gsom_subscribers: Total rows added: 12 in 0.13 seconds
+0302.075 (0) Table wp_gsom_subscribers: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_gsom_subscribers.table.gz - 1.4 Kb)
+0302.190 (0) Table wp_huge_it_videogallery_galleries: Total expected rows (approximate): 1
+0302.195 (0) Table wp_huge_it_videogallery_galleries: Total rows added: 1 in 0.00 seconds
+0302.197 (0) Table wp_huge_it_videogallery_galleries: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_huge_it_videogallery_galleries.table.gz - 0.5 Kb)
+0302.239 (0) Table wp_huge_it_videogallery_videos: Total expected rows (approximate): 10
+0302.250 (0) Table wp_huge_it_videogallery_videos: Total rows added: 10 in 0.01 seconds
+0302.252 (0) Table wp_huge_it_videogallery_videos: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_huge_it_videogallery_videos.table.gz - 1.3 Kb)
+0302.260 (0) Table wp_itsec_lockouts: Total expected rows (approximate): 0
+0302.262 (0) Table wp_itsec_lockouts: Total rows added: 0 in 0.00 seconds
+0302.264 (0) Table wp_itsec_lockouts: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_itsec_lockouts.table.gz - 0.4 Kb)
+0302.311 (0) Table wp_itsec_log: Total expected rows (approximate): 5
+0302.430 (0) Table wp_itsec_log: Total rows added: 5 in 0.12 seconds
+0302.432 (0) Table wp_itsec_log: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_itsec_log.table.gz - 0.6 Kb)
+0302.440 (0) Table wp_itsec_temp: Total expected rows (approximate): 0
+0302.442 (0) Table wp_itsec_temp: Total rows added: 0 in 0.00 seconds
+0302.443 (0) Table wp_itsec_temp: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_itsec_temp.table.gz - 0.4 Kb)
+0302.501 (0) Table wp_knewsautomated: Total expected rows (approximate): 0
+0302.504 (0) Table wp_knewsautomated: Total rows added: 0 in 0.00 seconds
+0302.506 (0) Table wp_knewsautomated: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_knewsautomated.table.gz - 0.5 Kb)
+0302.562 (0) Table wp_knewsautomatedposts: Total expected rows (approximate): 0
+0302.565 (0) Table wp_knewsautomatedposts: Total rows added: 0 in 0.00 seconds
+0302.566 (0) Table wp_knewsautomatedposts: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_knewsautomatedposts.table.gz - 0.3 Kb)
+0302.585 (0) Table wp_knewsautomatedsel: Total expected rows (approximate): 0
+0302.587 (0) Table wp_knewsautomatedsel: Total rows added: 0 in 0.00 seconds
+0302.588 (0) Table wp_knewsautomatedsel: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_knewsautomatedsel.table.gz - 0.3 Kb)
+0302.628 (0) Table wp_knewsextrafields: Total expected rows (approximate): 2
+0302.639 (0) Table wp_knewsextrafields: Total rows added: 2 in 0.01 seconds
+0302.641 (0) Table wp_knewsextrafields: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_knewsextrafields.table.gz - 0.4 Kb)
+0302.724 (0) Table wp_knewskeys: Total expected rows (approximate): 0
+0302.727 (0) Table wp_knewskeys: Total rows added: 0 in 0.00 seconds
+0302.728 (0) Table wp_knewskeys: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_knewskeys.table.gz - 0.3 Kb)
+0302.878 (0) Table wp_knewsletters: Total expected rows (approximate): 0
+0302.882 (0) Table wp_knewsletters: Total rows added: 0 in 0.00 seconds
+0302.888 (0) Table wp_knewsletters: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_knewsletters.table.gz - 0.4 Kb)
+0302.940 (0) Table wp_knewslists: Total expected rows (approximate): 1
+0302.946 (0) Table wp_knewslists: Total rows added: 1 in 0.00 seconds
+0302.948 (0) Table wp_knewslists: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_knewslists.table.gz - 0.4 Kb)
+0303.015 (0) Table wp_knewstats: Total expected rows (approximate): 0
+0303.025 (0) Table wp_knewstats: Total rows added: 0 in 0.01 seconds
+0303.030 (0) Table wp_knewstats: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_knewstats.table.gz - 0.3 Kb)
+0303.061 (0) Table wp_knewsubmits: Total expected rows (approximate): 0
+0303.063 (0) Table wp_knewsubmits: Total rows added: 0 in 0.00 seconds
+0303.065 (0) Table wp_knewsubmits: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_knewsubmits.table.gz - 0.4 Kb)
+0303.112 (0) Table wp_knewsubmitsdetails: Total expected rows (approximate): 0
+0303.115 (0) Table wp_knewsubmitsdetails: Total rows added: 0 in 0.00 seconds
+0303.117 (0) Table wp_knewsubmitsdetails: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_knewsubmitsdetails.table.gz - 0.3 Kb)
+0303.192 (0) Table wp_knewsusers: Total expected rows (approximate): 0
+0303.202 (0) Table wp_knewsusers: Total rows added: 0 in 0.00 seconds
+0303.204 (0) Table wp_knewsusers: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_knewsusers.table.gz - 0.3 Kb)
+0303.283 (0) Table wp_knewsusersevents: Total expected rows (approximate): 0
+0303.293 (0) Table wp_knewsusersevents: Total rows added: 0 in 0.00 seconds
+0303.294 (0) Table wp_knewsusersevents: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_knewsusersevents.table.gz - 0.3 Kb)
+0303.523 (0) Table wp_knewsusersextra: Total expected rows (approximate): 0
+0303.532 (0) Table wp_knewsusersextra: Total rows added: 0 in 0.00 seconds
+0303.533 (0) Table wp_knewsusersextra: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_knewsusersextra.table.gz - 0.3 Kb)
+0303.668 (0) Table wp_knewsuserslists: Total expected rows (approximate): 0
+0303.670 (0) Table wp_knewsuserslists: Total rows added: 0 in 0.00 seconds
+0303.672 (0) Table wp_knewsuserslists: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_knewsuserslists.table.gz - 0.3 Kb)
+0303.958 (0) Table wp_login_security_solution_fail: Total expected rows (approximate): 10750
+0305.096 (0) Table wp_login_security_solution_fail: Total rows added: 10750 in 1.13 seconds
+0305.098 (0) Table wp_login_security_solution_fail: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_login_security_solution_fail.table.gz - 281.4 Kb)
+0305.277 (0) Table wp_newsletter: Total expected rows (approximate): 0
+0305.280 (0) Table wp_newsletter: Total rows added: 0 in 0.00 seconds
+0305.282 (0) Table wp_newsletter: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_newsletter.table.gz - 0.6 Kb)
+0305.300 (0) Table wp_newsletter_emails: Total expected rows (approximate): 0
+0305.303 (0) Table wp_newsletter_emails: Total rows added: 0 in 0.00 seconds
+0305.304 (0) Table wp_newsletter_emails: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_newsletter_emails.table.gz - 0.5 Kb)
+0305.363 (0) Table wp_newsletter_stats: Total expected rows (approximate): 0
+0305.366 (0) Table wp_newsletter_stats: Total rows added: 0 in 0.00 seconds
+0305.367 (0) Table wp_newsletter_stats: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_newsletter_stats.table.gz - 0.4 Kb)
+0305.399 (0) Table wp_psr_post: Total expected rows (approximate): 0
+0305.402 (0) Table wp_psr_post: Total rows added: 0 in 0.00 seconds
+0305.403 (0) Table wp_psr_post: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_psr_post.table.gz - 0.3 Kb)
+0305.562 (0) Table wp_psr_user: Total expected rows (approximate): 0
+0305.564 (0) Table wp_psr_user: Total rows added: 0 in 0.00 seconds
+0305.566 (0) Table wp_psr_user: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_psr_user.table.gz - 0.3 Kb)
+0305.624 (0) Table wp_pvc_daily: Total expected rows (approximate): 31
+0305.628 (0) Table wp_pvc_daily: Total rows added: 31 in 0.00 seconds
+0305.630 (0) Table wp_pvc_daily: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_pvc_daily.table.gz - 0.6 Kb)
+0305.639 (0) Table wp_pvc_total: Total expected rows (approximate): 44
+0305.642 (0) Table wp_pvc_total: Total rows added: 44 in 0.00 seconds
+0305.644 (0) Table wp_pvc_total: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_pvc_total.table.gz - 0.6 Kb)
+0305.685 (0) Table wp_rh_ratings: Total expected rows (approximate): 0
+0305.687 (0) Table wp_rh_ratings: Total rows added: 0 in 0.00 seconds
+0305.688 (0) Table wp_rh_ratings: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_rh_ratings.table.gz - 0.3 Kb)
+0305.790 (0) Table wp_sendpress_list_subscribers: Total expected rows (approximate): 0
+0305.793 (0) Table wp_sendpress_list_subscribers: Total rows added: 0 in 0.00 seconds
+0305.794 (0) Table wp_sendpress_list_subscribers: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_sendpress_list_subscribers.table.gz - 0.4 Kb)
+0305.910 (0) Table wp_sendpress_queue: Total expected rows (approximate): 0
+0305.914 (0) Table wp_sendpress_queue: Total rows added: 0 in 0.00 seconds
+0305.915 (0) Table wp_sendpress_queue: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_sendpress_queue.table.gz - 0.5 Kb)
+0305.943 (0) Table wp_sendpress_report_url: Total expected rows (approximate): 0
+0305.947 (0) Table wp_sendpress_report_url: Total rows added: 0 in 0.00 seconds
+0305.948 (0) Table wp_sendpress_report_url: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_sendpress_report_url.table.gz - 0.3 Kb)
+0305.990 (0) Table wp_sendpress_subscribers: Total expected rows (approximate): 0
+0305.993 (0) Table wp_sendpress_subscribers: Total rows added: 0 in 0.00 seconds
+0305.994 (0) Table wp_sendpress_subscribers: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_sendpress_subscribers.table.gz - 0.4 Kb)
+0306.069 (0) Table wp_sendpress_subscribers_event: Total expected rows (approximate): 0
+0306.072 (0) Table wp_sendpress_subscribers_event: Total rows added: 0 in 0.00 seconds
+0306.074 (0) Table wp_sendpress_subscribers_event: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_sendpress_subscribers_event.table.gz - 0.4 Kb)
+0306.157 (0) Table wp_sendpress_subscribers_meta: Total expected rows (approximate): 0
+0306.160 (0) Table wp_sendpress_subscribers_meta: Total rows added: 0 in 0.00 seconds
+0306.161 (0) Table wp_sendpress_subscribers_meta: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_sendpress_subscribers_meta.table.gz - 0.4 Kb)
+0306.289 (0) Table wp_sendpress_subscribers_status: Total expected rows (approximate): 4
+0306.365 (0) Table wp_sendpress_subscribers_status: Total rows added: 4 in 0.07 seconds
+0306.367 (0) Table wp_sendpress_subscribers_status: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_sendpress_subscribers_status.table.gz - 0.4 Kb)
+0306.406 (0) Table wp_sendpress_subscribers_tracker: Total expected rows (approximate): 0
+0306.409 (0) Table wp_sendpress_subscribers_tracker: Total rows added: 0 in 0.00 seconds
+0306.410 (0) Table wp_sendpress_subscribers_tracker: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_sendpress_subscribers_tracker.table.gz - 0.3 Kb)
+0306.484 (0) Table wp_sendpress_subscribers_url: Total expected rows (approximate): 0
+0306.487 (0) Table wp_sendpress_subscribers_url: Total rows added: 0 in 0.00 seconds
+0306.488 (0) Table wp_sendpress_subscribers_url: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_sendpress_subscribers_url.table.gz - 0.3 Kb)
+0306.514 (0) Table wp_sendpress_url: Total expected rows (approximate): 0
+0306.516 (0) Table wp_sendpress_url: Total rows added: 0 in 0.00 seconds
+0306.517 (0) Table wp_sendpress_url: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_sendpress_url.table.gz - 0.3 Kb)
+0306.685 (0) Table wp_sola_nl_advanced_link_tracking: Total expected rows (approximate): 0
+0306.688 (0) Table wp_sola_nl_advanced_link_tracking: Total rows added: 0 in 0.00 seconds
+0306.689 (0) Table wp_sola_nl_advanced_link_tracking: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_sola_nl_advanced_link_tracking.table.gz - 0.4 Kb)
+0307.773 (0) Table wp_sola_nl_campaign_lists: Total expected rows (approximate): 0
+0307.775 (0) Table wp_sola_nl_campaign_lists: Total rows added: 0 in 0.00 seconds
+0307.777 (0) Table wp_sola_nl_campaign_lists: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_sola_nl_campaign_lists.table.gz - 0.3 Kb)
+0307.877 (0) Table wp_sola_nl_campaign_subscribers: Total expected rows (approximate): 0
+0307.881 (0) Table wp_sola_nl_campaign_subscribers: Total rows added: 0 in 0.00 seconds
+0307.882 (0) Table wp_sola_nl_campaign_subscribers: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_sola_nl_campaign_subscribers.table.gz - 0.3 Kb)
+0308.052 (0) Table wp_sola_nl_campaigns: Total expected rows (approximate): 0
+0308.055 (0) Table wp_sola_nl_campaigns: Total rows added: 0 in 0.00 seconds
+0308.057 (0) Table wp_sola_nl_campaigns: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_sola_nl_campaigns.table.gz - 0.5 Kb)
+0308.269 (0) Table wp_sola_nl_css_options: Total expected rows (approximate): 55
+0308.274 (0) Table wp_sola_nl_css_options: Total rows added: 55 in 0.00 seconds
+0308.275 (0) Table wp_sola_nl_css_options: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_sola_nl_css_options.table.gz - 1 Kb)
+0308.344 (0) Table wp_sola_nl_link_tracking: Total expected rows (approximate): 0
+0308.347 (0) Table wp_sola_nl_link_tracking: Total rows added: 0 in 0.00 seconds
+0308.348 (0) Table wp_sola_nl_link_tracking: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_sola_nl_link_tracking.table.gz - 0.3 Kb)
+0308.361 (0) Table wp_sola_nl_list: Total expected rows (approximate): 1
+0308.363 (0) Table wp_sola_nl_list: Total rows added: 1 in 0.00 seconds
+0308.365 (0) Table wp_sola_nl_list: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_sola_nl_list.table.gz - 0.4 Kb)
+0308.423 (0) Table wp_sola_nl_subscribers: Total expected rows (approximate): 1
+0308.426 (0) Table wp_sola_nl_subscribers: Total rows added: 1 in 0.00 seconds
+0308.427 (0) Table wp_sola_nl_subscribers: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_sola_nl_subscribers.table.gz - 0.5 Kb)
+0308.442 (0) Table wp_sola_nl_subscribers_list: Total expected rows (approximate): 1
+0308.444 (0) Table wp_sola_nl_subscribers_list: Total rows added: 1 in 0.00 seconds
+0308.445 (0) Table wp_sola_nl_subscribers_list: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_sola_nl_subscribers_list.table.gz - 0.3 Kb)
+0308.483 (0) Table wp_sola_nl_themes: Total expected rows (approximate): 1
+0308.486 (0) Table wp_sola_nl_themes: Total rows added: 1 in 0.00 seconds
+0308.488 (0) Table wp_sola_nl_themes: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_sola_nl_themes.table.gz - 1.7 Kb)
+0308.534 (0) Table wp_srzyt_albums: Total expected rows (approximate): 1
+0308.543 (0) Table wp_srzyt_albums: Total rows added: 1 in 0.01 seconds
+0308.552 (0) Table wp_srzyt_albums: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_srzyt_albums.table.gz - 0.6 Kb)
+0308.566 (0) Table wp_stream: Total expected rows (approximate): 4188
+0309.822 (0) Table wp_stream: Total rows added: 4188 in 1.25 seconds
+0309.824 (0) Table wp_stream: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_stream.table.gz - 106.2 Kb)
+0309.832 (0) Table wp_stream_context: Total expected rows (approximate): 4188
+0310.381 (0) Table wp_stream_context: Total rows added: 4188 in 0.55 seconds
+0310.383 (0) Table wp_stream_context: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_stream_context.table.gz - 23.5 Kb)
+0310.685 (0) Table wp_stream_meta: Total expected rows (approximate): 20961
+0312.243 (0) Table wp_stream_meta: Total rows added: 20961 in 1.56 seconds
+0312.245 (0) Table wp_stream_meta: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_stream_meta.table.gz - 184.9 Kb)
+0312.394 (0) Table wp_ultimate: Total expected rows (approximate): 1
+0312.414 (0) Table wp_ultimate: Total rows added: 1 in 0.01 seconds
+0312.416 (0) Table wp_ultimate: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_ultimate.table.gz - 0.9 Kb)
+0312.462 (0) Table wp_ultimatetables: Total expected rows (approximate): 1
+0312.489 (0) Table wp_ultimatetables: Total rows added: 1 in 0.02 seconds
+0312.507 (0) Table wp_ultimatetables: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_ultimatetables.table.gz - 0.7 Kb)
+0312.679 (0) Table wp_wfBadLeechers: Total expected rows (approximate): 0
+0312.681 (0) Table wp_wfBadLeechers: Total rows added: 0 in 0.00 seconds
+0312.683 (0) Table wp_wfBadLeechers: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wfBadLeechers.table.gz - 0.3 Kb)
+0312.774 (0) Table wp_wfBlockedIPLog: Total expected rows (approximate): 1
+0312.847 (0) Table wp_wfBlockedIPLog: Total rows added: 1 in 0.07 seconds
+0312.849 (0) Table wp_wfBlockedIPLog: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wfBlockedIPLog.table.gz - 0.4 Kb)
+0312.856 (0) Table wp_wfBlocks: Total expected rows (approximate): 1
+0312.859 (0) Table wp_wfBlocks: Total rows added: 1 in 0.00 seconds
+0312.860 (0) Table wp_wfBlocks: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wfBlocks.table.gz - 0.4 Kb)
+0312.868 (0) Table wp_wfBlocksAdv: Total expected rows (approximate): 0
+0312.870 (0) Table wp_wfBlocksAdv: Total rows added: 0 in 0.00 seconds
+0312.871 (0) Table wp_wfBlocksAdv: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wfBlocksAdv.table.gz - 0.3 Kb)
+0312.879 (0) Table wp_wfConfig: Total expected rows (approximate): 129
+0313.046 (0) Table wp_wfConfig: Total rows added: 129 in 0.17 seconds
+0313.048 (0) Table wp_wfConfig: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wfConfig.table.gz - 8.1 Kb)
+0313.081 (0) Table wp_wfCrawlers: Total expected rows (approximate): 13
+0313.084 (0) Table wp_wfCrawlers: Total rows added: 13 in 0.00 seconds
+0313.085 (0) Table wp_wfCrawlers: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wfCrawlers.table.gz - 0.6 Kb)
+0313.179 (0) Table wp_wfFileMods: Total expected rows (approximate): 7741
+0313.684 (0) Table wp_wfFileMods: Total rows added: 7741 in 0.50 seconds
+0313.686 (0) Table wp_wfFileMods: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wfFileMods.table.gz - 336.1 Kb)
+0313.694 (0) Table wp_wfHits: Total expected rows (approximate): 1916
+0314.058 (0) Table wp_wfHits: Total rows added: 1916 in 0.36 seconds
+0314.060 (0) Table wp_wfHits: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wfHits.table.gz - 42.6 Kb)
+0314.163 (0) Table wp_wfHoover: Total expected rows (approximate): 0
+0314.165 (0) Table wp_wfHoover: Total rows added: 0 in 0.00 seconds
+0314.167 (0) Table wp_wfHoover: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wfHoover.table.gz - 0.3 Kb)
+0314.225 (0) Table wp_wfIssues: Total expected rows (approximate): 0
+0314.227 (0) Table wp_wfIssues: Total rows added: 0 in 0.00 seconds
+0314.228 (0) Table wp_wfIssues: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wfIssues.table.gz - 0.4 Kb)
+0314.236 (0) Table wp_wfLeechers: Total expected rows (approximate): 1478
+0314.342 (0) Table wp_wfLeechers: Total rows added: 1478 in 0.10 seconds
+0314.344 (0) Table wp_wfLeechers: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wfLeechers.table.gz - 7.2 Kb)
+0314.352 (0) Table wp_wfLockedOut: Total expected rows (approximate): 0
+0314.354 (0) Table wp_wfLockedOut: Total rows added: 0 in 0.00 seconds
+0314.355 (0) Table wp_wfLockedOut: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wfLockedOut.table.gz - 0.3 Kb)
+0314.429 (0) Table wp_wfLocs: Total expected rows (approximate): 0
+0314.432 (0) Table wp_wfLocs: Total rows added: 0 in 0.00 seconds
+0314.434 (0) Table wp_wfLocs: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wfLocs.table.gz - 0.4 Kb)
+0314.495 (0) Table wp_wfLogins: Total expected rows (approximate): 306
+0314.803 (0) Table wp_wfLogins: Total rows added: 306 in 0.31 seconds
+0314.805 (0) Table wp_wfLogins: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wfLogins.table.gz - 5.6 Kb)
+0314.812 (0) Table wp_wfNet404s: Total expected rows (approximate): 0
+0314.815 (0) Table wp_wfNet404s: Total rows added: 0 in 0.00 seconds
+0314.816 (0) Table wp_wfNet404s: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wfNet404s.table.gz - 0.3 Kb)
+0314.824 (0) Table wp_wfReverseCache: Total expected rows (approximate): 4
+0314.826 (0) Table wp_wfReverseCache: Total rows added: 4 in 0.00 seconds
+0314.828 (0) Table wp_wfReverseCache: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wfReverseCache.table.gz - 0.4 Kb)
+0314.863 (0) Table wp_wfScanners: Total expected rows (approximate): 7
+0314.884 (0) Table wp_wfScanners: Total rows added: 7 in 0.02 seconds
+0314.885 (0) Table wp_wfScanners: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wfScanners.table.gz - 0.4 Kb)
+0315.159 (0) Table wp_wfStatus: Total expected rows (approximate): 1237
+0315.421 (0) Table wp_wfStatus: Total rows added: 1237 in 0.26 seconds
+0315.424 (0) Table wp_wfStatus: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wfStatus.table.gz - 19 Kb)
+0315.491 (0) Table wp_wfThrottleLog: Total expected rows (approximate): 0
+0315.494 (0) Table wp_wfThrottleLog: Total rows added: 0 in 0.00 seconds
+0315.496 (0) Table wp_wfThrottleLog: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wfThrottleLog.table.gz - 0.3 Kb)
+0315.519 (0) Table wp_wfVulnScanners: Total expected rows (approximate): 0
+0315.521 (0) Table wp_wfVulnScanners: Total rows added: 0 in 0.00 seconds
+0315.522 (0) Table wp_wfVulnScanners: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wfVulnScanners.table.gz - 0.3 Kb)
+0315.529 (0) Table wp_wpfb_cats: Total expected rows (approximate): 0
+0315.532 (0) Table wp_wpfb_cats: Total rows added: 0 in 0.00 seconds
+0315.543 (0) Table wp_wpfb_cats: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wpfb_cats.table.gz - 0.5 Kb)
+0315.551 (0) Table wp_wpfb_files: Total expected rows (approximate): 0
+0315.554 (0) Table wp_wpfb_files: Total rows added: 0 in 0.00 seconds
+0315.555 (0) Table wp_wpfb_files: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wpfb_files.table.gz - 0.7 Kb)
+0315.616 (0) Table wp_wpfb_files_id3: Total expected rows (approximate): 0
+0315.619 (0) Table wp_wpfb_files_id3: Total rows added: 0 in 0.00 seconds
+0315.620 (0) Table wp_wpfb_files_id3: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wpfb_files_id3.table.gz - 0.3 Kb)
+0315.683 (0) Table wp_wpmlautoresponderemails: Total expected rows (approximate): 0
+0315.686 (0) Table wp_wpmlautoresponderemails: Total rows added: 0 in 0.00 seconds
+0315.687 (0) Table wp_wpmlautoresponderemails: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wpmlautoresponderemails.table.gz - 0.4 Kb)
+0315.784 (0) Table wp_wpmlautoresponders: Total expected rows (approximate): 0
+0315.787 (0) Table wp_wpmlautoresponders: Total rows added: 0 in 0.00 seconds
+0315.789 (0) Table wp_wpmlautoresponders: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wpmlautoresponders.table.gz - 0.4 Kb)
+0315.872 (0) Table wp_wpmlautoresponderslists: Total expected rows (approximate): 0
+0315.875 (0) Table wp_wpmlautoresponderslists: Total rows added: 0 in 0.00 seconds
+0315.876 (0) Table wp_wpmlautoresponderslists: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wpmlautoresponderslists.table.gz - 0.3 Kb)
+0315.934 (0) Table wp_wpmlbounces: Total expected rows (approximate): 0
+0315.937 (0) Table wp_wpmlbounces: Total rows added: 0 in 0.00 seconds
+0315.938 (0) Table wp_wpmlbounces: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wpmlbounces.table.gz - 0.4 Kb)
+0316.059 (0) Table wp_wpmlclicks: Total expected rows (approximate): 0
+0316.062 (0) Table wp_wpmlclicks: Total rows added: 0 in 0.00 seconds
+0316.064 (0) Table wp_wpmlclicks: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wpmlclicks.table.gz - 0.4 Kb)
+0316.274 (0) Table wp_wpmlcontents: Total expected rows (approximate): 0
+0316.276 (0) Table wp_wpmlcontents: Total rows added: 0 in 0.00 seconds
+0316.278 (0) Table wp_wpmlcontents: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wpmlcontents.table.gz - 0.3 Kb)
+0316.443 (0) Table wp_wpmlcountries: Total expected rows (approximate): 241
+0316.467 (0) Table wp_wpmlcountries: Total rows added: 241 in 0.02 seconds
+0316.469 (0) Table wp_wpmlcountries: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wpmlcountries.table.gz - 2.7 Kb)
+0316.728 (0) Table wp_wpmlemails: Total expected rows (approximate): 0
+0316.731 (0) Table wp_wpmlemails: Total rows added: 0 in 0.00 seconds
+0316.732 (0) Table wp_wpmlemails: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wpmlemails.table.gz - 0.5 Kb)
+0316.788 (0) Table wp_wpmlfields: Total expected rows (approximate): 2
+0316.802 (0) Table wp_wpmlfields: Total rows added: 2 in 0.01 seconds
+0316.804 (0) Table wp_wpmlfields: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wpmlfields.table.gz - 0.6 Kb)
+0316.875 (0) Table wp_wpmlfieldslists: Total expected rows (approximate): 4
+0316.895 (0) Table wp_wpmlfieldslists: Total rows added: 4 in 0.02 seconds
+0316.896 (0) Table wp_wpmlfieldslists: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wpmlfieldslists.table.gz - 0.4 Kb)
+0316.969 (0) Table wp_wpmlgroups: Total expected rows (approximate): 0
+0316.972 (0) Table wp_wpmlgroups: Total rows added: 0 in 0.00 seconds
+0316.973 (0) Table wp_wpmlgroups: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wpmlgroups.table.gz - 0.3 Kb)
+0317.125 (0) Table wp_wpmlhistoriesattachments: Total expected rows (approximate): 0
+0317.128 (0) Table wp_wpmlhistoriesattachments: Total rows added: 0 in 0.00 seconds
+0317.129 (0) Table wp_wpmlhistoriesattachments: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wpmlhistoriesattachments.table.gz - 0.4 Kb)
+0317.238 (0) Table wp_wpmlhistorieslists: Total expected rows (approximate): 0
+0317.241 (0) Table wp_wpmlhistorieslists: Total rows added: 0 in 0.00 seconds
+0317.242 (0) Table wp_wpmlhistorieslists: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wpmlhistorieslists.table.gz - 0.3 Kb)
+0317.310 (0) Table wp_wpmlhistory: Total expected rows (approximate): 0
+0317.313 (0) Table wp_wpmlhistory: Total rows added: 0 in 0.00 seconds
+0317.315 (0) Table wp_wpmlhistory: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wpmlhistory.table.gz - 0.6 Kb)
+0317.387 (0) Table wp_wpmllatestposts: Total expected rows (approximate): 0
+0317.390 (0) Table wp_wpmllatestposts: Total rows added: 0 in 0.00 seconds
+0317.391 (0) Table wp_wpmllatestposts: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wpmllatestposts.table.gz - 0.3 Kb)
+0317.500 (0) Table wp_wpmllatestpostssubscriptions: Total expected rows (approximate): 0
+0317.503 (0) Table wp_wpmllatestpostssubscriptions: Total rows added: 0 in 0.00 seconds
+0317.505 (0) Table wp_wpmllatestpostssubscriptions: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wpmllatestpostssubscriptions.table.gz - 0.5 Kb)
+0317.541 (0) Table wp_wpmllinks: Total expected rows (approximate): 0
+0317.544 (0) Table wp_wpmllinks: Total rows added: 0 in 0.00 seconds
+0317.545 (0) Table wp_wpmllinks: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wpmllinks.table.gz - 0.3 Kb)
+0317.763 (0) Table wp_wpmlmailinglists: Total expected rows (approximate): 1
+0317.788 (0) Table wp_wpmlmailinglists: Total rows added: 1 in 0.02 seconds
+0317.790 (0) Table wp_wpmlmailinglists: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wpmlmailinglists.table.gz - 0.6 Kb)
+0317.824 (0) Table wp_wpmloptions: Total expected rows (approximate): 0
+0317.827 (0) Table wp_wpmloptions: Total rows added: 0 in 0.00 seconds
+0317.828 (0) Table wp_wpmloptions: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wpmloptions.table.gz - 0.3 Kb)
+0317.911 (0) Table wp_wpmlorders: Total expected rows (approximate): 0
+0317.914 (0) Table wp_wpmlorders: Total rows added: 0 in 0.00 seconds
+0317.915 (0) Table wp_wpmlorders: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wpmlorders.table.gz - 0.4 Kb)
+0317.951 (0) Table wp_wpmlposts: Total expected rows (approximate): 0
+0317.953 (0) Table wp_wpmlposts: Total rows added: 0 in 0.00 seconds
+0317.955 (0) Table wp_wpmlposts: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wpmlposts.table.gz - 0.3 Kb)
+0318.096 (0) Table wp_wpmlqueue: Total expected rows (approximate): 0
+0318.099 (0) Table wp_wpmlqueue: Total rows added: 0 in 0.00 seconds
+0318.101 (0) Table wp_wpmlqueue: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wpmlqueue.table.gz - 0.4 Kb)
+0318.158 (0) Table wp_wpmlsubscribers: Total expected rows (approximate): 0
+0318.161 (0) Table wp_wpmlsubscribers: Total rows added: 0 in 0.00 seconds
+0318.163 (0) Table wp_wpmlsubscribers: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wpmlsubscribers.table.gz - 0.5 Kb)
+0318.215 (0) Table wp_wpmlsubscriberslists: Total expected rows (approximate): 0
+0318.218 (0) Table wp_wpmlsubscriberslists: Total rows added: 0 in 0.00 seconds
+0318.220 (0) Table wp_wpmlsubscriberslists: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wpmlsubscriberslists.table.gz - 0.4 Kb)
+0318.258 (0) Table wp_wpmlsubscribersoptions: Total expected rows (approximate): 0
+0318.260 (0) Table wp_wpmlsubscribersoptions: Total rows added: 0 in 0.00 seconds
+0318.262 (0) Table wp_wpmlsubscribersoptions: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wpmlsubscribersoptions.table.gz - 0.3 Kb)
+0318.319 (0) Table wp_wpmltemplates: Total expected rows (approximate): 0
+0318.321 (0) Table wp_wpmltemplates: Total rows added: 0 in 0.00 seconds
+0318.323 (0) Table wp_wpmltemplates: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wpmltemplates.table.gz - 0.4 Kb)
+0318.370 (0) Table wp_wpmlthemes: Total expected rows (approximate): 10
+0318.450 (0) Table wp_wpmlthemes: Total rows added: 10 in 0.08 seconds
+0318.453 (0) Table wp_wpmlthemes: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wpmlthemes.table.gz - 7.4 Kb)
+0318.495 (0) Table wp_wpmlunsubscribes: Total expected rows (approximate): 0
+0318.498 (0) Table wp_wpmlunsubscribes: Total rows added: 0 in 0.00 seconds
+0318.499 (0) Table wp_wpmlunsubscribes: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wpmlunsubscribes.table.gz - 0.4 Kb)
+0318.578 (0) Table wp_wppg_album: Total expected rows (approximate): 0
+0318.581 (0) Table wp_wppg_album: Total rows added: 0 in 0.00 seconds
+0318.582 (0) Table wp_wppg_album: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wppg_album.table.gz - 0.4 Kb)
+0318.616 (0) Table wp_wppg_downloads: Total expected rows (approximate): 0
+0318.618 (0) Table wp_wppg_downloads: Total rows added: 0 in 0.00 seconds
+0318.620 (0) Table wp_wppg_downloads: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wppg_downloads.table.gz - 0.3 Kb)
+0318.716 (0) Table wp_wppg_gallery: Total expected rows (approximate): 0
+0318.719 (0) Table wp_wppg_gallery: Total rows added: 0 in 0.00 seconds
+0318.720 (0) Table wp_wppg_gallery: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wppg_gallery.table.gz - 0.5 Kb)
+0318.787 (0) Table wp_wppg_global_meta: Total expected rows (approximate): 0
+0318.790 (0) Table wp_wppg_global_meta: Total rows added: 0 in 0.00 seconds
+0318.791 (0) Table wp_wppg_global_meta: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wppg_global_meta.table.gz - 0.4 Kb)
+0318.849 (0) Table wp_wppg_settings: Total expected rows (approximate): 0
+0318.851 (0) Table wp_wppg_settings: Total rows added: 0 in 0.00 seconds
+0318.853 (0) Table wp_wppg_settings: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wppg_settings.table.gz - 0.3 Kb)
+0318.932 (0) Table wp_wptwitipid: Total expected rows (approximate): 0
+0318.935 (0) Table wp_wptwitipid: Total rows added: 0 in 0.00 seconds
+0318.936 (0) Table wp_wptwitipid: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wptwitipid.table.gz - 0.3 Kb)
+0319.033 (0) Table wp_wysija_campaign: Total expected rows (approximate): 2
+0319.052 (0) Table wp_wysija_campaign: Total rows added: 2 in 0.02 seconds
+0319.054 (0) Table wp_wysija_campaign: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wysija_campaign.table.gz - 0.4 Kb)
+0319.096 (0) Table wp_wysija_campaign_list: Total expected rows (approximate): 1
+0319.110 (0) Table wp_wysija_campaign_list: Total rows added: 1 in 0.01 seconds
+0319.111 (0) Table wp_wysija_campaign_list: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wysija_campaign_list.table.gz - 0.3 Kb)
+0319.165 (0) Table wp_wysija_custom_field: Total expected rows (approximate): 0
+0319.168 (0) Table wp_wysija_custom_field: Total rows added: 0 in 0.00 seconds
+0319.169 (0) Table wp_wysija_custom_field: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wysija_custom_field.table.gz - 0.3 Kb)
+0319.177 (0) Table wp_wysija_email: Total expected rows (approximate): 3
+0319.183 (0) Table wp_wysija_email: Total rows added: 3 in 0.00 seconds
+0319.185 (0) Table wp_wysija_email: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wysija_email.table.gz - 12.6 Kb)
+0319.280 (0) Table wp_wysija_email_user_stat: Total expected rows (approximate): 0
+0319.283 (0) Table wp_wysija_email_user_stat: Total rows added: 0 in 0.00 seconds
+0319.284 (0) Table wp_wysija_email_user_stat: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wysija_email_user_stat.table.gz - 0.3 Kb)
+0319.385 (0) Table wp_wysija_email_user_url: Total expected rows (approximate): 0
+0319.388 (0) Table wp_wysija_email_user_url: Total rows added: 0 in 0.00 seconds
+0319.390 (0) Table wp_wysija_email_user_url: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wysija_email_user_url.table.gz - 0.3 Kb)
+0319.542 (0) Table wp_wysija_form: Total expected rows (approximate): 1
+0319.556 (0) Table wp_wysija_form: Total rows added: 1 in 0.01 seconds
+0319.557 (0) Table wp_wysija_form: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wysija_form.table.gz - 1.1 Kb)
+0319.632 (0) Table wp_wysija_list: Total expected rows (approximate): 2
+0319.694 (0) Table wp_wysija_list: Total rows added: 2 in 0.05 seconds
+0319.696 (0) Table wp_wysija_list: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wysija_list.table.gz - 0.5 Kb)
+0319.704 (0) Table wp_wysija_queue: Total expected rows (approximate): 0
+0319.706 (0) Table wp_wysija_queue: Total rows added: 0 in 0.00 seconds
+0319.707 (0) Table wp_wysija_queue: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wysija_queue.table.gz - 0.3 Kb)
+0319.781 (0) Table wp_wysija_url: Total expected rows (approximate): 0
+0319.784 (0) Table wp_wysija_url: Total rows added: 0 in 0.00 seconds
+0319.785 (0) Table wp_wysija_url: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wysija_url.table.gz - 0.3 Kb)
+0319.838 (0) Table wp_wysija_url_mail: Total expected rows (approximate): 0
+0319.841 (0) Table wp_wysija_url_mail: Total rows added: 0 in 0.00 seconds
+0319.843 (0) Table wp_wysija_url_mail: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wysija_url_mail.table.gz - 0.3 Kb)
+0319.863 (0) Table wp_wysija_user: Total expected rows (approximate): 4
+0319.866 (0) Table wp_wysija_user: Total rows added: 4 in 0.00 seconds
+0319.867 (0) Table wp_wysija_user: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wysija_user.table.gz - 0.7 Kb)
+0319.984 (0) Table wp_wysija_user_field: Total expected rows (approximate): 2
+0319.993 (0) Table wp_wysija_user_field: Total rows added: 2 in 0.01 seconds
+0319.995 (0) Table wp_wysija_user_field: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wysija_user_field.table.gz - 0.4 Kb)
+0320.036 (0) Table wp_wysija_user_history: Total expected rows (approximate): 0
+0320.038 (0) Table wp_wysija_user_history: Total rows added: 0 in 0.00 seconds
+0320.040 (0) Table wp_wysija_user_history: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wysija_user_history.table.gz - 0.3 Kb)
+0320.146 (0) Table wp_wysija_user_list: Total expected rows (approximate): 6
+0320.158 (0) Table wp_wysija_user_list: Total rows added: 6 in 0.01 seconds
+0320.159 (0) Table wp_wysija_user_list: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wysija_user_list.table.gz - 0.4 Kb)
+0320.210 (0) Table wp_xml_sitemap_generator: Total expected rows (approximate): 1
+0320.213 (0) Table wp_xml_sitemap_generator: Total rows added: 1 in 0.00 seconds
+0320.215 (0) Table wp_xml_sitemap_generator: finishing file (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_xml_sitemap_generator.table.gz - 0.4 Kb)
+0320.219 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_options.table.gz (1/186): adding to final database dump
+0320.275 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_users.table.gz (2/186): adding to final database dump
+0320.276 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_usermeta.table.gz (3/186): adding to final database dump
+0320.278 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_commentmeta.table.gz (4/186): adding to final database dump
+0320.291 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_comments.table.gz (5/186): adding to final database dump
+0320.302 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_links.table.gz (6/186): adding to final database dump
+0320.304 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_postmeta.table.gz (7/186): adding to final database dump
+0320.316 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_posts.table.gz (8/186): adding to final database dump
+0320.444 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_term_relationships.table.gz (9/186): adding to final database dump
+0320.449 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_term_taxonomy.table.gz (10/186): adding to final database dump
+0320.452 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_terms.table.gz (11/186): adding to final database dump
+0320.454 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_Counterize.table.gz (12/186): adding to final database dump
+0324.424 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_Counterize_Countries.table.gz (13/186): adding to final database dump
+0324.427 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_Counterize_Keywords.table.gz (14/186): adding to final database dump
+0324.438 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_Counterize_Outlinks.table.gz (15/186): adding to final database dump
+0324.442 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_Counterize_Pages.table.gz (16/186): adding to final database dump
+0324.506 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_Counterize_Referers.table.gz (17/186): adding to final database dump
+0324.676 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_Counterize_UserAgents.table.gz (18/186): adding to final database dump
+0324.727 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_botnetblocker.table.gz (19/186): adding to final database dump
+0324.729 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_bwg_album.table.gz (20/186): adding to final database dump
+0324.730 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_bwg_album_gallery.table.gz (21/186): adding to final database dump
+0324.732 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_bwg_gallery.table.gz (22/186): adding to final database dump
+0324.733 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_bwg_image.table.gz (23/186): adding to final database dump
+0324.734 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_bwg_image_comment.table.gz (24/186): adding to final database dump
+0324.736 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_bwg_image_rate.table.gz (25/186): adding to final database dump
+0324.737 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_bwg_image_tag.table.gz (26/186): adding to final database dump
+0324.739 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_bwg_option.table.gz (27/186): adding to final database dump
+0324.741 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_bwg_shortcode.table.gz (28/186): adding to final database dump
+0324.742 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_bwg_theme.table.gz (29/186): adding to final database dump
+0324.745 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_caa_profile_db.table.gz (30/186): adding to final database dump
+0324.747 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_comment_rating.table.gz (31/186): adding to final database dump
+0324.748 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_demon_imagenote.table.gz (32/186): adding to final database dump
+0324.749 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_ean_newsletter.table.gz (33/186): adding to final database dump
+0324.751 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_easymail_recipients.table.gz (34/186): adding to final database dump
+0324.752 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_easymail_stats.table.gz (35/186): adding to final database dump
+0324.753 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_easymail_subscribers.table.gz (36/186): adding to final database dump
+0324.755 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_easymail_unsubscribed.table.gz (37/186): adding to final database dump
+0324.756 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_eemail_newsletter.table.gz (38/186): adding to final database dump
+0324.757 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_eemail_newsletter_sub.table.gz (39/186): adding to final database dump
+0324.759 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_effecto.table.gz (40/186): adding to final database dump
+0324.760 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_flag_album.table.gz (41/186): adding to final database dump
+0324.761 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_flag_comments.table.gz (42/186): adding to final database dump
+0324.763 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_flag_gallery.table.gz (43/186): adding to final database dump
+0324.764 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_flag_pictures.table.gz (44/186): adding to final database dump
+0324.766 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_fsr_post.table.gz (45/186): adding to final database dump
+0324.767 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_fsr_user.table.gz (46/186): adding to final database dump
+0324.768 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_gdsr_data_article.table.gz (47/186): adding to final database dump
+0324.770 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_gdsr_data_category.table.gz (48/186): adding to final database dump
+0324.771 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_gdsr_data_comment.table.gz (49/186): adding to final database dump
+0324.772 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_gdsr_ips.table.gz (50/186): adding to final database dump
+0324.774 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_gdsr_moderate.table.gz (51/186): adding to final database dump
+0324.775 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_gdsr_multis.table.gz (52/186): adding to final database dump
+0324.777 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_gdsr_multis_data.table.gz (53/186): adding to final database dump
+0324.778 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_gdsr_multis_trend.table.gz (54/186): adding to final database dump
+0324.779 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_gdsr_multis_values.table.gz (55/186): adding to final database dump
+0324.780 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_gdsr_templates.table.gz (56/186): adding to final database dump
+0324.783 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_gdsr_votes_log.table.gz (57/186): adding to final database dump
+0324.784 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_gdsr_votes_trend.table.gz (58/186): adding to final database dump
+0324.785 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_gsom_subscribers.table.gz (59/186): adding to final database dump
+0324.787 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_huge_it_videogallery_galleries.table.gz (60/186): adding to final database dump
+0324.788 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_huge_it_videogallery_videos.table.gz (61/186): adding to final database dump
+0324.790 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_itsec_lockouts.table.gz (62/186): adding to final database dump
+0324.791 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_itsec_log.table.gz (63/186): adding to final database dump
+0324.793 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_itsec_temp.table.gz (64/186): adding to final database dump
+0324.794 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_knewsautomated.table.gz (65/186): adding to final database dump
+0324.795 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_knewsautomatedposts.table.gz (66/186): adding to final database dump
+0324.797 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_knewsautomatedsel.table.gz (67/186): adding to final database dump
+0324.798 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_knewsextrafields.table.gz (68/186): adding to final database dump
+0324.799 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_knewskeys.table.gz (69/186): adding to final database dump
+0324.801 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_knewsletters.table.gz (70/186): adding to final database dump
+0324.802 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_knewslists.table.gz (71/186): adding to final database dump
+0324.803 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_knewstats.table.gz (72/186): adding to final database dump
+0324.805 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_knewsubmits.table.gz (73/186): adding to final database dump
+0324.806 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_knewsubmitsdetails.table.gz (74/186): adding to final database dump
+0324.807 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_knewsusers.table.gz (75/186): adding to final database dump
+0324.809 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_knewsusersevents.table.gz (76/186): adding to final database dump
+0324.810 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_knewsusersextra.table.gz (77/186): adding to final database dump
+0324.811 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_knewsuserslists.table.gz (78/186): adding to final database dump
+0324.813 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_login_security_solution_fail.table.gz (79/186): adding to final database dump
+0324.913 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_newsletter.table.gz (80/186): adding to final database dump
+0324.916 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_newsletter_emails.table.gz (81/186): adding to final database dump
+0324.917 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_newsletter_stats.table.gz (82/186): adding to final database dump
+0324.920 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_psr_post.table.gz (83/186): adding to final database dump
+0324.921 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_psr_user.table.gz (84/186): adding to final database dump
+0324.923 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_pvc_daily.table.gz (85/186): adding to final database dump
+0324.924 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_pvc_total.table.gz (86/186): adding to final database dump
+0324.926 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_rh_ratings.table.gz (87/186): adding to final database dump
+0324.927 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_sendpress_list_subscribers.table.gz (88/186): adding to final database dump
+0324.928 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_sendpress_queue.table.gz (89/186): adding to final database dump
+0324.930 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_sendpress_report_url.table.gz (90/186): adding to final database dump
+0324.931 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_sendpress_subscribers.table.gz (91/186): adding to final database dump
+0324.933 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_sendpress_subscribers_event.table.gz (92/186): adding to final database dump
+0324.934 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_sendpress_subscribers_meta.table.gz (93/186): adding to final database dump
+0324.936 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_sendpress_subscribers_status.table.gz (94/186): adding to final database dump
+0324.937 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_sendpress_subscribers_tracker.table.gz (95/186): adding to final database dump
+0324.938 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_sendpress_subscribers_url.table.gz (96/186): adding to final database dump
+0324.940 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_sendpress_url.table.gz (97/186): adding to final database dump
+0324.941 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_sola_nl_advanced_link_tracking.table.gz (98/186): adding to final database dump
+0324.942 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_sola_nl_campaign_lists.table.gz (99/186): adding to final database dump
+0324.947 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_sola_nl_campaign_subscribers.table.gz (100/186): adding to final database dump
+0324.948 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_sola_nl_campaigns.table.gz (101/186): adding to final database dump
+0324.950 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_sola_nl_css_options.table.gz (102/186): adding to final database dump
+0324.951 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_sola_nl_link_tracking.table.gz (103/186): adding to final database dump
+0324.953 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_sola_nl_list.table.gz (104/186): adding to final database dump
+0324.954 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_sola_nl_subscribers.table.gz (105/186): adding to final database dump
+0324.955 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_sola_nl_subscribers_list.table.gz (106/186): adding to final database dump
+0324.957 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_sola_nl_themes.table.gz (107/186): adding to final database dump
+0324.959 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_srzyt_albums.table.gz (108/186): adding to final database dump
+0324.960 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_stream.table.gz (109/186): adding to final database dump
+0325.008 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_stream_context.table.gz (110/186): adding to final database dump
+0325.034 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_stream_meta.table.gz (111/186): adding to final database dump
+0325.179 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_ultimate.table.gz (112/186): adding to final database dump
+0325.182 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_ultimatetables.table.gz (113/186): adding to final database dump
+0325.183 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wfBadLeechers.table.gz (114/186): adding to final database dump
+0325.185 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wfBlockedIPLog.table.gz (115/186): adding to final database dump
+0325.186 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wfBlocks.table.gz (116/186): adding to final database dump
+0325.187 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wfBlocksAdv.table.gz (117/186): adding to final database dump
+0325.189 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wfConfig.table.gz (118/186): adding to final database dump
+0325.191 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wfCrawlers.table.gz (119/186): adding to final database dump
+0325.193 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wfFileMods.table.gz (120/186): adding to final database dump
+0325.278 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wfHits.table.gz (121/186): adding to final database dump
+0325.298 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wfHoover.table.gz (122/186): adding to final database dump
+0325.299 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wfIssues.table.gz (123/186): adding to final database dump
+0325.301 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wfLeechers.table.gz (124/186): adding to final database dump
+0325.308 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wfLockedOut.table.gz (125/186): adding to final database dump
+0325.310 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wfLocs.table.gz (126/186): adding to final database dump
+0325.311 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wfLogins.table.gz (127/186): adding to final database dump
+0325.314 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wfNet404s.table.gz (128/186): adding to final database dump
+0325.316 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wfReverseCache.table.gz (129/186): adding to final database dump
+0325.317 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wfScanners.table.gz (130/186): adding to final database dump
+0325.318 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wfStatus.table.gz (131/186): adding to final database dump
+0325.328 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wfThrottleLog.table.gz (132/186): adding to final database dump
+0325.330 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wfVulnScanners.table.gz (133/186): adding to final database dump
+0325.331 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wpfb_cats.table.gz (134/186): adding to final database dump
+0325.332 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wpfb_files.table.gz (135/186): adding to final database dump
+0325.334 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wpfb_files_id3.table.gz (136/186): adding to final database dump
+0325.335 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wpmlautoresponderemails.table.gz (137/186): adding to final database dump
+0325.337 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wpmlautoresponders.table.gz (138/186): adding to final database dump
+0325.338 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wpmlautoresponderslists.table.gz (139/186): adding to final database dump
+0325.339 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wpmlbounces.table.gz (140/186): adding to final database dump
+0325.340 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wpmlclicks.table.gz (141/186): adding to final database dump
+0325.342 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wpmlcontents.table.gz (142/186): adding to final database dump
+0325.343 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wpmlcountries.table.gz (143/186): adding to final database dump
+0325.346 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wpmlemails.table.gz (144/186): adding to final database dump
+0325.347 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wpmlfields.table.gz (145/186): adding to final database dump
+0325.348 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wpmlfieldslists.table.gz (146/186): adding to final database dump
+0325.350 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wpmlgroups.table.gz (147/186): adding to final database dump
+0325.351 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wpmlhistoriesattachments.table.gz (148/186): adding to final database dump
+0325.352 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wpmlhistorieslists.table.gz (149/186): adding to final database dump
+0325.354 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wpmlhistory.table.gz (150/186): adding to final database dump
+0325.355 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wpmllatestposts.table.gz (151/186): adding to final database dump
+0325.356 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wpmllatestpostssubscriptions.table.gz (152/186): adding to final database dump
+0325.358 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wpmllinks.table.gz (153/186): adding to final database dump
+0325.359 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wpmlmailinglists.table.gz (154/186): adding to final database dump
+0325.361 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wpmloptions.table.gz (155/186): adding to final database dump
+0325.362 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wpmlorders.table.gz (156/186): adding to final database dump
+0325.363 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wpmlposts.table.gz (157/186): adding to final database dump
+0325.365 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wpmlqueue.table.gz (158/186): adding to final database dump
+0325.366 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wpmlsubscribers.table.gz (159/186): adding to final database dump
+0325.367 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wpmlsubscriberslists.table.gz (160/186): adding to final database dump
+0325.369 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wpmlsubscribersoptions.table.gz (161/186): adding to final database dump
+0325.370 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wpmltemplates.table.gz (162/186): adding to final database dump
+0325.371 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wpmlthemes.table.gz (163/186): adding to final database dump
+0325.376 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wpmlunsubscribes.table.gz (164/186): adding to final database dump
+0325.378 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wppg_album.table.gz (165/186): adding to final database dump
+0325.379 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wppg_downloads.table.gz (166/186): adding to final database dump
+0325.380 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wppg_gallery.table.gz (167/186): adding to final database dump
+0325.382 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wppg_global_meta.table.gz (168/186): adding to final database dump
+0325.383 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wppg_settings.table.gz (169/186): adding to final database dump
+0325.384 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wptwitipid.table.gz (170/186): adding to final database dump
+0325.386 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wysija_campaign.table.gz (171/186): adding to final database dump
+0325.387 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wysija_campaign_list.table.gz (172/186): adding to final database dump
+0325.388 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wysija_custom_field.table.gz (173/186): adding to final database dump
+0325.390 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wysija_email.table.gz (174/186): adding to final database dump
+0325.393 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wysija_email_user_stat.table.gz (175/186): adding to final database dump
+0325.395 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wysija_email_user_url.table.gz (176/186): adding to final database dump
+0325.396 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wysija_form.table.gz (177/186): adding to final database dump
+0325.398 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wysija_list.table.gz (178/186): adding to final database dump
+0325.399 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wysija_queue.table.gz (179/186): adding to final database dump
+0325.401 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wysija_url.table.gz (180/186): adding to final database dump
+0325.402 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wysija_url_mail.table.gz (181/186): adding to final database dump
+0325.403 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wysija_user.table.gz (182/186): adding to final database dump
+0325.405 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wysija_user_field.table.gz (183/186): adding to final database dump
+0325.406 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wysija_user_history.table.gz (184/186): adding to final database dump
+0325.407 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_wysija_user_list.table.gz (185/186): adding to final database dump
+0325.408 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db-table-wp_xml_sitemap_generator.table.gz (186/186): adding to final database dump
+0325.410 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db.gz: finished writing out complete database file (8448 Kb)
+0325.472 (0) Total database tables backed up: 186 (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db.gz, size: 8682050, checksum (SHA1): 3552364dba0e258e091372d8532e4d8ac1b2b17f)
+0325.476 (0) Saving backup history
+0325.481 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip: plugins: This file has not yet been successfully uploaded: will queue
+0325.483 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-themes.zip: themes: This file has not yet been successfully uploaded: will queue
+0325.484 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-uploads.zip: uploads: This file has not yet been successfully uploaded: will queue
+0325.485 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-others.zip: others: This file has not yet been successfully uploaded: will queue
+0325.486 (0) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db.gz: db: This file has not yet been successfully uploaded: will queue
+0325.489 (0) Requesting upload of the files that have not yet been successfully uploaded (5)
+0325.495 (0) Cloud backup selection (1/1): dropbox (last)
+0325.497 (0) Beginning dispatch of backup to remote (dropbox)
+0325.498 (0) Dropbox: begin cloud upload
+0325.526 (0) Dropbox: access gained
+0328.346 (0) Dropbox quota usage: normal=218.2 Mb, shared=0 Mb, total=2304 Mb, available=2085.8 Mb
+0328.348 (0) Dropbox: Attempt to upload: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip to: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip
+0335.462 (0) Dropbox chunked upload: 3.4 % uploaded (7KTTLLourubV2LVQus0v2w, 1048576)
+0351.032 (0) Dropbox chunked upload: 6.8 % uploaded (7KTTLLourubV2LVQus0v2w, 2097152)
+0360.949 (0) Dropbox chunked upload: 10.2 % uploaded (7KTTLLourubV2LVQus0v2w, 3145728)
+0369.393 (0) Dropbox chunked upload: 13.6 % uploaded (7KTTLLourubV2LVQus0v2w, 4194304)
+0377.511 (0) Dropbox chunked upload: 17 % uploaded (7KTTLLourubV2LVQus0v2w, 5242880)
+0384.780 (0) Dropbox chunked upload: 20.4 % uploaded (7KTTLLourubV2LVQus0v2w, 6291456)
+0391.539 (0) Dropbox chunked upload: 23.8 % uploaded (7KTTLLourubV2LVQus0v2w, 7340032)
+0399.718 (0) Dropbox chunked upload: 27.2 % uploaded (7KTTLLourubV2LVQus0v2w, 8388608)
+0406.750 (0) Dropbox chunked upload: 30.5 % uploaded (7KTTLLourubV2LVQus0v2w, 9437184)
+0415.285 (0) Dropbox chunked upload: 33.9 % uploaded (7KTTLLourubV2LVQus0v2w, 10485760)
+0422.705 (0) Dropbox chunked upload: 37.3 % uploaded (7KTTLLourubV2LVQus0v2w, 11534336)
+0430.876 (0) Dropbox chunked upload: 40.7 % uploaded (7KTTLLourubV2LVQus0v2w, 12582912)
+0437.538 (0) Dropbox chunked upload: 44.1 % uploaded (7KTTLLourubV2LVQus0v2w, 13631488)
+0445.117 (0) Dropbox chunked upload: 47.5 % uploaded (7KTTLLourubV2LVQus0v2w, 14680064)
+0452.010 (0) Dropbox chunked upload: 50.9 % uploaded (7KTTLLourubV2LVQus0v2w, 15728640)
+0460.411 (0) Dropbox chunked upload: 54.3 % uploaded (7KTTLLourubV2LVQus0v2w, 16777216)
+0466.468 (0) Dropbox chunked upload: 57.7 % uploaded (7KTTLLourubV2LVQus0v2w, 17825792)
+0474.839 (0) Dropbox chunked upload: 61.1 % uploaded (7KTTLLourubV2LVQus0v2w, 18874368)
+0483.800 (0) Dropbox chunked upload: 64.5 % uploaded (7KTTLLourubV2LVQus0v2w, 19922944)
+0491.863 (0) The scheduled resumption is within 45 seconds - will reschedule
+0491.866 (0) Rescheduling resumption 1: moving to 578 seconds from now (1440535656)
+0491.872 (0) To decrease the likelihood of overlaps, increasing resumption interval to: 533 + 45 = 578
+0491.873 (0) Dropbox chunked upload: 67.9 % uploaded (7KTTLLourubV2LVQus0v2w, 20971520)
+1200.908 (1) Opened log file at time: Tue, 25 Aug 2015 20:49:47 +0000 on http://www.selectsifiso.net
+1200.909 (1) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.10.3 WP: 4.2.4 PHP: 5.3.2-1ubuntu4.28 (Linux gnoll.imaginet.co.za 2.6.32-73-server #140-Ubuntu SMP Tue Feb 10 15:26:08 UTC 2015 x86_64) MySQL: 5.1.73-0ubuntu0.10.04.1 Server: Apache safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 83.9M | 84.5M) multisite: N mcrypt: Y LANG:  ZipArchive::addFile: Y
+1200.911 (1) Free space on disk containing Updraft's temporary directory: 62767.5 Mb
+1200.914 (1) Backup run: resumption=1, nonce=3552bbe869f3, begun at=1440534586 (1201s ago), job type=backup, previous check-in=491.7s
+1200.918 (1) Scheduling a resumption (2) after 578 seconds (1440536365) in case this run gets aborted
+1200.979 (1) Checking if we have a zip executable available
+1200.981 (1) Creation of backups of directories: already finished
+1200.982 (1) Saving backup status to database (elements: 8)
+1200.985 (1) Database dump (WordPress DB): Creation was completed already
+1200.986 (1) Saving backup history
+1200.990 (1) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip: plugins: This file has not yet been successfully uploaded: will queue
+1200.991 (1) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-themes.zip: themes: This file has not yet been successfully uploaded: will queue
+1200.992 (1) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-uploads.zip: uploads: This file has not yet been successfully uploaded: will queue
+1200.993 (1) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-others.zip: others: This file has not yet been successfully uploaded: will queue
+1200.994 (1) backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db.gz: db: This file has not yet been successfully uploaded: will queue
+1200.996 (1) Requesting upload of the files that have not yet been successfully uploaded (5)
+1200.997 (1) Cloud backup selection (1/1): dropbox (last)
+1201.000 (1) Beginning dispatch of backup to remote (dropbox)
+1201.001 (1) Dropbox: begin cloud upload
+1201.005 (1) Dropbox: access gained
+1203.011 (1) Dropbox quota usage: normal=218.2 Mb, shared=0 Mb, total=2304 Mb, available=2085.8 Mb
+1203.012 (1) This is a resumption: 20971520 bytes had already been uploaded
+1203.013 (1) Dropbox: Attempt to upload: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip to: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip
+1208.305 (1) Dropbox chunked upload: 71.3 % uploaded (7KTTLLourubV2LVQus0v2w, 22020096)
+1215.163 (1) Dropbox chunked upload: 74.7 % uploaded (7KTTLLourubV2LVQus0v2w, 23068672)
+1222.217 (1) Dropbox chunked upload: 78.1 % uploaded (7KTTLLourubV2LVQus0v2w, 24117248)
+1232.207 (1) Dropbox chunked upload: 81.5 % uploaded (7KTTLLourubV2LVQus0v2w, 25165824)
+1239.238 (1) Dropbox chunked upload: 84.9 % uploaded (7KTTLLourubV2LVQus0v2w, 26214400)
+1250.278 (1) Dropbox chunked upload: 88.2 % uploaded (7KTTLLourubV2LVQus0v2w, 27262976)
+1258.521 (1) Dropbox chunked upload: 91.6 % uploaded (7KTTLLourubV2LVQus0v2w, 28311552)
+1267.228 (1) Dropbox chunked upload: 95 % uploaded (7KTTLLourubV2LVQus0v2w, 29360128)
+1275.190 (1) Dropbox chunked upload: 98.4 % uploaded (7KTTLLourubV2LVQus0v2w, 30408704)
+1279.930 (1) Dropbox chunked upload: 100 % uploaded (7KTTLLourubV2LVQus0v2w, 30893606)
+1282.431 (1) Recording as successfully uploaded: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip (802109b5ab55003824a6980f362e90ae)
+1282.446 (1) Deleting local file: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip: OK
+1282.448 (1) Dropbox: File upload success (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-plugins.zip): 30169 Kb in 79s (379 Kb/s)
+1284.096 (1) Dropbox quota usage: normal=247.7 Mb, shared=0 Mb, total=2304 Mb, available=2056.3 Mb
+1284.097 (1) Dropbox: Attempt to upload: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-themes.zip to: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-themes.zip
+1288.211 (1) Dropbox chunked upload: 100 % uploaded (v-dwmRqcpC7ybnRWumsQ2w, 499540)
+1290.491 (1) Recording as successfully uploaded: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-themes.zip (98f9f8df555a75fcdd5db985c0440526)
+1290.498 (1) Deleting local file: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-themes.zip: OK
+1290.499 (1) Dropbox: File upload success (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-themes.zip): 487 Kb in 6s (76 Kb/s)
+1292.133 (1) Dropbox quota usage: normal=248.2 Mb, shared=0 Mb, total=2304 Mb, available=2055.8 Mb
+1292.134 (1) Dropbox: Attempt to upload: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-uploads.zip to: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-uploads.zip
+1302.669 (1) Dropbox chunked upload: 4.3 % uploaded (gCrM4piyZITvp70sxAD4ew, 1048576)
+1313.047 (1) Dropbox chunked upload: 8.5 % uploaded (gCrM4piyZITvp70sxAD4ew, 2097152)
+1322.292 (1) Dropbox chunked upload: 12.8 % uploaded (gCrM4piyZITvp70sxAD4ew, 3145728)
+1331.770 (1) Dropbox chunked upload: 17 % uploaded (gCrM4piyZITvp70sxAD4ew, 4194304)
+1340.511 (1) Dropbox chunked upload: 21.3 % uploaded (gCrM4piyZITvp70sxAD4ew, 5242880)
+1349.032 (1) Dropbox chunked upload: 25.5 % uploaded (gCrM4piyZITvp70sxAD4ew, 6291456)
+1356.645 (1) Dropbox chunked upload: 29.8 % uploaded (gCrM4piyZITvp70sxAD4ew, 7340032)
+1371.303 (1) Dropbox chunked upload: 34 % uploaded (gCrM4piyZITvp70sxAD4ew, 8388608)
+1378.283 (1) Dropbox chunked upload: 38.3 % uploaded (gCrM4piyZITvp70sxAD4ew, 9437184)
+1394.514 (1) Dropbox chunked upload: 42.5 % uploaded (gCrM4piyZITvp70sxAD4ew, 10485760)
+1403.312 (1) Dropbox chunked upload: 46.8 % uploaded (gCrM4piyZITvp70sxAD4ew, 11534336)
+1409.739 (1) Dropbox chunked upload: 51 % uploaded (gCrM4piyZITvp70sxAD4ew, 12582912)
+1419.105 (1) Dropbox chunked upload: 55.3 % uploaded (gCrM4piyZITvp70sxAD4ew, 13631488)
+1430.965 (1) Dropbox chunked upload: 59.5 % uploaded (gCrM4piyZITvp70sxAD4ew, 14680064)
+1442.847 (1) Dropbox chunked upload: 63.8 % uploaded (gCrM4piyZITvp70sxAD4ew, 15728640)
+1450.261 (1) Dropbox chunked upload: 68 % uploaded (gCrM4piyZITvp70sxAD4ew, 16777216)
+1459.308 (1) Dropbox chunked upload: 72.3 % uploaded (gCrM4piyZITvp70sxAD4ew, 17825792)
+1465.724 (1) Dropbox chunked upload: 76.5 % uploaded (gCrM4piyZITvp70sxAD4ew, 18874368)
+1474.242 (1) Dropbox chunked upload: 80.8 % uploaded (gCrM4piyZITvp70sxAD4ew, 19922944)
+1489.591 (1) Dropbox chunked upload: 85 % uploaded (gCrM4piyZITvp70sxAD4ew, 20971520)
+1504.899 (1) Dropbox chunked upload: 89.3 % uploaded (gCrM4piyZITvp70sxAD4ew, 22020096)
+1511.548 (1) Dropbox chunked upload: 93.5 % uploaded (gCrM4piyZITvp70sxAD4ew, 23068672)
+1517.833 (1) Dropbox chunked upload: 97.8 % uploaded (gCrM4piyZITvp70sxAD4ew, 24117248)
+1524.141 (1) Dropbox chunked upload: 100 % uploaded (gCrM4piyZITvp70sxAD4ew, 24665385)
+1527.234 (1) Recording as successfully uploaded: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-uploads.zip (1e8159079c8b85b186b6622773f3087d)
+1527.247 (1) Deleting local file: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-uploads.zip: OK
+1527.249 (1) Dropbox: File upload success (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-uploads.zip): 24087 Kb in 235s (102 Kb/s)
+1529.578 (1) Dropbox quota usage: normal=271.7 Mb, shared=0 Mb, total=2304 Mb, available=2032.3 Mb
+1529.580 (1) Dropbox: Attempt to upload: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-others.zip to: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-others.zip
+1538.147 (1) Dropbox chunked upload: 100 % uploaded (WSzKwOibRtLlfQW5m3RL3w, 984728)
+1542.580 (1) Recording as successfully uploaded: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-others.zip (d53a53970e57ab923896860144b73ac4)
+1542.587 (1) Deleting local file: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-others.zip: OK
+1542.588 (1) Dropbox: File upload success (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-others.zip): 961 Kb in 13s (73 Kb/s)
+1549.972 (1) Dropbox quota usage: normal=272.6 Mb, shared=0 Mb, total=2304 Mb, available=2031.4 Mb
+1549.974 (1) Dropbox: Attempt to upload: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db.gz to: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db.gz
+1580.179 (1) Dropbox chunked upload: 12.1 % uploaded (q_q1p80RNLrHUJmSYuVqVA, 1048576)
+1589.100 (1) Dropbox chunked upload: 24.2 % uploaded (q_q1p80RNLrHUJmSYuVqVA, 2097152)
+1597.336 (1) Dropbox chunked upload: 36.2 % uploaded (q_q1p80RNLrHUJmSYuVqVA, 3145728)
+1606.245 (1) Dropbox chunked upload: 48.3 % uploaded (q_q1p80RNLrHUJmSYuVqVA, 4194304)
+1615.171 (1) Dropbox chunked upload: 60.4 % uploaded (q_q1p80RNLrHUJmSYuVqVA, 5242880)
+1621.712 (1) Dropbox chunked upload: 72.5 % uploaded (q_q1p80RNLrHUJmSYuVqVA, 6291456)
+1629.550 (1) Dropbox chunked upload: 84.5 % uploaded (q_q1p80RNLrHUJmSYuVqVA, 7340032)
+1642.653 (1) Dropbox chunked upload: 96.6 % uploaded (q_q1p80RNLrHUJmSYuVqVA, 8388608)
+1646.196 (1) Dropbox chunked upload: 100 % uploaded (q_q1p80RNLrHUJmSYuVqVA, 8682050)
+1648.538 (1) Recording as successfully uploaded: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db.gz (6a926ef0d6b418d0d10d4ed2b358cda0)
+1648.548 (1) Deleting local file: backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db.gz: OK
+1648.549 (1) Dropbox: File upload success (backup_2015-08-25-2229_select_SIFISO_3552bbe869f3-db.gz): 8478 Kb in 98s (86 Kb/s)
+1648.553 (1) Retain: beginning examination of existing backup sets; user setting: retain_files=2, retain_db=2
+1648.555 (1) Number of backup sets in history: 3
+1648.556 (1) Examining backup set with datestamp: 1440534586 (Aug 25 2015 20:29:46)
+1648.560 (1) 1440534586: this backup set remains non-empty (1/1); will retain in history
+1648.561 (1) Examining backup set with datestamp: 1439929784 (Aug 18 2015 20:29:44)
+1648.565 (1) 1439929784: this backup set remains non-empty (1/1); will retain in history
+1648.566 (1) Examining backup set with datestamp: 1439324936 (Aug 11 2015 20:28:56)
+1648.567 (1) 1439324936: db: this set includes a database (backup_2015-08-11-2228_select_SIFISO_b8bfe3a06d0c-db.gz); db count is now 3
+1648.568 (1) 1439324936: db: over retain limit (2); will delete this database
+1648.569 (1) Delete file: backup_2015-08-11-2228_select_SIFISO_b8bfe3a06d0c-db.gz, service=dropbox
+1648.570 (1) Dropbox: request deletion: backup_2015-08-11-2228_select_SIFISO_b8bfe3a06d0c-db.gz
+1650.606 (1) Dropbox: delete succeeded
+1650.611 (1) plugins: 1439324936: over retain limit (2); will delete this file (backup_2015-08-11-2228_select_SIFISO_b8bfe3a06d0c-plugins.zip)
+1650.612 (1) themes: 1439324936: over retain limit (2); will delete this file (backup_2015-08-11-2228_select_SIFISO_b8bfe3a06d0c-themes.zip)
+1650.613 (1) uploads: 1439324936: over retain limit (2); will delete this file (backup_2015-08-11-2228_select_SIFISO_b8bfe3a06d0c-uploads.zip)
+1650.614 (1) others: 1439324936: over retain limit (2); will delete this file (backup_2015-08-11-2228_select_SIFISO_b8bfe3a06d0c-others.zip)
+1650.615 (1) Delete file: backup_2015-08-11-2228_select_SIFISO_b8bfe3a06d0c-plugins.zip, service=dropbox
+1650.616 (1) Delete file: backup_2015-08-11-2228_select_SIFISO_b8bfe3a06d0c-themes.zip, service=dropbox
+1650.617 (1) Delete file: backup_2015-08-11-2228_select_SIFISO_b8bfe3a06d0c-uploads.zip, service=dropbox
+1650.618 (1) Delete file: backup_2015-08-11-2228_select_SIFISO_b8bfe3a06d0c-others.zip, service=dropbox
+1650.620 (1) Dropbox: request deletion: backup_2015-08-11-2228_select_SIFISO_b8bfe3a06d0c-plugins.zip
+1652.952 (1) Dropbox: delete succeeded
+1652.954 (1) Dropbox: request deletion: backup_2015-08-11-2228_select_SIFISO_b8bfe3a06d0c-themes.zip
+1654.876 (1) Dropbox: delete succeeded
+1654.878 (1) Dropbox: request deletion: backup_2015-08-11-2228_select_SIFISO_b8bfe3a06d0c-uploads.zip
+1660.334 (1) Dropbox: delete succeeded
+1660.335 (1) Dropbox: request deletion: backup_2015-08-11-2228_select_SIFISO_b8bfe3a06d0c-others.zip
+1662.297 (1) Dropbox: delete succeeded
+1662.301 (1) 1439324936: this backup set is now empty; will remove from history
+1662.303 (1) 1439324936: deleting log file (log.b8bfe3a06d0c.txt)
+1662.481 (1) Retain: saving new backup history (sets now: 2) and finishing retain operation
+1662.484 (1) Resume backup (3552bbe869f3, 1): finish run
+1662.486 (1) There were no errors in the uploads, so the 'resume' event (2) is being unscheduled
+1662.493 (1) Fetching RSS news feed
+1680.128 (1) Fetched RSS news feed; result is a: SimplePie
+1680.131 (1) Sending email ('Files and database (Full backup)') report (attachments: 0, size: 0 Kb) to: selec...
+1680.583 (1) The backup apparently succeeded and is now complete

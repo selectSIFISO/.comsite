@@ -2,10 +2,11 @@
 /*
 Plugin Name: Spam Comments Cleaner
 Plugin URI:
-Description: This plugin will delete all your spam comments in a regular time interval.
-Version: 1.2.2
+Description: This plugin will delete all your spam comments in a regular time interval. Ger advance version <a href="http://youngtechleads.com/wordpress-database-cleaner/">WordPress Database Cleaner</a>
+Version: 1.2.3
 Author: Manish Kumar Agarwal
 Author URI: http://www.youngtechleads.com
+Author Emailid: manishkrag@yahoo.co.in/skype:mfsi_manish
 */
 
 /*
@@ -61,14 +62,19 @@ function reschedule_delete_spam() {
 	wp_reschedule_event( (time()+60), 'daily', 'wordpress_spam_cleaner' ); 
 }
 
-add_action( 'admin_menu', 'wsc_menu' );
+function scc_admin_css() {
+	wp_enqueue_style( 'scc-style-css', plugin_dir_url( __FILE__ ) . '/spam-comments-cleaner.css' );
+}
 
+add_action( 'admin_menu', 'wsc_menu' );
 function wsc_menu() {
-  add_options_page( 'WordPress Spam Cleaner', 'WordPress Spam Cleaner', 'manage_options', 'wsc-options', 'wsc_options' );
+  $scc_page_hook = add_options_page( 'WordPress Spam Cleaner', 'WordPress Spam Cleaner', 'manage_options', 'wsc-options', 'wsc_options' );
+  add_action( "admin_print_scripts-$scc_page_hook", 'scc_admin_css' );
 }
 
 function wsc_options() {
-	$valid_nonce = wp_verify_nonce( $_REQUEST['_wpnonce'], 'wordpress_spam_cleaner' );
+	$nonce = isset( $_REQUEST['_wpnonce'] ) ? $_REQUEST['_wpnonce'] : '';
+	$valid_nonce = wp_verify_nonce( $nonce, 'wordpress_spam_cleaner' );
 	if ( $valid_nonce ) {
 		if ( isset( $_POST['delete_spam_now_button'] ) )
 			wordpress_spam_cleaner_now();
@@ -100,119 +106,127 @@ function wsc_options() {
 			<strong>Settings updated</strong>
 		</div>
 	<?php } ?>
-		<div id="form-buttons">
-			<p>
-				<?php 
-				if ( wp_next_scheduled( 'wordpress_spam_cleaner' ) == NULL ) {	
-					echo 'The schedule has not been started'; 
-				} else  {
-					echo 'Next Spam Delete: ', date( "l, F j, Y @ h:i a",( wp_next_scheduled( 'wordpress_spam_cleaner' ) ) );
-				} 
-				?>
-			</p>
-			<p>Current Spam Count in your site: <?php show_spam_count(); ?></p><br />
-			 
-			<form name="delete_spam_now_button" action="" method="post">
-				<?php wp_nonce_field( 'wordpress_spam_cleaner' ); ?>
-				<input type="hidden" name="delete_spam_now_button" value="update" />
-				<div>
-					<input class="button button-primary"  id="delete_spam_now_button" type="submit" value="Delete spam now &raquo;" />
-				</div>
-			</form><br />
+		<div id="scc-form-buttons">
+			<div class="left-form-section" style="float: left;">
+				<p>
+					<?php 
+					if ( wp_next_scheduled( 'wordpress_spam_cleaner' ) == NULL ) {	
+						echo 'The schedule has not been started'; 
+					} else  {
+						echo 'Next Spam Delete: ', date( "l, F j, Y @ h:i a",( wp_next_scheduled( 'wordpress_spam_cleaner' ) ) );
+					} 
+					?>
+				</p>
+				<p>Current Spam Count in your site: <?php show_spam_count(); ?></p><br />
+				 
+				<form name="delete_spam_now_button" action="" method="post">
+					<?php wp_nonce_field( 'wordpress_spam_cleaner' ); ?>
+					<input type="hidden" name="delete_spam_now_button" value="update" />
+					<div>
+						<input class="button button-primary"  id="delete_spam_now_button" type="submit" value="Delete spam now &raquo;" />
+					</div>
+				</form><br />
 
-			<?php if ( NULL == wp_next_scheduled( 'wordpress_spam_cleaner' ) ) { ?>
-				<form name="delete_spam_hourly_button" action="" method="post">
-					<?php wp_nonce_field( 'wordpress_spam_cleaner' ); ?>
-					<input type="hidden" name="delete_spam_hourly_button" value="update" />
-					<div>
-						<input class="button button-primary" id="delete_spam_hourly_button" type="submit" value="Delete spam hourly &raquo;" />
-					</div>
-				</form>
+				<?php if ( NULL == wp_next_scheduled( 'wordpress_spam_cleaner' ) ) { ?>
+					<form name="delete_spam_hourly_button" action="" method="post">
+						<?php wp_nonce_field( 'wordpress_spam_cleaner' ); ?>
+						<input type="hidden" name="delete_spam_hourly_button" value="update" />
+						<div>
+							<input class="button button-primary" id="delete_spam_hourly_button" type="submit" value="Delete spam hourly &raquo;" />
+						</div>
+					</form>
+					<br />
+					<form name="delete_spam_daily_button" action="" method="post">
+						<?php wp_nonce_field( 'wordpress_spam_cleaner' ); ?>
+						<input type="hidden" name="delete_spam_daily_button" value="update" />
+						<div>
+							<input class="button button-primary" id="delete_spam_daily_button" type="submit" value="Delete spam daily &raquo;" />
+						</div>
+					</form>
+					<br />
+					<form name="delete_spam_twice_button" action="" method="post">
+						<?php wp_nonce_field( 'wordpress_spam_cleaner' ); ?>
+						<input type="hidden" name="delete_spam_twice_button" value="update" />
+						<div>
+							<input class="button button-primary" id="delete_spam_twice_button" type="submit" value="Delete spam twice daily &raquo;" />
+						</div>
+					</form>
+					<br />
+					<form name="delete_spam_weekly" action="" method="post">
+						<?php wp_nonce_field( 'wordpress_spam_cleaner' ); ?>
+						<input type="hidden" name="delete_spam_weekly" value="update" />
+						<div>
+							<input class="button button-primary" id="delete_spam_weekly" type="submit" value="Delete spam weekly &raquo;" />
+						</div>
+					</form>
+					<br />
+					<form name="delete_spam_twiceweekly" action="" method="post">
+						<?php wp_nonce_field( 'wordpress_spam_cleaner' ); ?>
+						<input type="hidden" name="delete_spam_twiceweekly" value="update" />
+						<div>
+							<input class="button button-primary" id="delete_spam_twiceweekly" type="submit" value="Delete spam twice Monthly &raquo;" />
+						</div>
+					</form>
+					<br />
+					<form name="delete_spam_monthly" action="" method="post">
+						<?php wp_nonce_field( 'wordpress_spam_cleaner' ); ?>
+						<input type="hidden" name="delete_spam_monthly" value="update" />
+						<div>
+							<input class="button button-primary" id="delete_spam_monthly" type="submit" value="Delete spam monthly &raquo;" />
+						</div>
+					</form>
+					<br />
+					<form name="custom_delete_spam_time" action="" method="post">
+						<?php wp_nonce_field( 'wordpress_spam_cleaner' ); ?>
+						<input type="hidden" name="custom_delete_spam_time" value="update" />
+						<div>
+							<input class="button button-primary" id="custom_delete_spam_time" type="submit" value="Delete spam every day at &raquo;" />
+							<input name="spam_delete_time" id="custom_delete_spam_time_text" placeholder="hr:mm" type="text" value="" />
+							<?php date_default_timezone_set( 'GMT' ); ?>
+							<br/>
+							<b>Current time:</b> <?php echo date( 'F j, Y, g:i a' ); ?> GMT
+						</div>
+					</form>
+					<br />
+			<?php } else { ?>
+					<form name="stop_deleting_spam_button" action="" method="post">
+						<?php wp_nonce_field( 'wordpress_spam_cleaner' ); ?>
+						<input type="hidden" name="stop_deleting_spam_button" value="update" />
+						<div>
+							<input class="button button-primary" id="stop_deleting_spam_button" type="submit" value="Stop Deleting Spam &raquo;" />
+						</div>
+					</form>
+					<br />
+					<form name="reschedule_delete_spam_button" action="" method="post">
+						<?php wp_nonce_field( 'wordpress_spam_cleaner' ); ?>
+						<input type="hidden" name="reschedule_delete_spam_button" value="update" />
+						<div>
+							<input class="button button-primary" id="reschedule_delete_spam_button" type="submit" value="Reschedule to start in 1 minute &raquo;" />
+							<i>Helpful for testing purpose</i>
+						</div>
+					</form>
+					<br />
+				<?php }	?>
 				<br />
-				<form name="delete_spam_daily_button" action="" method="post">
-					<?php wp_nonce_field( 'wordpress_spam_cleaner' ); ?>
-					<input type="hidden" name="delete_spam_daily_button" value="update" />
-					<div>
-						<input class="button button-primary" id="delete_spam_daily_button" type="submit" value="Delete spam daily &raquo;" />
-					</div>
-				</form>
+				Once you deactivate this plugin spam comments delete cron job will stop automatically.
 				<br />
-				<form name="delete_spam_twice_button" action="" method="post">
-					<?php wp_nonce_field( 'wordpress_spam_cleaner' ); ?>
-					<input type="hidden" name="delete_spam_twice_button" value="update" />
-					<div>
-						<input class="button button-primary" id="delete_spam_twice_button" type="submit" value="Delete spam twice daily &raquo;" />
-					</div>
-				</form>
-				<br />
-				<form name="delete_spam_weekly" action="" method="post">
-					<?php wp_nonce_field( 'wordpress_spam_cleaner' ); ?>
-					<input type="hidden" name="delete_spam_weekly" value="update" />
-					<div>
-						<input class="button button-primary" id="delete_spam_weekly" type="submit" value="Delete spam weekly &raquo;" />
-					</div>
-				</form>
-				<br />
-				<form name="delete_spam_twiceweekly" action="" method="post">
-					<?php wp_nonce_field( 'wordpress_spam_cleaner' ); ?>
-					<input type="hidden" name="delete_spam_twiceweekly" value="update" />
-					<div>
-						<input class="button button-primary" id="delete_spam_twiceweekly" type="submit" value="Delete spam twice Monthly &raquo;" />
-					</div>
-				</form>
-				<br />
-				<form name="delete_spam_monthly" action="" method="post">
-					<?php wp_nonce_field( 'wordpress_spam_cleaner' ); ?>
-					<input type="hidden" name="delete_spam_monthly" value="update" />
-					<div>
-						<input class="button button-primary" id="delete_spam_monthly" type="submit" value="Delete spam monthly &raquo;" />
-					</div>
-				</form>
-				<br />
-				<form name="custom_delete_spam_time" action="" method="post">
-					<?php wp_nonce_field( 'wordpress_spam_cleaner' ); ?>
-					<input type="hidden" name="custom_delete_spam_time" value="update" />
-					<div>
-						<input class="button button-primary" id="custom_delete_spam_time" type="submit" value="Delete spam every day at &raquo;" />
-						<input name="spam_delete_time" id="custom_delete_spam_time_text" placeholder="hr:mm" type="text" value="" />
-						<?php date_default_timezone_set( 'GMT' ); ?>
-						<b>Current time:</b> <?php echo date( 'F j, Y, g:i a' ); ?> GMT
-					</div>
-				</form>
-				<br />
-		<?php } else { ?>
-				<form name="stop_deleting_spam_button" action="" method="post">
-					<?php wp_nonce_field( 'wordpress_spam_cleaner' ); ?>
-					<input type="hidden" name="stop_deleting_spam_button" value="update" />
-					<div>
-						<input class="button button-primary" id="stop_deleting_spam_button" type="submit" value="Stop Deleting Spam &raquo;" />
-					</div>
-				</form>
-				<br />
-				<form name="reschedule_delete_spam_button" action="" method="post">
-					<?php wp_nonce_field( 'wordpress_spam_cleaner' ); ?>
-					<input type="hidden" name="reschedule_delete_spam_button" value="update" />
-					<div>
-						<input class="button button-primary" id="reschedule_delete_spam_button" type="submit" value="Reschedule to start in 1 minute &raquo;" />
-						<i>Helpful for testing purpose</i>
-					</div>
-				</form>
-				<br />
-			<?php }	?>
-			<br />
-			Once you deactivate this plugin spam comments delete cron job will stop automatically.
-			<br />
+			</div>
+			<div class="right-ad-section otherlinks">
+				<div class="quicklinks other_plugins">
+					<marquee behavior="alternate" direction="right"><h3>WordPress Database Cleaner</h3></marquee>
+					<p>WordPress Database Cleaner is a advanced version of WordPress Spam Comments Cleaner. This plugin will allow you to delete SPAM Comments, Post/Page Revisions, auto draft, trash. This plugin will Optimization all tables as well.</p>
+				</div>
+				<div class="quicklinks">
+					<h3>Quick Links</h3>
+					<p><a target="_blank" href="mailto:youngtec@youngtechleads.com">Mail Me</a></p>
+					<p><a target="_blank" href="http://www.youngtechleads.com/wordpress-database-cleaner">Plugin home page</a></p>
+				</div>
+			</div>
 		</div>
-		<h3>Quick Links</h3>
-		<p>Contact me skype: mfsi_manish mail me: youngtec@youngtechleadds.com</p>
+		<h3 style="clear: left;">&nbsp;</h3>
 		<p><a target="_blank" href="https://wordpress.org/support/view/plugin-reviews/spam-comments-cleaner?filter=5">Rate Now</a> <strong>If this plugin really helps you, please do consider providing rating which can help others to find this plugin easily.</strong></p>
 	</div>
-	
-	<style>
-	#form-buttons .button-primary {
-		width: 200px;
-	}
-</style>
+
 	<?php
 }
 

@@ -321,11 +321,11 @@ class W4PL_Helper_Terms extends W4PL_Core
 	public static function terms_orderby_options($taxonomy)
 	{
 		$return = array(
-			'term_id'			=> __( 'ID', 					W4PL_TD),
-			'name'				=> __( 'Name', 					W4PL_TD),
-			'slug'				=> __( 'Slug', 					W4PL_TD),
-			'count'				=> __( 'Count', 				W4PL_TD),
-			'custom'			=> __( 'Include terms', 		W4PL_TD)
+			'term_id'			=> __( 'ID', 					'w4pl'),
+			'name'				=> __( 'Name', 					'w4pl'),
+			'slug'				=> __( 'Slug', 					'w4pl'),
+			'count'				=> __( 'Count', 				'w4pl'),
+			'custom'			=> __( 'Include terms', 		'w4pl')
 		);
 
 		return $return;

@@ -121,6 +121,8 @@ If you find this plugin useful, please add your <a href="http://wordpress.org/su
 3. Preview 2
 
 == Changelog ==
+= 2.1 =
+* Fix: Now one list can be loaded multiple times.
 = 2.0.8 =
 * Date Query: Multiple date query filters
 * New: Shortcode [post_type], [post_type_label], [post_status], [post_status_label]
@@ -320,6 +322,8 @@ If you find this plugin useful, please add your <a href="http://wordpress.org/su
 
 
 == Upgrade Notice ==
+= 2.1 =
+* Fix: Now one list can be loaded multiple times, it means list can be duplicated.
 = 2.0.8 =
 * Date Query: Multiple date query filters
 * New: Shortcode [post_type], [post_type_label], [post_status], [post_status_label]

@@ -19,8 +19,8 @@ class W4_Post_list
 		if( !isset($options['id']) )
 			return new WP_Error('error', 'Invalid list id');
 
-		if( in_array($options['id'], $w4pl_lists) )
-			return new WP_Error('list_loaded', 'A list can load only once on the same page');
+		#if( in_array($options['id'], $w4pl_lists) )
+		#	return new WP_Error('list_loaded', 'A list can load only once on the same page');
 
 		$w4pl_lists[] = $options['id'];
 

@@ -1,64 +1,70 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="http://blogs.selectsifiso.com/wp-content/plugins/google-xml-sitemaps-v3-for-qtranslate/sitemap.xsl"?><!-- generator="wordpress/4.4.1" -->
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="http://blogs.selectsifiso.com/wp-content/plugins/google-xml-sitemaps-v3-for-qtranslate/sitemap.xsl"?><!-- generator="wordpress/4.4.2" -->
 <!-- sitemap-generator-url="http://www.arnebrachhold.de" sitemap-generator-version="3.4.1" -->
-<!-- generated-on="January 20, 2016 6:36 PM" -->
-<!-- Debug: Total comment count: 357 -->
+<!-- generated-on="March 15, 2016 8:33 AM" -->
+<!-- Debug: Total comment count: 358 -->
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">	<url>
 		<loc>http://blogs.selectsifiso.com/</loc>
-		<lastmod>2015-11-17T05:14:11+00:00</lastmod>
+		<lastmod>2016-03-07T16:10:29+00:00</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 <!-- Debug: Start Postings -->
-<!-- Debug: Priority report of postID 1204: Comments: 0 of 357 = 0 points -->
+	<url>
+		<loc>http://blogs.selectsifiso.com/about/</loc>
+		<lastmod>2016-03-07T16:10:29+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+<!-- Debug: Priority report of postID 1204: Comments: 0 of 358 = 0 points -->
 	<url>
 		<loc>http://blogs.selectsifiso.com/duplicate-mysql-table-using-phpmyadmin/</loc>
 		<lastmod>2015-11-17T05:14:11+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
-<!-- Debug: Priority report of postID 1188: Comments: 0 of 357 = 0 points -->
+<!-- Debug: Priority report of postID 1188: Comments: 0 of 358 = 0 points -->
 	<url>
 		<loc>http://blogs.selectsifiso.com/wheres-my-team-explorer-2015/</loc>
 		<lastmod>2015-11-03T09:43:57+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
-<!-- Debug: Priority report of postID 1196: Comments: 0 of 357 = 0 points -->
+<!-- Debug: Priority report of postID 1196: Comments: 0 of 358 = 0 points -->
 	<url>
 		<loc>http://blogs.selectsifiso.com/sql-server-database-source-control-using-vso-git/</loc>
 		<lastmod>2015-10-26T11:12:21+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
-<!-- Debug: Priority report of postID 1136: Comments: 0 of 357 = 0 points -->
+<!-- Debug: Priority report of postID 1136: Comments: 0 of 358 = 0 points -->
 	<url>
 		<loc>http://blogs.selectsifiso.com/dimensional-modelling-in-lucidchart-vs-visio-part-1/</loc>
 		<lastmod>2015-08-30T11:33:41+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
-<!-- Debug: Priority report of postID 1112: Comments: 0 of 357 = 0 points -->
+<!-- Debug: Priority report of postID 1112: Comments: 0 of 358 = 0 points -->
 	<url>
 		<loc>http://blogs.selectsifiso.com/execute-all-packages-within-ssis-project-catalog/</loc>
 		<lastmod>2015-07-06T16:34:08+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
-<!-- Debug: Priority report of postID 1043: Comments: 0 of 357 = 0 points -->
+<!-- Debug: Priority report of postID 1043: Comments: 0 of 358 = 0 points -->
 	<url>
 		<loc>http://blogs.selectsifiso.com/handling-no-data-in-ssrs-controls/</loc>
 		<lastmod>2015-06-15T09:05:59+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
-<!-- Debug: Priority report of postID 1038: Comments: 0 of 357 = 0 points -->
+<!-- Debug: Priority report of postID 1038: Comments: 0 of 358 = 0 points -->
 	<url>
 		<loc>http://blogs.selectsifiso.com/latest-blog-post-sourcing-xml-in-ssis/</loc>
 		<lastmod>2015-05-17T15:07:39+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
-<!-- Debug: Priority report of postID 1009: Comments: 1 of 357 = 0 points -->
+<!-- Debug: Priority report of postID 1009: Comments: 1 of 358 = 0 points -->
 	<url>
 		<loc>http://blogs.selectsifiso.com/using-ssis-to-import-http-based-xml-document/</loc>
 		<lastmod>2015-05-17T15:02:22+00:00</lastmod>
@@ -137,20 +143,14 @@
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
 	</url>
-	<url>
-		<loc>http://blogs.selectsifiso.com/about/</loc>
-		<lastmod>2015-05-13T18:18:46+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>0.6</priority>
-	</url>
-<!-- Debug: Priority report of postID 981: Comments: 0 of 357 = 0 points -->
+<!-- Debug: Priority report of postID 981: Comments: 0 of 358 = 0 points -->
 	<url>
 		<loc>http://blogs.selectsifiso.com/xml-document-sourced-ssrs-report-using-http-url/</loc>
 		<lastmod>2015-05-11T17:46:47+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
-<!-- Debug: Priority report of postID 978: Comments: 0 of 357 = 0 points -->
+<!-- Debug: Priority report of postID 978: Comments: 0 of 358 = 0 points -->
 	<url>
 		<loc>http://blogs.selectsifiso.com/introducing-the-new-look-select-sifiso-blog/</loc>
 		<lastmod>2015-05-10T12:24:20+00:00</lastmod>
@@ -163,7 +163,7 @@
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
 	</url>
-<!-- Debug: Priority report of postID 917: Comments: 0 of 357 = 0 points -->
+<!-- Debug: Priority report of postID 917: Comments: 0 of 358 = 0 points -->
 	<url>
 		<loc>http://blogs.selectsifiso.com/test-123/</loc>
 		<lastmod>2015-05-10T05:35:49+00:00</lastmod>
@@ -188,245 +188,245 @@
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
 	</url>
-<!-- Debug: Priority report of postID 640: Comments: 2 of 357 = 0 points -->
+<!-- Debug: Priority report of postID 640: Comments: 2 of 358 = 0 points -->
 	<url>
 		<loc>http://blogs.selectsifiso.com/failing-to-preview-report-in-report-builder/</loc>
 		<lastmod>2015-05-01T12:27:50+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
-<!-- Debug: Priority report of postID 479: Comments: 1 of 357 = 0 points -->
+<!-- Debug: Priority report of postID 479: Comments: 1 of 358 = 0 points -->
 	<url>
 		<loc>http://blogs.selectsifiso.com/load-integration-services-assembly-file-into-visual-studio-2010-project/</loc>
 		<lastmod>2013-02-13T11:15:19+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
-<!-- Debug: Priority report of postID 510: Comments: 2 of 357 = 0 points -->
+<!-- Debug: Priority report of postID 510: Comments: 3 of 358 = 0 points -->
 	<url>
 		<loc>http://blogs.selectsifiso.com/programmatically-create-and-deploy-ssis-2012-project-into-catalog-using-c/</loc>
 		<lastmod>2013-02-13T11:15:06+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
-<!-- Debug: Priority report of postID 558: Comments: 4 of 357 = 0 points -->
+<!-- Debug: Priority report of postID 558: Comments: 4 of 358 = 0 points -->
 	<url>
 		<loc>http://blogs.selectsifiso.com/execute-process-task-compress-file-using-7-zip/</loc>
 		<lastmod>2013-02-13T11:14:52+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
-<!-- Debug: Priority report of postID 473: Comments: 0 of 357 = 0 points -->
+<!-- Debug: Priority report of postID 473: Comments: 0 of 358 = 0 points -->
 	<url>
 		<loc>http://blogs.selectsifiso.com/ssis-2012-programmatically-create-catalog/</loc>
 		<lastmod>2013-02-13T11:14:36+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
-<!-- Debug: Priority report of postID 578: Comments: 4 of 357 = 0 points -->
+<!-- Debug: Priority report of postID 578: Comments: 4 of 358 = 0 points -->
 	<url>
 		<loc>http://blogs.selectsifiso.com/using-rest-api-in-ssis-to-extract-top-100-user-tweets/</loc>
 		<lastmod>2013-02-13T11:13:47+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
-<!-- Debug: Priority report of postID 606: Comments: 6 of 357 = 0 points -->
+<!-- Debug: Priority report of postID 606: Comments: 6 of 358 = 0 points -->
 	<url>
 		<loc>http://blogs.selectsifiso.com/compress-dynamic-files-using-7-zip-in-ssis/</loc>
 		<lastmod>2013-02-13T11:12:55+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
-<!-- Debug: Priority report of postID 370: Comments: 0 of 357 = 0 points -->
+<!-- Debug: Priority report of postID 370: Comments: 0 of 358 = 0 points -->
 	<url>
 		<loc>http://blogs.selectsifiso.com/programmatically-transfer-sql-server-objects-schema-using-c/</loc>
 		<lastmod>2013-01-07T17:46:18+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
-<!-- Debug: Priority report of postID 459: Comments: 0 of 357 = 0 points -->
+<!-- Debug: Priority report of postID 459: Comments: 0 of 358 = 0 points -->
 	<url>
 		<loc>http://blogs.selectsifiso.com/programmatically-load-and-update-connection-managers-of-ssis-package-template/</loc>
 		<lastmod>2012-06-23T12:21:12+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
-<!-- Debug: Priority report of postID 442: Comments: 7 of 357 = 0 points -->
+<!-- Debug: Priority report of postID 442: Comments: 7 of 358 = 0 points -->
 	<url>
 		<loc>http://blogs.selectsifiso.com/programmatically-import-delimited-text-file-with-derived-columns-into-flat-file-destination-using-ssiss-script-task-tool/</loc>
 		<lastmod>2012-04-19T14:19:14+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
-<!-- Debug: Priority report of postID 397: Comments: 27 of 357 = 0.1 points -->
+<!-- Debug: Priority report of postID 397: Comments: 27 of 358 = 0.1 points -->
 	<url>
 		<loc>http://blogs.selectsifiso.com/programmatically-import-flat-file-data-source-into-sql-server-2008-using-ssiss-script-task-tool/</loc>
 		<lastmod>2012-03-25T08:56:26+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
-<!-- Debug: Priority report of postID 386: Comments: 0 of 357 = 0 points -->
+<!-- Debug: Priority report of postID 386: Comments: 0 of 358 = 0 points -->
 	<url>
 		<loc>http://blogs.selectsifiso.com/download-save-ssis-packages-from-sql-server-2008-instance-to-xml-format/</loc>
 		<lastmod>2012-02-10T10:04:07+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
-<!-- Debug: Priority report of postID 376: Comments: 2 of 357 = 0 points -->
+<!-- Debug: Priority report of postID 376: Comments: 2 of 358 = 0 points -->
 	<url>
 		<loc>http://blogs.selectsifiso.com/programmatically-insert-into-sql-server-table-from-an-excel-file-using-ssis-script-tasks/</loc>
 		<lastmod>2012-01-30T13:55:38+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
-<!-- Debug: Priority report of postID 361: Comments: 0 of 357 = 0 points -->
+<!-- Debug: Priority report of postID 361: Comments: 0 of 358 = 0 points -->
 	<url>
 		<loc>http://blogs.selectsifiso.com/programmatically-transfer-sql-server-objects-stored-procedure-using-c/</loc>
 		<lastmod>2011-11-28T09:39:20+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
-<!-- Debug: Priority report of postID 356: Comments: 0 of 357 = 0 points -->
+<!-- Debug: Priority report of postID 356: Comments: 0 of 358 = 0 points -->
 	<url>
 		<loc>http://blogs.selectsifiso.com/programmatically-transfer-sql-server-objects-views-using-c/</loc>
 		<lastmod>2011-10-20T06:30:06+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
-<!-- Debug: Priority report of postID 349: Comments: 0 of 357 = 0 points -->
+<!-- Debug: Priority report of postID 349: Comments: 0 of 358 = 0 points -->
 	<url>
 		<loc>http://blogs.selectsifiso.com/programmatically-transfer-sql-server-objects-tables-using-c/</loc>
 		<lastmod>2011-09-22T07:24:48+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
-<!-- Debug: Priority report of postID 344: Comments: 0 of 357 = 0 points -->
+<!-- Debug: Priority report of postID 344: Comments: 0 of 358 = 0 points -->
 	<url>
 		<loc>http://blogs.selectsifiso.com/programmatically-execute-file-system-package-task-using-c/</loc>
 		<lastmod>2011-08-08T10:43:20+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
-<!-- Debug: Priority report of postID 341: Comments: 0 of 357 = 0 points -->
+<!-- Debug: Priority report of postID 341: Comments: 0 of 358 = 0 points -->
 	<url>
 		<loc>http://blogs.selectsifiso.com/programmatically-execute-sql-server-package-task-using-c/</loc>
 		<lastmod>2011-08-08T10:33:21+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
-<!-- Debug: Priority report of postID 337: Comments: 16 of 357 = 0 points -->
+<!-- Debug: Priority report of postID 337: Comments: 16 of 358 = 0 points -->
 	<url>
 		<loc>http://blogs.selectsifiso.com/programmatically-insert-conditional-split-transformation-in-data-flow-task-of-ssis-package-using-c/</loc>
 		<lastmod>2011-07-22T07:42:20+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
-<!-- Debug: Priority report of postID 332: Comments: 5 of 357 = 0 points -->
+<!-- Debug: Priority report of postID 332: Comments: 5 of 358 = 0 points -->
 	<url>
 		<loc>http://blogs.selectsifiso.com/programmatically-insert-character-map-transformation-in-data-flow-task-of-ssis-package-using-c/</loc>
 		<lastmod>2011-07-14T11:11:37+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
-<!-- Debug: Priority report of postID 321: Comments: 13 of 357 = 0 points -->
+<!-- Debug: Priority report of postID 321: Comments: 13 of 358 = 0 points -->
 	<url>
 		<loc>http://blogs.selectsifiso.com/programmatically-create-data-flow-task-with-row-count-transformation-in-ssis-package-using-c/</loc>
 		<lastmod>2011-06-23T12:58:31+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
-<!-- Debug: Priority report of postID 317: Comments: 10 of 357 = 0 points -->
+<!-- Debug: Priority report of postID 317: Comments: 10 of 358 = 0 points -->
 	<url>
 		<loc>http://blogs.selectsifiso.com/programmatically-create-data-flow-task-inside-a-foreachloop-container-using-c/</loc>
 		<lastmod>2011-06-07T10:01:20+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
-<!-- Debug: Priority report of postID 310: Comments: 6 of 357 = 0 points -->
+<!-- Debug: Priority report of postID 310: Comments: 6 of 358 = 0 points -->
 	<url>
 		<loc>http://blogs.selectsifiso.com/programmatically-create-data-flow-task-inside-a-forloop-container-using-c/</loc>
 		<lastmod>2011-06-04T11:29:27+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
-<!-- Debug: Priority report of postID 302: Comments: 6 of 357 = 0 points -->
+<!-- Debug: Priority report of postID 302: Comments: 6 of 358 = 0 points -->
 	<url>
 		<loc>http://blogs.selectsifiso.com/programmatically-create-data-flow-task-inside-a-sequence-container-using-c/</loc>
 		<lastmod>2011-06-03T11:37:13+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
-<!-- Debug: Priority report of postID 288: Comments: 26 of 357 = 0.1 points -->
+<!-- Debug: Priority report of postID 288: Comments: 26 of 358 = 0.1 points -->
 	<url>
 		<loc>http://blogs.selectsifiso.com/programmatically-create-data-flow-task-in-ssis-package-using-c/</loc>
 		<lastmod>2011-06-02T08:54:45+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
-<!-- Debug: Priority report of postID 284: Comments: 52 of 357 = 0.1 points -->
+<!-- Debug: Priority report of postID 284: Comments: 52 of 358 = 0.1 points -->
 	<url>
 		<loc>http://blogs.selectsifiso.com/extract-sql-statements-in-execute-sql-tasks-and-save-them-into-a-text-delimited-file-using-c/</loc>
 		<lastmod>2011-05-10T16:16:53+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
-<!-- Debug: Priority report of postID 278: Comments: 58 of 357 = 0.2 points -->
+<!-- Debug: Priority report of postID 278: Comments: 58 of 358 = 0.2 points -->
 	<url>
 		<loc>http://blogs.selectsifiso.com/extract-sql-statements-in-execute-sql-tasks-and-save-them-into-an-excel-workbook-using-c/</loc>
 		<lastmod>2011-05-10T08:25:43+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
-<!-- Debug: Priority report of postID 242: Comments: 4 of 357 = 0 points -->
+<!-- Debug: Priority report of postID 242: Comments: 4 of 358 = 0 points -->
 	<url>
 		<loc>http://blogs.selectsifiso.com/extract-save-sql-statements-of-execute-sql-tasks-in-a-foreach-loop-container-using-c/</loc>
 		<lastmod>2011-05-10T06:44:24+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
-<!-- Debug: Priority report of postID 239: Comments: 6 of 357 = 0 points -->
+<!-- Debug: Priority report of postID 239: Comments: 6 of 358 = 0 points -->
 	<url>
 		<loc>http://blogs.selectsifiso.com/extract-save-sql-statements-of-execute-sql-tasks-in-a-for-loop-container-using-c/</loc>
 		<lastmod>2011-05-05T07:51:39+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
-<!-- Debug: Priority report of postID 245: Comments: 12 of 357 = 0 points -->
+<!-- Debug: Priority report of postID 245: Comments: 12 of 358 = 0 points -->
 	<url>
 		<loc>http://blogs.selectsifiso.com/extract-save-sql-statements-of-execute-sql-tasks-within-a-sequence-container-using-c/</loc>
 		<lastmod>2011-05-05T07:10:51+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
-<!-- Debug: Priority report of postID 204: Comments: 8 of 357 = 0 points -->
+<!-- Debug: Priority report of postID 204: Comments: 8 of 358 = 0 points -->
 	<url>
 		<loc>http://blogs.selectsifiso.com/create-ssis-package-with-sql-tasks-inside-a-for-loop-container-using-c/</loc>
 		<lastmod>2011-05-05T06:45:44+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
-<!-- Debug: Priority report of postID 177: Comments: 4 of 357 = 0 points -->
+<!-- Debug: Priority report of postID 177: Comments: 4 of 358 = 0 points -->
 	<url>
 		<loc>http://blogs.selectsifiso.com/programmatically-extract-save-sql-statements-in-execute-sql-tasks-using-c/</loc>
 		<lastmod>2011-04-23T09:22:22+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
-<!-- Debug: Priority report of postID 82: Comments: 23 of 357 = 0.1 points -->
+<!-- Debug: Priority report of postID 82: Comments: 23 of 358 = 0.1 points -->
 	<url>
 		<loc>http://blogs.selectsifiso.com/programmatically-create-ssis-package-using-c/</loc>
 		<lastmod>2011-04-23T09:18:44+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
-<!-- Debug: Priority report of postID 221: Comments: 16 of 357 = 0 points -->
+<!-- Debug: Priority report of postID 221: Comments: 16 of 358 = 0 points -->
 	<url>
 		<loc>http://blogs.selectsifiso.com/create-ssis-package-with-sql-tasks-inside-a-sequence-container-using-c/</loc>
 		<lastmod>2011-04-23T09:07:54+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
-<!-- Debug: Priority report of postID 214: Comments: 35 of 357 = 0.1 points -->
+<!-- Debug: Priority report of postID 214: Comments: 35 of 358 = 0.1 points -->
 	<url>
 		<loc>http://blogs.selectsifiso.com/create-ssis-package-with-sql-tasks-inside-a-foreachloop-container-using-c/</loc>
 		<lastmod>2011-04-23T09:07:10+00:00</lastmod>

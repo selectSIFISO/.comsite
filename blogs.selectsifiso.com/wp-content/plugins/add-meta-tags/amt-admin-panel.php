@@ -187,7 +187,7 @@ function amt_admin_help_tabs() {
     <p><code>&lt;meta property="fb:admins" content="1234" /&gt;</code></p>
     <p><code>&lt;meta property="fb:app_id" content="4321" /&gt;</code></p>
 
-    <p>'.__('Moreover, the full meta tags box accepts the special notation <code>[field=Field Name]</code> which lets you use data from a Custom Field with name <em>Field Name</em>. This special notation may exist anywhere inside the meta tag.', 'add-meta-tags').'</p>
+    <p>'.__('Moreover, the full meta tags box accepts the special notation <code>[field=Field Name]</code> which lets you use data from a Custom Field with name <em>Field Name</em>. This special notation may exist anywhere inside the meta tag. To automatically add paging information to URLs, append the <code>PAGEINFO</code> placeholder.', 'add-meta-tags').'</p>
 
     ';
     $screen->add_help_tab( array(
@@ -270,6 +270,10 @@ function amt_admin_help_tabs() {
     <h3>'.__('Automatically generate Opengraph meta tags.', 'add-meta-tags').'</h3>
 
     <p>'.__('If this option is enabled, Opengraph metadata is automatically generated for content, attachments and archives. For more information, please refer to the <a href="http://ogp.me">Opengraph specification</a>.', 'add-meta-tags').'</p>
+
+    <h3>'.__('Add Facebook\'s XML namespaces.', 'add-meta-tags').'</h3>
+
+    <p>'.__('When enabled, the Facebook\'s XML namespaces for the <code>og</code> and <code>fb</code> meta tag name prefixes are added to the <code>html</code> element of the page. If your theme already contains these namespaces, then this option should not be enabled.', 'add-meta-tags').'</p>
 
     <h3>'.__('Omit <code>og:video</code> meta tags.', 'add-meta-tags').'</h3>
 
@@ -431,8 +435,12 @@ function amt_admin_help_tabs() {
 
     <h3>'.__('Default Image', 'add-meta-tags').'</h3>
 
-    <p>'.__('Enter an absolute URL to an image that represents your website, for instance the logo. This image will be used in the metadata of the front page and also in the metadata of the content, in case no featured image or other images have been attached or embedded.', 'add-meta-tags').'</p>
+    <p>'.__('Enter an absolute URL to an image that represents your website, for instance the logo. This image will be used in the metadata of the front page and also in the metadata of the content, in case no featured image or other images have been attached or embedded. To specify the image dimensions you can use the special notation <code>URL,WIDTHxHEIGHT</code>.', 'add-meta-tags').'</p>
     <p><strong>'.__('Example', 'add-meta-tags').'</strong>: <code>http://example.org/images/logo.png</code></p>
+
+    <h3>'.__('Shortcodes', 'add-meta-tags').'</h3>
+
+    <p>'.__('Enforce the expansion of shortcodes before generating a description.', 'add-meta-tags').'</p>
 
     <h3>'.__('Secure Access', 'add-meta-tags').'</h3>
 
@@ -453,6 +461,10 @@ function amt_admin_help_tabs() {
     <h3>'.__('Enable keyword analysis and statistics', 'add-meta-tags').'</h3>
 
     <p>'.__('If enabled, a section containing <a href="http://www.codetrax.org/projects/wp-add-meta-tags/wiki/Metadata_Overview">statistical information</a> about the metadata and the content is also displayed in the review mode panel.', 'add-meta-tags').'</p>
+
+    <h3>'.__('Omit help messages and notices', 'add-meta-tags').'</h3>
+
+    <p>'.__('If enabled, help messages and other notices are no longer displayed in the metadata review panel.', 'add-meta-tags').'</p>
 
     ';
     $screen->add_help_tab( array(
@@ -511,75 +523,23 @@ function amt_admin_help_tabs() {
 
     // Metadata caching
     $help_text = '
-    <p>'.__('This section contains information about how Add-Meta-Tags can cache the generated metadata and aims to help you decide whether you need to enable this feature or not.', 'add-meta-tags').'</p>
+    <p>'.__('This section contains basic information about the <em>metadata caching</em> feature. For more details about how metadata caching works in Add-Meta-Tags, troubleshooting notes and also helpful information that aims to help you decide whether you need to enable this feature or not can be found in the <a target="_blank" href="http://www.codetrax.org/projects/wp-add-meta-tags/wiki/Performance#Metadata-Caching">Performance</a> page of the wiki.', 'add-meta-tags').'</p>
 
-    <p>'.__('Metadata caching should be the last thing that should bother you while configuring this plugin. You should consider enabling it only after you have finished configuring the rest of the settings.', 'add-meta-tags').'</p>
-
-    <p>'.__('If you are here to troubleshoot a problem you have encountered with metadata caching, please head down to the <em>Troubleshooting</em> section for quick tips.', 'add-meta-tags').'</p>
+    <p>'.__('Metadata caching is the last thing you should care about while configuring this plugin. You should consider enabling it only after you have finished configuring the rest of the settings.', 'add-meta-tags').'</p>
 
     <h3>'.__('Notice', 'add-meta-tags').'</h3>
 
-    <p>'.__('Metadata caching is an experimental feature, which should only be used by experienced WordPress users. If you are a WordPress beginner or if you don\'t have enough knowledge about the concept of caching and, especially, if you have followed instructions without having understood how this works, please keep this feature turned off, read this section of the documentation carefully and ask any questions you might have before enabling it. Even if you do otherwise, your web site is not going to be harmed in any way, but it is always a good idea to have a good understanding about how things work.', 'add-meta-tags').'</p>
+    <p>'.__('Metadata caching is an experimental feature, which should only be used by experienced WordPress users. If you are a WordPress beginner or if you don\'t have enough knowledge about the concept of caching and, especially, if you have followed instructions without having understood how this works, please keep this feature turned off, read this section of the documentation and also the <a target="_blank" href="http://www.codetrax.org/projects/wp-add-meta-tags/wiki/Performance#Metadata-Caching">Performance</a> page of the wiki carefully and ask any questions you might have before enabling it. Even if you do otherwise, your web site is not going to be harmed in any way, but it is always a good idea to have a good understanding about how things work.', 'add-meta-tags').'</p>
 
     <h3>'.__('Show timing information', 'add-meta-tags').'</h3>
 
     <p>'.__('If this option is enabled, information about the total time that was required to generate a block of metadata is printed. This feature, generally, should not be enabled, unless you want an indication of the metadata generation times in each request.', 'add-meta-tags').'</p>
 
-    <p>'.__('Make no mistake, the printed timings are not a benchmark, but rather very rough indicators about how Add-Meta-Tags performs in your specific environment. Moreover, these timings may differ very much, even in consequent loadings of the same web page. This happens because other factors such as the server\'s load play a determinant role on how WordPress performs. In general, timings you get on live web sites, in shared hosting environments, on virtual servers with shared resources or even on dedicated boxes on which, apart from the web server, other production services are running, are not going to be consistent. This is not a problem of the plugin and there is absolutely nothing that can be done about it.', 'add-meta-tags').'</p>
-
     <h3>'.__('Enable metadata caching', 'add-meta-tags').'</h3>
 
-    <p>'.__('Metadata caching can be enabled by setting the number of seconds, for which the metadata should be cached, to a number greater than zero.', 'add-meta-tags').'</p>
+    <p>'.__('Metadata caching can be enabled by setting the <em>caching timeout</em>, which is the number of seconds for which the metadata should be cached, to a number greater than zero. The cache is cleared every time you save the Add-Meta-Tags settings or from the command line using the <code>amt</code> command of <code>wp-cli</code>.', 'add-meta-tags').'</p>
 
-    <p>'.__('Metadata generation requires some system resources. By caching the generated metadata, the plugin does not have to regenerated it in subsequent requests, but, instead, use the same cached metadata until it expires. If this feature has been enabled, Add-Meta-Tags caches the metadata the first time the page is requested using the WordPress <em>Transients API</em>, which is meant to be used to store temporary data that expires inside the WordPress database or other storage backend for quick access. No extra database tables are created for this purpose. WordPress itself already uses the Transients API for similar purposes.', 'add-meta-tags').'</p>
-
-    <p>'.__('Obviously, metadata caching comes at the cost of some storage space, which raises the question "<em>Should I use it?</em>". Unfortunately, there is no clear answer to this question, but it depends on many factors. In general, low or mid traffic web sites would see very little benefit by using metadata caching. On the contrary, on high traffic web sites, and only in case WordPress has to load on every request, every millisecond counts and in this case the benefits can be great. On the other hand, regardless of the amount of the web traffic, in case a caching proxy server or a content delivery network (CDN) is used in front of your WordPress driven web site or if a plugin that produces static versions of your dynamic web pages is active, the benefits of metadata caching are minimal. In fact, in such cases caching metadata should rather be considered as a waste of even the little storage space that is used than a performance boost. Additionally, in very large multi-site WordPress installations, on which the superadmin does not have full control over the various blogs, under certain circumstances, metadata caching could lead to a significant increase of the used storage space in the database.', 'add-meta-tags').'</p>
-
-    <p>'.__('You should always keep in mind that this feature exists only for those who judge that they need it. There is no general rule that applies to all cases. Enabling it should result is slightly better page loading times in several cases.', 'add-meta-tags').'</p>
-
-    <h3>'.__('How it works', 'add-meta-tags').'</h3>
-
-    <p>'.__('At this time, metadata can be cached for published content pages (posts, pages, attachments, custom post types, products, etc), but not for archives or other custom content. This happens not only because metadata generation for archives is not a computationally expensive process, but also, more importantly, because more research needs to be done to determine whether such a feature could be abused.', 'add-meta-tags').'</p>
-
-    <p>'.__('If metadata caching has been enabled, Add-Meta-Tags, before attempting to generate a new metadata block, checks whether a cached metadata block, which has not expired, already exists. If such a cached block is found, then it is used as is.', 'add-meta-tags').'</p>
-
-    <h3>'.__('Clearing the cached metadata', 'add-meta-tags').'</h3>
-
-    <p>'.__('If a <em>published</em> post, for which metadata has been cached, is edited and saved, then automatic purging of its cached metadata takes place. Add-Meta-Tags will generate a fresh metadata block the next time the post\'s page is visited. So, in order to manually clear the cached metadata for a specific post, page, attachment, etc, all you have to do is to save it. Purging the cached metadata of individual post objects works regardless of the storage backend for transient data.', 'add-meta-tags').'</p>
-
-    <p>'.__('Moreover, every time you save the plugin settings, all metadata entries that have been cached in the database are automatically purged in order to avoid using stale metadata which has not been generated according to the plugin settings that are in effect. This is by design. Please note that this automatic purging of the whole metadata cache when the plugin settings are saved will not work in case a different storage backend than the database is used by WordPress to store the transient data. In such advanced configurations clearing the whole metadata cache can only be done manually. The manual purging of the whole metadata cache can be performed using the <code>amt</code> command of <code>wp-cli</code>. This manual purging operation is transient storage backend agnostic. Please make sure to read the <em>Using alternative transient storage backends</em> section below for more information about the best practices when using alternative storage backends.', 'add-meta-tags').'</p>
-
-    <p>'.__('Another useful technical note is that WordPress keeps expired transient data in the database or other storage backend until it is requested again. The transient data is not automatically removed by scheduled clean-up jobs. This is by WordPress design.', 'add-meta-tags').'</p>
-
-    <h3>'.__('How many seconds should metadata be cached for?', 'add-meta-tags').'</h3>
-
-    <p>'.__('Since you are the one who knows the details of your environment and the general configuration of your web site, this is your call. Setting the caching timeout to 60, 300, 86400 (a day), 604800 (a week) seconds or whatever is totally up to you.', 'add-meta-tags').'</p>
-
-    <p>'.__('However, some details need to be taken into consideration when a storage backend different than the database is used. Please make sure to read the <em>Using alternative transient storage backends</em> section below for more information about the best practices regarding the caching timeout in such configurations.', 'add-meta-tags').'</p>
-
-    <h3>'.__('Using alternative transient storage backends', 'add-meta-tags').'</h3>
-
-    <p>'.__('By default, WordPress stores the transient data in its database, but different storage backends may be configured for this purpose. Add-Meta-Tags uses the <em>Transients API</em> to manage its metadata cache, so it is going to work fine regardless of the type of the storage backend, except for the automatic purging of the whole metadata cache when the plugin settings are saved, which does not work in case a different storage backend than the database is used.', 'add-meta-tags').'</p>
-
-    <p>'.__('If a different storage backend than the database is used for the transient data, setting a caching timeout and thus enabling metadata caching in Add-Meta-Tags should be the last thing to configure. If you set a big caching timeout and later make changes to the Add-Meta-Tags configuration, especially changes regarding the enabled metadata generators, the metadata blocks that have already been cached will not be cleared when the plugin settings are saved, because this automatic purging of the full metadata cache works only when the cache is stored in the database. In such cases, manual purging of the whole metadata cache has to be performed from the command line.', 'add-meta-tags').'</p>
-
-    <p>'.__('If you are using an alternative transient data storage backend and access to the command line is not possible, then you should reevaluate your cache expiration strategy and set a lower caching timeout, for instance 60 or 300 seconds. This way your posts will contain stale metadata for a very little amount of time until it expires, in which case a fresh metadata block will be generated according to the plugin settings that are in effect.', 'add-meta-tags').'</p>
-
-    <h3>'.__('Troubleshooting', 'add-meta-tags').'</h3>
-
-    <p>'.__('In case you are getting unexpected metadata in your pages, here are a few things you can try in order to troubleshoot.', 'add-meta-tags').'</p>
-
-    <p>'.__('<em>Pro tip</em>: before checking the HTML source code of the page, please make sure you have cleared your browser\'s cache to prevent it from getting in the way. Alternatively, you can hard refresh the web page, for instance by pressing <code>Ctrl-F5</code> in Firefox or Chrome.', 'add-meta-tags').'</p>
-
-    <p>'.__('First, if you are seeing unexpected metadata in the HTML source code of a content page, for instance a post or page or attachment, try to resave it in order to trigger the automatic purging of its cached metadata. If for any reason this does not help, turn off metadata caching globally in the Add-Meta-Tags settings. This can be done by setting the number of seconds to cache metadata to zero and save the settings. Saving the settings also automatically purges the whole metadata cache. If you are using an alternative storage backend for transient data (see above), use the <code>amt</code> command of <code>wp-cli</code>', 'add-meta-tags').'</p>
-
-    <p>'.__('If you are still seeing wrong metadata in the HTML source, then the metadata caching feature of the Add-Meta-Tags plugin is not the cause of the problem. If you are using a caching proxy server, a CDN or a caching plugin for WordPress that generates static versions of your dynamic pages, please make sure to purge their caches and ask for help in their support channels.', 'add-meta-tags').'</p>
-
-    <h3>'.__('Further reading', 'add-meta-tags').'</h3>
-
-    <p>'.__('Many new features and improvements have been implemented in Add-Meta-Tags during the last years. All these implementations have slightly increased the time that is required to generate the relevant metadata. Several code optimizations have been planned for the future.', 'add-meta-tags').'</p>
-
-    <p>'.__('In the meantime, check the <a target="_blank" href="http://www.codetrax.org/projects/wp-add-meta-tags/wiki/Performance">Performance section</a> of the technical documentation. (currently, work in progress)', 'add-meta-tags').'</p>
+    <p>'.__('The full documentation of this feature has been moved to the <a target="_blank" href="http://www.codetrax.org/projects/wp-add-meta-tags/wiki/Performance#Metadata-Caching">Performance</a> page of the wiki. It is highly recommended to thoroughly study this document before enabling metadata caching.', 'add-meta-tags').'</p>
 
     ';
     if ( apply_filters('amt_enable_metadata_cache', true) ) {
@@ -953,6 +913,10 @@ function amt_options_page() {
                 <label for="auto_opengraph">'.__('Automatically generate Opengraph meta tags.', 'add-meta-tags').'</label>
                 <br />
 
+                <input id="og_add_xml_namespaces" type="checkbox" value="1" name="og_add_xml_namespaces" '. (($options["og_add_xml_namespaces"]=="1") ? 'checked="checked"' : '') .'" />
+                <label for="og_add_xml_namespaces">'.__('Add Facebook\'s XML namespaces.', 'add-meta-tags').'</label>
+                <br />
+
                 <input id="og_omit_video_metadata" type="checkbox" value="1" name="og_omit_video_metadata" '. (($options["og_omit_video_metadata"]=="1") ? 'checked="checked"' : '') .'" />
                 <label for="og_omit_video_metadata">'.__('Omit <code>og:video</code> meta tags.', 'add-meta-tags').'</label>
                 <br />
@@ -1098,7 +1062,44 @@ function amt_options_page() {
                 '.__('Referenced items.', 'add-meta-tags').' ('.__('Not recommended', 'add-meta-tags').')
                 </label></p>
 
+            ');
+
+            // The term meta API was implemented in 4.4
+            if ( version_compare( get_bloginfo('version'), '4.4', '>=' ) ) {
+            
+                print('
+                    <h4>'.__('Taxonomy terms', 'add-meta-tags').':</h4>
+
+                    <p><input id="metabox_term_enable_full_metatags" type="checkbox" value="1" name="metabox_term_enable_full_metatags" '. (($options["metabox_term_enable_full_metatags"]=="1") ? 'checked="checked"' : '') .'" />
+                    <label for="metabox_term_enable_full_metatags">
+                    '.__('Full meta tags box.', 'add-meta-tags').'
+                    </label></p>
+
+                    <p><input id="metabox_term_enable_image_url" type="checkbox" value="1" name="metabox_term_enable_image_url" '. (($options["metabox_term_enable_image_url"]=="1") ? 'checked="checked"' : '') .'" />
+                    <label for="metabox_term_enable_image_url">
+                    '.__('Global image override.', 'add-meta-tags').'
+                    </label></p>
+
+                ');
+
+            }
+
+            print('
+
+                <h4>'.__('WordPress user profiles', 'add-meta-tags').':</h4>
+
+                <p><input id="metabox_user_enable_full_metatags" type="checkbox" value="1" name="metabox_user_enable_full_metatags" '. (($options["metabox_user_enable_full_metatags"]=="1") ? 'checked="checked"' : '') .'" />
+                <label for="metabox_user_enable_full_metatags">
+                '.__('Full meta tags box.', 'add-meta-tags').'
+                </label></p>
+
+                <p><input id="metabox_user_enable_image_url" type="checkbox" value="1" name="metabox_user_enable_image_url" '. (($options["metabox_user_enable_image_url"]=="1") ? 'checked="checked"' : '') .'" />
+                <label for="metabox_user_enable_image_url">
+                '.__('Global image override.', 'add-meta-tags').'
+                </label></p>
+
                 <br />
+
             </fieldset>
             </td>
             </tr>
@@ -1191,9 +1192,23 @@ function amt_options_page() {
                 <input name="default_image_url" type="text" id="default_image_url" class="code" value="' . esc_url_raw( stripslashes( $options["default_image_url"] ) ) . '" size="100" maxlength="1024" />
                 <br />
                 <label for="default_image_url">
-                '.__('Enter an absolute URL to an image that represents your website, for instance the logo.', 'add-meta-tags').'
+                '.__('Enter an absolute URL to an image that represents your website, for instance the logo. To specify the image dimensions you can use the special notation <code>URL,WIDTHxHEIGHT</code>.', 'add-meta-tags').'
                 </label>
                 <br />
+            </fieldset>
+            </td>
+            </tr>
+
+            <tr valign="top">
+            <th scope="row">'.__('Shortcodes', 'add-meta-tags').'</th>
+            <td>
+            <fieldset>
+                <legend class="screen-reader-text"><span>'.__('Shortcodes', 'add-meta-tags').'</span></legend>
+
+                <input id="expand_shortcodes" type="checkbox" value="1" name="expand_shortcodes" '. (($options["expand_shortcodes"]=="1") ? 'checked="checked"' : '') .'" />
+                <label for="expand_shortcodes">'.__('Enforce the expansion of shortcodes before generating a description.', 'add-meta-tags').'</label>
+                <br />
+
             </fieldset>
             </td>
             </tr>
@@ -1238,6 +1253,10 @@ function amt_options_page() {
                 <label for="review_mode_metadata_report">'.__('Enable keyword analysis and statistics.', 'add-meta-tags').'</label>
                 (<a target="_blank" href="http://www.codetrax.org/projects/wp-add-meta-tags/wiki/Metadata_Overview">'.__('Learn more', 'add-meta-tags').'</a>)
                 (<span style="color:red;">'.__('Experimental', 'add-meta-tags').'</span>)
+                <br />
+
+                <input id="review_mode_omit_notices" type="checkbox" value="1" name="review_mode_omit_notices" '. (($options["review_mode_omit_notices"]=="1") ? 'checked="checked"' : '') .'" />
+                <label for="review_mode_omit_notices">'.__('Omit help messages and notices. I have read, understood and agreed to them.', 'add-meta-tags').'</label>
                 <br />
 
             </fieldset>
@@ -1348,12 +1367,12 @@ function amt_options_page() {
                 <legend class="screen-reader-text"><span>'.__('Vendor HTML comments', 'add-meta-tags').'</span></legend>
 
                 <p>
-                    '.__('Add-Meta-Tags has always been enclosing its output in <a target="_blank" href="http://www.codetrax.org/projects/wp-add-meta-tags/wiki/Screenshots#Vendor-HTML-comments">HTML comments</a>, which contain the plugin\'s name. This is common practice among WordPress plugin developers as it makes it easier for users to identify the output of a specific plugin and also lets those who check the HTML source code of the page know which plugin has generated this specific output. For a free product with limited resources like Add-Meta-Tags this practice is also its only means of exposure in a safe and unintrusive way.', 'add-meta-tags').'
+                    '.__('Add-Meta-Tags has always been enclosing its output in <a target="_blank" href="http://www.codetrax.org/projects/wp-add-meta-tags/wiki/Screenshots#Vendor-HTML-comments">HTML comments</a>, which contain the plugin\'s name. This is common practice among WordPress plugin developers as it makes it easier for users to identify the output of a specific plugin and also lets those who check the HTML source code of the page know which plugin has generated this specific output. For a free product with limited resources like Add-Meta-Tags this practice is also its only means of exposure in a safe and non intrusive way.', 'add-meta-tags').'
                 </p>
                 <br />
 
                 <p>
-                    '.__('Although we don\'t like it, we have added the following option which deactivates the generation of those HTML comments*. We do not recommend checking the following box, but, if for whatever reason you have to turn these comments off, please go ahead and do it. To make it a little harder for you, an artificial requirement of a one time donation for any number of web sites you own has been added. Please keep in mind that there are no special donation links for this purpose. We do not force, check or keep track of your donations. You are free to go ahead and check this box without donating. What you do is totally your own decision and has nothing to do with us.', 'add-meta-tags').'
+                    '.__('Although we don\'t like it, we have added the following option which deactivates the generation of those HTML comments*. We do not recommend checking the following box, but, if for whatever reason you have to turn these comments off, please go ahead and do it. To make it a little harder for you, an artificial requirement of a one time donation for any number of web sites you own has been added. Please keep in mind that there are no special donation links for this purpose. We do not force or keep track of your donations. You are free to go ahead and check this box without donating. What you do is totally your own decision and has nothing to do with us.', 'add-meta-tags').'
                 </p>
                 <br />
 
@@ -1600,6 +1619,14 @@ function amt_inner_metadata_box( $post ) {
             ');
         }
 
+        // Add warning about the automatic descriptions being turned off.
+        if ( ! apply_filters( 'amt_generate_description_if_no_manual_data', true ) ) {
+            print('
+                <p>
+                    <em>'.__('Warning: the automatic generation of descriptions has been turned off.', 'add-meta-tags').'</em>
+                </p>
+            ');
+        }
     }
 
 
@@ -1640,6 +1667,15 @@ function amt_inner_metadata_box( $post ) {
             print('
                 <p>
                     '.__('If the <em>keywords</em> field is left blank, a <em>keywords</em> meta tag will only be automatically generated from global keywords, if any such global keywords have been set in the plugin settings.', 'add-meta-tags').'
+                </p>
+            ');
+        }
+
+        // Add warning about the automatic keywords being turned off.
+        if ( ! apply_filters( 'amt_generate_keywords_if_no_manual_data', true ) ) {
+            print('
+                <p>
+                    <em>'.__('Warning: the automatic generation of keywords has been turned off.', 'add-meta-tags').'</em>
                 </p>
             ');
         }
@@ -1715,7 +1751,7 @@ function amt_inner_metadata_box( $post ) {
                 <code>&lt;meta name="robots" content="noarchive" /&gt;</code>
             </p>
 
-            <p>'.__('Moreover, the full meta tags box accepts the special notation <code>[field=Field Name]</code> which lets you use data from a Custom Field with name <em>Field Name</em>. This special notation may exist anywhere inside the meta tag.', 'add-meta-tags').'</p>
+            <p>'.__('Moreover, the full meta tags box accepts the special notation <code>[field=Field Name]</code> which lets you use data from a Custom Field with name <em>Field Name</em>. This special notation may exist anywhere inside the meta tag. To automatically add paging information to URLs, append the <code>PAGEINFO</code> placeholder.', 'add-meta-tags').'</p>
 
         ');
 
@@ -1925,6 +1961,10 @@ function amt_save_postdata( $post_id, $post ) {
     // Express review
     if ( isset( $_POST['amt_custom_express_review'] ) ) {
         $express_review_value = esc_textarea( wp_kses( stripslashes( $_POST['amt_custom_express_review'] ), array() ) );
+        //
+        // REVIEW_AMPERSAND_NOTE: We replace &amp; to & for (see also REVIEW_AMPERSAND_NOTE in amt-utils.php)
+        //
+        $express_review_value = str_replace('&amp;', '&', $express_review_value);
     }
     // List of referenced items - We allow no HTML elements.
     if ( isset( $_POST['amt_custom_referenced_list'] ) ) {
@@ -2038,5 +2078,396 @@ function amt_save_postdata( $post_id, $post ) {
     }
     
 }
+
+
+
+//
+//
+// Extra fields to taxonomy terms
+//
+//
+
+function amt_add_extra_section_fields_terms() {
+
+    // The term meta API was implemented in 4.4
+    if ( version_compare( get_bloginfo('version'), '4.4', '<' ) ) {
+        return;
+    }
+
+    $taxonomies = get_taxonomies();
+    if ( ! empty($taxonomies) ) {
+        foreach ( $taxonomies as $key => $taxonomy_slug ) {
+            // For new term additions.
+            //add_action( $taxonomy_slug . '_add_form_fields', 'amt_taxonomy_extra_fields_show', 9999, 2 );
+            // For editing current terms.
+            add_action( $taxonomy_slug . '_edit_form_fields', 'amt_taxonomy_extra_fields_show', 9999, 2 );
+
+            // Store data when created
+            //add_action( 'created_' . $taxonomy_slug, 'amt_taxonomy_extra_fields_save', 10, 2 );
+            // Store data when edited
+            add_action( 'edited_' . $taxonomy_slug, 'amt_taxonomy_extra_fields_save', 10, 2 );
+        }
+    }
+}
+add_action('admin_init', 'amt_add_extra_section_fields_terms');
+
+
+function amt_taxonomy_extra_fields_show( $term, $taxonomy_slug ) {
+
+    // Use a nonce field for verification
+    wp_nonce_field( plugin_basename( AMT_PLUGIN_FILE ), 'amt_noncename' );
+
+    // Get the Metadata metabox permissions (filtered)
+    $metabox_permissions = amt_get_metadata_metabox_permissions();
+
+    // Get the Add-Meta-Tags options.
+    $options = amt_get_options();
+
+    // Store term ID
+    $term_id = $term->term_id;
+
+    // Display the meta box HTML code.
+
+    $metabox_has_features = false;
+
+    print('
+        <tr class="form-field">
+        <th scope="row"><h3>'.__('Add-Meta-Tags', 'add-meta-tags').'</h3></th>
+        <td></td>
+        </tr>
+    ');
+
+    // per post full meta tags
+    
+    // Full meta tags box permission check (can be user customized via filter).
+    if ( $options['metabox_term_enable_full_metatags'] == '1' && current_user_can( $metabox_permissions['term_full_metatags_box_capability'] ) ) {
+        $metabox_has_features = true;
+
+        // Retrieve the field data from the database.
+        $custom_full_metatags_value = amt_get_term_meta_full_metatags( $term_id );
+
+        print('
+
+            <tr class="form-field term-amt_custom_full_metatags-wrap">
+            <th scope="row"><label for="amt_custom_full_metatags">'.__('Full meta tags', 'add-meta-tags').'</label></th>
+            <td>
+                <textarea class="large-text code" style="width: 99%" id="amt_custom_full_metatags" name="amt_custom_full_metatags" cols="50" rows="6" >'. stripslashes( $custom_full_metatags_value ) .'</textarea>
+                <p class="description">
+                    '.__('Provide the full XHTML code of extra <a target="_blank" href="http://en.wikipedia.org/wiki/Meta_element" target="_blank"><code>meta</code></a> and <code>link</code> <a target="_blank" href="https://en.wikipedia.org/wiki/HTML_element">HTML elements</a>. To automatically add paging information to URLs, append the <code>PAGEINFO</code> placeholder. For example:', 'add-meta-tags').'
+                    <br /><br />
+                    <code>&lt;meta name="robots" content="noodp,noarchive,notranslate,noimageindex" /&gt;</code>
+                    <br />
+                    <code>&lt;link rel="prefetch" href="http://www.example.org/landing-page.html" /&gt;</code>
+                    <br />
+                    <code>&lt;link rel="alternate" hreflang="el" href="http://example.org/section/multimedia/PAGEINFO" /&gt;</code>
+                    <br />
+                </p>
+            </td>
+            </tr>
+
+        ');
+
+    }
+
+
+    // Image URL (global override)
+    
+    // 'image_url' box permission check (can be user customized via filter).
+    if ( $options['metabox_term_enable_image_url'] == '1' && current_user_can( $metabox_permissions['term_image_url_box_capability'] ) ) {
+        $metabox_has_features = true;
+
+        // Retrieve the field data from the database.
+        $custom_image_url_value = amt_get_term_meta_image_url( $term_id );
+
+        print('
+            <tr class="form-field term-amt_custom_image_url-wrap">
+            <th scope="row"><label for="amt_custom_image_url">'.__('Image URL', 'add-meta-tags').'</label></th>
+            <td>
+            <input type="text" class="code" style="width: 99%" size="40" id="amt_custom_image_url" name="amt_custom_image_url" value="' . esc_url_raw( stripslashes( $custom_image_url_value ) ) . '" />
+            <p class="description">
+                '.__('Enter an absolute image URL in order to enforce the use of this image in the metadata. To specify the image dimensions you can use the special notation <code>URL,WIDTHxHEIGHT</code>.', 'add-meta-tags').'
+                <br />
+            </p>
+            </td>
+            </tr>
+
+        ');
+
+    }
+
+    // If no features have been enabled, print an informative message
+    if ( $metabox_has_features === false ) {
+        print('
+
+        <tr class="form-field">
+        <th scope="row">'.__('Notice', 'add-meta-tags').'</th>
+        <td>
+            <p>'.__(sprintf( 'No features have been enabled for this metabox in the Add-Meta-Tags <a href="%s">settings</a> or you do not have enough permissions to access the available features.', admin_url( 'options-general.php?page=add-meta-tags-options' ) ), 'add-meta-tags').'</p>
+        </td>
+        </tr>
+        ');
+    }
+
+}
+
+
+// When the term is saved
+function amt_taxonomy_extra_fields_save( $term_id, $taxonomy_id ) {
+
+    /* Verify the nonce before proceeding. */
+    // Verify this came from the our screen and with proper authorization,
+    // because save_post can be triggered at other times
+    if ( ! isset($_POST['amt_noncename']) || ! wp_verify_nonce( $_POST['amt_noncename'], plugin_basename( AMT_PLUGIN_FILE ) ) )
+        return;
+
+    // Get the Metadata metabox permissions (filtered)
+    $metabox_permissions = amt_get_metadata_metabox_permissions();
+
+    // Global Metadata metabox permission check (can be user customized via filter).
+    if ( ! current_user_can( $metabox_permissions['global_metabox_capability'] ) ) {
+        return;
+    }
+
+    // Get the Add-Meta-Tags options.
+    $options = amt_get_options();
+
+    // Check if the current user has permission to edit the post.
+	if ( ! current_user_can( 'edit_published_posts' ) ) {
+		return;
+    }
+
+    // OK, we're authenticated: we need to find and save the data
+
+    //
+    // Sanitize user input
+    //
+
+    // Full metatags - We allow only <meta> elements.
+    if ( isset( $_POST['amt_custom_full_metatags'] ) ) {
+        $full_metatags_value = esc_textarea( wp_kses( stripslashes( $_POST['amt_custom_full_metatags'] ), amt_get_allowed_html_kses() ) );
+    }
+    // Image URL
+    if ( isset( $_POST['amt_custom_image_url'] ) ) {
+        $image_url_value = esc_url_raw( stripslashes( $_POST['amt_custom_image_url'] ) );
+    }
+
+    // If a value has not been entered we try to delete existing data from the database
+    // If the user has entered data, store it in the database.
+
+    // Add-Meta-Tags custom field names
+    $amt_full_metatags_field_name = '_amt_term_full_metatags';
+    $amt_image_url_field_name = '_amt_term_image_url';
+
+    // As an extra security measure, here we also check the user-defined per box
+    // permissions before we save any data in the database.
+
+    // per term full meta tags
+    if ( $options['metabox_term_enable_full_metatags'] == '1' && current_user_can( $metabox_permissions['term_full_metatags_box_capability'] ) ) {
+        if ( empty($full_metatags_value) ) {
+            delete_term_meta($term_id, $amt_full_metatags_field_name);
+        } else {
+            update_term_meta($term_id, $amt_full_metatags_field_name, $full_metatags_value);
+        }
+    }
+
+    // Image URL
+    if ( $options['metabox_term_enable_image_url'] == '1' && current_user_can( $metabox_permissions['term_image_url_box_capability'] ) ) {
+        if ( empty($image_url_value) ) {
+            delete_term_meta($term_id, $amt_image_url_field_name);
+        } else {
+            update_term_meta($term_id, $amt_image_url_field_name, $image_url_value);
+        }
+    }
+
+}
+
+
+//
+//
+// Extra fields to WordPress user profiles
+//
+//
+
+function amt_add_extra_section_fields_users() {
+    $taxonomies = get_taxonomies();
+    if ( ! empty($taxonomies) ) {
+        foreach ( $taxonomies as $key => $taxonomy_slug ) {
+            // Show/edit
+            add_action( 'show_user_profile', 'amt_user_extra_fields_show' );
+            add_action( 'edit_user_profile', 'amt_user_extra_fields_show' );
+
+            // Store data when created
+            add_action( 'personal_options_update', 'amt_user_extra_fields_save' );
+            add_action( 'edit_user_profile_update', 'amt_user_extra_fields_save' );
+        }
+    }
+}
+add_action('admin_init', 'amt_add_extra_section_fields_users');
+
+
+function amt_user_extra_fields_show( $user ) {
+
+    // Use a nonce field for verification
+    wp_nonce_field( plugin_basename( AMT_PLUGIN_FILE ), 'amt_noncename' );
+
+    // Get the Metadata metabox permissions (filtered)
+    $metabox_permissions = amt_get_metadata_metabox_permissions();
+
+    // Get the Add-Meta-Tags options.
+    $options = amt_get_options();
+
+    // Display the meta box HTML code.
+
+    $metabox_has_features = false;
+
+    print('
+        <h3>'.__('Add-Meta-Tags', 'add-meta-tags').'</h3>
+
+        <table class="form-table">
+            <tbody>
+    ');
+
+    // per post full meta tags
+    // Full meta tags box permission check (can be user customized via filter).
+    if ( $options['metabox_user_enable_full_metatags'] == '1' && current_user_can( $metabox_permissions['user_full_metatags_box_capability'] ) ) {
+        $metabox_has_features = true;
+
+        // Retrieve the field data from the database.
+        $custom_full_metatags_value = amt_get_user_meta_full_metatags( $user->ID );
+
+        print('
+
+            <tr class="form-field user-amt_custom_full_metatags-wrap">
+            <th scope="row"><label for="amt_custom_full_metatags">'.__('Full meta tags', 'add-meta-tags').'</label></th>
+            <td>
+                <textarea class="large-text code" style="width: 99%" id="amt_custom_full_metatags" name="amt_custom_full_metatags" cols="50" rows="6" >'. stripslashes( $custom_full_metatags_value ) .'</textarea>
+                <p class="description">
+                    '.__('Provide the full XHTML code of extra <a target="_blank" href="http://en.wikipedia.org/wiki/Meta_element" target="_blank"><code>meta</code></a> and <code>link</code> <a target="_blank" href="https://en.wikipedia.org/wiki/HTML_element">HTML elements</a>. To automatically add paging information to URLs, append the <code>PAGEINFO</code> placeholder. For example:', 'add-meta-tags').'
+                    <br /><br />
+                    <code>&lt;meta name="robots" content="noodp,noarchive,notranslate,noimageindex" /&gt;</code>
+                    <br />
+                    <code>&lt;link rel="prefetch" href="http://www.example.org/landing-page.html" /&gt;</code>
+                    <br />
+                    <code>&lt;link rel="alternate" hreflang="el" href="http://example.org/section/multimedia/PAGEINFO" /&gt;</code>
+                    <br />
+                </p>
+            </td>
+            </tr>
+
+        ');
+
+    }
+
+
+    // Image URL (global override)
+    
+    // 'image_url' box permission check (can be user customized via filter).
+    if ( $options['metabox_user_enable_image_url'] == '1' && current_user_can( $metabox_permissions['user_image_url_box_capability'] ) ) {
+        $metabox_has_features = true;
+
+        // Retrieve the field data from the database.
+        $custom_image_url_value = amt_get_user_meta_image_url( $user->ID );
+
+        print('
+            <tr class="form-field user-amt_custom_image_url-wrap">
+            <th scope="row"><label for="amt_custom_image_url">'.__('Image URL', 'add-meta-tags').'</label></th>
+            <td>
+            <input type="text" class="code" style="width: 99%" size="40" id="amt_custom_image_url" name="amt_custom_image_url" value="' . esc_url_raw( stripslashes( $custom_image_url_value ) ) . '" />
+            <p class="description">
+                '.__('Enter an absolute image URL in order to enforce the use of this image in the metadata. To specify the image dimensions you can use the special notation <code>URL,WIDTHxHEIGHT</code>.', 'add-meta-tags').'
+                <br />
+            </p>
+            </td>
+            </tr>
+
+        ');
+
+    }
+
+    print('
+            </tbody>
+        </table>
+    ');
+
+    // If no features have been enabled, print an informative message
+    if ( $metabox_has_features === false ) {
+        print('
+            <p>'.__(sprintf( 'No features have been enabled for this metabox in the Add-Meta-Tags <a href="%s">settings</a> or you do not have enough permissions to access the available features.', admin_url( 'options-general.php?page=add-meta-tags-options' ) ), 'add-meta-tags').'</p>
+        ');
+    }
+
+}
+
+
+// When the user profile is saved
+function amt_user_extra_fields_save( $user_id ) {
+
+    /* Verify the nonce before proceeding. */
+    // Verify this came from the our screen and with proper authorization,
+    // because save_post can be triggered at other times
+    if ( ! isset($_POST['amt_noncename']) || ! wp_verify_nonce( $_POST['amt_noncename'], plugin_basename( AMT_PLUGIN_FILE ) ) )
+        return;
+
+    // Get the Metadata metabox permissions (filtered)
+    $metabox_permissions = amt_get_metadata_metabox_permissions();
+
+    // Global Metadata metabox permission check (can be user customized via filter).
+    if ( ! current_user_can( $metabox_permissions['global_metabox_capability'] ) ) {
+        return;
+    }
+
+    // Get the Add-Meta-Tags options.
+    $options = amt_get_options();
+
+    // Check if the current user has permission to edit the post.
+	if ( ! current_user_can( 'edit_published_posts' ) ) {
+		return;
+    }
+
+    // OK, we're authenticated: we need to find and save the data
+
+    //
+    // Sanitize user input
+    //
+
+    // Full metatags - We allow only <meta> elements.
+    if ( isset( $_POST['amt_custom_full_metatags'] ) ) {
+        $full_metatags_value = esc_textarea( wp_kses( stripslashes( $_POST['amt_custom_full_metatags'] ), amt_get_allowed_html_kses() ) );
+    }
+    // Image URL
+    if ( isset( $_POST['amt_custom_image_url'] ) ) {
+        $image_url_value = esc_url_raw( stripslashes( $_POST['amt_custom_image_url'] ) );
+    }
+
+    // If a value has not been entered we try to delete existing data from the database
+    // If the user has entered data, store it in the database.
+
+    // Add-Meta-Tags custom field names
+    $amt_full_metatags_field_name = '_amt_user_full_metatags';
+    $amt_image_url_field_name = '_amt_user_image_url';
+
+    // As an extra security measure, here we also check the user-defined per box
+    // permissions before we save any data in the database.
+
+    // per user profile full meta tags
+    if ( $options['metabox_user_enable_full_metatags'] == '1' && current_user_can( $metabox_permissions['user_full_metatags_box_capability'] ) ) {
+        if ( empty($full_metatags_value) ) {
+            delete_user_meta($user_id, $amt_full_metatags_field_name);
+        } else {
+            update_user_meta($user_id, $amt_full_metatags_field_name, $full_metatags_value);
+        }
+    }
+
+    // Image URL
+    if ( $options['metabox_user_enable_image_url'] == '1' && current_user_can( $metabox_permissions['user_image_url_box_capability'] ) ) {
+        if ( empty($image_url_value) ) {
+            delete_user_meta($user_id, $amt_image_url_field_name);
+        } else {
+            update_user_meta($user_id, $amt_image_url_field_name, $image_url_value);
+        }
+    }
+
+}
+
 
 
