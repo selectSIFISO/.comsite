@@ -63,7 +63,7 @@ class Themonic_Textarea_Control extends WP_Customize_Control {
 $wp_customize->add_section('content' , array(
 	'priority'    => 200,
 ));
-$wp_customize->add_setting('textarea_copy', array('default' => 'Copyright 2015', 'sanitize_callback' => 'iconic_one_sanitize_text',));
+$wp_customize->add_setting('textarea_copy', array('default' => 'Copyright 2016', 'sanitize_callback' => 'iconic_one_sanitize_text',));
 $wp_customize->add_control(new Themonic_Textarea_Control($wp_customize, 'textarea_copy', array(
 	'label' => 'Footer Copyright',
 	'section' => 'content',

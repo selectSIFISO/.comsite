@@ -1,5 +1,12 @@
 Changelog for Iconic One WordPress Responsive Theme | Visit http://themonic.com/iconic-one/ for latest version
 
+-------------- May 2016 ----------------
+
+07/05/2016
+
+* Responsive and Mobile view improvement
+* Minor Code updates
+* Copyright text updated
 
 -------------- March 2016 ----------------
 

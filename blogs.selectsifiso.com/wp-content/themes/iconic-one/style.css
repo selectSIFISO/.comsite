@@ -4,7 +4,7 @@ Theme URI: http://themonic.com/iconic-one/
 Author: Themonic
 Author URI: http://themonic.com
 Description: Iconic One is a premium quality theme with pixel perfect typography and responsiveness and is built for speed with pagespeed score of 95+, Iconic One implements proper SEO so that your content will rank high and is compatible with AIOSEO and Yoast SEO, It makes proper use of Live customizer that allows you to setup the theme in minutes, you can easily upload the logo, modify the background color, footer text, social media urls without touching any line of code. It utilizes latest HTML 5, CSS3 and wordpress native functions for creating the awesomeness that looks good on every browser. Support is free, access the support here http://themonic.com/support/, Report issues and feedback at http://themonic.com/feedback/.
-Version: 1.5
+Version: 1.6
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: Blue, White, Black, one-column, two-columns, right-sidebar, custom-background, fluid-layout, responsive-layout, custom-menu, full-width-template, post-formats, rtl-language-support, theme-options, custom-colors
@@ -527,7 +527,9 @@ a:hover {
 }
 
 .themonic-logo {
+    padding: 17px;
 	float:left;
+	margin:10px 0;
 }
 
 
@@ -890,6 +892,7 @@ img.aligncenter {
 .site-content article {
 	border-bottom: 2px double #F3F3F3;
 	margin-bottom: 28px;
+	padding-bottom: 24px;
 	word-wrap: break-word;
 	-webkit-hyphens: auto;
 	-moz-hyphens: auto;
@@ -1069,7 +1072,7 @@ changed article header
 .comments-area article header cite {
 	font-style: normal;
 	font-size: 15px;
-	line-height: 1.42857143;
+	line-height: 1;
 }
 .comments-area article header time {
 	line-height: 1.714285714;
@@ -1309,9 +1312,10 @@ img#wpstats {
 	}
 .socialmedia{
     float: right;
+     padding: 7px 10px;
 	text-align: right;
-    width: 35%;
-	margin-top: 5px;
+    width: 25%;
+	margin-top:30px;
 	}
 .socialmedia a{
     padding: 0 5px;
@@ -1419,9 +1423,11 @@ img#wpstats {
 		max-width: 1040px;
 	}
 	.site-content {
-	float: left;
+	border-right: 1px solid #F1F1F1;
+    float: left;
     margin: 0px 1%;
-    width: 92.2%;
+    padding: 30px 2% 0 1%;
+    width: 63.2%;
 	}
 	body.template-front-page .site-content,
 	body.single-attachment .site-content,
@@ -1598,6 +1604,42 @@ img#wpstats {
     border-top: none;
     display: none;
     }
+}
+@media screen and (max-width: 440px) {
+.site {
+    padding: 0 10px;
+}
+.widget-area {
+    padding: 0 10px;
+}
+.entry-header {
+    margin-bottom: 10px;
+}
+.entry-header .entry-title {
+    margin-bottom: 0px;
+}
+.alignleft.wp-post-image {
+    width: auto;
+	float:none;
+}
+.entry-summary {
+	text-align:center;
+}
+.entry-summary p{
+	text-align:left;
+}
+.footercopy {
+    float: none;
+	padding-right: 20px;
+    text-align: center;
+}
+.footercredit {
+    float: none;
+    margin-left: 0;
+	margin-top:10px;
+    padding: 0 20px;
+    text-align: center;
+}
 }
 /* Print styles
 ----------------------------------------------- */
