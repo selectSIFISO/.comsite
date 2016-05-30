@@ -41,22 +41,23 @@
 	<?php if( get_theme_mod( 'iconic_one_social_activate' ) == '1') { ?>	
 		<div class="socialmedia">
 			<?php if( get_theme_mod( 'twitter_url' ) !== '' ) { ?>
-				<a href="<?php echo esc_url( get_theme_mod( 'twitter_url', 'default_value' ) ); ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/twitter.png" alt="Follow us on Twitter"/></a> 
+				<a href="<?php echo esc_url( get_theme_mod( 'twitter_url', 'https://twitter.com/selectsifiso' ) ); ?>
+				" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/twitter.png" alt="Follow us on Twitter"/></a> 
 			<?php } ?>
 			<?php if( get_theme_mod( 'facebook_url' ) !== '' ) { ?>
-					<a href="<?php echo esc_url( get_theme_mod( 'facebook_url', 'default_value' ) ); ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/facebook.png" alt="Follow us on Facebook"/></a>
+					<a href="<?php echo esc_url( get_theme_mod( 'facebook_url', 'https://www.facebook.com/select-SIFISO-652751321424822' ) ); ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/facebook.png" alt="Follow us on Facebook"/></a>
 			<?php } ?>
 			<?php if( get_theme_mod( 'plus_url' ) !== '' ) { ?>
-					<a href="<?php echo esc_url(get_theme_mod( 'plus_url', 'default_value' ) ); ?>" rel="author" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/gplus.png" alt="Follow us on Google Plus"/></a>
+					<a href="<?php echo esc_url(get_theme_mod( 'plus_url', 'https://plus.google.com/u/0/103041474356156114889' ) ); ?>" rel="author" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/gplus.png" alt="Follow us on Google Plus"/></a>
 			<?php } ?>
 			<?php if( get_theme_mod( 'link_url' ) !== '' ) { ?>
-			<a class="rss" href="https://www.linkedin.com/company/select-sifiso?trk=biz-companies-cym" target="_blank"><img src="http://blogs.selectsifiso.com/wp-content/uploads/2015/05/linkedin_321.png" alt="Connect with us on LinkedIn"/></a>			
+			<a class="rss" href="http://www.linkedin.com/company/3505445" target="_blank"><img src="http://blogs.selectsifiso.com/wp-content/uploads/2015/05/linkedin_321.png" alt="Connect with us on LinkedIn"/></a>			
 			<?php } ?>
 			<?php if( get_theme_mod( 'tube_url' ) !== '' ) { ?>
 			<a class="rss" href="https://www.youtube.com/channel/UCjloZMqHJaRiXXlnt3y7ZKQ" target="_blank"><img src="http://blogs.selectsifiso.com/wp-content/uploads/2015/05/youtube_logo.png" alt="Tune into our YouTube channel"/></a>			
 			<?php } ?>
 			<?php if( get_theme_mod( 'rss_url' ) !== '' ) { ?>
-			<a class="rss" href="<?php echo esc_url( get_theme_mod( 'rss_url', 'default_value' ) ); ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/rss.png" alt="Follow us on rss"/></a>			
+			<a class="rss" href="<?php echo esc_url( get_theme_mod( 'rss_url', 'http://blogs.selectsifiso.com/feed/' ) ); ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/rss.png" alt="Follow us on rss"/></a>			
 			<?php } ?>
 			<div class="widget widget_search">
 				<?php get_search_form(); ?>
@@ -72,22 +73,22 @@
 	<?php if( get_theme_mod( 'iconic_one_social_activate' ) == '1') { ?>
 		<div class="socialmedia">
 			<?php if( get_theme_mod( 'twitter_url' ) !== '' ) { ?>
-				<a href="<?php echo esc_url( get_theme_mod( 'twitter_url', 'default_value' ) ); ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/twitter.png" alt="Follow us on Twitter"/></a> 
+				<a href="<?php echo esc_url( get_theme_mod( 'twitter_url', 'https://twitter.com/selectsifiso' ) ); ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/twitter.png" alt="Follow us on Twitter"/></a> 
 			<?php } ?>
 			<?php if( get_theme_mod( 'facebook_url' ) !== '' ) { ?>
-					<a href="<?php echo esc_url( get_theme_mod( 'facebook_url', 'default_value' ) ); ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/facebook.png" alt="Follow us on Facebook"/></a>
+					<a href="<?php echo esc_url( get_theme_mod( 'facebook_url', 'https://www.facebook.com/select-SIFISO-652751321424822' ) ); ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/facebook.png" alt="Follow us on Facebook"/></a>
 			<?php } ?>
 			<?php if( get_theme_mod( 'plus_url' ) !== '' ) { ?>
-					<a href="<?php echo esc_url(get_theme_mod( 'plus_url', 'default_value' ) ); ?>" rel="author" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/gplus.png" alt="Follow us on Google Plus"/></a>
+					<a href="<?php echo esc_url(get_theme_mod( 'plus_url', 'https://plus.google.com/u/0/103041474356156114889' ) ); ?>" rel="author" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/gplus.png" alt="Follow us on Google Plus"/></a>
 			<?php } ?>
 			<?php if( get_theme_mod( 'link_url' ) !== '' ) { ?>
-			<a class="rss" href="https://www.linkedin.com/company/select-sifiso?trk=biz-companies-cym" target="_blank"><img src="http://blogs.selectsifiso.com/wp-content/uploads/2015/05/linkedin_321.png" alt="Connect with us on LinkedIn"/></a>			
+			<a class="rss" href="http://www.linkedin.com/company/3505445" target="_blank"><img src="http://blogs.selectsifiso.com/wp-content/uploads/2015/05/linkedin_321.png" alt="Connect with us on LinkedIn"/></a>			
 			<?php } ?>
 			<?php if( get_theme_mod( 'tube_url' ) !== '' ) { ?>
 			<a class="rss" href="https://www.youtube.com/channel/UCjloZMqHJaRiXXlnt3y7ZKQ" target="_blank"><img src="http://blogs.selectsifiso.com/wp-content/uploads/2015/05/youtube_logo.png" alt="Tune into our YouTube channel"/></a>			
 			<?php } ?>
 			<?php if( get_theme_mod( 'rss_url' ) !== '' ) { ?>
-			<a class="rss" href="<?php echo esc_url( get_theme_mod( 'rss_url', 'default_value' ) ); ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/rss.png" alt="Follow us on rss"/></a>			
+			<a class="rss" href="<?php echo esc_url( get_theme_mod( 'rss_url', 'http://blogs.selectsifiso.com/feed/' ) ); ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/rss.png" alt="Follow us on rss"/></a>			
 			<?php } ?>
 		</div>
 	<?php } ?>	

@@ -527,9 +527,7 @@ a:hover {
 }
 
 .themonic-logo {
-    padding: 17px;
 	float:left;
-	margin:10px 0;
 }
 
 
@@ -892,7 +890,6 @@ img.aligncenter {
 .site-content article {
 	border-bottom: 2px double #F3F3F3;
 	margin-bottom: 28px;
-	padding-bottom: 24px;
 	word-wrap: break-word;
 	-webkit-hyphens: auto;
 	-moz-hyphens: auto;
@@ -1312,10 +1309,9 @@ img#wpstats {
 	}
 .socialmedia{
     float: right;
-     padding: 7px 10px;
 	text-align: right;
     width: 35%;
-	margin-top:30px;
+	margin-top: 5px;
 	}
 .socialmedia a{
     padding: 0 5px;
@@ -1423,11 +1419,9 @@ img#wpstats {
 		max-width: 1040px;
 	}
 	.site-content {
-	border-right: 1px solid #F1F1F1;
-    float: left;
+	float: left;
     margin: 0px 1%;
-    padding: 30px 2% 0 1%;
-    width: 63.2%;
+    width: 92.2%;
 	}
 	body.template-front-page .site-content,
 	body.single-attachment .site-content,
